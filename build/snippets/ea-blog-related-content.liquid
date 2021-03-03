@@ -1,0 +1,42 @@
+{% comment %} ATTENTION!!! This is compiled version of ea-blog-related-content.liquid and it is overriding automatically. You should use theme development tool and sources\snippets\ea-blog-related-content.liquid file to code and save your changes. {% endcomment %}{% render 'ea-section-styles', section: section %}
+{% assign set = section.settings %}
+
+{% if template == 'article.recipes' %}
+  {% assign postType = 'featured' %}
+{% endif %}
+
+<div class="section posts posts--related">
+  {% render 'ea-section-foreground-image' %}
+  <div class="container">
+    {% if set.title != blank %}
+      <h3 class="title ta-center m-black">{{ set.title }}</h3>
+    {% endif %}
+    <div class="posts__grid">
+      <div class="row">
+        {%- capture class -%}
+          {%- render 'column-width', { device: 'md', columns: set.posts_per_row  } -%}
+          {%- render 'column-width', { columns: set.posts_per_row_mobile  } -%}
+        {%- endcapture -%}
+        {% assign thisArticle = article %}
+        {% assign counter = 0 %}
+        {%- for article in blog.articles -%}
+          {% if article.handle != thisArticle.handle and counter < set.max_posts %}
+            <div class="{{ class | strip }}" data-animate-section>
+              {%- render 'post-cell', type: postType, article: article, section: section -%}
+            </div>
+            {% assign counter = counter | plus: 1 %}
+          {% endif %}
+        {%- endfor -%}
+      </div>
+    </div>  <!-- ./ .posts__grid -->
+    <div class="ta-center">
+      {% render 'button', {
+        top: set.btntop,
+        id: section.id,
+        text: set.btn,
+        url: blog.url,
+        class: 'm-outline m-animated'
+      } %}
+    </div>
+  </div> <!-- ./ .container -->
+</div>

@@ -1,0 +1,44 @@
+{% comment %} ATTENTION!!! This is compiled version of account_menu.liquid and it is overriding automatically. You should use theme development tool and sources\snippets\account_menu.liquid file to code and save your changes. {% endcomment %}<div class="my-account-menu animation">
+  <div class="clearfix small-flex my-account-menu-wrapper" data-accordions-container data-accordions-mobile-only="1">
+    <h1 class="medium--hide small--hide"><a href="/account">Account</a></h1>
+    <h1 class="hide--desktop" data-accordion-button>
+      More Account Details
+      {% render 'icon' with 'accordion-arrow' %}
+    </h1>
+    <div class="goto" data-accordion-content>
+      <div class="trigger hide medium--show small--show">Go to... <i class="fa fa-angle-up fa-angle-down"></i></div>
+
+      <ul>
+        <li class="animation" data-link="account"><a href="/account">My Account</a></li>
+        <li class="animation" data-link="account/addresses"><a href="/account/addresses">Address Book</a></li>
+        <li class="animation" data-link="account/orders"><a href="{% unless template == "customers/account" %}/account{% endunless %}#customer_orders" class="scroll">My Orders</a></li>
+        {% if customer.metafields.subscriptions.customer_string %}
+          {% comment %}<li class="animation link-subscription" data-link="/tools/recurring/login/"><a href="/tools/recurring/login/">Manage Subscriptions</a></li>{% endcomment %}
+          <!--BeginRechargeCode-->
+          <li class="animation"><a href="/tools/recurring/customer/{{customer.metafields.subscriptions.customer_string}}/subscriptions/">Manage Subscriptions</a></li>
+          <!--EndRechargeCode-->
+        {% endif %}
+        <li class="animation"><a class="btn" href="/account/logout">Logout</a></li>
+        
+      </ul>
+    </div>
+    
+  </div>
+</div>
+<script>
+  $(function(){
+    $('.my-account-menu .goto .trigger').click(function(){
+      $(this).siblings('ul').slideToggle();
+      $(this).find('i').toggleClass('fa-angle-down');
+    });
+
+    let currentUrl = window.location.pathname.replace('/','')+window.location.hash;
+    console.log(currentUrl);
+    console.log(currentUrl.indexOf('account/orders'));
+    if(currentUrl.indexOf('account/orders') > -1) {
+      currentUrl = 'account/orders';
+    }
+    $('[data-link="'+currentUrl+'"]').addClass('active');
+
+  });
+</script>

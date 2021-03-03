@@ -1,0 +1,78 @@
+{% assign set = section.settings %}
+
+{% render 'ea-section-styles', section: section %}
+
+{% render 'ea-section-foreground-image', section: section %} 
+
+
+<div class="faq {{ class }}">
+  {% assign blockString = section.blocks | map: 'type' | join %}
+  {% assign sections = 'question, products, order, account, shipping, returns' | split: ', ' %}
+
+  {% assign category_handles = '' %}
+
+
+  {% if type != 'topbar-disabled' %}
+  <div class="faq-topbar">
+      <div class="container {% if type != 'topbar-disabled' %}m-short{% endif %}">
+        {% assign is_first = true %}
+        {% for block in section.blocks %}
+          {% assign category_handle = block.settings.category_name | handleize %}
+          {% unless category_handles contains category_handle %}
+            {% assign category_handles = category_handles | append: category_handle | append: ',' %} 
+            <div class="faq-topbar__item">
+              <h3 class="faq-topbar__title {% if is_first %} is-active{% endif %}" data-faq-section-toggle="{{ category_handle }}">{{ block.settings.category_name }}</h3>
+            </div>
+            {% assign is_first = false %}
+          {% endunless %}
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+
+  <div class="container faq__wrap {% if type != 'topbar-disabled' %}m-short{% endif %}">
+    <div class="section__content">
+      <div class="faq-grid">
+        {% if set.image %}
+          <div class="faq-image">{% render 'rimage', image: set.image, size: '500x' %}</div>
+        {% endif %}
+        <div class="faq-questions">
+          {% if set.pretitle != blank %}
+            <h3 class="pretitle">{{ set.pretitle }}</h3>
+          {% endif %}
+          {% if set.title != blank %}
+            <h2 class="title h2 m-heavy ta-center">{{ set.title }}</h2>
+          {% endif %}
+          {% if set.subtitle != blank %}
+            <div class="subtitle ta-center">{{ set.subtitle }}</div>
+          {% endif %}
+
+          {% assign category_handles_array = category_handles | split: ',' %}
+          {% assign is_first = true %}
+          {% for category_handle in category_handles_array %}
+            {% render 'faq-item', section: section, blockType: category_handle, is_first: is_first %}
+            {% assign is_first = false %}
+          {% endfor %}
+
+          {% comment %} {%- capture btnClass -%}link {% if type == 'topbar-disabled' %}m-small{% endif %}{%- endcapture -%}
+          
+            <div class="ta-center">
+          
+            {% render 'button', {
+              top: set.btntop,
+              id: section.id,
+              text: set.btn,
+              url: set.btnu,
+              class: btnClass
+            } %}
+          
+            </div> {% endcomment %}
+
+            
+          
+
+        </div> <!-- /.faq-questions -->
+      </div> <!-- /.faq-grid -->
+    </div>
+  </div>
+</div>

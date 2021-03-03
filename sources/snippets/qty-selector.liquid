@@ -1,0 +1,36 @@
+{% assign currentQty = item.quantity | default: 1 %}
+{% assign item_id = item.id %}
+{% if type == 'cart' %}
+  {% assign item_id = item.variant_id | append: '-' | append: index %}
+{% endif %}
+<div class="qty-selector {{ class }}">
+  <div class="e-controls">
+    <button
+      class="e-btn m-decr"
+      data-id="{{ item_id }}"
+      type="button"
+      data-qty-btn="decr, {{ type }}"><i class="icon-minus"></i></button>
+    <input
+      id="qty-id-{{ item_id }}"
+      class="e-input"
+      type="text"
+      value="{{ currentQty }}"
+      maxlength="10"
+      autocomplete="false"
+      readonly
+      name="quantity"
+      data-qty
+      {% if type == 'cart' %}
+        data-line="{{ forloop.index }}"
+      {% endif %}
+    >
+    <button
+      class="e-btn m-incr"
+      data-id="{{ item_id }}"
+      type="button"
+      data-qty-btn="incr, {{ type }}"><i class="icon-plus"></i></button>
+  </div>
+  {% if type == 'cart' %}
+    <div id="qty-id-error-{{ item_id }}" class="error hide" data-qty-error></div>
+  {% endif %}
+</div> 

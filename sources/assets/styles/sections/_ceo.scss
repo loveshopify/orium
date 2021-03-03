@@ -1,0 +1,48 @@
+.ceo__image {
+  min-width: 0;
+  max-width: none;
+  margin: 0 (-$gutter);
+  @include desktop {
+    min-width: 725px;
+    max-width: 725px;
+    margin: 0;
+  }
+}
+.ceo__text {
+  flex: 1;
+  background: #fef7f1;
+  position: relative;
+  z-index: 1;
+  min-width: none;
+  @include desktop {
+    min-width: 480px;
+  }
+  .ceo__image + & {
+    margin: 0 (-$gutter);
+    padding: 25px 45px;
+    max-width: none;
+    min-width: 0;
+    @include desktop {
+      padding: 100px 50px 150px;
+      max-width: 480px;
+      margin-left: -240px;
+      margin-right: 0;
+    }
+  }
+}
+.ceo__content {
+  display: block;
+  @include desktop {
+    display: flex;
+    align-items: center;
+  }
+}
+.ceo__bgimage {
+  width: 100px;
+  position: absolute;
+  bottom: -50px;
+  left: -30px;
+  @include desktop {
+    width: 250px;
+  }
+}

@@ -1,0 +1,232 @@
+// Product Info:
+.product-info {
+  margin: 0 auto;
+  width: 95%;
+  @include desktop {
+    width: 450px;
+  }
+  
+  .buy-info {
+    margin-top: $gutter;
+    font-size: 14px;
+    p {
+      margin: 0;
+    }
+  }
+  .title {
+    margin-top: 0;
+    font-size: $fz-3;
+    font-weight: 900;
+    color: $color-black;
+    text-transform: uppercase;
+  }
+  .subtitle {
+    margin-top: 0;
+    font-stretch: condensed;
+    color: $color-brown;
+    font-weight: 500;
+  }
+}
+
+
+.product-benefits {
+  margin-top: $gutter;
+  font-weight: 600;
+  font-size: $fz-6;
+  p {
+    margin-bottom: 0;
+    &:before {
+      content: "";
+      display: inline-block;
+      margin-right: 0.5em;
+      width: 14px;
+      height: 1em;
+      background: url('../images/checkmark.svg') no-repeat center center / contain;
+    }
+  }
+}
+.product-info__bottom {
+  margin-top: 20px;
+  font-size: $fz-7;
+  padding-left: 40px;
+  position: relative;
+  &:before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url('../images/flag.png') no-repeat center center / contain;
+    position: absolute;
+    top: 2px;
+    left: 0;
+  }
+}
+
+.product-info__reviews {
+  margin-bottom: $gutter;
+}
+.product-info__descr {
+  margin-top: $gutter;
+  font-size: $fz-5;
+  line-height: 1.2;
+  p {
+    margin: 0;
+  }
+  p, li, ul, ol, dl {
+    font-size: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+  }
+  ul {
+    margin: 0;
+    list-style: none;
+  }
+  li {
+    &:before {
+      font-size: 0.6em;
+      margin-right: .5em;
+    }
+  }
+}
+
+.product-price {
+  margin-top: 0;
+  font-size: $fz-2;
+  font-weight: 900;
+  color: $color-red
+}
+.was-price {
+  color: $color-blue-grey;
+  font-size: 0.8em;
+  text-decoration: line-through;
+}
+.product-price__amount {
+  &.is-hidden {
+    display: none;
+  }
+}
+
+
+.product-info__top-label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+}
+.product-info__bottom-label {
+  margin: 25px (-$gutter) 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  font-size: $fz-5;
+  font-weight: 600;
+  background: $color-grey-lightest;
+  text-align: center;
+  @include desktop {
+    margin: 25px (-$gutter*2) 0;
+  }
+}
+
+.product-stock {
+  margin-top: $gutter;
+  font-weight: 600;
+  text-align: center;
+}
+.product-stock__bar {
+  display: inline-block;
+  width: 285px;
+  height: 10px;
+  background: $color-blue;
+  position: relative;
+  border-radius: 10px;
+  &:before {
+    content: "";
+    display: block;
+    width: 25%;
+    height: 100%;
+    background: $color-red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    animation: stock 2s;
+  }
+}
+
+.membership-info {
+  margin-top: -2px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid $color-yellow;
+  border-radius: 3px;
+  font-size: $fz-7;
+  .btn {
+    color: $color-red;
+    font-weight: 600;
+  }
+  i {
+    margin-right: 5px;
+    color: $color-red;
+    font-size: $fz-5;
+    vertical-align: middle;
+    top: -1px;
+  }
+}
+
+.membership-popup-section {
+  .popup-window {
+    border-radius: 10px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  }
+  .close {
+    color: $color-red;
+    opacity: 1;
+    font-size: $fz-4;
+  }
+}
+.membership-popup {
+  padding: $gutter*2 $gutter*3;
+  color: $color-black;
+  .title {
+    font-weight: 900;
+    font-size: $fz-3;
+    color: $color-black;
+    text-align: center;
+  }
+}
+.membership-items {
+  margin-bottom: 0;
+  margin-top: $gutter*2;
+  padding-left: 0;
+  list-style-type: none;
+  li {
+    position: relative;
+    padding-left: $gutter*2;
+    &:before {
+      content: "✓"; 
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: $fz-4;
+      color: $color-blue;
+    }
+    +li {
+      margin-top: 20px;
+    }
+    .title {
+      margin-bottom: 0;
+      font-weight: 600;
+      text-align: left;
+      font-size: $fz-5;
+      +.subtitle {
+        margin-top: 0;
+      }
+    }
+    .subtitle {
+      font-size: $fz-7;
+    }
+  }
+}

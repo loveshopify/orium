@@ -1,0 +1,7 @@
+{% if section.settings.visible %}
+  {% render 'ea-reviews-content', section: section %}
+{% endif %}
+
+{% schema %}
+  @@include('ea-reviews.json')
+{% endschema %}

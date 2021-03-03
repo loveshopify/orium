@@ -1,0 +1,89 @@
+{% comment %} ATTENTION!!! This is compiled version of ea-head.liquid and it is overriding automatically. You should use theme development tool and sources\snippets\ea-head.liquid file to code and save your changes. {% endcomment %}<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="{{ settings.color_primary }}">
+{% assign canoonical_url_modified = canonical_url %}
+{% if template == 'collection' %}
+  {% assign canoonical_url_modified = request.host | append: collection.url | append: '?page=1'  %}
+  {% assign canoonical_url_modified = 'https://' | append: canoonical_url_modified %}
+{% endif %}
+<link rel="canonical" href="{{ canoonical_url_modified }}">
+{% if settings.favicon != blank %}
+  <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
+{% endif %}
+
+{% capture seo_title %}
+  {% if page_title == 'empty' %}
+    {% if request.page_type == 'blog' %}
+      {{ blog.title }}
+    {% endif %}
+  {% else %}
+    {{ page_title }}
+  {% endif %}
+  {% if current_tags %}
+    {%- assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags -}}
+  {% endif %}
+  {% if current_page != 1 %}
+    &ndash; {{ 'general.meta.page' | t: page: current_page }}
+  {% endif %}
+  {% unless page_title contains shop.name %}
+    &ndash; {{ shop.name }}
+  {% endunless %}
+{% endcapture %}
+
+<title>{{ seo_title }}</title>
+
+
+{% if page_description %}
+  <meta name="description" content="{{ page_description | escape }}">
+{% endif %}
+
+{% include 'social-meta-tags' %}
+{{ 'styles.scss.css' | asset_url | stylesheet_tag }}
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+
+  window.theme = {
+    strings: {
+      addToCart: {{ 'products.product.add_to_cart' | t | json }},
+      soldOut: {{ 'products.product.sold_out' | t | json }},
+      preOrder: {{ 'products.product.pre_order' | t | json }},
+      unavailable: {{ 'products.product.unavailable' | t | json }},
+      recharge: {% if product.handle contains 'annual' %} "Subscribe" {% else %} "Subscribe For $1" {% endif %}
+    },
+    moneyFormat: {{ shop.money_format | json }}
+  };
+</script>
+
+{% unless request.path contains '/a/review' %}
+  {% if template == blank and page == blank %}
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+  {% endif %}
+{% endunless %}
+
+{% if template.directory == 'customers' %}
+  <script src="{{ 'shopify_common.js' | shopify_asset_url }}"></script>
+{% endif %}
+
+<link href="{{ 'theme.css' | asset_url }}" rel="stylesheet">
+<link href="{{ 'extra.css' | asset_url }}" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+{% if template.name == 'index' %}
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "name": "{{ shop.name }}",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "{{ shop.url }}/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "url": "{{ shop.url }}{{ page.url }}"
+    }
+  </script>
+{% endif %}
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js"></script>

@@ -1,0 +1,2884 @@
+{
+  "current": {
+    "logosvg": "",
+    "logo": "shopify:\/\/shop_images\/logo_180x_0bd27f5d-1cae-40e5-a7b0-c2449c57494d.png",
+    "animations_on": true,
+    "social_instagram_link": "https:\/\/www.instagram.com\/tacticalpro.supply\/",
+    "social_twitter_link": "",
+    "social_youtube_link": "",
+    "social_facebook_link": "https:\/\/www.facebook.com\/TacticalProSupply\/",
+    "brand_info_bg": "#ffffff",
+    "brand_info_icon": "",
+    "brand_info": "",
+    "favicon": "shopify:\/\/shop_images\/country.png",
+    "checkout_header_image": "",
+    "checkout_logo_image": "shopify:\/\/shop_images\/logo_180x_200x_5eeb0fd7-8882-4f0c-8f94-acbdc02a745d.png",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_accent_color": "#197bbd",
+    "checkout_button_color": "#197bbd",
+    "checkout_error_color": "#e32c2b",
+    "sections": {
+      "ea-topbar": {
+        "type": "ea-topbar",
+        "settings": {
+          "topbar_text1": "<p>Free Shipping Over $70 + Free Returns<\/p>",
+          "topbar_text2": "<p>🦅 DUE TO THE EFFECTS OF COVID-19, ALL ORDERS WILL BE DELAYED 7-10 BUSINESS DAYS 🗽<\/p>",
+          "topbar_menu": "top-bar"
+        }
+      },
+      "ea-nav-desktop": {
+        "type": "ea-nav-desktop",
+        "blocks": {
+          "1588250665194": {
+            "type": "dropdown_submenus",
+            "settings": {
+              "title": "Men",
+              "url": "",
+              "link_1_title": "Mens Tees",
+              "link_1_url": "\/",
+              "link_1_image": "shopify:\/\/shop_images\/1_copy.jpg",
+              "link_1_submenu": "men-tees",
+              "link_2_title": "Jackets",
+              "link_2_url": "\/collections\/jackets",
+              "link_2_image": "shopify:\/\/shop_images\/jacket-concealed-carry-softshell-jacket-1_394x_04ac40cb-968e-4788-bd55-2cc78d6a7f61.png",
+              "link_2_submenu": "",
+              "link_3_title": "Hoodies",
+              "link_3_url": "\/collections\/hoodies",
+              "link_3_image": "shopify:\/\/shop_images\/hoodies-army-camo-hoodie-1_394x_86c44e3a-e599-492d-8191-009d266981a9.png",
+              "link_3_submenu": "",
+              "link_4_title": "",
+              "link_4_url": "",
+              "link_4_image": "",
+              "link_4_submenu": "",
+              "link_5_title": "",
+              "link_5_url": "",
+              "link_5_image": "",
+              "link_5_submenu": ""
+            }
+          },
+          "1588627264096": {
+            "type": "dropdown_submenus",
+            "settings": {
+              "title": "Women",
+              "url": "",
+              "link_1_title": "leggings",
+              "link_1_url": "",
+              "link_1_image": "shopify:\/\/shop_images\/2.jpg",
+              "link_1_submenu": "",
+              "link_2_title": "Tees",
+              "link_2_url": "\/collections\/womens-shirts",
+              "link_2_image": "shopify:\/\/shop_images\/women-s-shirt-blue-line-womens-tee-1_394x_af52b054-8aff-4726-864d-2a5198670b88.png",
+              "link_2_submenu": "",
+              "link_3_title": "Hoodies",
+              "link_3_url": "\/collections\/hoodies",
+              "link_3_image": "shopify:\/\/shop_images\/hoodies-ban-idiots-hoodie-1_394x_a98c6dd5-d08b-4d8d-a057-606cdd10ac22.png",
+              "link_3_submenu": "",
+              "link_4_title": "Leggings",
+              "link_4_url": "\/collections\/leggings",
+              "link_4_image": "shopify:\/\/shop_images\/leggings-white-crest-flag-leggings-1_394x_b446526a-e872-4b68-9ade-4663e24088f0.png",
+              "link_4_submenu": "",
+              "link_5_title": "",
+              "link_5_url": "",
+              "link_5_image": "",
+              "link_5_submenu": ""
+            }
+          },
+          "1588627822972": {
+            "type": "dropdown_submenus",
+            "settings": {
+              "title": "Headwear",
+              "url": "",
+              "link_1_title": "Headwear",
+              "link_1_url": "",
+              "link_1_image": "shopify:\/\/shop_images\/3333e.jpg",
+              "link_1_submenu": "",
+              "link_2_title": "Flexfit",
+              "link_2_url": "\/collections\/flexfits",
+              "link_2_image": "shopify:\/\/shop_images\/headwear-white-flag-patch-flexfit-cap-1_2048x_394x_1733e787-60b0-4cdc-a908-253c7d4a31b2.png",
+              "link_2_submenu": "",
+              "link_3_title": "Snapbacks",
+              "link_3_url": "\/collections\/snapbacks",
+              "link_3_image": "shopify:\/\/shop_images\/headwear-old-glory-snapback-cap-1_2048xcopy_394x_fe0f0f92-da6c-40c1-b630-61cf5bbc83d0.png",
+              "link_3_submenu": "",
+              "link_4_title": "",
+              "link_4_url": "",
+              "link_4_image": "",
+              "link_4_submenu": "",
+              "link_5_title": "",
+              "link_5_url": "",
+              "link_5_image": "",
+              "link_5_submenu": ""
+            }
+          },
+          "1588628198038": {
+            "type": "dropdown_submenus",
+            "settings": {
+              "title": "Bottoms",
+              "url": "",
+              "link_1_title": "bottoms",
+              "link_1_url": "",
+              "link_1_image": "shopify:\/\/shop_images\/2222ee.jpg",
+              "link_1_submenu": "",
+              "link_2_title": "BOARD SHORTS",
+              "link_2_url": "\/collections\/board-shorts",
+              "link_2_image": "shopify:\/\/shop_images\/board-shorts-white-crest-flag-board-shorts-1_394x_a83a4d92-47c5-4724-85f1-21b1c480d8cb.png",
+              "link_2_submenu": "",
+              "link_3_title": "SWEATPANTS",
+              "link_3_url": "\/collections\/sweatpants",
+              "link_3_image": "shopify:\/\/shop_images\/sweatpants-white-crest-flag-sweatpants-1_394x_8602225f-08fa-460c-a111-4edfa89f56e3.png",
+              "link_3_submenu": "",
+              "link_4_title": "Leggings",
+              "link_4_url": "\/collections\/leggings",
+              "link_4_image": "shopify:\/\/shop_images\/leggings-white-crest-flag-leggings-1_394x_1.png",
+              "link_4_submenu": "",
+              "link_5_title": "",
+              "link_5_url": "",
+              "link_5_image": "",
+              "link_5_submenu": ""
+            }
+          },
+          "1588628390181": {
+            "type": "dropdown_submenus",
+            "settings": {
+              "title": "MISC",
+              "url": "",
+              "link_1_title": "",
+              "link_1_url": "",
+              "link_1_image": "",
+              "link_1_submenu": "",
+              "link_2_title": "Bottles",
+              "link_2_url": "\/collections\/shaker-bottles",
+              "link_2_image": "shopify:\/\/shop_images\/bottles-assaulting-forward-black-bottle-1_394x_7603fe07-6e53-4702-8c7e-4ad49bb81ef1.png",
+              "link_2_submenu": "",
+              "link_3_title": "Socks",
+              "link_3_url": "\/collections\/socks",
+              "link_3_image": "shopify:\/\/shop_images\/accessories-usa-flag-socks-1_394x_0d2757a3-dea5-4249-90d5-2a14527472d2.png",
+              "link_3_submenu": "",
+              "link_4_title": "Flags",
+              "link_4_url": "\/collections\/flags",
+              "link_4_image": "shopify:\/\/shop_images\/flags-blue-line-steel-flag-1_394x_99d2eb84-f342-44bc-93cf-f0407a6b445a.png",
+              "link_4_submenu": "",
+              "link_5_title": "CAMPING ESSENTIALS",
+              "link_5_url": "\/collections\/camping-essentials",
+              "link_5_image": "shopify:\/\/shop_images\/accessories-kevlar-reinforced-ranger-pack-1_394x_20cb559e-dc87-4b6b-b6e5-58a4a9ae27dd.png",
+              "link_5_submenu": ""
+            }
+          },
+          "1588628530876": {
+            "type": "link",
+            "settings": {
+              "title": "Proud Supporters",
+              "url": "\/pages\/happy-patriots"
+            }
+          }
+        },
+        "block_order": [
+          "1588250665194",
+          "1588627264096",
+          "1588627822972",
+          "1588628198038",
+          "1588628390181",
+          "1588628530876"
+        ],
+        "settings": {
+        }
+      },
+      "ea-nav-mobile": {
+        "type": "ea-nav-mobile",
+        "settings": {
+          "main_link_list": ""
+        }
+      },
+      "ea-footer": {
+        "type": "ea-footer",
+        "blocks": {
+          "1588218601834": {
+            "type": "menu",
+            "settings": {
+              "menu": "footer"
+            }
+          },
+          "1588218606725": {
+            "type": "menu",
+            "settings": {
+              "menu": "info"
+            }
+          }
+        },
+        "block_order": [
+          "1588218601834",
+          "1588218606725"
+        ],
+        "settings": {
+          "logo": "",
+          "svglogo": "",
+          "info": "<p>(516) 927-7831&nbsp;&nbsp;&bull;&nbsp;<a href=\"https:\/\/www.tacticalprosupply.com\/pages\/contact-us\">Contact Us<\/a><\/p>\n<p>Tactical Pro Supply<br>109 Allen Blvd<br>Farmingdale, NY 11735<\/p>",
+          "showSocial": true,
+          "bottom_menu": "",
+          "copy": "<p>&copy; 2020, <a href=\"\/\" title=\"\/\">Tactical Pro Supply, LLC<\/a><\/p>\n<p><a href=\"https:\/\/www.shopify.com\/?utm_campaign=poweredby&amp;utm_medium=shopify&amp;utm_source=onlinestore\" title=\"https:\/\/www.shopify.com\/?utm_campaign=poweredby&amp;utm_medium=shopify&amp;utm_source=onlinestore\">Powered by Shopify<\/a><\/p>"
+        }
+      },
+      "1587769587725": {
+        "type": "ea-text",
+        "disabled": true,
+        "settings": {
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "title": "COVID-19:",
+          "text": "<p>Unfortunately, the effects of COVID-19 have impacted our shipping and&nbsp;<strong>all orders will be delayed in<\/strong>&nbsp;<strong>delivery by 7-10 business days.<\/strong><\/p>\n<p>That said, we&rsquo;ve all been impacted in one way or another. It&rsquo;s important that we remain strong and stand united in the fight against this crisis, just as we&rsquo;ve done with all the others that have tried to rattle our country.<\/p>\n<p>In the interim, TPS will remain committed to providing you, our customers, with only the highest-quality products and our utmost support in this trying time. Please contact us with any questions or concerns. Your satisfaction is our biggest objective&ndash; now and beyond this crisis.<\/p>\n<p><\/p>"
+        }
+      },
+      "1588183795403": {
+        "type": "video",
+        "settings": {
+          "visible": true,
+          "ptop": 0,
+          "pbottom": 0,
+          "ptop_mob": 0,
+          "pbottom_mob": 0,
+          "sectionbg": "#ffffff",
+          "video_url": "https:\/\/vimeo.com\/403009208",
+          "full_width": true
+        }
+      },
+      "1588187451951": {
+        "type": "ea-text",
+        "settings": {
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "title": "OUR MISSION:",
+          "text": "<p>The strongest weapon in the United States is a patriotic American. Here at Tactical Pro Supply, we donate a portion of every sale to the PTSD Foundation of America because we believe that it is our duty to help those who have sacrificed their lives to defend our freedoms. Join us on our mission to build American pride and help our troops overcome the devastating effects of PTSD. We&nbsp;would be proud to have your support, and we are honoured by your patronage.<\/p>"
+        }
+      },
+      "1588196746310": {
+        "type": "ea-gallery",
+        "blocks": {
+          "1588196746310-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/1_copy.jpg",
+              "link": "\/collections\/mens-shirts",
+              "title": "Men's Tees"
+            }
+          },
+          "1588196746310-1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/2.jpg",
+              "link": "\/collections\/womens-shirts",
+              "title": "Women's Tees"
+            }
+          },
+          "1588196746310-2": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/3.jpg",
+              "link": "\/collections\/headwear",
+              "title": "Headwear"
+            }
+          },
+          "1588196746310-3": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/21212.jpg",
+              "link": "\/collections\/hoodies",
+              "title": "Hoodies"
+            }
+          },
+          "1588199684956": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/2222ee.jpg",
+              "link": "\/collections\/board-shorts",
+              "title": "Board Shorts"
+            }
+          }
+        },
+        "block_order": [
+          "1588196746310-0",
+          "1588196746310-1",
+          "1588196746310-2",
+          "1588196746310-3",
+          "1588199684956"
+        ],
+        "settings": {
+          "visible": true,
+          "title": "OUR COLLECTIONS:",
+          "ptop": 0,
+          "pbottom": 0,
+          "ptop_mob": 0,
+          "pbottom_mob": 0,
+          "full_width": false,
+          "section_padding": true,
+          "images_per_row": "3",
+          "gutter": true,
+          "zoom": false,
+          "color_overlay": "#4f4f4f",
+          "color_overlay_hover": "#000000",
+          "color_overlay_text": "#ffffff",
+          "color_overlay_alpha": 28
+        }
+      },
+      "1588200941482": {
+        "type": "ea-gallery",
+        "blocks": {
+          "1588200941482-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/2323.jpg",
+              "link": "\/collections\/leggings",
+              "title": "Leggings"
+            }
+          },
+          "1588200941482-1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/3435.jpg",
+              "link": "\/collections\/jackets",
+              "title": "Jackets"
+            }
+          },
+          "1588200941482-2": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/43r43r.jpg",
+              "link": "\/collections\/sweatpants",
+              "title": "Sweatpants"
+            }
+          },
+          "1588200941482-3": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/sssss.jpg",
+              "link": "\/collections\/all-accessories",
+              "title": "MISC."
+            }
+          }
+        },
+        "block_order": [
+          "1588200941482-0",
+          "1588200941482-1",
+          "1588200941482-2",
+          "1588200941482-3"
+        ],
+        "settings": {
+          "visible": true,
+          "title": "",
+          "ptop": 0,
+          "pbottom": 0,
+          "ptop_mob": 0,
+          "pbottom_mob": 0,
+          "full_width": false,
+          "section_padding": true,
+          "images_per_row": "4",
+          "gutter": true,
+          "zoom": true,
+          "color_overlay": "#4f4f4f",
+          "color_overlay_hover": "#000000",
+          "color_overlay_text": "#ffffff",
+          "color_overlay_alpha": 40
+        }
+      },
+      "ea-ordering": {
+        "type": "ea-ordering",
+        "settings": {
+        }
+      },
+      "ea-product-main": {
+        "type": "ea-product-main",
+        "settings": {
+          "ptop": 45,
+          "pbottom": 80,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "info": "<p>Professionally Printed Graphic<\/p>\n<p>100% Cotton<\/p>\n<p>Fits True to Size<\/p>\n<p>Proceeds Donated to the PTSD Foundation<\/p>",
+          "info2": "<p>Join Team Tactical today for ONLY $1, then $20 on the first of each month after that or go with an annual membership of $220 and save 20%.<\/p>"
+        }
+      },
+      "ingredients--product": {
+        "type": "ingredients--product",
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "pretitle": "",
+          "title": "",
+          "subtitle": "",
+          "btntop": 45,
+          "btnu": "",
+          "btn": "View All Ingredients"
+        }
+      },
+      "results": {
+        "type": "results",
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "pretitle": "",
+          "title": "",
+          "subtitle": ""
+        }
+      },
+      "faq--product": {
+        "type": "faq--product",
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "image": "",
+          "pretitle": "",
+          "title": "",
+          "subtitle": "",
+          "btntop": 45,
+          "btnu": "",
+          "btn": "ORDER NOW"
+        }
+      },
+      "s2--product": {
+        "type": "s2--product",
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "pretitle": "",
+          "title": "Title"
+        }
+      },
+      "ea-reviews": {
+        "type": "ea-reviews",
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "bg_image": "shopify:\/\/shop_images\/2_cffd165a-f278-417b-96f5-17e4806d6b65.jpg",
+          "fg_image": "shopify:\/\/shop_images\/432423.png"
+        }
+      },
+      "hero--collection": {
+        "type": "hero--collection",
+        "settings": {
+        }
+      },
+      "collection": {
+        "type": "collection",
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "show_product_price": true,
+          "show_product_info": true
+        }
+      },
+      "s3--collection": {
+        "type": "s3--collection",
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "title": "",
+          "subtitle": ""
+        }
+      },
+      "1588218824776": {
+        "type": "ea-hor-slider",
+        "blocks": {
+          "1588218824776-0": {
+            "type": "slide",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/tt01_1920x_0809f8fb-a453-4a52-ad0f-a63fea57bfbd.jpg",
+              "title": "",
+              "text": "<p>Americas #1 Patriotic T-Shirt Subscription! Providing TRUE Patriots with monthly deliveries containing all new and exclusive Tactical Pro Supply T-Shirts in your preferred size!<\/p>",
+              "bullet_title": "",
+              "btn": "CLICK HERE FOR MORE INFO",
+              "btnu": ""
+            }
+          }
+        },
+        "block_order": [
+          "1588218824776-0"
+        ],
+        "settings": {
+          "visible": true,
+          "ptop": 60,
+          "pbottom": 110,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#fafafa",
+          "bgimage": "",
+          "bgwidth": 56,
+          "bgpos": "right",
+          "bgtop": 0,
+          "bgedge": -15,
+          "title": "🗽 JOIN TEAM TACTICAL!"
+        }
+      },
+      "1588219362411": {
+        "type": "s1",
+        "blocks": {
+          "1588219416162": {
+            "type": "logo",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/11_260x_414a831d-3242-4199-9d91-a61eda46ddde.jpg",
+              "text": ""
+            }
+          },
+          "1588219407502": {
+            "type": "logo",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/12_260x_ab1c7ea1-a2d0-41c8-b72a-002cfe8c08a4.jpg",
+              "text": ""
+            }
+          },
+          "1588219362411-1": {
+            "type": "logo",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/14_260x_4182523f-d5af-4980-ab35-7c741a585a78.jpg",
+              "text": ""
+            }
+          },
+          "1588219362411-0": {
+            "type": "logo",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/13_260x_f33c38e2-7755-44fb-9c5f-610384403bd8.jpg",
+              "text": ""
+            }
+          }
+        },
+        "block_order": [
+          "1588219416162",
+          "1588219407502",
+          "1588219362411-1",
+          "1588219362411-0"
+        ],
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff"
+        }
+      },
+      "hero--faq": {
+        "type": "hero--faq",
+        "blocks": {
+          "1588716106230": {
+            "type": "hero",
+            "settings": {
+              "visible": true,
+              "sectionbg": "#fff",
+              "hero_image": "shopify:\/\/shop_images\/1_3e8ff99d-5615-46cf-948e-0f0843840457.jpg",
+              "image_top_desktop": 0,
+              "hero_image_mobile": "shopify:\/\/shop_images\/Untitled-3.jpg",
+              "image_top_mobile": 0,
+              "text_pos": "left",
+              "text_top": 41,
+              "text_left": 0,
+              "text_pos_mobile": "center",
+              "text_top_mobile": 19,
+              "text_left_mobile": 0,
+              "pretitle": "",
+              "title": "<p>Got Questions?<\/p>",
+              "title_large": false,
+              "subtitle": "<p>Tactical has answers<\/p>",
+              "subtitle_large": false,
+              "white_text": false,
+              "btntop": 45,
+              "btnu": "",
+              "btn": "BUY",
+              "white_btn": false,
+              "large_btn": false
+            }
+          }
+        },
+        "block_order": [
+          "1588716106230"
+        ],
+        "settings": {
+        }
+      },
+      "faq": {
+        "type": "faq",
+        "blocks": {
+          "1588219502103": {
+            "type": "shipping",
+            "settings": {
+              "title": "How fast do you ship?",
+              "answer": "<p>Purchased items will be shipped within&nbsp;<span style=\"text-decoration: underline;\"><strong>2&nbsp;business days<\/strong><\/span>&nbsp;of the order. Please allow up to 1 week from ship date for your delivery to arrive. If you still have not received your purchase after 1 week, please notify contact@tacticalprosupply.com and provide us with your order number. &nbsp;<\/p>"
+            }
+          },
+          "1588219530691": {
+            "type": "shipping",
+            "settings": {
+              "title": "Domestic (USA) - USPS Mail",
+              "answer": "<p>All domestic orders&nbsp;ship via USPS First Class or Priority mail depending&nbsp;on the weight of your package.<\/p>"
+            }
+          },
+          "1588219539802": {
+            "type": "shipping",
+            "settings": {
+              "title": "International - USPS Mail",
+              "answer": "<p>This is an American Company. We only ship within the United States of America.<\/p>"
+            }
+          },
+          "1588219552764": {
+            "type": "shipping",
+            "settings": {
+              "title": "Please Note*",
+              "answer": "<p><em>Tactical Pro Supply&nbsp;is not responsible for international shipping delays, such as customs delays and is not responsible for any customs duties or taxes. We are not responsible for any lost, stolen, or damaged shipments. The buyer assumes all responsibilities of claims made with the shipping carrier and all duties\/fees incurred on the shipment. Please contact&nbsp;tacticalprosupply@gmail.com&nbsp;if you have any questions.&nbsp;Customs authorities require that we state the value of your order directly on your package this price is calculated by the retail cost. It is at the sole discretion of customs agents to release your package. Note, on rare occasions, customs agents may delay delivery of some packages. For more information on customs and duties charges, please contact your local customs office.<\/em><\/p>"
+            }
+          },
+          "1588219575660": {
+            "type": "shipping",
+            "settings": {
+              "title": "HOLIDAY SCHEDULE",
+              "answer": "<p>Please note: Packages are shipped out on business days. The following are holidays and considered to be non-business days:<br>New Year&rsquo;s Day<br>Martin Luther King&rsquo;s Birthday<br>Presidents&rsquo; Day<br>Memorial Day<br>Independence Day<br>Labor Day<br>Thanksgiving Day<br>The Day After Thanksgiving Day<br>Christmas Day<\/p>"
+            }
+          },
+          "1588219586801": {
+            "type": "shipping",
+            "settings": {
+              "title": "PO BOXES",
+              "answer": "<p>Orders shipping to international PO Boxes will be sent via USPS first-class. Tracking numbers are available through USPS until international package leaves the United States. Once your package leaves the United States it is then in the hands of your local post office and will not have a tracking number.<br>&nbsp;<br>Packages going to Australia will be handed off to:<br>&nbsp;<br>Australia Postal Corp -613 8847 9045<br>&nbsp;<br>Packages going to the UK will be handed off to one of the two listed below:<br><br>Parcel Force- 08448 00 44 66<br>Royal Mail- 08457 740 740<\/p>"
+            }
+          },
+          "1588219609949": {
+            "type": "returns",
+            "settings": {
+              "title": "EXCHANGE RATES",
+              "answer": "<p>All prices shown on the website are in U.S. dollars. If you need a conversion to your local currency, please refer to yahoo.finance.com or a similar website. Exchange rates change daily, and we are not responsible for any loss incurred as a result of currency fluctuation. Please note that your credit card processor may charge you a conversion rate fee.<\/p>\n<p>Credit Card will not work at Checkout:<br>You can always use PayPal.&nbsp; Sometimes credit cards will not work due to the customer moving to a new address that does not match up with old address where he or she had the bank or credit card.<\/p>"
+            }
+          },
+          "1588716058728": {
+            "type": "shipping",
+            "settings": {
+              "title": "",
+              "answer": ""
+            }
+          },
+          "1588716062351": {
+            "type": "returns",
+            "settings": {
+              "title": "",
+              "answer": ""
+            }
+          },
+          "1588716065520": {
+            "type": "order",
+            "settings": {
+              "title": "",
+              "answer": ""
+            }
+          },
+          "1588716070887": {
+            "type": "products",
+            "settings": {
+              "title": "",
+              "answer": ""
+            }
+          }
+        },
+        "block_order": [
+          "1588219502103",
+          "1588219530691",
+          "1588219539802",
+          "1588219552764",
+          "1588219575660",
+          "1588219586801",
+          "1588219609949",
+          "1588716058728",
+          "1588716062351",
+          "1588716065520",
+          "1588716070887"
+        ],
+        "settings": {
+          "visible": true,
+          "ptop": 0,
+          "pbottom": 45,
+          "ptop_mob": 0,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "btntop": 45,
+          "btnu": "",
+          "btn": "ORDER NOW"
+        }
+      },
+      "ea-login": {
+        "type": "ea-login",
+        "settings": {
+          "sectionbg": "#ffffff",
+          "page_title": "<p>Welcome to&nbsp;Tactical Pro Supply<\/p>",
+          "title": "<p>Login<\/p>",
+          "subtitle": "",
+          "btn": "Sign In",
+          "forgotlink": "Forgot Your Password?",
+          "title2": "<p>CREATE ACCOUNT<\/p>",
+          "subtitle2": "",
+          "register_text": "Create Account"
+        }
+      },
+      "ea-login-forgot-password": {
+        "type": "ea-login-forgot-password",
+        "settings": {
+          "sectionbg": "#ffffff",
+          "title": "<p>RESET YOUR PASSWORD<\/p>",
+          "subtitle": "<p>We will send you an email to reset your password.<\/p>",
+          "image": "shopify:\/\/shop_images\/3.jpg",
+          "loginlink": "Cancel",
+          "btn": "SUBMIT"
+        }
+      },
+      "blog-featured": {
+        "type": "blog-featured",
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff"
+        }
+      },
+      "blog-main": {
+        "type": "blog-main",
+        "settings": {
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "posts_per_row": 3,
+          "posts_per_row_mobile": 1,
+          "blog_posts_per_page": 12
+        }
+      },
+      "article-page": {
+        "type": "article-page",
+        "settings": {
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "showSocial": true,
+          "sidebarbg": "#ffffff",
+          "sidebar_title": "",
+          "show_product_price": true,
+          "show_product_info": true
+        }
+      },
+      "blog-related": {
+        "type": "blog-related",
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "title": "",
+          "max_posts": 14,
+          "posts_per_row": 3,
+          "posts_per_row_mobile": 1
+        }
+      },
+      "1588246885221": {
+        "type": "featured-products",
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "full_width": false,
+          "sectionbg": "#ffffff",
+          "pretitle": "",
+          "title": "FLAGSHIP COLLECTION:",
+          "collection": "all-products",
+          "product_count": "8"
+        }
+      },
+      "ea-benefits": {
+        "type": "ea-benefits",
+        "blocks": {
+          "1588284488695": {
+            "type": "benefit",
+            "settings": {
+              "title": "For True Patriots",
+              "text": "<p>The strongest weapon in the United States is a patriotic American. We make clothes for those who are proud to stand united with our brothers and sister who defend this great country.<\/p>",
+              "image": "shopify:\/\/shop_images\/3000x3000.png"
+            }
+          },
+          "1588285322147": {
+            "type": "benefit",
+            "settings": {
+              "title": "Proudly Made",
+              "text": "<p>Print, packaging and shipping! We believe in providing the American people with premium quality products that represents everything this country stands for.<\/p>",
+              "image": "shopify:\/\/shop_images\/New_Project.png"
+            }
+          },
+          "1588518303438": {
+            "type": "benefit",
+            "settings": {
+              "title": "American Quality",
+              "text": "<p>These tees are made from 100% cotton with breathable performance. As our glorious nation, the inks resists the threats of fading from the sun and time. you&rsquo;ll have comfort, fit, and looks that last.<\/p>",
+              "image": "shopify:\/\/shop_images\/New_Project_1.png"
+            }
+          },
+          "1588518333020": {
+            "type": "benefit",
+            "settings": {
+              "title": "Tactical Designs",
+              "text": "<p>Your t-shirts say a lot about you. Let your beliefs shine with our designs that say you are a patriot! Just wearing our powerful graphic tees can make you a bold builder of American pride.<\/p>",
+              "image": "shopify:\/\/shop_images\/New_Project_2.png"
+            }
+          }
+        },
+        "block_order": [
+          "1588284488695",
+          "1588285322147",
+          "1588518303438",
+          "1588518333020"
+        ],
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "sectionbg": "#ffffff",
+          "title": "MEN TEES FOR REAL PATRIOTS",
+          "text": "",
+          "bottom_image": "shopify:\/\/shop_images\/New_Project.jpg"
+        }
+      },
+      "ea-text-and-video": {
+        "type": "ea-text-and-video",
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "video_url": "https:\/\/www.youtube.com\/watch?v=WGmsMyzT3mU",
+          "bgimage": "shopify:\/\/shop_images\/New_Project_4.png",
+          "sectionbg": "#ffffff",
+          "title": "<p>HIGH QUALITY<\/p>\n<p>PREMIUM SHIRTS<\/p>",
+          "text": "<p>Our distressed, heavyweight USA tshirts are designed, developed, and manufactured with the utmost care and attention to detail right here in the US. Our comfort-focused American flag clothes are for men or for women and are as durable as they come.<\/p>",
+          "btntop": 45,
+          "btnu": "\/",
+          "btn": "ORDER NOW"
+        }
+      },
+      "ea-made-in": {
+        "type": "ea-made-in",
+        "blocks": {
+          "1588532888630": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/New_Project_1.jpg",
+              "pos": "left"
+            }
+          },
+          "1588532935228": {
+            "type": "text",
+            "settings": {
+              "text": "<p>We are family owned and operated, and we believe in good old-fashioned red, white, and blue values. Pride in country, pride in self, and pride in our products. Best of all, we keep jobs in 'MERICA!<\/p>",
+              "pos": "left"
+            }
+          },
+          "1588532920712": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/New_Project_2.jpg",
+              "pos": "right"
+            }
+          },
+          "1588532948185": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/New_Project_3.jpg",
+              "pos": "right"
+            }
+          }
+        },
+        "block_order": [
+          "1588532888630",
+          "1588532935228",
+          "1588532920712",
+          "1588532948185"
+        ],
+        "settings": {
+          "visible": true,
+          "ptop": 0,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#071b33",
+          "title": "<p>DESIGNED, PRINTED, PACKAGED,<\/p>\n<p>AND SHIPPED IN THE USA<\/p>",
+          "text": "<p>Our patriotic apparel company is based<\/p>\n<p>entirely in the United States of America.<\/p>",
+          "btntop": 0,
+          "btnu": "",
+          "btn": "ORDER NOW"
+        }
+      },
+      "ea-image-and-text": {
+        "type": "ea-image-and-text",
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "rgba(0,0,0,0)",
+          "image": "shopify:\/\/shop_images\/2.png",
+          "image_pos": "right",
+          "top_label": "FITS TRUE TO SIZE!",
+          "title": "<p>EASY TO FOLLOW SIZING<\/p>",
+          "text": "<p>To&nbsp;<strong>determine which size to buy<\/strong>, see dimensions guide. Measurements are in inches and are measured when the shirt is lying flat on a hard surface. Width is measured armpit to armpit, and the length is measured from the very top of the shirt to the bottom.<\/p>",
+          "btntop": 45,
+          "btnu": "",
+          "btn": "ORDER NOW"
+        }
+      },
+      "ea-support-our-troops": {
+        "type": "ea-support-our-troops",
+        "settings": {
+          "visible": true,
+          "ptop": 80,
+          "pbottom": 40,
+          "ptop_mob": 0,
+          "pbottom_mob": 0,
+          "sectionbg": "#ffffff",
+          "image_bg": "shopify:\/\/shop_images\/6342344423.jpg",
+          "image": "shopify:\/\/shop_images\/eweraddadas.png",
+          "image_pos": "left",
+          "title": "<p>HELP US GIVE BACK TO THE PTSD FOUNDATION OF AMERICA!<\/p>",
+          "text": "<p>We proudly donate a portion of every single clothing purchase to our favorite charity, the PTSD Foundation which aids our active duty military and veterans across all branches: Army, Navy, Air Force, Marines, and Coast Guard.&nbsp;<strong>Support our troops.<\/strong>&nbsp;Do your part in providing hope and healing for the unseen wounds of war..<\/p>",
+          "btntop": 15,
+          "btnu": "",
+          "btn": "ORDER NOW"
+        }
+      },
+      "ea-related-products": {
+        "type": "ea-related-products",
+        "settings": {
+          "visible": true,
+          "ptop": 125,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "full_width": false,
+          "sectionbg": "#ffffff",
+          "pretitle": "",
+          "title": "RELATED PRODUCTS",
+          "collection": "",
+          "product_count": "3"
+        }
+      },
+      "ea-search-results": {
+        "type": "ea-search-results",
+        "settings": {
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff"
+        }
+      },
+      "ea-product-main--recharge": {
+        "type": "ea-product-main--recharge",
+        "settings": {
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "info": "<p>Professionally Printed Graphic<\/p>",
+          "info2": "<p>Join Team Tactical today for ONLY $1, then $20 on the first of each month after that or go with an annual membership of $220 and save 20%.<\/p>"
+        }
+      },
+      "ea-popup--recharge": {
+        "type": "ea-popup--recharge",
+        "settings": {
+          "title": "<p>Membership Savings<\/p>"
+        }
+      },
+      "ea-product-main--women-tees": {
+        "type": "ea-product-main--women-tees",
+        "settings": {
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "info": "<p>Professionally Printed Graphic<\/p>\n<p>100% Cotton<\/p>\n<p>Fits True to Size<\/p>\n<p>Proceeds Donated to the PTSD Foundation<\/p>",
+          "info2": "<p><strong>Premium Quality Garments<\/strong><\/p>"
+        }
+      },
+      "ea-benefits--women-tees": {
+        "type": "ea-benefits--women-tees",
+        "blocks": {
+          "1588705593026": {
+            "type": "benefit",
+            "settings": {
+              "title": "For True Patriots",
+              "text": "<p><span style=\"text-decoration: none;\">The strongest weapon in the United States is a patriotic American. We make clothes for those who are proud to stand united with our brothers and sister who defend this great country.<\/span><\/p>",
+              "image": "shopify:\/\/shop_images\/3000x3000.png"
+            }
+          },
+          "1588705620981": {
+            "type": "benefit",
+            "settings": {
+              "title": "Proudly Made",
+              "text": "<p><span style=\"text-decoration: none;\">Print, packaging and shipping! We believe in providing the American people with premium quality products that represents everything this country stands for<\/span><\/p>",
+              "image": "shopify:\/\/shop_images\/New_Project.png"
+            }
+          },
+          "1588705641004": {
+            "type": "benefit",
+            "settings": {
+              "title": "American Quality",
+              "text": "<p><span style=\"text-decoration: none;\">These tees are made from 100% cotton with breathable performance. As our glorious nation, the inks resists the threats of fading from the sun and time. you&rsquo;ll have comfort, fit, and looks that last.<\/span><\/p>",
+              "image": "shopify:\/\/shop_images\/New_Project_1.png"
+            }
+          },
+          "1588705659373": {
+            "type": "benefit",
+            "settings": {
+              "title": "Tactical Designs",
+              "text": "<p><span style=\"text-decoration: none;\">Your t-shirts say a lot about you. Let your beliefs shine with our designs that say you are a patriot! Just wearing our powerful graphic tees can make you a bold builder of American pride.<\/span><\/p>",
+              "image": "shopify:\/\/shop_images\/New_Project_2.png"
+            }
+          }
+        },
+        "block_order": [
+          "1588705593026",
+          "1588705620981",
+          "1588705641004",
+          "1588705659373"
+        ],
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "sectionbg": "#ffffff",
+          "title": "WOMEN TEES FOR REAL PATRIOTS",
+          "text": "",
+          "bottom_image": "shopify:\/\/shop_images\/New_Project.jpg"
+        }
+      },
+      "ea-text-and-video--women-tees": {
+        "type": "ea-text-and-video--women-tees",
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "video_url": "https:\/\/youtu.be\/WGmsMyzT3mU",
+          "bgimage": "shopify:\/\/shop_images\/lighter_8ff31176-1d72-4337-a066-0aa6f8e7dcb6.png",
+          "sectionbg": "#ffffff",
+          "title": "<p>HIGH QUALITY<\/p>\n<p>PREMIUM SHIRTS<\/p>",
+          "text": "<p><span style=\"text-decoration: none;\">Our distressed, heavyweight USA tshirts are designed, developed, and manufactured with the utmost care and attention to detail right here in the US. Our comfort-focused American flag clothes are for men or for women and are as durable as they come.<\/span><\/p>",
+          "btntop": 15,
+          "btnu": "",
+          "btn": "ADD TO CART"
+        }
+      },
+      "ea-made-in--women-tees": {
+        "type": "ea-made-in--women-tees",
+        "blocks": {
+          "1588706349083": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/lighter_8648f502-045f-4a8a-a0b2-b00c366acc02.jpg",
+              "pos": "left"
+            }
+          },
+          "1588706390894": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/lighter1.jpg",
+              "pos": "right"
+            }
+          },
+          "1588706397949": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/2_4b21756c-92a2-4484-9e53-ebe74e3907b7.jpg",
+              "pos": "right"
+            }
+          },
+          "1588706403933": {
+            "type": "text",
+            "settings": {
+              "text": "<p><span style=\"text-decoration: none;\">We are family owned and operated, and we believe in good old-fashioned red, white, and blue values. Pride in country, pride in self, and pride in our products. Best of all, we keep jobs in 'MERICA!<\/span><\/p>",
+              "pos": "left"
+            }
+          }
+        },
+        "block_order": [
+          "1588706349083",
+          "1588706390894",
+          "1588706397949",
+          "1588706403933"
+        ],
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#002e56",
+          "title": "<p>DESIGNED, PRINTED, PACKAGED,<br>AND SHIPPED IN THE USA<\/p>",
+          "text": "<p><span style=\"text-decoration: none;\">Our patriotic apparel company is based<br>entirely in the United States of America.<\/span><\/p>",
+          "btntop": 0,
+          "btnu": "",
+          "btn": "Add to cart"
+        }
+      },
+      "ea-image-and-text--women-tees": {
+        "type": "ea-image-and-text--women-tees",
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "image": "shopify:\/\/shop_images\/lighter_16e919c1-a4c9-4b24-af26-aa1cfc4b26cd.png",
+          "image_pos": "right",
+          "top_label": "FITS TRUE TO SIZE!",
+          "title": "<p>EASY TO FOLLOW SIZING<\/p>",
+          "text": "<p><span style=\"text-decoration: none;\">To <\/span><strong>determine which size to buy<\/strong><span style=\"text-decoration: none;\">, see dimensions guide. Measurements are in inches and are measured when the shirt is lying flat on a hard surface. Width is measured armpit to armpit, and the length is measured from the very top of the shirt to the bottom.<\/span><\/p>",
+          "btntop": 45,
+          "btnu": "",
+          "btn": "Order now"
+        }
+      },
+      "ea-reviews--women-tees": {
+        "type": "ea-reviews--women-tees",
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "bg_image": "shopify:\/\/shop_images\/2_cffd165a-f278-417b-96f5-17e4806d6b65.jpg",
+          "fg_image": "shopify:\/\/shop_images\/download.png"
+        }
+      },
+      "ea-support-our-troops--women-tees": {
+        "type": "ea-support-our-troops--women-tees",
+        "settings": {
+          "visible": true,
+          "ptop": 80,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "image_bg": "shopify:\/\/shop_images\/6342344423.jpg",
+          "image": "shopify:\/\/shop_images\/eweraddadas.png",
+          "image_pos": "left",
+          "title": "<p>HELP US GIVE BACK TO THE PTSD FOUNDATION OF AMERICA!<\/p>",
+          "text": "<p><span style=\"text-decoration: none;\">We proudly donate a portion of every single clothing purchase to our favorite charity, the PTSD Foundation which aids our active duty military and veterans across all branches: Army, Navy, Air Force, Marines, and Coast Guard. <\/span><strong>Support our troops.<\/strong><span style=\"text-decoration: none;\"> Do your part in providing hope and healing for the unseen wounds of war..<\/span><\/p>",
+          "btntop": 15,
+          "btnu": "",
+          "btn": "Add to cart"
+        }
+      },
+      "ea-related-products--women-tees": {
+        "type": "ea-related-products--women-tees",
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "full_width": false,
+          "sectionbg": "#ffffff",
+          "pretitle": "",
+          "title": "RELATED PRODUCTS",
+          "collection": "",
+          "product_count": "3"
+        }
+      },
+      "ea-product-main--men-tees": {
+        "type": "ea-product-main--men-tees",
+        "settings": {
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "info": "<p>Professionally Printed Graphic&nbsp;<\/p>\n<p>100% Cotton&nbsp;<\/p>\n<p>Fits True to Size&nbsp;<\/p>\n<p>Proceeds Donated to the PTSD Foundation<\/p>",
+          "info2": "<p><strong>Premium Quality Garments<\/strong><\/p>"
+        }
+      },
+      "ea-benefits--men-tees": {
+        "type": "ea-benefits--men-tees",
+        "blocks": {
+          "1588703802551": {
+            "type": "benefit",
+            "settings": {
+              "title": "For True Patriots",
+              "text": "<p>The strongest weapon in the United States is a patriotic American. We make clothes for those who are proud to stand united with our brothers and sister who defend this great country.<\/p>",
+              "image": "shopify:\/\/shop_images\/3000x3000.png"
+            }
+          },
+          "1588703815010": {
+            "type": "benefit",
+            "settings": {
+              "title": "Proudly Made",
+              "text": "<p>Print, packaging and shipping! We believe in providing the American people with premium quality products that represents everything this country stands for.<\/p>",
+              "image": "shopify:\/\/shop_images\/New_Project.png"
+            }
+          },
+          "1588703842872": {
+            "type": "benefit",
+            "settings": {
+              "title": "American Quality",
+              "text": "<p>These tees are made from 100% cotton with breathable performance. As our glorious nation, the inks resists the threats of fading from the sun and time. you&rsquo;ll have comfort, fit, and looks that last.<\/p>",
+              "image": "shopify:\/\/shop_images\/New_Project_1.png"
+            }
+          },
+          "1588703864127": {
+            "type": "benefit",
+            "settings": {
+              "title": "Tactical Designs",
+              "text": "<p>Your t-shirts say a lot about you. Let your beliefs shine with our designs that say you are a patriot! Just wearing our powerful graphic tees can make you a bold builder of American pride.<\/p>",
+              "image": "shopify:\/\/shop_images\/New_Project_2.png"
+            }
+          }
+        },
+        "block_order": [
+          "1588703802551",
+          "1588703815010",
+          "1588703842872",
+          "1588703864127"
+        ],
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "sectionbg": "#ffffff",
+          "title": "MEN TEES FOR REAL PATRIOTS",
+          "text": "",
+          "bottom_image": "shopify:\/\/shop_images\/New_Project.jpg"
+        }
+      },
+      "ea-text-and-video--men-tees": {
+        "type": "ea-text-and-video--men-tees",
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "video_url": "https:\/\/youtu.be\/WGmsMyzT3mU",
+          "bgimage": "shopify:\/\/shop_images\/bg-video.jpg",
+          "sectionbg": "#ffffff",
+          "title": "<p>HIGH QUALITY PREMIUM SHIRTS<\/p>",
+          "text": "<p>Our distressed, heavyweight USA tshirts are designed, developed, and manufactured with the utmost care and attention to detail right here in the US. Our comfort-focused American flag clothes are for men or for women and are as durable as they come.<\/p>",
+          "btntop": 45,
+          "btnu": "",
+          "btn": "ORDER NOW"
+        }
+      },
+      "ea-made-in--men-tees": {
+        "type": "ea-made-in--men-tees",
+        "blocks": {
+          "1588704081347": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/New_Project_1.jpg",
+              "pos": "left"
+            }
+          },
+          "1588704116126": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/New_Project_2.jpg",
+              "pos": "right"
+            }
+          },
+          "1588704132441": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/New_Project_3.jpg",
+              "pos": "right"
+            }
+          },
+          "1588704153511": {
+            "type": "text",
+            "settings": {
+              "text": "<p>We are family owned and operated, and we believe in good old-fashioned red, white, and blue values. Pride in country, pride in self, and pride in our products. Best of all, we keep jobs in 'MERICA!<\/p>",
+              "pos": "left"
+            }
+          }
+        },
+        "block_order": [
+          "1588704081347",
+          "1588704116126",
+          "1588704132441",
+          "1588704153511"
+        ],
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#0d1c30",
+          "title": "<p>DESIGNED, PRINTED, PACKAGED,<br>AND SHIPPED IN THE USA<\/p>",
+          "text": "<p>Our patriotic apparel company is based<br>entirely in the United States of America.<\/p>",
+          "btntop": 0,
+          "btnu": "",
+          "btn": "ORDER NOW"
+        }
+      },
+      "ea-image-and-text--men-tees": {
+        "type": "ea-image-and-text--men-tees",
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "image": "shopify:\/\/shop_images\/2.png",
+          "image_pos": "right",
+          "top_label": "FITS TRUE TO SIZE!",
+          "title": "<p>EASY TO FOLLOW SIZING<\/p>",
+          "text": "<p>To determine which size to buy, see dimensions guide. Measurements are in inches and are measured when the shirt is lying flat on a hard surface. Width is measured armpit to armpit, and the length is measured from the very top of the shirt to the bottom.<\/p>",
+          "btntop": 45,
+          "btnu": "",
+          "btn": "Order Now"
+        }
+      },
+      "ea-reviews--men-tees": {
+        "type": "ea-reviews--men-tees",
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "bg_image": "shopify:\/\/shop_images\/2_cffd165a-f278-417b-96f5-17e4806d6b65.jpg",
+          "fg_image": "shopify:\/\/shop_images\/download.png"
+        }
+      },
+      "ea-support-our-troops--men-tees": {
+        "type": "ea-support-our-troops--men-tees",
+        "settings": {
+          "visible": true,
+          "ptop": 80,
+          "pbottom": 130,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "image_bg": "shopify:\/\/shop_images\/6342344423.jpg",
+          "image": "shopify:\/\/shop_images\/eweraddadas.png",
+          "image_pos": "left",
+          "title": "<p>HELP US GIVE BACK TO THE PTSD FOUNDATION OF AMERICA!<\/p>",
+          "text": "<p>We proudly donate a portion of every single clothing purchase to our favorite charity, the PTSD Foundation which aids our active duty military and veterans across all branches: Army, Navy, Air Force, Marines, and Coast Guard. Support our troops. Do your part in providing hope and healing for the unseen wounds of war..<\/p>",
+          "btntop": 15,
+          "btnu": "",
+          "btn": "Order Now"
+        }
+      },
+      "ea-related-products--men-tees": {
+        "type": "ea-related-products--men-tees",
+        "settings": {
+          "visible": true,
+          "ptop": 180,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "full_width": false,
+          "sectionbg": "#ffffff",
+          "pretitle": "",
+          "title": "RELATED PRODUCTS",
+          "collection": "",
+          "product_count": "3"
+        }
+      },
+      "ea-product-main--men-hoodies": {
+        "type": "ea-product-main--men-hoodies",
+        "settings": {
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "info": "<p>Professionally Printed Graphic<\/p>\n<p>80% Cotton \/ 20% Polyester<\/p>\n<p>Fits True to Size&nbsp;<\/p>\n<p>Proceeds Donated to the PTSD Foundation<\/p>",
+          "info2": "<p><strong>Premium Quality Garments<\/strong><\/p>"
+        }
+      },
+      "ea-benefits--men-hoodies": {
+        "type": "ea-benefits--men-hoodies",
+        "blocks": {
+          "1588704781957": {
+            "type": "benefit",
+            "settings": {
+              "title": "For True Patriots",
+              "text": "<p>The strongest weapon in the United States is a patriotic American. We make clothes for those who are proud to stand united with our brothers and sister who defend this great country.<\/p>",
+              "image": "shopify:\/\/shop_images\/3000x3000.png"
+            }
+          },
+          "1588704805152": {
+            "type": "benefit",
+            "settings": {
+              "title": "Proudly Made",
+              "text": "<p>Print, packaging and shipping! We believe in providing the American people with premium quality products that represents everything this country stands for.<\/p>",
+              "image": "shopify:\/\/shop_images\/New_Project.png"
+            }
+          },
+          "1588704825212": {
+            "type": "benefit",
+            "settings": {
+              "title": "American Quality",
+              "text": "<p>These Hoodies are premium quality and offer breathable performance. As our glorious nation, the inks resists the threats of fading from the sun and time. you&rsquo;ll have comfort, fit, and looks that last.<\/p>",
+              "image": "shopify:\/\/shop_images\/New_Project_1.png"
+            }
+          },
+          "1588704845916": {
+            "type": "benefit",
+            "settings": {
+              "title": "Tactical Designs",
+              "text": "<p>Your Hoodie says a lot about you. Let your beliefs shine with our designs that say you are a patriot! Just wearing our powerful graphic Hoodie can make you a bold builder of American pride.<\/p>",
+              "image": "shopify:\/\/shop_images\/New_Project_2.png"
+            }
+          }
+        },
+        "block_order": [
+          "1588704781957",
+          "1588704805152",
+          "1588704825212",
+          "1588704845916"
+        ],
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "sectionbg": "#ffffff",
+          "title": "HOODIES FOR REAL PATRIOTS",
+          "text": "",
+          "bottom_image": "shopify:\/\/shop_images\/New_Project.jpg"
+        }
+      },
+      "ea-text-and-video--men-hoodies": {
+        "type": "ea-text-and-video--men-hoodies",
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "video_url": "https:\/\/youtu.be\/WGmsMyzT3mU",
+          "bgimage": "shopify:\/\/shop_images\/New_Project_4.png",
+          "sectionbg": "#ffffff",
+          "title": "<p>HIGH QUALITY PREMIUM HOODIES<\/p>",
+          "text": "<p>Our distressed, heavyweight USA Hoodies are designed, developed, and manufactured with the utmost care and attention to detail right here in the US. Our comfort-focused American flag clothes are for men or for women and are as durable as they come.<\/p>",
+          "btntop": 45,
+          "btnu": "",
+          "btn": "Order"
+        }
+      },
+      "ea-made-in--men-hoodies": {
+        "type": "ea-made-in--men-hoodies",
+        "blocks": {
+          "1588705100633": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/lighter.png",
+              "pos": "left"
+            }
+          },
+          "1588705120994": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/lighterw.png",
+              "pos": "right"
+            }
+          },
+          "1588705136213": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/lighterww.png",
+              "pos": "right"
+            }
+          },
+          "1588705157152": {
+            "type": "text",
+            "settings": {
+              "text": "<p><span style=\"text-decoration: none;\">We are family owned and operated, and we believe in good old-fashioned red, white, and blue values. Pride in country, pride in self, and pride in our products. Best of all, we keep jobs in 'MERICA!<\/span><\/p>",
+              "pos": "left"
+            }
+          }
+        },
+        "block_order": [
+          "1588705100633",
+          "1588705120994",
+          "1588705136213",
+          "1588705157152"
+        ],
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#002e56",
+          "title": "<p>DESIGNED, PRINTED, PACKAGED,<br>AND SHIPPED IN THE USA<\/p>",
+          "text": "<p>Our patriotic apparel company is based<br>entirely in the United States of America.<\/p>",
+          "btntop": 0,
+          "btnu": "",
+          "btn": "Order Now"
+        }
+      },
+      "ea-image-and-text--men-hoodies": {
+        "type": "ea-image-and-text--men-hoodies",
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "image": "shopify:\/\/shop_images\/lighter.jpg",
+          "image_pos": "right",
+          "top_label": "FITS TRUE TO SIZE!",
+          "title": "<p>EASY TO FOLLOW SIZING<\/p>",
+          "text": "<p>To determine which size to buy, see dimensions guide. Measurements are in inches and are measured when the Hoodie is lying flat on a hard surface. Width is measured armpit to armpit, and the length is measured from the very top of the Hoodie to the bottom.<\/p>",
+          "btntop": 20,
+          "btnu": "",
+          "btn": "Order now"
+        }
+      },
+      "ea-reviews--men-hoodies": {
+        "type": "ea-reviews--men-hoodies",
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "bg_image": "shopify:\/\/shop_images\/2_cffd165a-f278-417b-96f5-17e4806d6b65.jpg",
+          "fg_image": "shopify:\/\/shop_images\/download.png"
+        }
+      },
+      "ea-support-our-troops--men-hoodies": {
+        "type": "ea-support-our-troops--men-hoodies",
+        "settings": {
+          "visible": true,
+          "ptop": 80,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "image_bg": "shopify:\/\/shop_images\/6342344423.jpg",
+          "image": "shopify:\/\/shop_images\/eweraddadas.png",
+          "image_pos": "left",
+          "title": "<p>HELP US GIVE BACK TO THE PTSD FOUNDATION OF AMERICA!<\/p>",
+          "text": "<p>We proudly donate a portion of every single clothing purchase to our favorite charity, the PTSD Foundation which aids our active duty military and veterans across all branches: Army, Navy, Air Force, Marines, and Coast Guard. <strong>Support our troops.<\/strong> Do your part in providing hope and healing for the unseen wounds of war..<\/p>",
+          "btntop": 15,
+          "btnu": "",
+          "btn": "Order now"
+        }
+      },
+      "ea-related-products--men-hoodies": {
+        "type": "ea-related-products--men-hoodies",
+        "settings": {
+          "visible": true,
+          "ptop": 140,
+          "pbottom": 25,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "full_width": false,
+          "sectionbg": "#ffffff",
+          "pretitle": "",
+          "title": "RELATED PRODUCTS",
+          "collection": "",
+          "product_count": "3"
+        }
+      },
+      "ea-product-main--headwear-snapbacks": {
+        "type": "ea-product-main--headwear-snapbacks",
+        "settings": {
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "info": "<p>Professionally Printed Graphic<\/p>\n<p>7% Cotton \/ 25% Polyester \/ 28% Nylon<\/p>\n<p>One Size Fits All<\/p>\n<p>Proceeds Donated to the PTSD Foundation<\/p>",
+          "info2": "<p><strong>Premium Quality Garments<\/strong><\/p>"
+        }
+      },
+      "ea-benefits--headwear-snapbacks": {
+        "type": "ea-benefits--headwear-snapbacks",
+        "blocks": {
+          "1588710984819": {
+            "type": "benefit",
+            "settings": {
+              "title": "For True Patriots",
+              "text": "<p><span style=\"text-decoration: none;\">The strongest weapon in the United States is a patriotic American. We make clothes for those who are proud to stand united with our brothers and sister who defend this great country.<\/span><\/p>",
+              "image": "shopify:\/\/shop_images\/3000x3000.png"
+            }
+          },
+          "1588711002448": {
+            "type": "benefit",
+            "settings": {
+              "title": "Proudly Made",
+              "text": "<p><span style=\"text-decoration: none;\">Print, packaging and shipping! We believe in providing the American people with premium quality products that represents everything this country stands for.<\/span><\/p>",
+              "image": "shopify:\/\/shop_images\/New_Project.png"
+            }
+          },
+          "1588711023937": {
+            "type": "benefit",
+            "settings": {
+              "title": "American Quality",
+              "text": "<p><span style=\"text-decoration: none;\">These tees are made from 100% cotton with breathable performance. As our glorious nation, the inks resists the threats of fading from the sun and time. you&rsquo;ll have comfort, fit, and looks that last.<\/span><\/p>",
+              "image": "shopify:\/\/shop_images\/New_Project_1.png"
+            }
+          },
+          "1588711048478": {
+            "type": "benefit",
+            "settings": {
+              "title": "Tactical Designs",
+              "text": "<p><span style=\"text-decoration: none;\">Your t-shirts say a lot about you. Let your beliefs shine with our designs that say you are a patriot! Just wearing our powerful graphic tees can make you a bold builder of American pride.<\/span><\/p>",
+              "image": "shopify:\/\/shop_images\/New_Project_2.png"
+            }
+          }
+        },
+        "block_order": [
+          "1588710984819",
+          "1588711002448",
+          "1588711023937",
+          "1588711048478"
+        ],
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "sectionbg": "#ffffff",
+          "title": "HEADWEAR FOR REAL PATRIOTS",
+          "text": "",
+          "bottom_image": "shopify:\/\/shop_images\/New_Project.jpg"
+        }
+      },
+      "ea-text-and-video--headwear-snapbacks": {
+        "type": "ea-text-and-video--headwear-snapbacks",
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOchttps:\/\/youtu.be\/WGmsMyzT3mU",
+          "bgimage": "shopify:\/\/shop_images\/New_Project_4.png",
+          "sectionbg": "#ffffff",
+          "title": "<p>EMBOSSED LOGO &amp; HIGHEST QUALITY MATERIALS<\/p>",
+          "text": "<p>Our classic snapbacks are designed, packaged, and shipped with the utmost care and attention to detail right here in the US. This hat is as durable as they come.<\/p>",
+          "btntop": 10,
+          "btnu": "",
+          "btn": "Order now"
+        }
+      },
+      "ea-made-in--headwear-snapbacks": {
+        "type": "ea-made-in--headwear-snapbacks",
+        "blocks": {
+          "1588711172596": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/lighter-10.jpeg",
+              "pos": "left"
+            }
+          },
+          "1588711198041": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/lighter-11.jpeg",
+              "pos": "right"
+            }
+          },
+          "1588711203878": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/lighter-12.jpeg",
+              "pos": "right"
+            }
+          },
+          "1588711210101": {
+            "type": "text",
+            "settings": {
+              "text": "<p><span style=\"text-decoration: none;\">We are family owned and operated, and we believe in good old-fashioned red, white, and blue values. Pride in country, pride in self, and pride in our products. Best of all, we keep jobs in 'MERICA!<\/span><\/p>",
+              "pos": "left"
+            }
+          }
+        },
+        "block_order": [
+          "1588711172596",
+          "1588711198041",
+          "1588711203878",
+          "1588711210101"
+        ],
+        "settings": {
+          "visible": true,
+          "ptop": 80,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#002e56",
+          "title": "<p>DESIGNED, PRINTED, PACKAGED,<\/p>\n<p>AND SHIPPED IN THE USA<\/p>",
+          "text": "<p><span style=\"text-decoration: none;\">Our patriotic apparel company is based entirely in the United States of America.<\/span><\/p>",
+          "btntop": 45,
+          "btnu": "",
+          "btn": "Order Now"
+        }
+      },
+      "ea-image-and-text--headwear-snapbacks": {
+        "type": "ea-image-and-text--headwear-snapbacks",
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "image": "shopify:\/\/shop_images\/lighter-9.jpeg",
+          "image_pos": "right",
+          "top_label": "FOR ALL SIZE HEADS!",
+          "title": "<p>COMFORTABLE AMERICAN HEADWEAR<\/p>",
+          "text": "<p><span style=\"text-decoration: none;\">Premium Quality Classic Mesh One Size Fits All Snapback Caps<\/span><\/p>",
+          "btntop": 15,
+          "btnu": "",
+          "btn": "Order Now"
+        }
+      },
+      "ea-reviews--headwear-snapbacks": {
+        "type": "ea-reviews--headwear-snapbacks",
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "bg_image": "",
+          "fg_image": ""
+        }
+      },
+      "ea-support-our-troops--headwear-snapbacks": {
+        "type": "ea-support-our-troops--headwear-snapbacks",
+        "settings": {
+          "visible": true,
+          "ptop": 80,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "image_bg": "shopify:\/\/shop_images\/6342344423.jpg",
+          "image": "shopify:\/\/shop_images\/eweraddadas.png",
+          "image_pos": "left",
+          "title": "<p>HELP US GIVE BACK TO THE PTSD FOUNDATION OF AMERICA!<\/p>",
+          "text": "<p><span style=\"text-decoration: none;\">We proudly donate a portion of every single clothing purchase to our favorite charity, the PTSD Foundation which aids our active duty military and veterans across all branches: Army, Navy, Air Force, Marines, and Coast Guard. <\/span><strong>Support our troops.<\/strong><span style=\"text-decoration: none;\"> Do your part in providing hope and healing for the unseen wounds of war..<\/span><\/p>",
+          "btntop": 10,
+          "btnu": "",
+          "btn": "Order Now"
+        }
+      },
+      "ea-related-products--headwear-snapbacks": {
+        "type": "ea-related-products--headwear-snapbacks",
+        "settings": {
+          "visible": true,
+          "ptop": 140,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "full_width": false,
+          "sectionbg": "#ffffff",
+          "pretitle": "",
+          "title": "RELATED PRODUCTS",
+          "collection": "all-accessories",
+          "product_count": "3"
+        }
+      },
+      "ea-product-main--bottoms-board-shorts": {
+        "type": "ea-product-main--bottoms-board-shorts",
+        "settings": {
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "info": "<p>Professionally Printed Graphic<\/p>\n<p>90\/10 Polyester\/Spandex<\/p>\n<p>Drawstring Waist Closure<\/p>\n<p>Velcro Pocket on Lower Right<\/p>\n<p>Proceeds Donated to the PTSD Foundation<\/p>",
+          "info2": "<p><strong>Premium Quality Garments<\/strong><\/p>"
+        }
+      },
+      "ea-benefits--bottoms-board-shorts": {
+        "type": "ea-benefits--bottoms-board-shorts",
+        "blocks": {
+          "1588706966462": {
+            "type": "benefit",
+            "settings": {
+              "title": "For True Patriots",
+              "text": "<p><span style=\"text-decoration: none;\">The strongest weapon in the United States is a patriotic American. We make clothes for those who are proud to stand united with our brothers and sister who defend this great country.<\/span><\/p>",
+              "image": "shopify:\/\/shop_images\/3000x3000.png"
+            }
+          },
+          "1588706985891": {
+            "type": "benefit",
+            "settings": {
+              "title": "Proudly Made",
+              "text": "<p><span style=\"text-decoration: none;\">Print, packaging and shipping! We believe in providing the American people with premium quality products that represents everything this country stands for.<\/span><\/p>",
+              "image": "shopify:\/\/shop_images\/New_Project.png"
+            }
+          },
+          "1588707005277": {
+            "type": "benefit",
+            "settings": {
+              "title": "American Quality",
+              "text": "<p><span style=\"text-decoration: none;\">These tees are made from 100% cotton with breathable performance. As our glorious nation, the inks resists the threats of fading from the sun and time. you&rsquo;ll have comfort, fit, and looks that last.<\/span><\/p>",
+              "image": "shopify:\/\/shop_images\/New_Project_1.png"
+            }
+          },
+          "1588707026693": {
+            "type": "benefit",
+            "settings": {
+              "title": "Tactical Designs",
+              "text": "<p><span style=\"text-decoration: none;\">Your t-shirts say a lot about you. Let your beliefs shine with our designs that say you are a patriot! Just wearing our powerful graphic tees can make you a bold builder of American pride.<\/span><\/p>",
+              "image": "shopify:\/\/shop_images\/New_Project_2.png"
+            }
+          }
+        },
+        "block_order": [
+          "1588706966462",
+          "1588706985891",
+          "1588707005277",
+          "1588707026693"
+        ],
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "sectionbg": "#ffffff",
+          "title": "SHORTS FOR REAL PATRIOTS",
+          "text": "",
+          "bottom_image": "shopify:\/\/shop_images\/New_Project.jpg"
+        }
+      },
+      "ea-text-and-video--bottoms-board-shorts": {
+        "type": "ea-text-and-video--bottoms-board-shorts",
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "video_url": "https:\/\/youtu.be\/WGmsMyzT3mU",
+          "bgimage": "shopify:\/\/shop_images\/bg-video.jpg",
+          "sectionbg": "#ffffff",
+          "title": "<p>HIGH QUALITY PREMIUM SHORTS<\/p>",
+          "text": "<p>Quality is what we strive for. Our #1 priority is to make sure that you are completely satisfied with your order. This is exactly why we handle all of the manufacturing that goes into our products. If there is ever a problem, our domestic support team is standing by to help.<\/p>",
+          "btntop": 25,
+          "btnu": "",
+          "btn": "Order now"
+        }
+      },
+      "ea-made-in--bottoms-board-shorts": {
+        "type": "ea-made-in--bottoms-board-shorts",
+        "blocks": {
+          "1588707280954": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/lighter-2.jpeg",
+              "pos": "left"
+            }
+          },
+          "1588707310461": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/lighter.jpeg",
+              "pos": "right"
+            }
+          },
+          "1588707318675": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/lighter-3.jpeg",
+              "pos": "right"
+            }
+          },
+          "1588707325752": {
+            "type": "text",
+            "settings": {
+              "text": "<p><span style=\"text-decoration: none;\">We are family owned and operated, and we believe in good old-fashioned red, white, and blue values. Pride in country, pride in self, and pride in our products. Best of all, we keep jobs in 'MERICA!<\/span><\/p>",
+              "pos": "left"
+            }
+          }
+        },
+        "block_order": [
+          "1588707280954",
+          "1588707310461",
+          "1588707318675",
+          "1588707325752"
+        ],
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#002e56",
+          "title": "<p>DESIGNED, PRINTED, PACKAGED,<br> AND SHIPPED IN THE USA<\/p>",
+          "text": "<p><span style=\"text-decoration: none;\">Our patriotic apparel company is based<\/span><\/p>\n<p><span style=\"text-decoration: none;\">entirely in the United States of America.<\/span><\/p>",
+          "btntop": 0,
+          "btnu": "",
+          "btn": "Order now"
+        }
+      },
+      "ea-image-and-text--bottoms-board-shorts": {
+        "type": "ea-image-and-text--bottoms-board-shorts",
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "image": "shopify:\/\/shop_images\/lighter-2.png",
+          "image_pos": "right",
+          "top_label": "FITS TRUE TO SIZE!",
+          "title": "<p>EASY TO FOLLOW SIZING<\/p>",
+          "text": "<p><span style=\"text-decoration: none;\">To&nbsp;<\/span><strong>determine which size to buy<\/strong><span style=\"text-decoration: none;\">, see dimensions guide. American flag board shorts material and fabric is 90% Polyester and 10% Spandex, with pocket on lower right side, professionally printed graphic.<\/span><\/p>",
+          "btntop": 45,
+          "btnu": "",
+          "btn": "Order now"
+        }
+      },
+      "ea-reviews--bottoms-board-shorts": {
+        "type": "ea-reviews--bottoms-board-shorts",
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "bg_image": "shopify:\/\/shop_images\/2_cffd165a-f278-417b-96f5-17e4806d6b65.jpg",
+          "fg_image": "shopify:\/\/shop_images\/download.png"
+        }
+      },
+      "ea-support-our-troops--bottoms-board-shorts": {
+        "type": "ea-support-our-troops--bottoms-board-shorts",
+        "settings": {
+          "visible": true,
+          "ptop": 80,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "image_bg": "shopify:\/\/shop_images\/6342344423.jpg",
+          "image": "shopify:\/\/shop_images\/eweraddadas.png",
+          "image_pos": "left",
+          "title": "<p>HELP US GIVE BACK TO THE PTSD FOUNDATION OF AMERICA!<\/p>",
+          "text": "<p><span style=\"text-decoration: none;\">We proudly donate a portion of every single clothing purchase to our favorite charity, the PTSD Foundation which aids our active duty military and veterans across all branches: Army, Navy, Air Force, Marines, and Coast Guard. <\/span><strong>Support our troops.<\/strong><span style=\"text-decoration: none;\"> Do your part in providing hope and healing for the unseen wounds of war..<\/span><\/p>",
+          "btntop": 15,
+          "btnu": "",
+          "btn": "Order now"
+        }
+      },
+      "ea-related-products--bottoms-board-shorts": {
+        "type": "ea-related-products--bottoms-board-shorts",
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "full_width": false,
+          "sectionbg": "#ffffff",
+          "pretitle": "",
+          "title": "RELATED PRODUCTS",
+          "collection": "board-shorts",
+          "product_count": "3"
+        }
+      },
+      "ea-product-main--bottoms-sweatpants": {
+        "type": "ea-product-main--bottoms-sweatpants",
+        "settings": {
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "info": "<p><strong>Professionally Printed Graphic<\/strong><\/p>\n<p><strong>80\/20 cotton\/polyester<\/strong><\/p>\n<p><strong>Elastic waistband with drawcord<\/strong><\/p>\n<p><strong>Triple-needle stitched bottom hem<\/strong><\/p>\n<p><strong>Proceeds Donated to the PTSD Foundation<\/strong><\/p>",
+          "info2": "<p><strong>Premium Quality Garments<\/strong><\/p>"
+        }
+      },
+      "ea-benefits--bottoms-sweatpants": {
+        "type": "ea-benefits--bottoms-sweatpants",
+        "blocks": {
+          "1588707568386": {
+            "type": "benefit",
+            "settings": {
+              "title": "For True Patriots",
+              "text": "<p><span style=\"text-decoration: none;\">The strongest weapon in the United States is a patriotic American. We make clothes for those who are proud to stand united with our brothers and sister who defend this great country.<\/span><\/p>",
+              "image": "shopify:\/\/shop_images\/3000x3000.png"
+            }
+          },
+          "1588707584566": {
+            "type": "benefit",
+            "settings": {
+              "title": "Proudly Made",
+              "text": "<p><span style=\"text-decoration: none;\">Print, packaging and shipping! We believe in providing the American people with premium quality products that represents everything this country stands for.<\/span><\/p>",
+              "image": "shopify:\/\/shop_images\/New_Project.png"
+            }
+          },
+          "1588707602104": {
+            "type": "benefit",
+            "settings": {
+              "title": "American Quality",
+              "text": "<p><span style=\"text-decoration: none;\">These Sweatpants are made from 80% cotton 20% Poly for breathable performance. As our glorious nation, the inks resists the threats of fading from the sun and time. you&rsquo;ll have comfort, fit, and looks that last.<\/span><\/p>",
+              "image": "shopify:\/\/shop_images\/New_Project_1.png"
+            }
+          },
+          "1588707620174": {
+            "type": "benefit",
+            "settings": {
+              "title": "Tactical Designs",
+              "text": "<p><span style=\"text-decoration: none;\">Your Sweatpants say a lot about you. Let your beliefs shine with our designs that say you are a patriot! Just wearing our powerful graphic Sweatpants can make you a bold builder of American pride.<\/span><\/p>",
+              "image": "shopify:\/\/shop_images\/New_Project_2.png"
+            }
+          }
+        },
+        "block_order": [
+          "1588707568386",
+          "1588707584566",
+          "1588707602104",
+          "1588707620174"
+        ],
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "sectionbg": "#ffffff",
+          "title": "SWEATPANTS FOR REAL PATRIOTS",
+          "text": "",
+          "bottom_image": "shopify:\/\/shop_images\/New_Project.jpg"
+        }
+      },
+      "ea-text-and-video--bottoms-sweatpants": {
+        "type": "ea-text-and-video--bottoms-sweatpants",
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "video_url": "https:\/\/youtu.be\/WGmsMyzT3mU",
+          "bgimage": "shopify:\/\/shop_images\/New_Project_4.png",
+          "sectionbg": "#ffffff",
+          "title": "<p>HIGH QUALITY SWEATPANTS<\/p>",
+          "text": "<p><span style=\"text-decoration: none;\">Quality is what we strive for. Our #1 priority is to make sure that you are completely satisfied with your order. This is exactly why we handle all of the manufacturing that goes into our products. If there is ever a problem, our domestic support team is standing by to help.<\/span><\/p>",
+          "btntop": 20,
+          "btnu": "",
+          "btn": "Order now"
+        }
+      },
+      "ea-made-in--bottoms-sweatpants": {
+        "type": "ea-made-in--bottoms-sweatpants",
+        "blocks": {
+          "1588707754833": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/lighter-3.png",
+              "pos": "left"
+            }
+          },
+          "1588707787121": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/lighter-4.jpeg",
+              "pos": "right"
+            }
+          },
+          "1588707794207": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/lighter-4.png",
+              "pos": "right"
+            }
+          },
+          "1588707800866": {
+            "type": "text",
+            "settings": {
+              "text": "<p><span style=\"text-decoration: none;\">We are family owned and operated, and we believe in good old-fashioned red, white, and blue values. Pride in country, pride in self, and pride in our products. Best of all, we keep jobs in 'MERICA!<\/span><\/p>",
+              "pos": "left"
+            }
+          }
+        },
+        "block_order": [
+          "1588707754833",
+          "1588707787121",
+          "1588707794207",
+          "1588707800866"
+        ],
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#002e56",
+          "title": "<p>DESIGNED, PRINTED, PACKAGED,<\/p>\n<p>AND SHIPPED IN THE USA<\/p>",
+          "text": "<p><span style=\"text-decoration: none;\">Our patriotic apparel company is based<\/span><\/p>\n<p><span style=\"text-decoration: none;\">entirely in the United States of America.<\/span><\/p>",
+          "btntop": 0,
+          "btnu": "",
+          "btn": "Enter text for button"
+        }
+      },
+      "ea-image-and-text--bottoms-sweatpants": {
+        "type": "ea-image-and-text--bottoms-sweatpants",
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "image": "shopify:\/\/shop_images\/lighter-5.jpeg",
+          "image_pos": "right",
+          "top_label": "FITS TRUE TO SIZE!",
+          "title": "<p>EASY TO FOLLOW SIZING<\/p>",
+          "text": "<p><span style=\"text-decoration: none;\">To <\/span><strong>determine which size to buy<\/strong><span style=\"text-decoration: none;\">, see dimensions guide. American Flag Sweatpants material and fabric is 90% Polyester and 10% Spandex, with pocket on lower right side, professionally printed graphic.<\/span><\/p>",
+          "btntop": 20,
+          "btnu": "",
+          "btn": "Order now"
+        }
+      },
+      "ea-reviews--bottoms-sweatpants": {
+        "type": "ea-reviews--bottoms-sweatpants",
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "bg_image": "shopify:\/\/shop_images\/2_cffd165a-f278-417b-96f5-17e4806d6b65.jpg",
+          "fg_image": "shopify:\/\/shop_images\/download.png"
+        }
+      },
+      "ea-support-our-troops--bottoms-sweatpants": {
+        "type": "ea-support-our-troops--bottoms-sweatpants",
+        "settings": {
+          "visible": true,
+          "ptop": 80,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "image_bg": "shopify:\/\/shop_images\/6342344423.jpg",
+          "image": "shopify:\/\/shop_images\/eweraddadas.png",
+          "image_pos": "left",
+          "title": "<p>HELP US GIVE BACK TO THE PTSD FOUNDATION OF AMERICA!<\/p>",
+          "text": "<p><span style=\"text-decoration: none;\">We proudly donate a portion of every single clothing purchase to our favorite charity, the PTSD Foundation which aids our active duty military and veterans across all branches: Army, Navy, Air Force, Marines, and Coast Guard. <\/span><strong>Support our troops.<\/strong><span style=\"text-decoration: none;\"> Do your part in providing hope and healing for the unseen wounds of war..<\/span><\/p>",
+          "btntop": 20,
+          "btnu": "",
+          "btn": "Order Now"
+        }
+      },
+      "ea-related-products--bottoms-sweatpants": {
+        "type": "ea-related-products--bottoms-sweatpants",
+        "settings": {
+          "visible": true,
+          "ptop": 120,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "full_width": false,
+          "sectionbg": "#ffffff",
+          "pretitle": "",
+          "title": "RELATED PRODUCTS",
+          "collection": "sweatpants",
+          "product_count": "3"
+        }
+      },
+      "ea-product-main--socks": {
+        "type": "ea-product-main--socks",
+        "settings": {
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "info": "<p>Top-Grade Quality Material<\/p>\n<p>86% Nylon, 2% Spandex and 12% Polyester<\/p>\n<p>Proceeds Donated to the PTSD Foundation<\/p>",
+          "info2": "<p><strong>Premium Quality Garments<\/strong><\/p>"
+        }
+      },
+      "ea-benefits--socks": {
+        "type": "ea-benefits--socks",
+        "blocks": {
+          "1588708144517": {
+            "type": "benefit",
+            "settings": {
+              "title": "For True Patriots",
+              "text": "<p><span style=\"text-decoration: none;\">The strongest weapon in the United States is a patriotic American. We make clothes for those who are proud to stand united with our brothers and sister who defend this great country.<\/span><\/p>",
+              "image": "shopify:\/\/shop_images\/3000x3000.png"
+            }
+          },
+          "1588708189181": {
+            "type": "benefit",
+            "settings": {
+              "title": "Proudly Made",
+              "text": "<p><span style=\"text-decoration: none;\">Print, packaging and shipping! We believe in providing the American people with premium quality products that represents everything this country stands for.<\/span><\/p>",
+              "image": "shopify:\/\/shop_images\/New_Project.png"
+            }
+          },
+          "1588708209548": {
+            "type": "benefit",
+            "settings": {
+              "title": "American Quality",
+              "text": "<p>These Socks are made from 86% Nylon, 2% Spandex and 12% Polyester for breathable performance. As our glorious nation, the inks resists the threats of fading from the sun and time. you&rsquo;ll have comfort, fit, and looks that last.<\/p>",
+              "image": "shopify:\/\/shop_images\/New_Project_1.png"
+            }
+          },
+          "1588708235410": {
+            "type": "benefit",
+            "settings": {
+              "title": "Tactical Designs",
+              "text": "<p><span style=\"text-decoration: none;\">Your Socks say a lot about you. Let your beliefs shine with our designs that say you are a patriot! Just wearing our powerful graphic Socks can make you a bold builder of American pride.<\/span><\/p>",
+              "image": "shopify:\/\/shop_images\/New_Project_2.png"
+            }
+          }
+        },
+        "block_order": [
+          "1588708144517",
+          "1588708189181",
+          "1588708209548",
+          "1588708235410"
+        ],
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "sectionbg": "#ffffff",
+          "title": "USA SOCKS FOR REAL PATRIOTS",
+          "text": "",
+          "bottom_image": "shopify:\/\/shop_images\/New_Project.jpg"
+        }
+      },
+      "ea-text-and-video--socks": {
+        "type": "ea-text-and-video--socks",
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "video_url": "https:\/\/youtu.be\/WGmsMyzT3mU",
+          "bgimage": "shopify:\/\/shop_images\/New_Project_4.png",
+          "sectionbg": "#ffffff",
+          "title": "<p>HIGH QUALITY SOCKS<\/p>",
+          "text": "<p>Quality is what we strive for. Our #1 priority is to make sure that you are completely satisfied with your order. This is exactly why we handle all of the manufacturing that goes into our products. If there is ever a problem, our domestic support team is standing by to help.<\/p>",
+          "btntop": 20,
+          "btnu": "",
+          "btn": "Order now"
+        }
+      },
+      "ea-made-in--socks": {
+        "type": "ea-made-in--socks",
+        "blocks": {
+          "1588708389904": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/lighter-6.jpeg",
+              "pos": "left"
+            }
+          },
+          "1588708413630": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/lighter-5.png",
+              "pos": "right"
+            }
+          },
+          "1588708429313": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/lighter-6.png",
+              "pos": "right"
+            }
+          },
+          "1588708385256": {
+            "type": "text",
+            "settings": {
+              "text": "<p><span style=\"text-decoration: none;\">We are family owned and operated, and we believe in good old-fashioned red, white, and blue values. Pride in country, pride in self, and pride in our products. Best of all, we keep jobs in 'MERICA!<\/span><\/p>",
+              "pos": "left"
+            }
+          }
+        },
+        "block_order": [
+          "1588708389904",
+          "1588708413630",
+          "1588708429313",
+          "1588708385256"
+        ],
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#002e56",
+          "title": "<p>DESIGNED, PRINTED, PACKAGED,<\/p>\n<p>AND SHIPPED IN THE USA<\/p>",
+          "text": "<p>Our patriotic apparel company is based<\/p>\n<p>entirely in the United States of America.<\/p>",
+          "btntop": 0,
+          "btnu": "",
+          "btn": "Order now"
+        }
+      },
+      "ea-image-and-text--socks": {
+        "type": "ea-image-and-text--socks",
+        "settings": {
+          "visible": false,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "image": "shopify:\/\/shop_images\/eweraddadas.png",
+          "image_pos": "left",
+          "top_label": "",
+          "title": "",
+          "text": "<p>Add your text here<\/p>",
+          "btntop": 45,
+          "btnu": "",
+          "btn": "Enter text for button"
+        }
+      },
+      "ea-reviews--socks": {
+        "type": "ea-reviews--socks",
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "bg_image": "shopify:\/\/shop_images\/2_cffd165a-f278-417b-96f5-17e4806d6b65.jpg",
+          "fg_image": "shopify:\/\/shop_images\/download.png"
+        }
+      },
+      "ea-support-our-troops--socks": {
+        "type": "ea-support-our-troops--socks",
+        "settings": {
+          "visible": true,
+          "ptop": 80,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "image_bg": "shopify:\/\/shop_images\/6342344423.jpg",
+          "image": "shopify:\/\/shop_images\/eweraddadas.png",
+          "image_pos": "left",
+          "title": "<p>HELP US GIVE BACK TO THE PTSD FOUNDATION OF AMERICA!<\/p>",
+          "text": "<p><span style=\"text-decoration: none;\">We proudly donate a portion of every single clothing purchase to our favorite charity, the PTSD Foundation which aids our active duty military and veterans across all branches: Army, Navy, Air Force, Marines, and Coast Guard. <\/span><strong>Support our troops.<\/strong><span style=\"text-decoration: none;\"> Do your part in providing hope and healing for the unseen wounds of war..<\/span><\/p>",
+          "btntop": 20,
+          "btnu": "",
+          "btn": "Order now"
+        }
+      },
+      "ea-related-products--socks": {
+        "type": "ea-related-products--socks",
+        "settings": {
+          "visible": true,
+          "ptop": 130,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "full_width": false,
+          "sectionbg": "#ffffff",
+          "pretitle": "",
+          "title": "RELATED PRODUCTS",
+          "collection": "all-accessories",
+          "product_count": "3"
+        }
+      },
+      "ea-product-main--headwear-flexfits": {
+        "type": "ea-product-main--headwear-flexfits",
+        "settings": {
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "info": "<p>Professionally Printed Graphic<\/p>\n<p>Woven Patch<\/p>\n<p>Fits True to Size<\/p>\n<p>Proceeds Donated to the PTSD Foundation<\/p>",
+          "info2": "<p><strong>Premium Quality Garments<\/strong><\/p>"
+        }
+      },
+      "ea-benefits--headwear-flexfits": {
+        "type": "ea-benefits--headwear-flexfits",
+        "blocks": {
+          "1588708784224": {
+            "type": "benefit",
+            "settings": {
+              "title": "For True Patriots",
+              "text": "<p><span style=\"text-decoration: none;\">The strongest weapon in the United States is a patriotic American. We make clothes for those who are proud to stand united with our brothers and sister who defend this great country.<\/span><\/p>",
+              "image": "shopify:\/\/shop_images\/3000x3000.png"
+            }
+          },
+          "1588709098181": {
+            "type": "benefit",
+            "settings": {
+              "title": "Proudly Made",
+              "text": "<p><span style=\"text-decoration: none;\">Print, packaging and shipping! We believe in providing the American people with premium quality products that represents everything this country stands for.<\/span><\/p>",
+              "image": "shopify:\/\/shop_images\/New_Project.png"
+            }
+          },
+          "1588709121127": {
+            "type": "benefit",
+            "settings": {
+              "title": "American Quality",
+              "text": "<p><span style=\"text-decoration: none;\">These tees are made from 100% cotton with breathable performance. As our glorious nation, the inks resists the threats of fading from the sun and time. you&rsquo;ll have comfort, fit, and looks that last.<\/span><\/p>",
+              "image": "shopify:\/\/shop_images\/New_Project_1.png"
+            }
+          },
+          "1588709142781": {
+            "type": "benefit",
+            "settings": {
+              "title": "Tactical Designs",
+              "text": "<p><span style=\"text-decoration: none;\">Your t-shirts say a lot about you. Let your beliefs shine with our designs that say you are a patriot! Just wearing our powerful graphic tees can make you a bold builder of American pride.<\/span><\/p>",
+              "image": "shopify:\/\/shop_images\/New_Project_2.png"
+            }
+          }
+        },
+        "block_order": [
+          "1588708784224",
+          "1588709098181",
+          "1588709121127",
+          "1588709142781"
+        ],
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "sectionbg": "#ffffff",
+          "title": "HEADWEAR FOR REAL PATRIOTS",
+          "text": "",
+          "bottom_image": "shopify:\/\/shop_images\/New_Project.jpg"
+        }
+      },
+      "ea-text-and-video--headwear-flexfits": {
+        "type": "ea-text-and-video--headwear-flexfits",
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "video_url": "https:\/\/youtu.be\/WGmsMyzT3mU",
+          "bgimage": "shopify:\/\/shop_images\/New_Project_4.png",
+          "sectionbg": "#ffffff",
+          "title": "<p>EMBOSSED LOGO &amp; HIGHEST QUALITY MATERIALS<\/p>",
+          "text": "<p>Our classic snapbacks are designed, packaged, and shipped with the utmost care and attention to detail right here in the US. This hat is as durable as they come.<\/p>",
+          "btntop": 15,
+          "btnu": "",
+          "btn": "Order now"
+        }
+      },
+      "ea-made-in--headwear-flexfits": {
+        "type": "ea-made-in--headwear-flexfits",
+        "blocks": {
+          "1588709368963": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/lighter-7.jpeg",
+              "pos": "left"
+            }
+          },
+          "1588709392449": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/lighter-8.jpeg",
+              "pos": "right"
+            }
+          },
+          "1588709399245": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/lighter-9.jpeg",
+              "pos": "right"
+            }
+          },
+          "1588709405756": {
+            "type": "text",
+            "settings": {
+              "text": "<p><span style=\"text-decoration: none;\">We are family owned and operated, and we believe in good old-fashioned red, white, and blue values. Pride in country, pride in self, and pride in our products. Best of all, we keep jobs in 'MERICA!<\/span><\/p>",
+              "pos": "left"
+            }
+          }
+        },
+        "block_order": [
+          "1588709368963",
+          "1588709392449",
+          "1588709399245",
+          "1588709405756"
+        ],
+        "settings": {
+          "visible": true,
+          "ptop": 80,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#002e56",
+          "title": "<p>DESIGNED, PRINTED, PACKAGED,<\/p>\n<p>AND SHIPPED IN THE USA<\/p>",
+          "text": "<p><span style=\"text-decoration: none;\">Our patriotic apparel company is based<\/span><\/p>\n<p><span style=\"text-decoration: none;\">entirely in the United States of America.<\/span><\/p>",
+          "btntop": 0,
+          "btnu": "",
+          "btn": "Order Now"
+        }
+      },
+      "ea-image-and-text--headwear-flexfits": {
+        "type": "ea-image-and-text--headwear-flexfits",
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "image": "shopify:\/\/shop_images\/lighter-7.png",
+          "image_pos": "right",
+          "top_label": "FITS TRUE TO SIZE!",
+          "title": "<p>EASY TO FOLLOW SIZING<\/p>",
+          "text": "<p>To <strong>determine which size to buy<\/strong>, see dimensions guide. Premium Quality Classic Mesh One Size Fits All Snapback Caps.<\/p>",
+          "btntop": 20,
+          "btnu": "",
+          "btn": "Order Now"
+        }
+      },
+      "ea-reviews--headwear-flexfits": {
+        "type": "ea-reviews--headwear-flexfits",
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "bg_image": "shopify:\/\/shop_images\/2_cffd165a-f278-417b-96f5-17e4806d6b65.jpg",
+          "fg_image": "shopify:\/\/shop_images\/download.png"
+        }
+      },
+      "ea-support-our-troops--headwear-flexfits": {
+        "type": "ea-support-our-troops--headwear-flexfits",
+        "settings": {
+          "visible": true,
+          "ptop": 80,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "image_bg": "shopify:\/\/shop_images\/6342344423.jpg",
+          "image": "shopify:\/\/shop_images\/eweraddadas.png",
+          "image_pos": "left",
+          "title": "<p>HELP US GIVE BACK TO THE PTSD FOUNDATION OF AMERICA!<\/p>",
+          "text": "<p><span style=\"text-decoration: none;\">We proudly donate a portion of every single clothing purchase to our favorite charity, the PTSD Foundation which aids our active duty military and veterans across all branches: Army, Navy, Air Force, Marines, and Coast Guard. <\/span><strong>Support our troops.<\/strong><span style=\"text-decoration: none;\"> Do your part in providing hope and healing for the unseen wounds of war..<\/span><\/p>",
+          "btntop": 15,
+          "btnu": "",
+          "btn": "Order Now"
+        }
+      },
+      "ea-related-products--headwear-flexfits": {
+        "type": "ea-related-products--headwear-flexfits",
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "full_width": false,
+          "sectionbg": "#ffffff",
+          "pretitle": "",
+          "title": "RELATED PRODUCTS",
+          "collection": "all-accessories",
+          "product_count": "3"
+        }
+      },
+      "ea-product-main--men-jackets": {
+        "type": "ea-product-main--men-jackets",
+        "settings": {
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "info": "<p>Premium Quality Heavy Duty Jacket<\/p>\n<p>Waterproof Shell<\/p>\n<p>Fits True to Size<\/p>\n<p>Proceeds Donated to the PTSD Foundation<\/p>",
+          "info2": ""
+        }
+      },
+      "ea-benefits--men-jackets": {
+        "type": "ea-benefits--men-jackets",
+        "blocks": {
+          "1588710111578": {
+            "type": "benefit",
+            "settings": {
+              "title": "For True Patriots",
+              "text": "<p>The strongest weapon in the United States is a patriotic American. We make clothes for those who are proud to stand united with our brothers and sister who defend this great country.<\/p>",
+              "image": "shopify:\/\/shop_images\/3000x3000.png"
+            }
+          },
+          "1588710169754": {
+            "type": "benefit",
+            "settings": {
+              "title": "Proudly Made",
+              "text": "<p><span style=\"text-decoration: none;\">Print, packaging and shipping! We believe in providing the American people with premium quality products that represents everything this country stands for.<\/span><\/p>",
+              "image": "shopify:\/\/shop_images\/New_Project.png"
+            }
+          },
+          "1588710198035": {
+            "type": "benefit",
+            "settings": {
+              "title": "American Quality",
+              "text": "<p><span style=\"text-decoration: none;\">These Hoodies are premium quality and offer breathable performance. As our glorious nation, the inks resists the threats of fading from the sun and time. you&rsquo;ll have comfort, fit, and looks that last.<\/span><\/p>",
+              "image": "shopify:\/\/shop_images\/New_Project_1.png"
+            }
+          },
+          "1588710226598": {
+            "type": "benefit",
+            "settings": {
+              "title": "Tactical Designs",
+              "text": "<p><span style=\"text-decoration: none;\">Your Hoodie says a lot about you. Let your beliefs shine with our designs that say you are a patriot! Just wearing our powerful graphic Hoodie can make you a bold builder of American pride.<\/span><\/p>",
+              "image": "shopify:\/\/shop_images\/New_Project_2.png"
+            }
+          }
+        },
+        "block_order": [
+          "1588710111578",
+          "1588710169754",
+          "1588710198035",
+          "1588710226598"
+        ],
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "sectionbg": "#ffffff",
+          "title": "HOODIES FOR REAL PATRIOTS",
+          "text": "",
+          "bottom_image": "shopify:\/\/shop_images\/New_Project.jpg"
+        }
+      },
+      "ea-text-and-video--men-jackets": {
+        "type": "ea-text-and-video--men-jackets",
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "video_url": "https:\/\/youtu.be\/WGmsMyzT3mU",
+          "bgimage": "shopify:\/\/shop_images\/New_Project_4.png",
+          "sectionbg": "#ffffff",
+          "title": "<p>HIGH QUALITY PREMIUM HOODIES<\/p>",
+          "text": "<p><span style=\"text-decoration: none;\">Our distressed, heavyweight USA Hoodies are designed, developed, and manufactured with the utmost care and attention to detail right here in the US. Our comfort-focused American flag clothes are for men or for women and are as durable as they come.<\/span><\/p>",
+          "btntop": 25,
+          "btnu": "",
+          "btn": "Add To Cart"
+        }
+      },
+      "ea-made-in--men-jackets": {
+        "type": "ea-made-in--men-jackets",
+        "blocks": {
+          "1588710391404": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/lighter-9.jpeg",
+              "pos": "left"
+            }
+          },
+          "1588710367795": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/hoodies-tiger-camo-hoodie-2_2048x_29d2edee-39cc-4991-a3f7-1cd131108cf4.jpg",
+              "pos": "right"
+            }
+          },
+          "1588710650756": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/lighter-7.jpeg",
+              "pos": "right"
+            }
+          },
+          "1588710381269": {
+            "type": "text",
+            "settings": {
+              "text": "<p><span style=\"text-decoration: none;\">We are family owned and operated, and we believe in good old-fashioned red, white, and blue values. Pride in country, pride in self, and pride in our products. Best of all, we keep jobs in 'MERICA!<\/span><\/p>",
+              "pos": "left"
+            }
+          }
+        },
+        "block_order": [
+          "1588710391404",
+          "1588710367795",
+          "1588710650756",
+          "1588710381269"
+        ],
+        "settings": {
+          "visible": true,
+          "ptop": 80,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "title": "<p>DESIGNED, PRINTED, PACKAGED,<\/p>\n<p>AND SHIPPED IN THE USA<\/p>",
+          "text": "<p><span style=\"text-decoration: none;\">Our patriotic apparel company is based<br>entirely in the United States of America.<\/span><\/p>",
+          "btntop": 0,
+          "btnu": "",
+          "btn": "Add to cart"
+        }
+      },
+      "ea-image-and-text--men-jackets": {
+        "type": "ea-image-and-text--men-jackets",
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "image": "shopify:\/\/shop_images\/lighter.jpg",
+          "image_pos": "right",
+          "top_label": "FITS TRUE TO SIZE!",
+          "title": "<p>EASY TO FOLLOW SIZING<\/p>",
+          "text": "<p>To <strong>determine which size to buy<\/strong>, see dimensions guide. Measurements are in inches and are measured when the Hoodie is lying flat on a hard surface. Width is measured armpit to armpit, and the length is measured from the very top of the Hoodie to the bottom.<\/p>",
+          "btntop": 45,
+          "btnu": "",
+          "btn": "Add to cart"
+        }
+      },
+      "ea-reviews--men-jackets": {
+        "type": "ea-reviews--men-jackets",
+        "settings": {
+          "visible": true,
+          "ptop": 45,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "bg_image": "shopify:\/\/shop_images\/2_cffd165a-f278-417b-96f5-17e4806d6b65.jpg",
+          "fg_image": "shopify:\/\/shop_images\/download.png"
+        }
+      },
+      "ea-support-our-troops--men-jackets": {
+        "type": "ea-support-our-troops--men-jackets",
+        "settings": {
+          "visible": true,
+          "ptop": 80,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "sectionbg": "#ffffff",
+          "image_bg": "shopify:\/\/shop_images\/6342344423.jpg",
+          "image": "shopify:\/\/shop_images\/eweraddadas.png",
+          "image_pos": "left",
+          "title": "<p>HELP US GIVE BACK TO THE PTSD FOUNDATION OF AMERICA!<\/p>",
+          "text": "<p><span style=\"text-decoration: none;\">We proudly donate a portion of every single clothing purchase to our favorite charity, the PTSD Foundation which aids our active duty military and veterans across all branches: Army, Navy, Air Force, Marines, and Coast Guard. <\/span><strong>Support our troops.<\/strong><span style=\"text-decoration: none;\"> Do your part in providing hope and healing for the unseen wounds of war..<\/span><\/p>",
+          "btntop": 25,
+          "btnu": "",
+          "btn": "Enter text for button"
+        }
+      },
+      "ea-related-products--men-jackets": {
+        "type": "ea-related-products--men-jackets",
+        "settings": {
+          "visible": true,
+          "ptop": 130,
+          "pbottom": 45,
+          "ptop_mob": 45,
+          "pbottom_mob": 45,
+          "full_width": false,
+          "sectionbg": "#ffffff",
+          "pretitle": "",
+          "title": "RELATED PRODUCTS",
+          "collection": "board-shorts",
+          "product_count": "3"
+        }
+      },
+      "ea-register": {
+        "type": "ea-register",
+        "settings": {
+          "sectionbg": "#ffffff",
+          "title": "<p>Tactical Pro Supply<\/p>",
+          "image": "shopify:\/\/shop_images\/lighter-7.jpeg",
+          "login_text": "Already have an account?",
+          "login_text_button": "Sign up",
+          "btn": "SIGN UP"
+        }
+      },
+      "page-contact": {
+        "type": "page-contact",
+        "settings": {
+          "sectionbg": "#ffffff",
+          "title": "<p>CONTACT US<\/p>",
+          "subtitle": "<p><strong>Tactical Pro Supply<\/strong><br>(516) 927-7831<br>109 Allen Blvd<br>Farmingdale, NY 11735<\/p>",
+          "image": "shopify:\/\/shop_images\/Untitled-4_copy.jpg",
+          "btn": "SEND"
+        }
+      }
+    },
+    "content_for_index": [
+      "1587769587725",
+      "1588183795403",
+      "1588187451951",
+      "1588196746310",
+      "1588200941482",
+      "1588218824776",
+      "1588219362411",
+      "1588246885221"
+    ]
+  }
+}

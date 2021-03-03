@@ -1,0 +1,73 @@
+{% assign set = section.settings %}
+
+{%- capture customStyles -%}
+  {%- if set.image_bg -%}
+    #shopify-section-{{ section.id }} {
+      background-image: url({{ set.image_bg | img_url: '2000x' }});
+    }
+  {%- endif -%}
+{%- endcapture -%}
+{% render 'ea-section-styles', section: section, customStyles: customStyles %}
+
+{% render 'ea-section-foreground-image', section: section %}
+
+{%- capture imageCellClass -%}
+  {%- if type == 'big-image' -%}col-md-7{%- else -%}col-md-6{%- endif -%}
+{%- endcapture -%}
+{%- capture textCellClass -%}
+  {%- if type == 'big-image' -%}col-md-5{%- else -%}col-md-6{%- endif -%}
+{%- endcapture -%}
+
+{%- capture image -%}
+  <div class="image-and-text__image {% if type == 'big-image' %}m-big-image{% endif %}">
+    <img src="{{ set.image | img_url: '1000x' }}" alt="{{ set.image.alt }}">
+  </div>
+{%- endcapture -%}
+
+{%- capture content -%}
+  <div class="image-and-text__text {% if set.image_pos == 'left' %}is-right {% else %}is-left{% endif %} {% if color == 'white' %}m-white{% endif %}">
+    {% if set.top_label != blank %}
+      <div class="skewed-shape">
+        <i class="icon-double-chevron"></i>
+        <span><b>FITS TRUE TO SIZE!</b></span>
+        <i class="icon-double-chevron"></i>
+      </div>
+    {% endif %}
+    {% if set.title != blank %}
+      <h2 class="title m-heavy">{{ set.title }}</h2>
+    {% endif %}
+    {% if set.text != '' %}
+      <div class="subtitle">{{ set.text }}</div>
+    {% endif %}
+    <div class="animated-bottom animated-delay-1">
+      {% render 'button', {
+        top: set.btntop,
+        id: section.id,
+        text: set.btn,
+        url: set.btnu,
+        class: 'add-to-cart m-long animated-bottom animated-delay-1'
+      } %}
+    </div>
+  </div>
+{%- endcapture -%}
+
+<div class="container">
+  <div class="row">
+    {% if set.image_pos == 'left' %}
+      <div class="{{ imageCellClass }}">
+        {{ image }}
+      </div>
+      <div class="{{ textCellClass }}">
+        {{ content }}
+      </div>
+    {% else %}
+      	
+      <div class="{{ textCellClass }}">
+        {{ content }}
+      </div>
+      <div class="{{ imageCellClass }}">
+        {{ image }}
+      </div>
+    {% endif %}
+  </div>
+</div>

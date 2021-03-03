@@ -1,0 +1,233 @@
+
+
+// Core styles
+.faq {
+  position: relative;
+  .container.m-short {
+    max-width: $container-s;
+    .section__content {
+      padding-top: $gutter;
+      @include desktop {
+        padding-top: $gutter*3;
+      }
+    }
+  }
+}
+
+// Item
+.faq-item {
+  border: none;
+  border-bottom: 1px solid $color-grey-light;
+  color: inherit;
+  background: $color-white;
+  &+& {
+    margin-top: 0;
+  }
+  h1,h2,h3,h4,h5,h6,p {
+    margin-bottom: 0;
+    font-size: inherit;
+    color: inherit;
+  }
+  p {
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  .faq-item__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $gutter 0;
+    color: inherit;
+    font-size: $fz-4;
+    font-weight: 100;
+    font-stretch: condensed;
+    color: inherit;
+    position: relative;
+    &:after {
+      display: none;
+    }
+    i {
+      color: $color-button;
+
+      svg {
+        width: 14px;
+      }
+    }
+  }
+  .faq-item__content {
+    padding: $gutter 0;
+    font-size: $fz-6;
+  }
+}
+
+
+
+// Grid
+.faq-grid {
+  display: block;
+  @include desktop {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+
+
+// Topbar
+.faq-topbar {
+  background: #cfdbd5;
+  overflow: auto;
+  padding: 20px;
+  @include desktop {
+    padding: 20px 0 $gutter 0;
+  }
+  .container {
+    display: flex;
+    @include row(0);
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: max-content;
+    @include desktop {
+      flex-wrap: wrap;
+      margin-left: auto;
+      margin-right: auto;
+      width: unset;
+    }
+  }
+
+}
+.faq-topbar__item {
+  min-width: unset;
+  max-width: unset;
+  padding: 0 20px;
+  @include desktop {
+    padding: 0px;
+  }
+}
+.faq-topbar__title {
+  cursor: pointer;
+  display: inline-block;
+  margin: 0;
+  font-size: $fz-4;
+  font-weight: 500;
+  font-stretch: condensed;
+  color: $color-dark-grey;
+  transition: $transition-time;
+  padding-bottom: 0.2em;
+  position: relative;
+  @include desktop {
+    padding-bottom: 0px;
+  }
+  &.is-active,
+  &:hover {
+    color: $color-button;
+    &:after {
+      opacity: 1;
+    }
+  }
+}
+
+// Questions
+.faq-questions {
+  flex: 1;
+  color: $color-black;
+  margin-top: $gutter*2;
+  @include desktop {
+    margin-top: 0px;
+  }
+  .faq-image + & {
+    padding: 0;
+    @include desktop {
+      padding: $gutter*3 0 $gutter*3 $gutter*5;
+    }
+  }
+}
+
+.faq-section {
+  display: none;
+  &.is-active {
+    display: block;
+  }
+  .faq-section__title {
+
+  }
+  .faq-section__icon {
+
+  }
+}
+
+
+// Image
+.faq-image {
+  min-width: 0;
+  max-width: none;
+  margin: 0 (-$gutter);
+  @include desktop {
+    min-width: 500px;
+    max-width: 500px;
+    margin: 0;
+  }
+}
+
+
+// Bottom
+.faq__more {
+  margin-top: $gutter*4;
+  font-size: $fz-3;
+  text-align: center;
+  a {
+    color: $color-button;
+    font-weight: 600;
+    text-decoration: none;
+  }
+}
+.faq__more-title {
+  font-size: inherit;
+  font-weight: 300;
+  color: $color-button;
+}
+
+
+// Product page styles
+.faq.m-product {
+  .faq-section {
+    display: block;
+  }
+}
+
+.need-help {
+
+  text-align: center;
+  margin: 82px;
+
+  @include desktop {
+    margin: 68px 0;
+  }
+  
+  .title {
+    color: $color-black;
+    font-weight: bold;
+    font-size: $fz-4;
+  }
+
+  .action-blocks {
+    margin-top: 68px;
+    justify-content: center;
+
+    @include desktop {
+      margin-top: 48px;
+    }
+  }
+
+  .action-block {
+    padding: 0 45px;
+
+    @include desktop {
+      padding: 0 65px;
+    }
+
+    .image {
+      margin-bottom: 15px;
+    }
+  }
+}

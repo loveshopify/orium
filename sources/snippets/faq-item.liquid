@@ -1,0 +1,11 @@
+<div class="faq-section m-{{ blockType }} {% if is_first %}is-active{% endif %} " data-accordions-container data-faq-section="{{ blockType }}">
+  {% for block in section.blocks %}
+    {% assign category_handle = block.settings.category_name | handleize %}
+    {% if category_handle == blockType %}
+      <div class="faq-item accordion" data-accordion>
+        <h3 class="faq-item__title accordion__title" data-accordion-button><span>{{ block.settings.title }}</span><i class="icon-plus"><svg src="plus.svg"></svg></i><i class="icon-minus"><svg src="minus.svg"></svg></i></h3>
+        <div class="faq-item__content accordion__content" data-accordion-content>{{ block.settings.answer }}</div>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>

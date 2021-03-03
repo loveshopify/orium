@@ -1,0 +1,29 @@
+{% comment %} ATTENTION!!! This is compiled version of product-info.liquid and it is overriding automatically. You should use theme development tool and sources\snippets\product-info.liquid file to code and save your changes. {% endcomment %}<div class="product-info">
+  <div class="product-info__reviews">
+    <a href="#looxReviews">
+      <div class="loox-rating" data-id="{{ product.id }}" data-rating="{{ product.metafields.loox.avg_rating }}" data-raters="{{ product.metafields.loox.num_reviews }}">
+      </div>
+    </a>
+  </div>
+
+  <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+    <meta itemprop="priceValidUntil" content="{{ 'now' | date: '%s' | plus: 31536000 | date: '%Y-%m-%d' | uri_encode | replace:'+','%20' }}">
+    <meta itemprop="url" content="{{ shop.url }}{{ variant.url }}">
+    
+    <meta itemprop="priceCurrency" content="{{ shop.currency }}">
+    <meta itemprop="price" content="{{ current_variant.price | divided_by: 100.00 }}">
+    <link itemprop="availability"
+      href="http://schema.org/{% if current_variant.available %}InStock{% else %}OutOfStock{% endif %}">
+
+    {% if template.suffix == 'gift' %}
+      {% render 'product-form--gift', product: product, section: section, current_variant: current_variant %}
+    {% else %}
+      {% render 'product-form', product: product, section: section, current_variant: current_variant %}
+    {% endif %}
+
+    {% if set.info != blank %}
+      <div class="product-info__descr">{{ set.info }}</div>
+    {% endif %}
+  </div>
+  {% comment %} / product schema {% endcomment %}
+</div>

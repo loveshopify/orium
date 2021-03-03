@@ -1,0 +1,55 @@
+{% assign set = section.settings %}
+
+{% if blog.handle == 'press' %}
+  {%- assign external_link = false -%}
+
+  {%- if article.metafields.sf_cuvee.link != blank -%}
+    {%- assign external_link = article.metafields.sf_cuvee.link -%}
+  {%- endif -%}
+  
+  <article class="post-cell m-press">
+    
+    <a href="{% if external_link %}{{ external_link }}{% else %}{{ article.url }}{% endif %}" class="post-cell__image no-hover-link">{% render 'rimage', image: article.image %}</a>
+    <!-- /.image -->
+
+    <div class="post-cell__content">
+      <h3 class="post-cell__title title h2 m-black not-animated"><a href="{% if external_link %}{{ external_link }}{% else %}{{ article.url }}{% endif %}" class="no-hover-link">{{ article.title }}</a></h3>
+      <div class="post-cell__bottom">
+        <div class="post-cell__meta">
+          {{ article.published_at | date: "%m/%d/%y" }}
+        </div>
+        <a href="{% if external_link %}{{ external_link }}{% else %}{{ article.url }}{% endif %}" class="post-cell__more no-hover-link">{{ article.tags[0] }}</a>
+      </div>
+    </div> <!-- /.post-cell__content -->
+  </article>
+
+{% else %}
+
+  <article class="post-cell {% if type == 'featured' %} post-cell--featured {% endif %} ">
+    
+    <a href="{{ article.url }}" class="post-cell__image no-hover-link">{% render 'rimage', image: article.image %}</a>
+    <!-- /.image -->
+
+    <div class="post-cell__content">
+      <h3 class="post-cell__title title h2 m-black not-animated"><a href="{{ article.url }}" class="no-hover-link">{{ article.title }}</a></h3>
+      <div class="post-cell__bottom">
+        <div class="post-cell__meta">
+          {%- if article.content != blank -%}{%- render 'ea-blog__read-time', article: article -%}{%- endif -%}
+          <span class="circle-dot"></span>
+          {{ article.published_at | date: "%b %d, %Y" }}
+        </div>
+        <a href="{{ article.url }}" class="post-cell__more no-hover-link">Read More</a>
+      </div>
+    </div> <!-- /.post-cell__content -->
+
+    {%- unless article.tags.size == 0 -%}
+    <span class="post-cell__tags">
+      {%- for tag in article.tags -%}
+        {{ tag }} {%- unless forloop.last -%}+{%- endunless -%}
+      {%- endfor -%}
+    </span>
+    {%- endunless -%} <!-- /.post-cell__tags -->
+
+  </article>
+
+{% endif %}

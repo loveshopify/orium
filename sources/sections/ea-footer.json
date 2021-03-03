@@ -1,0 +1,56 @@
+{
+  "name": "Footer",
+  "tag": "footer",
+  "class": "site-footer",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo raster image"
+    },
+    {
+      "type": "textarea",
+      "id": "svglogo",
+      "label": "Logo vector image",
+      "info": "(preferred)"
+    },
+    {
+      "type": "richtext",
+      "id": "info",
+      "label": "Info"
+    },
+    {
+      "type": "checkbox",
+      "id": "showSocial",
+      "label": "Show links to social networks",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Menus"
+    },
+    {
+      "type": "link_list",
+      "id": "bottom_menu",
+      "label": "Bottom Menu"
+    },
+    {
+      "type": "richtext",
+      "id": "copy",
+      "label": "Copyright"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "menu",
+      "name": "Menu",
+      "settings": [
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "Menu"
+        }
+      ]
+    }
+  ]
+}

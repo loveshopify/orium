@@ -1,0 +1,21 @@
+{% comment %} ATTENTION!!! This is compiled version of ea-cta-content.liquid and it is overriding automatically. You should use theme development tool and sources\snippets\ea-cta-content.liquid file to code and save your changes. {% endcomment %}{% assign set = section.settings %}
+
+{% render 'ea-section-styles', section: section %}
+
+{% render 'ea-section-foreground-image', section: section %}
+
+<div class="container ta-center">
+  {% if set.title != blank %}
+    <h3 class="title">{{ set.title }}</h3>
+  {% endif %}
+  {% if set.text != blank %}
+    <div class="subtitle">{{ set.text }}</div>
+  {% endif %}
+  {% render 'button', {
+    top: set.btntop,
+    id: section.id,
+    text: set.btn,
+    url: set.btnu,
+    class: 'm-primary m-animated'
+  } %}
+</div>

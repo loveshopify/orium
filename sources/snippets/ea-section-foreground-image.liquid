@@ -1,0 +1,14 @@
+{% assign set = section.settings %}
+<style>
+  #shopify-section-{{ section.id }} .section__bgimage {
+    width: {{ set.bgwidth }}%;
+    margin-top: {{ set.bgtop }}%;
+    {{ set.bgpos }}: {{ set.bgedge }}%;
+  }
+</style>
+
+{% if set.bgimage != blank %}
+  <div class="section__foreground-image m-pos-{{ set.bgpos }}">
+    <img src="{{ set.bgimage | img_url: 'master' }}" alt="{{ set.bgimage.alt }}">
+  </div>
+{% endif %}

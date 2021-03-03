@@ -1,0 +1,56 @@
+html {
+  font-size: $fz-body;
+}
+body {
+  color: $color-body;
+  font-family: $ff-1;
+  font-size: $fz-body;
+  font-weight: normal;
+  padding-top: 60px;
+  position: relative;
+  overflow-x: hidden;
+  @include desktop {
+    padding-top: 0px;
+  }
+}
+img {
+  max-width: 100%;
+}
+
+.no-js {
+  display: none;
+}
+
+.hide {
+  display: none !important;
+}
+
+.desktop--hide,
+.hide--desktop {
+  display: block !important;
+}
+
+.small--hide,
+.hide--mobile {
+  display: none !important;
+}
+
+@include desktop {
+  .desktop--hide,
+  .hide--desktop {
+    display: none !important; 
+  }
+  
+  .small--hide,
+  .hide--mobile {
+    display: block !important;
+  }
+
+}
+
+// .skewed-shape {
+//   @include mobile {
+//     -webkit-clip-path: polygon(0 0, 92% 0%, 85% 100%, 0% 100%) !important;
+//     clip-path: polygon(0 0, 92% 0%, 85% 100%, 0% 100%) !important;
+//   }
+// }

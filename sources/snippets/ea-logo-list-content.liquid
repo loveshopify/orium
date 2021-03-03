@@ -1,0 +1,42 @@
+{% render 'ea-section-styles', section: section %}
+
+{% assign set = section.settings %}
+
+<div class="container">
+  <div class="slider" data-slider="{{ section.id }}"
+    data-hor-slider
+    data-dots="false" 
+    data-arrows="false" 
+    data-slides-to-show="1" 
+    data-slides-to-scroll="1">
+    {% for block in section.blocks %}
+      {% assign bset = block.settings %}
+      {% if bset.text != blank %}
+        <h2 class="title m-black h2 ta-center not-animated {% if forloop.first %}is-active{% endif %} ">{{ bset.text }}</h2>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <div class="section__content">
+    <div class="slider s1__slider" 
+      {% comment %} data-hor-slider
+      data-as-nav-for="{{ section.id }}"
+      data-dots="false" 
+      data-arrows="false" 
+      data-slides-to-show="4" 
+      data-slides-to-show-mob="2" 
+      data-slides-to-scroll="1"
+      data-centermode="true"
+      data-autoplay="true" {% endcomment %}
+      >
+      {% for block in section.blocks %}
+        {% assign bset = block.settings %}
+        <div class="s1__item">
+          {% if bset.img != blank  %}
+            <img src="{{ bset.img | img_url: '200x' }}" alt="{{ best.img.alt }}">
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

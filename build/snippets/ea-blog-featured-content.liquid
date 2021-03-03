@@ -1,0 +1,38 @@
+{% comment %} ATTENTION!!! This is compiled version of ea-blog-featured-content.liquid and it is overriding automatically. You should use theme development tool and sources\snippets\ea-blog-featured-content.liquid file to code and save your changes. {% endcomment %}{% assign set = section.settings %}
+
+{%- capture customStyles -%}
+  #shopify-section-{{ section.id }} .featured-post {
+    background-color: {{ set.sectionbg }};
+  }
+{%- endcapture -%}
+{% render 'ea-section-styles', section: section, customStyles: customStyles %}
+
+{% render 'ea-section-foreground-image', section: section %}
+
+<div class="container">
+  <div class="featured-posts">
+    <div class="slider m-custom-controls" data-hor-slider data-custom-controls="1" data-slides-to-show="1">
+      {% for block in section.blocks %}
+        {% if block.type == 'post' %}
+          {% assign article = articles[block.settings.article] %}
+          <a class="featured-post no-hover-link" href="{{ article.url }}">
+            <div class="featured-post__image">{% render 'rimage', image: article.image %}</div>
+            <div class="featured-post__content">
+              {% if article.tags[0] != blank %}
+                <h4 class="pretitle m-accent not-animated">{{ article.tags[0] }}</h4>
+              {% endif %}
+              <h3 class="title h2 m-black not-animated">{{ article.title }}</h3>
+              {% if article.excerpt != blank %}
+                <div class="subtitle not-animated">{{ article.excerpt }}</div>
+              {% endif %}
+            </div>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div class="slider-controls">
+      <button class="slider-arrow slider-prev m-icon" data-hor-slider-prev><i class="icon-left-arrow"></i></button>
+      <button class="slider-arrow slider-next m-icon" data-hor-slider-next><i class="icon-right-arrow"></i></button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+{% if section.settings.visible %}
+  {% render 'ea-blog-featured-content', section: section %}
+{% endif %}
+
+
+{% schema %}
+  @@include('ea-blog-featured.json')
+{% endschema %}

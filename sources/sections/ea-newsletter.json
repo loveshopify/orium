@@ -1,0 +1,35 @@
+{
+  "name": "Newsletter",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "visible",
+      "label": "Show section",
+      "default": true
+    },
+
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "pretitle",
+      "label": "Title Secondary"
+    },
+    {
+      "type": "text",
+      "id": "placeholder",
+      "label": "Input default text",
+      "default": "Enter your email"
+    },
+    {
+      "type": "text",
+      "id": "btn",
+      "label": "Button text",
+      "default": "SUBSCRIBE"
+    }
+  ]
+}

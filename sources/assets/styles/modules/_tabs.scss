@@ -1,0 +1,46 @@
+.tabs {
+  display: flex;
+  justify-content: center;
+}
+.tab {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  color: $color-light-grey;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: $color-white;
+  border: 1px solid $color-brown-light;
+  padding: 0 2em;
+  min-width: 200px;
+  line-height: 1.15;
+  font-weight: 500;
+  font-size: $fz-4;
+  letter-spacing: 0.02em;
+  font-stretch: condensed;
+
+  &.is-active {
+    background: $color-brown-light;
+    color: $color-black;
+  }
+}
+
+.tab:focus,
+.tab.is-focused,
+.tab:active,
+.tab.is-active {
+  outline: 0;
+}
+
+.tab-content {
+  display: none;
+  &.is-active {
+    display: block;
+  }
+}

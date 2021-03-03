@@ -1,0 +1,31 @@
+
+.product-images {
+  height: auto;
+  @include desktop {
+      position: relative;
+      background-size: contain;
+      text-align: left;
+  }
+}
+
+.product-slider {
+  visibility: hidden;
+  &.is-visible {
+    visibility: visible;
+  }
+  .slick-arrow {
+    top: auto;
+    bottom: -45px;
+    right: calc(50% - 45px);
+  }
+  .slick-prev {
+    right: auto;
+    left: calc(50% - 45px);
+  }
+  .slick-dots {
+    position: absolute;
+    bottom: $gutter;
+    left: $gutter;
+    right: $gutter;
+  }
+}

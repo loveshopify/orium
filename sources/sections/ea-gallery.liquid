@@ -1,0 +1,7 @@
+{% if section.settings.visible %}
+  {% render 'ea-gallery-content', section: section %}
+{% endif %}
+
+{% schema %}
+  @@include('ea-gallery.json')
+{% endschema %}

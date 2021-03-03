@@ -1,0 +1,199 @@
+{% comment %} ATTENTION!!! This is compiled version of ea-megamenu-second.liquid and it is overriding automatically. You should use theme development tool and sources\sections\ea-megamenu-second.liquid file to code and save your changes. {% endcomment %}<nav class="nav" data-accordions-container data-accordions-mobile-only="1">
+  <ul class="nav__items">
+
+    {% for block in section.blocks %}
+
+      {% if block.type contains 'dropdown' %}
+        <li class="nav__item m-level-1 m-dropdown" data-trigger-hover {{ block.shopify_attributes }}>
+          <a href="{{ block.settings.url }}" class="nav__link m-level-1 m-icon" data-accordion-button>
+            {{ block.settings.title }}
+            <i class="icon-caret-down"></i>
+          </a>
+          {% render 'nav-dropdown', block: block %}
+        </li>
+
+      {% elsif block.type == 'link' %}
+        <li class="nav__item m-level-1" {{ block.shopify_attributes }}>
+          <a class="nav__link m-level-1" href="{{ block.settings.url }}">
+            {{ block.settings.title }}
+          </a>
+        </li>      
+      {% endif %}
+
+    {% endfor %}
+  </ul>
+</nav> <!-- /.site-header__nav -->
+
+{% schema %}
+  {
+  "name": "Mega Menu",
+  "blocks": [
+    {
+      "type": "dropdown_submenus",
+      "name": "Dropdown",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Main Link Text"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Main Link Url"
+        },
+        {
+          "type": "header",
+          "content": "Dropdown links"
+        },
+
+
+        {
+          "type": "header",
+          "content": "Link 1"
+        },
+        {
+          "type": "text",
+          "id": "link_1_title",
+          "label": "Link 1 Text"
+        },
+        {
+          "type": "url",
+          "id": "link_1_url",
+          "label": "Link 1 Url"
+        },
+        {
+          "type": "image_picker",
+          "id": "link_1_image",
+          "label": "Link 1 Image"
+        },
+        {
+          "type": "link_list",
+          "id": "link_1_submenu",
+          "label": "Link 1 Submenu"
+        },
+
+
+        {
+          "type": "header",
+          "content": "Link 2"
+        },
+        {
+          "type": "text",
+          "id": "link_2_title",
+          "label": "Link 2 Text"
+        },
+        {
+          "type": "url",
+          "id": "link_2_url",
+          "label": "Link 2 Url"
+        },
+        {
+          "type": "image_picker",
+          "id": "link_2_image",
+          "label": "Link 2 Image"
+        },
+        {
+          "type": "link_list",
+          "id": "link_2_submenu",
+          "label": "Link 2 Submenu"
+        },
+
+
+        {
+          "type": "header",
+          "content": "Link 3"
+        },
+        {
+          "type": "text",
+          "id": "link_3_title",
+          "label": "Link 3 Text"
+        },
+        {
+          "type": "url",
+          "id": "link_3_url",
+          "label": "Link 3 Url"
+        },
+        {
+          "type": "image_picker",
+          "id": "link_3_image",
+          "label": "Link 3 Image"
+        },
+        {
+          "type": "link_list",
+          "id": "link_3_submenu",
+          "label": "Link 3 Submenu"
+        },
+
+
+        {
+          "type": "header",
+          "content": "Link 4"
+        },
+        {
+          "type": "text",
+          "id": "link_4_title",
+          "label": "Link 4 Text"
+        },
+        {
+          "type": "url",
+          "id": "link_4_url",
+          "label": "Link 4 Url"
+        },
+        {
+          "type": "image_picker",
+          "id": "link_4_image",
+          "label": "Link 4 Image"
+        },
+        {
+          "type": "link_list",
+          "id": "link_4_submenu",
+          "label": "Link 4 Submenu"
+        },
+
+
+        {
+          "type": "header",
+          "content": "Link 5"
+        },
+        {
+          "type": "text",
+          "id": "link_5_title",
+          "label": "Link 5 Text"
+        },
+        {
+          "type": "url",
+          "id": "link_5_url",
+          "label": "Link 5 Url"
+        },
+        {
+          "type": "image_picker",
+          "id": "link_5_image",
+          "label": "Link 5 Image"
+        },
+        {
+          "type": "link_list",
+          "id": "link_5_submenu",
+          "label": "Link 5 Submenu"
+        }
+      ]
+    },
+    {
+      "type": "link",
+      "name": "Regular Link",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Link Text"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Link URL"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

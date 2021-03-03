@@ -1,0 +1,159 @@
+{% assign set = section.settings %}
+
+<table class="cart-table">
+  <thead class="small--hide">
+    <tr>
+      <th class="m-image">{{ 'cart.label.product' | t }}</th>
+      <th class="m-info">&nbsp;</th>
+
+      <th class="m-qty">{{ 'cart.label.qty' | t }}</th>
+      <th class="m-price">{{ 'cart.label.price' | t }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in cart.items %}
+      {% assign product = item.product %}
+      {% assign defaultVariant = false %}
+      {% if item.variant.title == "Default Title" %}
+        {% assign defaultVariant = true %}
+      {% endif %}
+      {% if item.product.template_suffix == 'gift' %}
+        {% continue %}
+      {% endif %}
+      {% if item.product.metafields.subscriptions.original_handle != blank %}
+        {% assign originProduct = all_products[item.product.metafields.subscriptions.original_handle] %}
+      {% endif %}
+
+      {% comment %}
+
+      Cart Item Template
+      =====================
+      The data-label attributes on <td> elements are mobile-friendly
+      helpers used for responsive-table labels
+      {% endcomment %}
+
+      <tr class="responsive-table-row" data-cart-row>
+
+        <td class="m-image" data-label="{{ 'customer.order.product' | t }}">
+          {% if item.image != blank %}
+            <a href="{{ item.url | within: collections.all }}" class="cart-product-image no-hover-link">
+              <img src="{{ item.image | img_url: '400x' }}" alt="{{ item.image.alt }}">
+            </a>
+          {% endif %}
+          <div class="hide--desktop ta-center">
+            <a class="cart-remove-link link no-hover-link" href="#" data-cart-remove-item data-id="{{ item.variant.id }}">
+              {{ 'cart.general.remove' | t }}
+            </a>
+          </div>
+        </td>
+        <!-- / Image cell -->
+
+        <td class="m-info">
+          <div class="product-summary">
+            <h3 class="pretitle not-animated h4"><a href="{{ item.url }}" class="no-hover-link">{{ item.product.title }}</a></h3>
+            {% unless defaultVariant %} <div class="subtitle h6 not-animated" data-variant-title>{{ item.variant.title }}</div> {% endunless %}
+            
+            <div class="cart-price">
+              {% if originProduct.handle != blank %}
+                <s class="was-price">{{ originProduct.variants[0].price | times: item.quantity | money }}</s>
+              {% else %}
+                {% if item.variant.compare_at_price > item.variant.price %}
+                  <s class="was-price">{{ item.variant.compare_at_price | times: item.quantity | money }}</s>
+                {% endif %}
+              {% endif %}
+              {{ item.variant.price | times: item.quantity | money }}
+            </div>
+
+            <div class="hide--mobile">
+              <a class="cart-remove-link link no-hover-link" href="#" data-cart-remove-item data-id="{{ item.variant.id }}">
+                {{ 'cart.general.remove' | t }}
+              </a>
+            </div>
+    
+            {%- assign property_size = item.properties | size -%}
+
+            {% if property_size > 0 %}
+              {% assign recurringchecked = "false" %} 
+              {% for p in item.properties %}
+                {% unless p.last == blank
+                or p.first == 'subscription_id' 
+                or p.first == 'shipping_interval_frequency' 
+                or p.first == 'shipping_interval_unit_type' %}
+                  
+                  {{ p.first }}:
+
+                  {% if p.last contains '/uploads/' %}
+                    <a href="{{ p.last }}">{{ p.last | split: '/' | last }}</a>
+                  {% else %}
+                    {{ p.last }}
+                  {% endif %}
+
+                {% endunless %}
+
+                {%- comment -%} Grab Recharge Frequency: {%- endcomment -%}
+                {% if p.first == 'shipping_interval_frequency' %}
+                  {% assign frequency = p.last %}
+                  {% assign recurringchecked = "true" %} 
+                {% endif %}
+                {% if p.first == 'shipping_interval_unit_type' %}
+                  {% if frequency == '1'%}
+                    {% if p.last == 'Days' %}
+                      {% assign frequency_unit = 'Day' %}
+                    {% elsif p.last == 'Months'%}
+                      {% assign frequency_unit = 'Month' %}
+                    {% elsif p.last == 'Weeks'%}
+                      {% assign frequency_unit = 'Week' %}
+                    {% endif %}
+                  {% else %}
+                    {% assign frequency_unit = p.last %}
+                  {% endif %}
+                {% endif %}
+                {%- comment -%} / Grab Recharge Frequency {%- endcomment -%}
+
+              {% endfor %}
+            {% endif %}
+          </div>
+
+        </td> <!-- / Product summary cell -->
+
+
+
+        <td class="m-qty" data-label="{{ 'cart.label.qty' | t }}">
+          <div class="field">
+            {% render 'qty-selector', {
+              type: 'cart',
+              item: item,
+              index: forloop.index,
+              forloop: forloop
+            } %}
+          </div>
+        </td>
+        <!-- / Quantity cell -->
+
+        <td class="m-price hide--mobile" data-label="{{ 'cart.label.price' | t }}">
+          <div class="cart-price">
+
+            {% if originProduct.handle != blank %}
+              <s class="was-price">{{ originProduct.variants[0].price | times: item.quantity | money }}</s>
+            {% else %}
+              {% if item.variant.compare_at_price > item.variant.price %}
+                <s class="was-price">{{ item.variant.compare_at_price | times: item.quantity | money }}</s>
+              {% endif %}
+            {% endif %}
+            {{ item.variant.price | times: item.quantity | money }}
+
+          </div>
+        </td>
+        <!-- / Price cell -->
+
+      </tr>
+
+      {% assign recurringchecked = false %}
+      {% assign frequency = blank %}
+      {% assign frequency_unit = blank %}
+      {% assign originProduct = false %}
+    {% endfor %}
+  </tbody>
+</table>
+
+

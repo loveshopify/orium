@@ -1,0 +1,74 @@
+
+
+.popup {
+  max-height: 100%;
+  position: fixed;
+  z-index: 999;
+  &.is-hidden {
+    display: none;
+  }
+}
+
+.popup-bg,
+.popup-window {
+  position: absolute;
+}
+
+.popup,
+.popup-bg {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.popup-bg {
+  z-index: 998;
+  background: black;
+  opacity: 0.4;
+}
+
+.popup-window {
+  background: $color-white;
+  width: 90%;
+  left: 5%;
+  right: 5%;
+  bottom: 5%;
+  top: 5%;
+  max-height: 100vh;
+  transform: none;
+  z-index: 999;
+  overflow-y: auto;
+  @include desktop {
+    top: 50%;
+    left: 50%;
+    right: unset;
+    bottom: unset;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.close {
+  width: 20px;
+  height: 20px;
+  right: 15px;
+  top: 15px;
+  position: absolute;
+  font-size: $fz-3;
+  opacity: .5;
+  background: none;
+  border: none;
+
+  @include desktop {
+    top: $gutter;
+    right: $gutter;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.quick-view-popup {
+  width: unset;
+}

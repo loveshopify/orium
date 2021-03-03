@@ -1,0 +1,120 @@
+{% comment %} ATTENTION!!! This is compiled version of ea-article-page.liquid and it is overriding automatically. You should use theme development tool and sources\sections\ea-article-page.liquid file to code and save your changes. {% endcomment %}{% render 'ea-article-page-content', section: section %}
+
+{% schema %}
+  {
+  "name": "Article Page",
+  "class": "ea-article-page",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "ptop",
+      "label": "Top spacing desktop",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "pbottom",
+      "label": "Bottom spacing desktop",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "ptop_mob",
+      "label": "Top spacing mobile",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "pbottom_mob",
+      "label": "Bottom spacing mobile",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+
+    
+    {
+      "type": "header",
+      "content": "Background"
+    },
+    {
+      "type": "color",
+      "id": "sectionbg",
+      "label": "Article header background color",
+      "default": "#ffffff"
+    },
+
+
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "checkbox",
+      "id": "showSocial",
+      "label": "Show links to social networks",
+      "default": true
+    },
+
+
+    {
+      "type": "header",
+      "content": "Sidebar"
+    },
+    {
+      "type": "color",
+      "id": "sidebarbg",
+      "label": "Sidebar background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "text",
+      "id": "sidebar_title",
+      "label": "Sidebar title"
+    },
+    {
+      "id": "show_product_price",
+      "type": "checkbox",
+      "default": true,
+      "label": "Show product price"
+    },
+    {
+      "id": "show_product_info",
+      "type": "checkbox",
+      "default": true,
+      "label": "Show product info"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

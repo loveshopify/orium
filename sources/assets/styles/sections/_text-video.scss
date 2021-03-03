@@ -1,0 +1,26 @@
+.text-video-section {
+  position: relative;
+
+  .title, .subtitle {
+    text-align: center;
+    @include desktop {
+      text-align: left;
+    }
+  }
+  .video-item {
+    padding: 0 105px 105px;
+    margin-top: 100px;
+    position: relative;
+    @include desktop {
+      margin-top: 15px;
+    }
+    &:before {
+      @include overlay {
+        top: -60px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+      }
+    }
+  }
+}

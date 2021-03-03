@@ -1,0 +1,21 @@
+{% comment %} ATTENTION!!! This is compiled version of button.liquid and it is overriding automatically. You should use theme development tool and sources\snippets\button.liquid file to code and save your changes. {% endcomment %}{% if text != blank and text != "" %}
+  <style>
+    #button-id-{{ id }} {
+      margin-top: {{ top }}px;
+      color: {{ color }};
+      background: {{ bg }};
+      border-color: {{ border }};
+    }
+    #button-id-{{ id }}:hover {
+      color: {{ colorH }};
+      background: {{ bgH }};
+      border-color: {{ borderH }};
+    }
+  </style>
+
+  {% if type == 'submit' %}
+    <button type="submit" id="button-id-{{ id }}" class="btn {{ class }}" {{ data_attr }}>{{ text }}</button>
+  {% else %}
+    <a href="{{ url }}" id="button-id-{{ id }}" class="btn {{ class }}" {{ data_attr }}>{{ text }}{% render 'arrow-icon' %}</a>
+  {% endif %} 
+{% endif %}

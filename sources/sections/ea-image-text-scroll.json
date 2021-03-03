@@ -1,0 +1,178 @@
+{
+  "name": "Image, text and scroll",
+  "class": "section promo m-promo m-scroll",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "visible",
+      "label": "Show section",
+      "default": true
+    },
+
+
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "ptop",
+      "label": "Top spacing desktop",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "pbottom",
+      "label": "Bottom spacing desktop",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "ptop_mob",
+      "label": "Top spacing mobile",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "pbottom_mob",
+      "label": "Bottom spacing mobile",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },    
+
+
+    {
+      "type": "header",
+      "content": "Background"
+    },
+    {
+      "type": "color",
+      "id": "sectionbg",
+      "label": "Section background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "image_picker",
+      "id": "bgimage",
+      "label": "Background image"
+    },
+    {
+      "type": "range",
+      "id": "bgwidth",
+      "label": "Background width",
+      "min": 1,
+      "unit": "%",
+      "max": 100,
+      "step": 1,
+      "default": 25
+    },
+    {
+      "type": "select",
+      "id": "bgpos",
+      "label": "Background position",
+      "options": [
+        { "value": "left", "label": "left" },
+        { "value": "right", "label": "right" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "bgtop",
+      "label": "Background top spacing",
+      "min": 0,
+      "unit": "%",
+      "max": 100,
+      "step": 1,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "bgedge",
+      "label": "Background edge spacing",
+      "min": -50,
+      "unit": "%",
+      "max": 50,
+      "step": 1,
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "id":"title",
+      "type":"text",
+      "label":"Title",
+      "default":"Title"
+    },
+    {
+      "id": "text",
+      "type": "richtext",
+      "label": "Text",
+      "default": "<p>Add your text here</p>"
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "id": "image",
+      "type": "image_picker",
+      "label": "Main image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "list_item",
+      "name": "List item",
+      "settings": [
+        {
+          "id": "title",
+          "type": "text",
+          "label": "List icon title text",
+          "default": "Enter title text"
+        },
+        {
+          "id": "text",
+          "type": "richtext",
+          "label": "List icon subtitle text",
+          "default": "<p>Add your text here</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image, text and scroll",
+      "category": "Promo",
+      "blocks": [
+        {
+          "type": "list_item"
+        },
+        {
+          "type": "list_item"
+        },
+        {
+          "type": "list_item"
+        }
+      ]
+    }
+  ]
+}

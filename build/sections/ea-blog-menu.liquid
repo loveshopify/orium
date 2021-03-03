@@ -1,0 +1,62 @@
+{% comment %} ATTENTION!!! This is compiled version of ea-blog-menu.liquid and it is overriding automatically. You should use theme development tool and sources\sections\ea-blog-menu.liquid file to code and save your changes. {% endcomment %}{% assign set = section.settings %}
+
+{% if set.visible %}
+  <div class="blog-menu desktop-show">
+    {% if set.menu %}
+      <nav class="nav">
+        <ul class="nav__items">
+          {% for link in linklists[set.menu].links %}
+            <li class="nav__item">
+              <a class="nav__link {% if blog.title == link.title %} is-active {% endif %} " href="{{ link.url }}">{{ link.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    {% endif %}
+  </div>
+  
+  <div class="blog-menu mobile-show">
+    {% if set.menu %}
+      <nav class="nav">
+        <div class="nav__items slider menu__slider" data-menu-slider data-slides-to-shows="3">
+          {% for link in linklists[set.menu].links %}
+            <div class="nav__item">
+              <a class="nav__link {% if blog.title == link.title %} is-active {% endif %} " href="{{ link.url }}">{{ link.title }}</a>
+            </div>
+          {% endfor %}  
+        </div>
+      </nav>
+    {% endif %}
+  </div>
+{% endif %}
+
+{% if set.search_visible %}
+  <div class="container">
+    {% render 'ea-search-form' %}
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Blog Menu",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "visible",
+      "label": "Show menu",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "search_visible",
+      "label": "Show search",
+      "default": true
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Blog Menu"
+    }
+  ]
+}
+{% endschema %}

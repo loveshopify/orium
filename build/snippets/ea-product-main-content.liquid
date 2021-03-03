@@ -1,0 +1,49 @@
+{% comment %} ATTENTION!!! This is compiled version of ea-product-main-content.liquid and it is overriding automatically. You should use theme development tool and sources\snippets\ea-product-main-content.liquid file to code and save your changes. {% endcomment %}{% assign set = section.settings %}
+
+{% render 'ea-section-styles', section: section %}
+
+{% render 'ea-section-foreground-image', section: section %}
+
+<div data-section-id="{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="product" data-enable-history-state="true" itemscope itemtype="http://schema.org/Product">
+  {%- assign current_variant = product.selected_or_first_available_variant -%}
+  {%- assign featured_image = current_variant.featured_image | default: product.featured_image -%}
+
+  <meta itemprop="name" content="{{ product.title }}{% unless product.has_only_default_variant %} - {{ current_variant.title }}{% endunless %}">
+  <meta itemprop="url" content="{{ shop.url }}{{ current_variant.url }}">
+  <meta itemprop="brand" content="{{ product.vendor }}">
+  <meta itemprop="image" content="{{ featured_image | img_url: '600x600' }}">
+  <meta itemprop="mpn" content="{{ current_variant.sku }}">
+  {%- if current_variant.sku != blank -%}
+    <meta itemprop="sku" content="{{ current_variant.sku }}">
+  {%- endif -%}
+  <meta itemprop="description" content="{{ product.description | strip_html | escape }}">
+  {% if product.metafields.okendo.summaryData.reviewCount > 0 %}      
+  <div itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating" itemscope>
+    <meta itemprop="reviewCount" content="{{ product.metafields.okendo.summaryData.reviewCount }}" />
+    <meta itemprop="ratingValue" content="{{ product.metafields.okendo.summaryData.reviewAverageValue }}" />
+  </div>
+  {% elsif product.metafields.okendo.ReviewCount > 0 %}
+  <div itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating" itemscope>
+    <meta itemprop="reviewCount" content="{{ product.metafields.okendo.ReviewAverageValue }}" />
+    <meta itemprop="ratingValue" content="{{ product.metafields.okendo.ReviewCount }}" />
+  </div>
+  {% endif %}
+
+  <div class="product-main">
+    <div class="product-main__container container">
+      <div class="product-main__left">
+        {% render 'product-images', product: product, section: section, current_variant: current_variant %}
+      </div>
+      <div class="product-main__right">
+        {% render 'product-info', product: product, section: section, current_variant: current_variant  %}
+      </div>
+    </div>
+  </div>
+
+  
+  {% unless product == empty %}
+    <script data-product-json type="application/json">
+      {{ product | json }}
+    </script>
+  {% endunless %}
+</div>

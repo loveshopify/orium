@@ -1,0 +1,92 @@
+{% comment %} ATTENTION!!! This is compiled version of ea-hero-content.liquid and it is overriding automatically. You should use theme development tool and sources\snippets\ea-hero-content.liquid file to code and save your changes. {% endcomment %}
+
+
+{% assign counter = 0 %}
+{% for block in section.blocks %}
+  {% if block.settings.visible %}
+    {% assign counter = counter | plus: 1 %}
+  {% endif %}
+{% endfor %}
+
+
+{% if section.blocks.size %}
+  <div class="hero-container">
+    {% for block in section.blocks %}
+      {% assign set = block.settings %}
+      {% if set.visible == false %}{% continue %}{% endif %}
+
+      <style>
+        #block-{{ block.id }} .hero__info.custom {
+          top: {{ set.text_top | append: '%' }};
+          left: {{ set.text_left }}px;
+          text-align: {{ set.text_pos }};
+        }        
+        @media (max-width: 989px) {
+          #block-{{ block.id }} .hero__info.custom {
+            top: {{ set.text_top_mobile | append: '%' }};
+            left: {{ set.text_left_mobile }}px;            
+            text-align: {{ set.text_pos_mobile }};
+          }          
+        }
+
+        
+      </style>
+      
+      <div
+        id="block-{{ block.id }}"
+        class="hero {% if type == 'blog' %}m-blog {% endif %}" 
+        style="background-color: {{ set.sectionbg }};">
+        <div class="hero__container {% if type == 'blog' %}container{% endif %}">
+          <div class="hero__info-wrap m-index-{{ forloop.index }} {% if counter == 2 %}m-half{% endif %} ">
+            <div class="hero__info {{ block.settings.content_position }} mobile_{{ block.settings.content_position_mobile }} {% if set.white_text %}m-white{% endif %}">
+              {% if set.pretitle != blank %}
+                <h3 class="pretitle not-animated h4">{{ set.pretitle }}</h3>
+              {% endif %}
+              {% if title != blank %}
+                <h1 class="hero__title title m-heavy not-animated {% if set.title_large %}m-large{% endif %}">{{ title }}</h1>
+              {% elsif set.title != blank %}
+                <h1 class="hero__title title m-heavy not-animated {% if set.title_large %}m-large{% endif %}">{{ set.title }}</h1>
+              {% endif %}
+              
+              {% if subtitle != blank %}
+                <div class="subtitle not-animated {% if set.subtitle_large %}h3{% endif %}">{{ subtitle }}</div>
+              {% elsif set.subtitle != blank %}
+                <div class="subtitle not-animated {% if set.subtitle_large %}h3{% endif %}">{{ set.subtitle }}</div>
+              {% endif %}
+
+              {% if set.btn != blank and set.btnu != blank %}
+                <div class="hero__btn">
+                  {%- capture btn_class -%}
+                    {%- if set.white_btn %}m-white{%- else -%}m-black{%- endif -%}
+                    {%- unless set.large_btn %} m-small{% endunless -%}
+                  {%- endcapture -%}
+                  {% render 'button', {
+                    top: set.btntop,
+                    id: section.id,
+                    text: set.btn,
+                    url: set.btnu,
+                    class: btn_class
+                  } %}
+                </div>
+              {% endif %}
+            </div> <!-- /.hero-info -->
+          </div>
+
+          {% if set.hero_image != blank or set.hero_image_mobile != blank %}
+            {% if set.hero_image != blank %}
+              <div class="hero__img hide--mobile" style="margin-top: {{ set.image_top_desktop }}px; ">
+                {% render 'rimage', image: set.hero_image, size: '2000x' %}
+              </div>
+            {% endif %}
+            <div class="hero__img hide--desktop" style="margin-top: {{ set.image_top_mobile }}px">
+              {% assign image = set.hero_image_mobile | default: set.hero_image %}
+              {% render 'rimage', image: image %}
+            </div>
+          {% endif %}
+      
+        </div> <!-- /.hero__container -->
+      </div> <!-- /.hero -->
+    {% endfor %}
+  </div> <!-- /.hero-container -->
+{% endif %}
+

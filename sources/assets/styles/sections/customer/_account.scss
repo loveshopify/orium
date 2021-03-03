@@ -1,0 +1,781 @@
+.account {
+  padding: $gutter*10 0;
+  table {
+    width: 100%;
+  }
+
+  h2, h3, h4 {
+    @extend .mt-4;
+  }
+}
+
+.customer-information {
+  h1 {
+    margin-bottom: 0;
+  }
+  p {
+    margin-top: 5px;
+  }
+  .divider {
+    color: $color-blue-grey;
+    padding: 0 10px;
+  }
+  a {
+    text-decoration: underline;
+  }
+}
+.order-product-img {
+  max-width: 100px;
+}
+.desktop-text-center {
+  text-align: center;
+  @include media-query(small) {
+    text-align: right;
+  }
+}
+
+.new-address-wrapper {
+  margin-top: 20px;
+  @include desktop {
+    margin-top: 40px;
+  }
+}
+
+
+
+
+
+
+
+/*============================================================================
+  Responsive tables, defined with .responsive-table on table element.
+==============================================================================*/
+
+// not customized yet
+  .responsive-table {
+    width: 100%;
+
+    thead {
+      display: none;
+    }
+
+    tr {
+      display: block;
+    }
+
+    // IE9 table layout fixes
+    tr,
+    td {
+      float: left;
+      clear: both;
+      width: 100%;
+    }
+
+    th,
+    td {
+      display: block;
+      text-align: right;
+      padding: $gutter / 2 0;
+      margin: 0;
+    }
+
+    td::before {
+      content: attr(data-label);
+      float: left;
+      text-align: center;
+      padding-right: 10px;
+    }
+  }
+
+  // Add a keyline between rows
+  .responsive-table-row + .responsive-table-row,
+  tfoot > .responsive-table-row:first-child {
+    position: relative;
+    margin-top: 10px;
+    padding-top: $gutter / 2;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: $gutter / 2;
+      right: $gutter / 2;
+      border-bottom: 1px solid $color-light-grey;
+    }
+  }
+
+
+.my-account {
+  padding-top: 0px;
+  padding-bottom: 150px;
+  @include desktop {
+    padding-top: 150px;
+  }
+  .container.d-flex {
+    flex-direction: column;
+    @include desktop {
+      flex-direction: row;
+    }
+  }
+  .radio {
+    label {
+      position: relative;
+    }
+    .label:before {
+      width: 25px;
+      height: 25px;
+      transform: translateY(3px);
+    }
+    input:checked+.label:before {
+      background: #000;
+      border-color: #000;
+      box-shadow: none;
+    }
+    input:checked+.label:after {
+      content: '';
+      display: inline-block;
+      border: 2px solid #000;
+      border-color: transparent white white transparent;
+      height: 12px;
+      width: 7px;
+      margin-top: 10px;
+      margin-left: 9px;
+      left: 0px;
+      transform: rotate(45deg);
+      position: absolute;
+    }
+  }
+  .content {
+    background: #fff;
+    padding: 15px 15px 30px 15px;
+    width: 100%;
+    h1 {
+      font-size: 16px;
+      font-weight: bold;
+      @include desktop {
+        font-size: 30px;
+        font-weight: normal;
+      }
+    }
+    @include desktop {
+      background: #fcfcfc;
+      padding: 30px;
+    }
+  }
+
+  .grid.columns {
+    display: block;
+    @include desktop {
+      display: flex;
+    }
+    .grid__item {
+      min-width: 100%;
+      max-width: 100%;
+      margin-bottom: 5px;
+      @include desktop {
+        min-width: 50%;
+        max-width: 50%;
+        margin-bottom: 0px;
+      }
+
+      [data-accordion-button] svg {
+        display: inline-block;
+        @include desktop {
+          display: none;
+        }
+      }
+      [data-accordion-button].is-open svg {
+        transform: rotate(180deg);
+      }
+      [data-accordion-content] {
+        padding: 0 15px 10px 15px;
+        p:first-child {
+          margin-top: 0px;
+          @include desktop {
+            margin-top: 10px;
+          }
+        }
+        @include desktop {
+          padding: 0px;
+        }
+      }
+
+      &:last-child [data-accordion-content] {
+        display: none;
+        @include desktop {
+          display: block;
+        }
+      }
+
+      h3 {
+        background: #edebeb;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 10px 15px;
+        @include desktop {
+          background: #FFF;
+          font-size: 19px;
+          padding: 0;
+        }
+        svg {
+          display: inline-block;
+          float: right;
+          margin-top: 5px;
+          @include desktop {
+            display: none;
+          }
+        }
+      }
+      p {
+        margin-bottom: 0px;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  #customer_orders {
+    margin-top: 45px;
+    h3 {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      @include desktop {
+        font-size: 19px;
+      }
+    }
+  }
+
+  #customer_orders {
+    margin-left: -15px;
+    margin-right: -15px;
+    @include desktop{
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+    table {
+      border-top: 1px solid #f4f4f4;
+      display: block;
+
+      thead, thead th, tbody {
+        display: block;
+      }
+
+      thead {
+        float: left;
+        th {
+          border-bottom: 1px solid #f4f4f4;
+          font-size: 14px;
+          height: 42px;
+          @include desktop {
+            border-bottom: none;
+            font-size: 16px;
+            height: auto;
+          }
+        }
+      }
+
+      tbody {
+        position: relative;
+        width: auto;
+        overflow-y: auto;
+        @include desktop {
+          overflow-y: unset;
+        }
+        tr {
+          display: table-cell;
+          @include desktop {
+            display: table-row;
+          }
+          td {
+            border-bottom: 1px solid #f4f4f4;
+            display: block;
+            width: 100%;
+            min-width: 115px;
+            @include desktop {
+              border-bottom: unset;
+              display: table-cell;
+              width: auto;
+              min-width: unset;
+            }
+          }
+        }
+      }
+
+      @include desktop {
+        border-top: none;
+        display: table;
+        thead {
+          display: table-header-group;
+          float: unset;
+          th {
+            display: table-cell;
+          }
+        }
+        tbody {
+          display: table-row-group;
+        }
+      }
+
+      .head {
+        background: #fff;
+        box-shadow: 5px 0 3px 0 rgba(159, 159, 159, 0.1);
+        @include desktop {
+          background: #edebeb;
+          box-shadow: none;
+        }
+        th {
+          padding: 7px 10px;
+        }
+      }
+      tbody tr td {
+        font-size: 14px;
+        padding: 10px;
+      }
+    }
+  }
+  .swipe_info {
+    background: #f4f4f4;
+    font-size: 14px;
+    line-height: 1;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    text-align: center;
+  }
+}
+
+.my-account-menu {
+  position: sticky;
+  top: 60px;
+  z-index: 1;
+  @include desktop {
+    position: relative;
+    top: unset;
+  }
+  .my-account-menu-wrapper {
+    
+    background: #edebeb;
+    margin-right: 0px;
+    padding: 0 15px;
+
+    @include desktop {
+      background: #fcfcfc;
+      margin-right: 30px;
+      padding: 30px 20px 15px 20px;;
+    }
+
+    [data-accordion-button] {
+      margin: 0px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+    [data-accordion-button] svg {
+      display: inline-block;
+      float: right;
+      width: 20px;
+      height: auto;
+      margin-top: 5px;
+    }
+    
+    [data-accordion-button].is-open svg {
+      transform: rotate(180deg);
+    }
+
+    [data-accordion-content] {
+      display: none;
+      @include desktop {
+        display: block;
+      }
+    }
+  }
+
+  h1 {
+    font-size: 18px;
+    font-weight: bold;
+    @include desktop {
+      font-size: 30px;
+      font-weight: normal;
+    }
+  }
+  .content {
+    padding-left: 15px;
+    padding-right: 15px;
+    @include desktop {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+  .goto {
+    width: 100%;
+    @include desktop {
+      width: 200px;
+    }
+    ul {
+      padding-left: 0px;
+      margin-bottom: 0px;
+    }
+    ul li {
+      border-bottom: 1px solid #e2e2e2;
+      list-style: none;
+      margin-top: 0px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      text-align: center;
+      @include desktop {
+        text-align: left;
+      }
+      &.link-subscription a {
+        color: #e31313;
+      }
+      &.active a {
+        color: #1238bf;
+      }
+      .btn {
+        display: block;
+        height: unset;
+        margin-top: 0px;
+        text-align: center;
+        padding: 0px;
+        @include desktop {
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+body.template-addresses {
+  .account.my-account {
+    overflow: unset;
+  }
+  .container__account.d-flex {
+    display: block !important;
+    @include desktop {
+      display: flex !important;
+    }
+  }
+  .content h1 {
+    font-size: 16px;
+    @include desktop {
+      font-size: 30px;
+    }
+  }
+
+
+  .radio {
+    margin-top: 0px;
+    @include desktop {
+      margin-top: 25px;
+    }
+    label {
+      position: relative;
+    }
+    .label:before {
+      width: 25px;
+      height: 25px;
+      transform: translateY(3px);
+    }
+    input:checked+.label:before {
+      background: #000;
+      border-color: #000;
+      box-shadow: none;
+    }
+    input:checked+.label:after {
+      content: '';
+      display: inline-block;
+      border: 2px solid #000;
+      border-color: transparent white white transparent;
+      height: 12px;
+      width: 7px;
+      margin-top: 10px;
+      margin-left: 9px;
+      left: 0px;
+      transform: rotate(45deg);
+      position: absolute;
+    }
+  }
+  .address-new-toggle {
+    background: #1238bf;
+    border-radius: 5px;
+    margin-top: 0px;
+    &.hide {
+      display: none;
+    }
+  }
+  .return_account {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #1238bf;
+    color: #1238bf;
+    height: unset;
+    margin-top: 0px;
+    min-width: unset;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 5px;
+  }
+  .return_account.hide {
+    display: none;
+  }
+  form#address_form_new {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    #AddressProvinceContainerNew {
+      width: 50%;
+      .form__field {
+        min-width: 100%;
+        max-width: 100%;
+      }
+    }
+    .form__field {
+      min-width: 100%;
+      max-width: 100%;
+      padding: 0 15px;
+      @include desktop {
+        min-width: 50%;
+        max-width: 50%;
+      }
+      input, .select {
+        border: 1px solid #e2e2e2;
+      }
+      label {
+        color: #575757;
+        margin-bottom: 3px;
+      }
+    }
+    .btn.add_address {
+      background: #1238bf;
+      border-radius: 5px;
+      margin-top: 0px;
+    }
+    .address-new-toggle {
+      background: transparent;
+      border: none;
+      border-radius: 0px;
+      border-bottom: 1px solid #000;
+      color: #000;
+      width: 50px;
+      text-align: left;
+      justify-content: flex-start;
+      padding-left: 0px;
+      padding-right: 0px;
+      height: auto;
+      min-width: unset;
+    }
+    .actions {
+      margin-top: 15px;
+      padding-left: 0px;
+      justify-content: center;
+      text-align: center;
+      input {
+        min-width: unset;
+      }
+      @include desktop {
+        padding-left: 15px;
+        justify-content: flex-start;
+        text-align: left;
+
+      }
+      .col-sm-6 {
+        padding-left: 0px;
+        padding-right: 0px;
+        margin: 0 5px;
+        width: unset;
+        @include desktop {
+          margin: 0;
+        }
+        &:last-child {
+          padding-top: 10px;
+        }
+      }
+    }
+  }
+  .added_addresses {
+    .col-sm-4 {
+      padding-left: 0px;
+    }
+    button {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #1238bf;
+      color: #1238bf;
+      min-width: unset;
+      margin-top: 20px;
+      margin-right: 30px;
+      width: unset;
+      height: unset;
+      padding: 0px;
+      padding-bottom: 5px;
+    }
+    .current_address.hide {
+      display: none;
+    }
+    .current_address p strong {
+      font-size: 18px;
+    }
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -15px;
+      margin-right: -15px;
+      h4 {
+        min-width: 100%;
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-size: 18px;
+      }
+      .form__field {
+        min-width: 100%;
+        max-width: 100%; 
+        padding-left: 15px;
+        padding-right: 15px;
+        @include desktop {
+          min-width: 50%;
+          max-width: 50%;
+        }
+        input, select {
+          border: 1px solid #e2e2e2;
+        }
+        label {
+          color: #575757;
+          margin-bottom: 3px;
+        }
+      }
+      .actions {
+        display: inline-block;
+        margin-top: 30px;
+        text-align: center;
+        @include desktop {
+          text-align: left;
+        }
+        input {
+          background: #1238bf;
+          min-width: unset;
+          border-radius: 5px;
+          margin-right: 15px;
+        }
+        button {
+          color: #000;
+          border-bottom-color: #000 !important;
+        }
+        * {
+          margin-top: 0px;
+        }
+      }
+    }
+  }
+  .popup {
+    background: #35364015;
+    .popup-window {
+      font-size: 20px;
+      max-width: 400px;
+      padding: 30px 75px;
+      text-align: center;
+      width: unset;
+      top: 50%;
+      bottom: unset;
+      transform: translateY(-50%);
+      @include desktop {
+        top: unset;
+        transform: unset;
+      }
+    }
+    .actions {
+      margin-top: 20px;
+    }
+    button {
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 14px;
+      margin: 0 3px;
+      width: 80px;
+      height: 35px;
+    }
+    [data-popup-close] {
+      background: #b3b8cb;
+    }
+    [data-remove-address] {
+      background: #1238bf;
+    }      
+  } 
+}
+
+body.template-order .my-account {
+
+  overflow: unset;
+  .container__account.d-flex {
+    display: block !important;
+    @include desktop {
+      display: flex !important;
+    }
+  }
+  .created_at {
+    margin-top: 15px;
+  }
+
+  .order-header {
+    align-items: center;
+    justify-content: space-between;
+    a {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #1c1c80;
+      color: #1c1c80;
+      margin: 0px;
+      min-width: unset;
+      height: unset;
+      padding: 0px;
+      padding-bottom: 5px;
+    }
+  }
+  .order-details {
+    h3.subtitle {
+      font-weight: bold;
+    }
+    .payment_status, .fulfillment_status {
+      margin-top: 5px;
+    }
+  }
+  .tbl-order-detail {
+    margin-top: 30px;
+    thead {
+      background: #edebeb;
+      th {
+        padding: 7px 10px;
+      }
+      th.total {
+        width: 130px;
+      }
+    }
+    tbody tr {
+      border-bottom: 0px;
+      @include desktop {
+        border-bottom: 1px solid #edebeb; 
+      }
+    }
+    tbody td {
+      font-size: 14px;
+      padding: 10px;
+    }
+    tfoot td {
+      font-size: 14px;
+      padding: 5px 10px;
+      strong {
+        display: none;
+      }
+      @include desktop {
+        display: block;
+      }
+    }
+    tfoot tr td:nth-child(3)::before {
+      font-weight: bold;
+      @include desktop {
+        font-weight: normal;
+      }
+    }
+  }
+}

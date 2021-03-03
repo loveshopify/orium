@@ -1,0 +1,25 @@
+{% comment %} ATTENTION!!! This is compiled version of ea-related-products-content.liquid and it is overriding automatically. You should use theme development tool and sources\snippets\ea-related-products-content.liquid file to code and save your changes. {% endcomment %}{% assign set = section.settings %}
+
+{% render 'ea-section-styles', section: section %}
+
+{% render 'ea-section-foreground-image', section: section %}
+
+{% assign productCollection = collections[set.collection] %}
+
+<div class="container {% if set.full_width %}container-fluid{% endif %}">
+  {% if set.pretitle != blank %}
+    <h3 class="pretitle ta-center">{{ set.pretitle }}</h3>
+  {% endif %}
+  {% if set.title != blank %}
+    <h2 class="title m-heavy ta-center">{{ set.title }}</h2>
+  {% endif %}
+  <div class="section__content">
+    <div class="row">
+      {% for product in productCollection.products limit: set.product_count %}
+        <div class="col-md-4">
+          {% render 'product-cell', product: product, showInfo: true, showDescr: true, showPrice: true, showBtn: true, class: 'm-related' %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

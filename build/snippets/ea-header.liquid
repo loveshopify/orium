@@ -1,0 +1,80 @@
+{% comment %} ATTENTION!!! This is compiled version of ea-header.liquid and it is overriding automatically. You should use theme development tool and sources\snippets\ea-header.liquid file to code and save your changes. {% endcomment %}{% comment %} ATTENTION!!! This is compiled version of ea-header.liquid and it is overriding automatically. You should use theme development tool and sources\snippets\ea-header.liquid file to code and save your changes. {% endcomment %}<header class="site-header-container {{ class }}" data-site-header>
+
+  {% section 'ea-topbar' %}
+
+  <section class="site-header {{ class }}" id="site-header">
+    <div class="container">
+      <button class="btn site-header__toggle hide--desktop" data-open-menu>
+        {% render 'menu-icon' %} Menu</button>
+      {% section 'ik-navigation' %}
+      <div class="site-header__logo">
+        <a href="/">
+          {% if settings.svglogo != blank %}
+            {{ settings.svglogo }}
+          {% elsif settings.logo != blank %}
+            <img src="{{ settings.logo | img_url: '140x25' }}" alt="{{ settings.logo.alt }}">
+          {% else %}
+            {{ shop.name }}
+          {% endif %}
+        </a>
+      </div>
+
+      <nav class="nav site-header__tools">
+        <ul class="nav__items">
+          {% comment %}<li class="nav__item"><span class="search" data-show-search-trigger data-popup-open="search-popup" data-search-style="{{ settings.search_display_style }}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g id="search"><path d="M92.83,90.18,71.47,68.83a38.58,38.58,0,1,0-6.29,5l22,22ZM14,41.46A30.47,30.47,0,1,1,44.47,71.93,30.51,30.51,0,0,1,14,41.46Z"/></g></svg></span></li>{% endcomment %}
+          <li class="nav__item hide--mobile">
+            {% if customer.id %}
+              <a class="nav__link m-level-1 m-login" href="/account">My Account</a>
+            {% else %}
+              <a class="nav__link m-level-1 m-login" href="/account">Sign In</a>
+            {% endif %}
+          </li>
+          {%- comment -%}
+            <li class="nav__item hide--mobile">
+              <a class="nav__link m-level-1 m-icon m-search" href="/search" data-trigger><i class="icon-search"></i></a>
+              <nav class="nav-dropdown m-wide" data-dropdown-parent>
+                <div class="container">
+                  <form action="/search" class="search-form" method="get" role="search">
+                    <label for="search-input"></label>
+                    <input type="search" id="search-input" class="input" name="q" value="{{ search.terms | escape }}" placeholder="{{ 'general.search.placeholder' | t }}">
+                    <input type="hidden" name="type" value="product">
+                  </form>
+                </div>
+              </nav>
+            </li>
+          {%- endcomment -%}
+          <li class="nav__item">
+            <a class="nav__link m-level-1 m-icon m-cart" href="/cart" data-minicart-toggle>
+              {% render 'cart-icon' %}
+              <span class="cart-count" data-cart-count>{{ cart.item_count }}</span>
+            </a>
+          </li>
+        </ul>
+      </nav> <!-- /.site-header__tools -->
+    </div> <!-- /.container -->
+      <div class="search-container" data-overlay-search data-popup="search-popup" style="display: none;">
+        {% render 'search-overlay' %}
+      </div>
+
+  </section> <!-- /.site-header -->
+</header> <!-- /.site-header-container -->
+
+<div class="sidenav hide--desktop">
+  <button class="sidenav__close btn m-icon-only" aria-label="sidenav close" data-open-menu><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm3 5.753l-6.44 5.247 6.44 5.263-.678.737-7.322-6 7.335-6 .665.753z"/></svg></button>
+  <form action="/search" class="search-form" method="get" role="search">
+    <label for="search-input-mobile"></label>
+    <input type="search" id="search-input-mobile" class="input" name="q" value="{{ search.terms | escape }}" placeholder="{{ 'general.search.placeholder' | t }}">
+    <input type="hidden" name="type" value="product">
+  </form>
+</div>
+<div class="sidenav-bg" data-open-menu></div>
+{% render 'minicart' %}
+
+<div class="popup is-hidden" data-popup="search-popup">
+  <div class="popup-window">
+    <div class="rte ingr-popup">
+      {% render 'search-overlay' %}
+    </div>
+  </div>
+  <div class="popup-bg" data-popup-close></div>
+</div>

@@ -1,0 +1,47 @@
+{% assign set = section.settings %}
+
+{% render 'ea-section-styles', section: section %}
+
+{% render 'ea-section-foreground-image', section: section %}
+
+{% form 'customer', class: 'newsletter', id: 'newsletter_form' %}
+  {% if form.errors %}              
+    <script>
+      {% for field in form.errors %}
+          Swal.fire({
+          title: 'Error',
+          text: '{{ field | capitalize }} - {{ form.errors.messages[field] }}',
+          icon: 'error',
+          confirmButtonText: 'Cool' 
+          })
+      {% endfor %}
+    </script>
+  {% endif %}
+
+  {%- if form.posted_successfully? -%}
+    <script>
+      Swal.fire({
+        title: 'Success!',
+        text: 'Thank you! Please check your email to confirm your subscription.',
+        icon: 'success',
+        confirmButtonText: 'Cool' 
+      })
+    </script>
+  {%- endif -%}
+  <input type="hidden" name="contact[tags]" value="prospect,newsletter"/>
+  <input type="hidden" name="challenge" value="false" />
+  <div class="container">
+    <div>
+      {% if set.title != blank %}
+        <h2 class="title m-black not-animated h2">{{ set.title }}</h2>
+      {% endif %}
+      {% if set.pretitle != blank %}
+        <h4 class="pretitle not-animated h4">{{ set.pretitle }}</h4>
+      {% endif %}
+    </div>
+    <div class="form-field">
+      <input type="text" class="input" name="contact[email]" placeholder="{{ set.placeholder }}">
+      <button type="submit" class="btn m-underline">{{ set.btn }}</button>
+    </div>
+  </div>
+{% endform %}

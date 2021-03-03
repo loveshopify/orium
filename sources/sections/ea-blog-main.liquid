@@ -1,0 +1,8 @@
+{% paginate blog.articles by set.blog_posts_per_page %}
+  {% render 'ea-blog-main-content', articles: blog.articles, section: section %}
+{% endpaginate %}
+
+
+{% schema %}
+  @@include('ea-blog-main.json')
+{% endschema %}

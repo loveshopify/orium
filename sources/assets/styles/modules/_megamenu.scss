@@ -1,0 +1,19 @@
+.mega-menu__section {
+    position: relative;
+    left: 0;
+
+    @include desktop {
+        position: absolute;
+        width: 100%;
+        left: 50%;
+    }
+}
+
+.mega-menu {
+    display: block !important;
+    padding: 0;
+}
+
+.mega-menu__block {
+    flex: unset;
+}

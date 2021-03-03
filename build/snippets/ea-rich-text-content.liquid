@@ -1,0 +1,41 @@
+{% comment %} ATTENTION!!! This is compiled version of ea-rich-text-content.liquid and it is overriding automatically. You should use theme development tool and sources\snippets\ea-rich-text-content.liquid file to code and save your changes. {% endcomment %}{% assign set = section.settings %}
+
+{% render 'ea-section-styles', section: section %}
+
+{% render 'ea-section-foreground-image', section: section %}
+
+<div class="featured-text section-standard" data-section-id="{{ section.id }}" data-section-type="featured-text-section">
+  <div class="contain-full-width">
+    <div class="wrapper">
+
+      <div class="content align-{{ section.settings.alignment }} rte">
+        {% if section.settings.title != blank %}
+          <h2>{{ section.settings.title | escape }}</h2>
+        {% endif %}
+        {% if section.settings.text != blank %}
+          <div class="richtext">
+            {{ section.settings.text }}
+          </div>
+        {% endif %}
+      </div>
+
+      {% for block in section.blocks %}
+        <div class="content content-page rte">
+          {% case block.type %}
+            {% when 'page' %}
+              {% if block.settings.show_title %}
+                <h2 class="align-{{ section.settings.alignment }}">{{ pages[block.settings.page].title }}</h2>
+              {% endif %}
+              <div class="richtext">{{ pages[block.settings.page].content }}</div>
+            {% when 'richtext' %}
+              {% if block.settings.title != blank %}
+                <h2 class="align-{{ section.settings.alignment }}">{{ block.settings.title | escape }}</h2>
+              {% endif %}
+              <div class="richtext">{{ block.settings.text }}</div>
+          {% endcase %}
+        </div>
+      {% endfor %}
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,136 @@
+{% comment %} ATTENTION!!! This is compiled version of ea-register.liquid and it is overriding automatically. You should use theme development tool and sources\sections\ea-register.liquid file to code and save your changes. {% endcomment %}{% assign set = section.settings %}
+
+<style>
+  #shopify-section-{{ section.id }} {
+    background-color: {{ set.sectionbg }};
+  }
+</style>
+
+<div class="section login has-image" data-login>
+
+  <div class="login__wrap">
+    {% if set.image %}
+      <div class="login__image">
+        <img src="{{ set.image | img_url: '1000x' }}" alt="{{ set.image.alt }}">
+      </div> <!-- /.login__image -->
+    {% endif %}
+
+    <div class="login__form">
+      <div class="login__content">
+        <div class="form">
+          {% if set.title != blank %}
+            <h1 class="title">{{ set.title }}</h1>
+          {% endif %}
+          {% form 'create_customer' %}
+            {% if form.errors %}
+              <div class="">
+                {% for field in form.errors %}
+                  <p class="form__error">{{ field | capitalize }} - {{ form.errors.messages[field] }}</p>
+                {% endfor %}
+              </div>
+            {% endif %}
+            
+            <div class="field-group">
+              <div class="form__field">
+                <label for="FirstName" class="label">{{ 'customer.register.first_name' | t }} *</label>
+                <input id="FirstName" type="text" class="form__input" name="customer[first_name]" required>
+              </div>
+              <div class="form__field">
+                <label for="LastName" class="label">{{ 'customer.register.last_name' | t }} *</label>
+                <input id="LastName" type="text" class="form__input" name="customer[last_name]" required>
+              </div>
+              <div class="form__field">
+                <label for="customer_email" class="label">{{ 'customer.login.email' | t }} *</label>
+                <input id="customer_email" type="email" class="form__input" name="customer[email]" required/>
+              </div>
+              <div class="form__field">
+                <label for="customer_password" class="label">{{ 'customer.login.password' | t }} *</label>
+                <input type="password" class="form__input" name="customer[password]" required/>
+              </div>
+            </div>
+
+            <div class="login__buttons">
+              {% render 'button', {
+                top: set.btntop,
+                id: section.id,
+                text: set.btn,
+                class: 'm-black',
+                type: 'submit'
+              } %}
+              <div class="form__link">
+                <span>{{ set.login_text }}</span><a href="/account/login" class="btn m-underline m-tiny">{{ set.login_text_button }}</a>
+              </div>
+            </div>
+          {% endform %}
+        </div> <!-- /.form -->
+      
+      </div>
+    </div> <!-- /.login__form -->
+  </div> <!-- /.login__wrap -->
+</div> <!-- /.section -->
+
+
+
+{% schema %}
+  {
+  "name": "Register",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Background"
+    },
+    {
+      "type": "color",
+      "id": "sectionbg",
+      "label": "Section background color",
+      "default": "#ffffff"
+    },
+
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "id": "title",
+      "type": "richtext",
+      "label": "Title"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }, 
+
+
+    {
+      "type": "header",
+      "content": "Links"
+    }, 
+    {
+      "type": "textarea",
+      "id": "login_text",
+      "label": "Login text",
+      "default": "Already have an account?"
+    },
+    {
+      "type": "textarea",
+      "id": "login_text_button",
+      "label": "Login button text",
+      "default": "Sign up"
+    },
+
+
+    {
+      "type": "header",
+      "content": "button"
+    },
+    {
+      "id": "btn",
+      "type": "text",
+      "label": "Button text",
+      "default": "SIGN UP"
+    }
+  ]
+}
+
+{% endschema %}

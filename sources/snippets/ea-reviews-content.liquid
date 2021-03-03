@@ -1,0 +1,22 @@
+{% assign set = section.settings %}
+
+{% render 'ea-section-styles', section: section %}
+
+{% render 'ea-section-foreground-image', section: section %}
+
+{%- if set.bg_image != blank or set.fg_image != blank -%}
+  <div class="banner">
+    {%- if set.bg_image != blank -%}
+      <div class="banner__img banner__bg" style="background-image: url({{ set.bg_image | img_url: '2000x' }}); height: 200px"></div>
+    {%- endif -%}
+    {%- if set.fg_image != blank -%}
+      <div class="banner__img banner__fg" style="background-image: url({{ set.fg_image | img_url: '1000x' }})"></div>
+    {%- endif -%}
+  </div>   
+{%- endif -%}
+
+<div class="container">
+  <div class="section__content">
+    <!-- place reviews app snippet here -->
+  </div>
+</div>

@@ -1,0 +1,45 @@
+<nav class="nav-dropdown" data-dropdown-parent id="{{ block.id }}" data-accordion-content>
+  <div class="container">
+
+    {% if block.settings.main_link_list != blank %}
+      <ul class="nav__items m-vertical m-primary">
+        {% for link in linklists[block.settings.main_link_list].links %}
+          <li class="nav__item">
+            <a class="nav__link" href="{{ link.url }}">{{ link.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+
+    {% if block.settings.secondary_link_list != blank %}
+      <ul class="nav__items m-vertical m-secondary">
+        {% for link in linklists[block.settings.secondary_link_list].links %}
+          <li class="nav__item">
+            <a class="nav__link" href="{{ link.url }}">{{ link.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+
+
+    <div class="nav-dropdown__feature">
+      {%- if block.type == 'dropdown_products' -%}
+        {%- render 'nav-dropdown-products', block: block -%}
+      {%- elsif block.type == 'dropdown_collections' -%}
+        {%- render 'nav-dropdown-collections', block: block -%}
+      {%- elsif block.type == 'dropdown_ingredients' -%}
+        {%- render 'nav-dropdown-ingredients', block: block -%}
+      {%- elsif block.type == 'dropdown_article' -%}
+        {%- render 'nav-dropdown-articles', block: block -%}
+      {%- elsif block.type == 'dropdown_banner' -%}
+        {%- render 'nav-dropdown-banner', block: block -%}
+      {%- elsif block.type == 'dropdown_submenus' -%}
+        {%- render 'nav-dropdown-submenus', block: block -%}
+      {%- endif -%}
+    </div> <!-- /.nav-dropdown__feature -->
+
+  </div>
+</nav> <!-- /.nav-dropdown -->
+

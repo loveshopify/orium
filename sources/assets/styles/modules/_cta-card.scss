@@ -1,0 +1,14 @@
+.cta-card {
+  background: $color-pink-light;
+  .title + .subtitle {
+    margin-top: $gutter;
+  }
+}
+
+.cta-card__link {
+  display: block;
+}
+
+.cta-card__text {
+  padding: $gutter 15%;
+}

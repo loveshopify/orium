@@ -1,0 +1,29 @@
+{% comment %} ATTENTION!!! This is compiled version of theme.liquid and it is overriding automatically. You should use theme development tool and sources\layout\theme.liquid file to code and save your changes. {% endcomment %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    {{ content_for_header }}
+    {% include 'ea-head' %}
+  </head>
+
+  <body class="template-{{ template.name }} {% if settings.animations_on %} animations-on {% endif %} {% if template == 'product' %}product-page--{{ product.handle }}{% endif %}">
+    
+    {% render 'ea-header' %}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="https://cdn.jsdelivr.net/g/lazysizes(lazysizes.min.js+plugins/rias/ls.rias.min.js+plugins/optimumx/ls.optimumx.min.js)" async=""></script>
+
+    {{ content_for_layout }}
+
+    <div class="site-footer-container" data-site-footer>
+      {% section 'ea-footer' %}
+    </div>
+
+    {% render 'product-quick-view-popup' %}
+
+    {% include 'subscription-theme-footer' %}
+    {% include 'ea-end' %}
+    
+  </body>
+</html>

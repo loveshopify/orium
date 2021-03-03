@@ -1,0 +1,231 @@
+{
+  "name": "Hero Section",
+  "max_blocks": 2,
+  "tag": "section",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Please use 2 blocks for splitting, or 1 block for full-width section."
+    },
+    {
+      "type": "paragraph",
+      "content": "For splitting section the images must be same size or aspect ratio."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "hero",
+      "name": "Hero block",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "visible",
+          "label": "Show block",
+          "default": true
+        },
+        {
+          "type": "color",
+          "id": "sectionbg",
+          "label": "Section background color",
+          "default": "#fff"
+        },
+        {
+          "type": "header",
+          "content": "Image"
+        },
+        {
+          "id": "hero_image",
+          "type": "image_picker",
+          "label": "Image desktop",
+          "info": "Full Width: 2000 x 1000 px."
+        },
+        {
+          "type": "range",
+          "id": "image_top_desktop",
+          "label": "Image top spacing on desktop",
+          "min": -500,
+          "max": 500,
+          "step": 10,
+          "default": 0
+        },
+        {
+          "id": "hero_image_mobile",
+          "type": "image_picker",
+          "label": "Image Mobile",
+          "info": "Full Width: 400 x 600 px."
+        },
+        {
+          "type": "range",
+          "id": "image_top_mobile",
+          "label": "Image top spacing on mobile",
+          "min": -500,
+          "max": 500,
+          "step": 10,
+          "default": 0
+        },
+        {
+          "type": "header",
+          "content": "Copy"
+        },
+        {
+          "type": "select",
+          "id": "content_position",
+          "label": "Content Position",
+          "options": [
+            {
+              "value": "top-left",
+              "label": "Top Left"
+            },
+            {
+              "value": "top-center",
+              "label": "Top Center"
+            },
+            {
+              "value": "top-right",
+              "label": "Top right"
+            },
+            {
+              "value": "middle-left",
+              "label": "Middle Left"
+            },
+            {
+              "value": "middle-center",
+              "label": "Middle Center"
+            },
+            {
+              "value": "middle-right",
+              "label": "Middle Right"
+            },
+            {
+              "value": "bottom-left",
+              "label": "Bottom Left"
+            },
+            {
+              "value": "bottom-center",
+              "label": "Bottom Center"
+            },
+            {
+              "value": "bottom-right",
+              "label": "Bottom Right"
+            }
+          ],
+          "default": "middle-center"
+        },
+        {
+          "type": "select",
+          "id": "content_position_mobile",
+          "label": "Content Position on Mobile",
+          "options": [
+            {
+              "value": "top-left",
+              "label": "Top Left"
+            },
+            {
+              "value": "top-center",
+              "label": "Top Center"
+            },
+            {
+              "value": "top-right",
+              "label": "Top right"
+            },
+            {
+              "value": "middle-left",
+              "label": "Middle Left"
+            },
+            {
+              "value": "middle-center",
+              "label": "Middle Center"
+            },
+            {
+              "value": "middle-right",
+              "label": "Middle Right"
+            },
+            {
+              "value": "bottom-left",
+              "label": "Bottom Left"
+            },
+            {
+              "value": "bottom-center",
+              "label": "Bottom Center"
+            },
+            {
+              "value": "bottom-right",
+              "label": "Bottom Right"
+            }
+          ],
+          "default": "middle-center"
+        },
+        {
+          "id": "pretitle",
+          "type": "richtext",
+          "label": "Pre-title"
+        },
+        {
+          "id": "title",
+          "type": "richtext",
+          "label": "Title"
+        },
+        {
+          "type": "checkbox",
+          "id": "title_large",
+          "label": "Make Title Large?"
+        },
+        {
+          "id": "subtitle",
+          "type": "richtext",
+          "label": "Text"
+        },
+        {
+          "type": "checkbox",
+          "id": "subtitle_large",
+          "label": "Make Text Large?"
+        },
+        {
+          "type": "checkbox",
+          "id": "white_text",
+          "label": "Make Text White?"
+        },
+        {
+          "type": "header",
+          "content": "button"
+        },
+        {
+          "type": "range",
+          "id": "btntop",
+          "label": "Top spacing",
+          "min": -200,
+          "max": 200,
+          "step": 5,
+          "default": 45
+        },
+        {
+          "id": "btnu",
+          "type": "url",
+          "label": "Link"
+        },
+        {
+          "id": "btn",
+          "type": "text",
+          "label": "Button text",
+          "default": "BUY"
+        },
+        {
+          "type": "checkbox",
+          "id": "white_btn",
+          "label": "Make Button White?"
+        },
+        {
+          "type": "checkbox",
+          "id": "large_btn",
+          "label": "Make Button Large?"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Section",
+      "category": "Promo"
+    }
+  ]
+}

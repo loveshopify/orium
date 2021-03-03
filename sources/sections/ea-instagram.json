@@ -1,0 +1,136 @@
+{
+  "name": "Instagram",
+  "tag": "section",
+  "class": "section instagram-section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "visible",
+      "label": "Show section",
+      "default": true
+    },
+
+
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "ptop",
+      "label": "Top spacing desktop",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "pbottom",
+      "label": "Bottom spacing desktop",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "ptop_mob",
+      "label": "Top spacing mobile",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "pbottom_mob",
+      "label": "Bottom spacing mobile",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+
+
+    {
+      "type": "header",
+      "content": "Width"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "Container width",
+      "min": 920,
+      "unit": "px",
+      "max": 1920,
+      "step": 10,
+      "default": 1200
+    },
+    {
+      "type": "checkbox",
+      "id": "make_full",
+      "label": "Make full width?"
+    },
+
+    {
+      "type": "header",
+      "content": "Background"
+    },
+    {
+      "type": "color",
+      "id": "sectionbg",
+      "label": "Section background color",
+      "default": "#ffffff"
+    },
+
+    {
+      "type": "header",
+      "content": "Instagram"
+    },
+    {
+      "id": "url",
+      "type": "url",
+      "label": "Instagram URL"
+    },
+    {
+      "type": "range",
+      "id": "max_slides",
+      "label": "Max slides",
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "default": 10
+    },
+
+    {
+      "type": "header",
+      "content": "Text"
+    },
+    {
+      "id": "pretitle",
+      "type": "richtext",
+      "label": "Pre-title"
+    },
+    {
+      "id": "title",
+      "type": "richtext",
+      "label": "Title"
+    },
+    {
+      "id": "subtitle",
+      "type": "richtext",
+      "label": "Text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Instagram Section",
+      "category": "Social"
+    }
+  ]
+}

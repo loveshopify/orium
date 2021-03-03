@@ -1,0 +1,23 @@
+{% comment %} ATTENTION!!! This is compiled version of ea-video-external.liquid and it is overriding automatically. You should use theme development tool and sources\snippets\ea-video-external.liquid file to code and save your changes. {% endcomment %}{% assign set = object.settings %}
+
+{% case set.video_url.type %}
+  {% when 'youtube' %}
+  <div class="video-container video--youtube" data-youtube-id="{{ set.video_url.id }}">
+    <iframe src="//www.youtube.com/embed/{{ set.video_url.id }}?vq=720" width="850" height="480" frameborder="0" allowfullscreen></iframe>
+  </div>
+  {% when 'vimeo' %}
+    <div class="video-container" 
+      data-vimeo-id="{{ set.video_url.id }}" 
+      data-vimeo-controls="false" 
+      data-vimeo-muted="true"  
+      data-vimeo-responsive="true"  
+      data-vimeo-autoplay="true"></div>
+    <script>
+      if (!window.Vimeo) {
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.src = "https://player.vimeo.com/api/player.js";
+        document.body.appendChild(s);
+      }
+    </script>
+{% endcase %}

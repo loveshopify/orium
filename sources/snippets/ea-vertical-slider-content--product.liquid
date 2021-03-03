@@ -1,0 +1,91 @@
+<style>
+  #shopify-section-{{ section.id }} {
+    padding: {{ set.ptop }}px 0 {{ set.pbottom }}px;
+    background-color: {{ set.sectionbg }};
+  }
+  #shopify-section-{{ section.id }} .s4__text {
+    background-color: {{ set.sectionbg }};
+  }
+  @media (max-width: 989px) {
+    #shopify-section-{{ section.id }} {
+      padding: {{ set.ptop_mob }}px 0 {{ set.pbottom_mob }}px;
+    }
+  }
+</style>
+{% assign object = product.metafields.vertical_slider %}
+
+{% if object.visible contains '["' %}
+  {% assign visible = object.visible | replace: '["', '' | replace: '"]', '' | split: '","' %}
+{% else %}
+{% assign visible = object.visible %}
+{% endif %}
+
+{% if object.image contains '["' %}
+  <!-- image fix -->
+  {% assign image = object.image | replace: '["', '' | replace: '"]', '' | replace: '" ]', '' | replace: ' ]', ''  | replace: '"', '' | split: ',' %}
+  {% else %}
+  <!-- image -->
+  {% assign image = object.image %}
+{% endif %}
+
+{% if object.title contains '["' %}
+  {% assign title = object.title | replace: '["', '' | replace: '"]', '' | split: '","' %}
+{% else %}
+  {% assign title = object.title %}
+{% endif %}
+
+{% if object.description contains '["' %}
+  {% assign description = object.description | replace: '["', '' | replace: '"]', '' | split: '","' %}
+{% else %}
+  {% assign description = object.description %}
+{% endif %}
+
+
+
+
+
+
+<div class="section has-sticky" data-vertical-slider-section>
+  <div class="vertical-slider slider m-vertical-dots m-left-dots" data-vertical-slider>
+    <div class="container">
+      {% for slide in (1..visible.size) %}
+        {% assign i = forloop.index0 %}
+        {% if visible[i] == 'true' %}
+          <div class="vertical-slide {% if i == 0 %}is-visible{% endif %}" data-vertical-slide>
+            <div class="s4__content m-image-pos-right">
+              {% if image[i] != blank %}
+                <div class="s4__image"><img src="{{ image[i] }}" alt="{{ image[i].alt }}"></div>
+              {% endif %}
+              <div class="s4__text">
+                {% if title[i] != blank %}
+                  <h2 class="title not-animated">{{ title[i] }} <span class="js-info"></span></h2>
+                {% endif %}
+                {% if description[i] != blank %}
+                  <div class="subtitle not-animated">{{ description[i] }}</div>
+                {% elsif i == 0 %}
+                  <div class="subtitle not-animated">{{ product.description }}</div>
+                {% endif %}
+              </div> <!-- /.s4__text -->
+            </div>  <!-- /.s4__content -->
+          </div> <!-- /.vertical-slide -->
+        {% endif %}
+      {% endfor %}
+
+      {%- capture dots -%}
+        {% for slide in (1..visible.size) %}
+          {% assign j = forloop.index0 %}
+          {% if visible[j] == 'true' %}
+            <li><button data-button="{{ forloop.index0 }}" {% if forloop.index0 == 0 %}class="is-active"{% endif %}>&nbsp;</button><div class="dots-line"></div></li>
+          {% endif %}
+        {% endfor %}
+      {%- endcapture -%}
+      {% if dots != blank %}
+        <div class="slider-controls" data-vertical-slider-controls>
+          <ul class="slider-dots">{{ dots }}</ul>
+          <button class="slider-arrow2" data-vertical-slider-arrow><i class="icon-down-arrow"></i></button>
+        </div>
+      {% endif %} <!-- /.slider-controls -->
+
+    </div> <!-- /.container -->
+  </div> <!-- /.vertical-slider -->
+</div>

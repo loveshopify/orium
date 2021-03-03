@@ -1,0 +1,26 @@
+{% assign set = section.settings %}
+
+<div class="cart-summary">
+  <div class="subtitle not-animated">
+    <p>ApplePay & PayPal accepted</p>
+    <p>*Taxes and Shipping costs are calculated during checkout</p>
+  </div>
+  <div class="order-summary-box">
+    <div class="order-summary-box__prices">
+      <h3 class="prices-summary"> 
+        <span><span id='revy-cart-subtotal-label'>{{ 'cart.general.subtotal' | t }}</span>:</span> 
+        <span data-cart-page-total="{{ cart.items_subtotal_price | money_without_currency }}">{{ cart.items_subtotal_price | money }}</span>
+      </h3>
+    </div>
+
+    <div class="d-flex align-items-start justify-content-end">
+      <div class="label">Shipping & Taxes <br>Calculated At Checkout</div>
+      <div>
+        <button class="btn m-black" data-cart-page-checkout data-checkout-btn type="submit" name="checkout">
+          {{ 'cart.general.checkout' | t }}
+        </button>
+      </div>
+    </div>
+    <a href="{{ set.continueurl }}" class="link no-hover-link"><i class="icon-arrow-left"></i>{{ set.continuetitle }}</a>
+  </div>
+</div>

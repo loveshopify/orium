@@ -1,0 +1,25 @@
+{% comment %} ATTENTION!!! This is compiled version of ea-blog-main-content.liquid and it is overriding automatically. You should use theme development tool and sources\snippets\ea-blog-main-content.liquid file to code and save your changes. {% endcomment %}{% assign set = section.settings %}
+
+{% render 'ea-section-styles', section: section, customStyles: customStyles %}
+
+{% render 'ea-section-foreground-image', section: section %}
+
+
+<div class="container">
+  <div class="posts__grid">
+    <div class="row">
+      {%- capture class -%}
+        {%- render 'column-width', { device: 'md', columns: set.posts_per_row  } -%}
+        {%- render 'column-width', { columns: set.posts_per_row_mobile  } -%}
+      {%- endcapture -%}
+      {%- for article in articles -%}
+        <div class="{{ class | strip }}" data-animate-section>
+          {%- render 'post-cell', article: article, section: section -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+  <div class="posts__pagination">
+    {% render 'pagination', paginate: paginate %}
+  </div>
+</div>

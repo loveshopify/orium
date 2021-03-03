@@ -1,0 +1,52 @@
+{% assign set = section.settings %}
+
+{% render 'ea-section-styles', section: section %}
+
+{% render 'ea-section-foreground-image', section: section %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-7">
+      <div class="promo__img-wrap">
+        <img class="promo__img" src="" alt="{{ set.alt }}" data-scroll-image>
+      </div>
+    </div>
+    
+    <div class="col-md-5">
+      <div class="promo__info">
+        <div class="promo__info__inner">
+          {% if set.title != '' %}
+            <h3 class="title">{{ set.title }}</h3>
+          {% endif %}
+          {% if set.text != '' %}
+            <div class="mt-4">{{ set.text }}</div>
+          {% endif %}
+          {%- capture items -%}
+            {%- for block in section.blocks -%}
+              {%- assign bset = block.settings -%}
+              <li class="list__item m-with-circle m-opacity " data-animate-block data-image="{{ bset.image | img_url: 'master' }}">
+                <div class="list__text">
+                  {%- if bset.title -%}
+                    <h4 class="list__title">{{ bset.title }}</h4>
+                  {%- endif -%}
+                  {%- if bset.text -%}
+                    {{ bset.text }}
+                  {%- endif -%}
+                </div>
+              </li>
+            {%- endfor -%}
+          {%- endcapture -%}
+          {% if items != blank and items != "" %}
+            <div class="scroll-line" data-animate-block>
+              <div class="e-line" data-scroll-line></div>
+              <ul class="list list--ico">
+                {{ items }}
+              </ul>
+              <div class="e-end-marker"></div>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

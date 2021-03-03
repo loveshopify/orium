@@ -1,0 +1,7 @@
+{% if section.settings.visible %}
+  {% render 'ea-benefits-content', section: section %}
+{% endif %}
+
+{% schema %}
+  @@include('ea-benefits.json')
+{% endschema %}

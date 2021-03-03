@@ -1,0 +1,140 @@
+
+{% assign set = section.settings %}
+{% if set.visible %}
+  <!-- CEO section (s8) -->
+  {% render 'ea-ceo-content', section: section %}
+  <!-- / CEO section (s8) -->
+{% endif %}
+
+{% schema %}
+{
+  "name": "CEO",
+  "tag": "section",
+  "class": "section s8",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "visible",
+      "label": "Show section",
+      "default": true
+    },
+
+
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "ptop",
+      "label": "Top spacing desktop",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "pbottom",
+      "label": "Bottom spacing desktop",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "ptop_mob",
+      "label": "Top spacing mobile",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "pbottom_mob",
+      "label": "Bottom spacing mobile",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+
+
+    {
+      "type": "header",
+      "content": "Background"
+    },
+    {
+      "type": "color",
+      "id": "sectionbg",
+      "label": "Section background color",
+      "default": "#ffffff"
+    },
+
+
+    {
+      "type": "header",
+      "content": "Text"
+    },
+    {
+      "id": "pretitle",
+      "type": "richtext",
+      "label": "Pre-title"
+    },
+    {
+      "id": "title",
+      "type": "richtext",
+      "label": "Title"
+    },
+    {
+      "id": "subtitle",
+      "type": "richtext",
+      "label": "Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "bgimage",
+      "label": "Bg Image"
+    },
+
+
+    {
+      "type": "header",
+      "content": "CEO"
+    },
+    {
+      "type": "image_picker",
+      "id": "ceo_photo",
+      "label": "Image"
+    },
+    {
+      "id": "ceo_pretitle",
+      "type": "richtext",
+      "label": "Pre-title"
+    },
+    {
+      "id": "ceo_title",
+      "type": "richtext",
+      "label": "Title"
+    },
+    {
+      "id": "ceo_subtitle",
+      "type": "richtext",
+      "label": "Text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "CEO",
+      "category": "About"
+    }
+  ]
+}
+
+{% endschema %}

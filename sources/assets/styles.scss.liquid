@@ -1,0 +1,350 @@
+// ============== COLORS ==============
+$color-black: #000000;
+$color-dark-grey: #141415;
+$color-light-grey: #777;
+$color-light-blue: #f9faff;
+$color-grey-light: #ccc;
+$color-grey-lightest: #f5f4f5;
+
+$color-blue: #002d56;
+$color-blue-dark: #071b33;
+$color-blue-grey: #8f9cb2;
+$color-orange: #ff7f50;
+$color-yellow: #ffbc16;
+$color-red: #9c0808;
+$color-pink: #da4e82;
+$color-pink-light: #fef7f1;
+$color-green: #8ccc00;
+$color-brown: #b88b4e;
+$color-brown-light: #f1d9b2;
+$color-white: #ffffff;
+
+// Main colors
+$color-body: $color-black;
+$color-primary: $color-light-grey;
+// Buttons
+$color-button: $color-black;
+// Title
+$color-title: $color-body;
+$color-title-accent: $color-body;
+// Link
+$color-link-hover: $color-body;
+$color-link: $color-body;
+// Hero
+$color-hero: $color-black;
+$color-hero-bg: $color-black;
+$color-product-cell-price: $color-black;
+// Cart count
+$color-cart-count: $color-dark-grey;
+$color-cart-count-bg: $color-yellow;
+// Header
+$color-header-bg: #2a2a2a;
+$color-header-link: $color-white;
+$color-dropdown-bg: $color-white;
+$color-dropdown-bottom-line-color: $color-black;
+$dropdown-bottom-line-size: 2px;
+// Footer
+$color-newsletter-bg: $color-brown-light;
+$color-newsletter-input-bg: $color-pink-light;
+$color-footer: $color-white;
+$color-footer-bg: $color-black;
+$color-error: $color-red;
+// Product
+$color-add-to-cart-bg: $color-brown;
+$color-add-to-cart: $color-white;
+
+// Minicart
+
+$color-cart-notification-bg: $color-blue-dark;
+
+// ============== FONTS ==============
+$fz-1: 32px;
+$fz-2: 29px;
+$fz-3: 24px;
+$fz-4: 19px;
+$fz-5: 16px;
+$fz-6: 14px;
+$fz-7: 12px;
+$fz-title: $fz-1;
+$fz-section: $fz-5;
+$fz-body: $fz-5;
+$fz-header: $fz-5;
+// Product cell
+$fz-product-cell-title: $fz-5;
+$fz-product-cell-price: $fz-7;
+$fz-product-cell-descr: $fz-5;
+// Button
+$fz-button: $fz-5;
+$fz-button-large: $fz-5;
+
+$ff-1: 'GT-AMERICA', sans-serif;
+$ff-2: 'Berlingske Serif XCn', serif;
+$ff-3: cursive;
+$ff-body: $ff-1;
+$ff-cursive: $ff-1;
+$ff-title: $ff-1;
+$ff-topbar: 'GT-AMERICA', sans-serif;
+
+$ls-1: 0.02em;
+
+// ============== LAYOUT ==============
+$container-xl: 1600px;
+$container-l: 1200px;
+$container-m: 1080px;
+$container-s: 720px;
+$container-sm: 540px;
+$gutter: 15px;
+
+$header-height: 100px;
+
+/*============================================================================
+  Grid Breakpoints and Class Names
+    - Do not change the variable names
+==============================================================================*/
+$grid-medium: 768px;
+$grid-large: 990px;
+$grid-widescreen: 1400px;
+$grid-xlarge: 1601px;
+$grid-gutter: 30px;
+
+$small: 'small';
+$medium: 'medium';
+$medium-down: 'medium-down';
+$mobile: 'mobile';
+$desktop: 'desktop';
+$medium-up: 'medium-up';
+$large: 'large';
+$large-down: 'large-down';
+$large-up: 'large-up';
+$widescreen: 'widescreen';
+$xlarge: 'xlarge';
+
+
+
+// ============== ANIMATION ==============
+$transition-time: 0.33s;
+$btn-transition: 
+  color $transition-time ease-in-out, 
+  background-color $transition-time ease-in-out, 
+  border-color $transition-time ease-in-out, 
+  box-shadow $transition-time ease-in-out;
+$nav-link-hover-opacity: 0.7;
+$animation-x: 50px;
+$animation-y: 50px;
+
+
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  color: black;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 2px solid transparent;
+  padding: 0 2em;
+  transition: $btn-transition;
+  min-width: 200px;
+  border-radius: 0px;
+  line-height: 1.15;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  outline: none;
+
+  &:hover {
+    color: black;
+  }
+  &.m-small {
+    padding: 0 0.5em;
+    min-width: 100px;
+    height: 30px;
+    font-size: $fz-6;
+  }
+  &.m-white {
+    background: $color-white;
+    border-color: $color-white;
+    color: $color-black;
+    &:hover {
+      background: $color-black;
+      border-color: $color-black;
+      color: $color-white;
+    }
+  }
+  &.m-black {
+    background: $color-black;
+    border-color: $color-black;
+    color: $color-white;
+    &:hover {
+      background: $color-white;
+      border-color: $color-black;
+      color: $color-black;
+    }
+  }
+  &.m-underline {
+    padding: 0 0 0.1em 0;
+    min-width: 0;
+    height: auto;
+    border: 0;
+    border-bottom: 1px solid currentColor;
+    color: $color-black;
+    border-radius: 0;
+    font-weight: 300;
+    font-size: inherit;
+    letter-spacing: normal;
+    &.m-bold {
+      border-bottom-width: 2px;
+      font-weight: 600;
+    }
+  }
+  &.m-long {
+    min-width: 250px;
+  }  
+  &.m-icon-only {
+    height: auto;
+    padding: 1em;
+    min-width: 0;
+    background: none;
+    color: black;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    transition: none;
+  }
+}
+
+.btn:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.btn:focus,
+.btn.focus,
+.btn:active,
+.btn.active, 
+.btn.is-active {
+  outline: 0;
+}
+
+.btn.disabled,
+.btn:disabled {
+  opacity: 0.65;
+}
+
+a.btn.disabled,
+fieldset:disabled a.btn {
+  pointer-events: none;
+}
+
+.btn--primary,
+.btn.m-primary,
+.btn.btn-primary {
+  {% if settings.button_primary_padding == 'small' %}
+    padding: 0 8px;
+  {% elsif settings.button_primary_padding == 'regular' %}
+    padding: 0 16px;
+  {% else %}
+    padding: 5 32px;
+  {% endif %}
+  background-color: {{ settings.button_primary_bg_color }};
+  opacity: {{ settings.button_primary_bg_color_transparency }};
+  border-color: {{ settings.button_primary_border_color }};
+  color: {{ settings.button_primary_text_color }};
+  border-radius: {{ settings.button_primary_border_radius }}px;
+  &:hover {
+    background-color: {{ settings.button_primary_bg_color--highlight }};
+    opacity: {{ settings.button_primary_bg_color_transparency--highlight }};
+    border-color: {{ settings.button_primary_border_color--highlight }};
+    color: {{ settings.button_primary_text_color--highlight }};
+  }
+}
+.btn--outline,
+.btn.m-outline {
+  background-color: $color-white;
+  color: $color-button;
+  border-color: $color-button;
+  &:hover {
+    background-color: $color-button;
+    color: $color-white;
+  }
+}
+.btn--transparent,
+.btn.m-transparent {
+  color: inherit;
+  border-color: currentColor;
+  background: transparent;
+}
+.btn--secondary,
+.btn.m-secondary {
+  {% if settings.button_secondary_padding == 'small' %}
+    padding: 0 8px;
+  {% elsif settings.button_secondary_padding == 'regular' %}
+    padding: 0 16px;
+  {% else %}
+    padding: 5 32px;
+  {% endif %}
+  background-color: {{ settings.button_secondary_bg_color }};
+  opacity: {{ settings.button_secondary_bg_color_transparency }};
+  border-color: {{ settings.button_secondary_border_color }};
+  color: {{ settings.button_secondary_text_color }};
+  border-radius: {{ settings.button_secondary_border_radius }}px;
+  &:hover {
+    background-color: {{ settings.button_secondary_bg_color--highlight }};
+    opacity: {{ settings.button_secondary_bg_color_transparency--highlight }};
+    border-color: {{ settings.button_secondary_border_color--highlight }};
+    color: {{ settings.button_secondary_text_color--highlight }};
+  }
+}
+
+.btn.add-to-cart {
+    {% if settings.button_cart_padding == 'small' %}
+        height: 45px;
+    {% elsif settings.button_cart_padding == 'regular' %}
+        height: 55px;
+    {% else %}
+        height: 60px;
+    {% endif %}
+    background-color: {{ settings.button_cart_bg_color }};
+    border-color: {{ settings.button_cart_border_color }};
+    color: {{ settings.button_cart_text_color }};
+    border-radius: {{ settings.button_cart_border_radius }}px;
+    &:hover {
+        background-color: {{ settings.button_cart_bg_color--highlight }};
+        color: {{ settings.button_cart_text_color--highlight }};
+        border-color: {{ settings.button_cart_border_color--highlight }};
+    }
+}
+
+.link {
+  display: inline-block;
+  {% if settings.button_link_padding == 'small' %}
+    padding-bottom: 4px;
+  {% elsif settings.button_link_padding == 'regular' %}
+    padding-bottom: 0 8px;
+  {% else %}
+    padding-bottom: 12px;
+  {% endif %}
+  font-weight: inherit;
+  color: {{ settings.button_link_text_color }};
+  font-size: inherit;
+  transition: $btn-transition;
+  border-style: {{ settings.button_link_underline_style }};
+  border-width: {{ settings.button_link_underline_thickness }}px;
+
+  &:hover {
+      color: {{ settings.button_link_text_color--highlight }};
+  } 
+}
+.link--small {
+  font-size: $fz-6;
+  padding-bottom: 0.1em;
+  letter-spacing: 0.01em;
+}

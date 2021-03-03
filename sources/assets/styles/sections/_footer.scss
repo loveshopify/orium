@@ -1,0 +1,229 @@
+.site-footer-container {
+  display: block;
+  position: static;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  @include desktop {
+    display: none;
+    position: absolute;
+  }
+}
+
+.site-footer {
+  padding-top: $gutter*2;
+  padding-bottom: $gutter*2;
+  color: $color-footer;
+  background: $color-footer-bg;
+  text-align: center;
+  @include desktop {
+    padding-top: 100px;
+    padding-bottom: 45px;
+  }
+  .row {
+    justify-content: center;
+  }
+  .footer-cta-hidden & {
+    margin-top: 0;
+    padding-top: $gutter*4;
+  }
+  .nav__link {
+    color: inherit;
+    font-size: $fz-6;
+    @include desktop {
+      font-size: $fz-7;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .title {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: $fz-4;
+    color: inherit;
+  }
+}
+
+.site-footer__top {
+  text-align: center;
+  @include desktop {
+    text-align: left;
+  }
+}
+.site-footer__logo {
+  img, svg {
+    width: auto;
+    height: 57px;
+  }
+  path,
+  polygon {
+    fill: currentColor !important;
+  }
+}
+.site-footer__info {
+  margin: $gutter*0.5 0 0 0;
+  line-height: 24px;
+  color: $color-grey-light;
+  font-size: 14px;
+  @include desktop {
+    font-size: $fz-7;
+  }
+  a {
+    color: $color-white;
+    text-decoration: underline;
+  }
+  p {
+    margin-bottom: 0;
+    +p {
+      margin-top: 0.5rem;
+    }
+  }
+}
+.social-links {
+  margin: 0.5rem (-$gutter/2) 0;
+  margin-top: $gutter;
+  color: inherit;
+  text-align: center;
+  justify-content: center;
+  @include desktop {
+    margin-top: 0.5rem;
+  }
+  .nav__link {
+    padding: $gutter/2;
+    font-size: $fz-4;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+.site-footer__nav {
+  display: block;
+  line-height: 24px;
+  @include desktop {
+    display: flex;
+  }
+  .nav__title {
+    border-bottom: 1px solid $color-brown-light;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: $fz-4;
+    font-weight: 500;
+    font-stretch: condensed;
+    margin-bottom: 0;
+    padding-bottom: $gutter;
+    white-space: nowrap;
+    @include desktop {
+      border-bottom: none;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    &.is-open {
+      i {
+        transform: rotate(-180deg);
+      }
+    }
+    i {
+      display: inline-block;
+      font-size: 9px;
+      color: $color-brown-light;
+      transition: $transition-time;
+      @include desktop {
+        display: none;
+      }
+    }
+  }
+  &.nav.m-vertical {
+    justify-content: space-around;
+    .nav__items {
+      align-items: center;
+    }
+    .nav__link {
+      padding: 0;
+      white-space: nowrap;
+      text-align: center;
+    }
+  }
+}
+.site-footer__bottom {
+  border: none;
+  color: $color-grey-light;
+  display: block;
+  font-size: $fz-6;
+  margin-top: 0px;
+  padding: 0;
+  text-align: center;
+  @include desktop {
+    font-size: $fz-7;
+    margin-top: $gutter*2;
+    text-align: left;
+  }
+  a {
+    color: $color-white;
+    text-decoration: none;
+  }
+}
+.site-footer__bottom-menu {
+  margin-top: $gutter;
+  .nav__items {
+    flex: 1;
+    justify-content: center;
+    @include desktop {
+      flex: auto;
+      justify-content: left;
+    }
+  }
+  .nav__item {
+    line-height: 1;
+  }
+  .nav__link {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-stretch: condensed;
+  }
+  .nav__item + .nav__item {
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 1px solid currentColor;
+  }
+  .nav__link {
+    padding: 0;
+  }
+}
+.site-footer__copy {
+  p {
+    margin-bottom: 0;
+  }
+  p+p {
+    margin-top: 1em;
+  }
+  span {
+    margin: 0 5px;
+    vertical-align: middle;
+    color: $color-red;
+    font-size: 1.25em;
+  }
+}
+
+.footer-box {
+  border-top: 1px solid $color-light-grey;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  &.m-no-border {
+    border: 0;
+  }
+  p {
+    margin-bottom: 0;
+  }
+  @include desktop {
+    border: none;
+    padding: 0;
+    width: auto;
+    p {
+      margin: 0;
+    }
+  }
+}
+

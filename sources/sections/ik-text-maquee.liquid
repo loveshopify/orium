@@ -1,0 +1,31 @@
+<div class="ik-marquee" id="{{ section.settings.marquee_id }}">
+  <div>
+    <h2>{{ section.settings.marquee_text }}</h2>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Text marquee",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "marquee_text",
+      "label": "marquee text",
+      "default": "hair confidence • hair wellness • science"
+    },
+    {
+      "type": "text",
+      "id": "marquee_id",
+      "label": "marquee id"
+    }
+  ],
+  "presets": [
+    {
+      "category": "ik-section",
+      "name": "marquee slider"
+    }
+  ]
+}
+{% endschema %}

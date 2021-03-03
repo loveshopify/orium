@@ -1,0 +1,41 @@
+.s7 {
+  padding: $gutter;
+  @include desktop {
+    padding: $gutter*2 0 0;
+  }
+  .row {
+    margin: 0 -30px;
+    >div {
+      padding: 0 30px;
+      &:not(:first-child) {
+        margin-top: $gutter*2;
+        @include desktop {
+          margin-top: $gutter;
+        }
+      }
+    }
+    >div:nth-child(2n+1) {
+      margin-top: 0;
+      @include desktop {
+        margin-top: 130px;
+      }
+    }
+  }
+}
+.s7-card__image {
+  position: relative;
+  display: block;
+  .title {
+    max-width: none;
+    position: absolute;
+    right: 0;
+    left: 80%;
+    bottom: 10%;
+    transform: rotate(-90deg) translate(0%, 0%);
+    white-space: nowrap;
+    z-index: 1;
+  }
+}
+.s7-card__text {
+  margin-top: 20px;
+}

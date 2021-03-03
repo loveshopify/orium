@@ -1,0 +1,13 @@
+{% assign set = section.settings %}
+<style>
+  #shopify-section-{{ section.id }} {% if internalElement %}{{ internalElement }}{% endif %} {
+    padding: {{ set.ptop }}px 0 {{ set.pbottom }}px;
+    background-color: {{ set.sectionbg }};
+  }
+  @media (max-width: 989px) {
+    #shopify-section-{{ section.id }} {% if internalElement %}{{ internalElement }}{% endif %} {
+      padding: {{ set.ptop_mob }}px 0 {{ set.pbottom_mob }}px;
+    }
+  }
+  {% if customStyles %}{{ customStyles }}{% endif %}
+</style>

@@ -1,0 +1,149 @@
+// ============== COLORS ==============
+$color-black: #000000;
+$color-dark-grey: #141415;
+$color-light-grey: #777;
+$color-light-blue: #f9faff;
+$color-grey-light: #ccc;
+$color-grey-lightest: #f5f4f5;
+
+$color-blue: #002d56;
+$color-blue-dark: #071b33;
+$color-blue-grey: #8f9cb2;
+$color-orange: #ff7f50;
+$color-yellow: #ffbc16;
+$color-red: #9c0808;
+$color-pink: #da4e82;
+$color-pink-light: #fef7f1;
+$color-green: #8ccc00;
+$color-brown: #b88b4e;
+$color-brown-light: #f1d9b2;
+$color-white: #ffffff;
+
+// Main colors
+$color-body: $color-black;
+$color-primary: $color-light-grey;
+// Buttons
+$color-button: $color-black;
+// Title
+$color-title: $color-body;
+$color-title-accent: $color-body;
+// Link
+$color-link-hover: $color-body;
+$color-link: $color-body;
+// Hero
+$color-hero: $color-black;
+$color-hero-bg: $color-black;
+$color-product-cell-price: $color-black;
+// Cart count
+$color-cart-count: $color-dark-grey;
+$color-cart-count-bg: $color-yellow;
+// Header
+$color-header-bg: #2a2a2a;
+$color-header-link: $color-white;
+$color-dropdown-bg: $color-white;
+$color-dropdown-bottom-line-color: $color-black;
+$dropdown-bottom-line-size: 2px;
+// Footer
+$color-newsletter-bg: $color-brown-light;
+$color-newsletter-input-bg: $color-pink-light;
+$color-footer: $color-white;
+$color-footer-bg: $color-black;
+$color-error: $color-red;
+// Product
+$color-add-to-cart-bg: $color-brown;
+$color-add-to-cart: $color-white;
+
+// Minicart
+
+$color-cart-notification-bg: $color-blue-dark;
+
+// ============== FONTS ==============
+$fz-1: 32px;
+$fz-2: 29px;
+$fz-3: 24px;
+$fz-4: 19px;
+$fz-5: 16px;
+$fz-6: 14px;
+$fz-7: 12px;
+$fz-title: $fz-1;
+$fz-section: $fz-5;
+$fz-body: $fz-5;
+$fz-header: $fz-5;
+// Product cell
+$fz-product-cell-title: $fz-5;
+$fz-product-cell-price: $fz-7;
+$fz-product-cell-descr: $fz-5;
+// Button
+$fz-button: $fz-5;
+$fz-button-large: $fz-5;
+
+$ff-1: 'GT-AMERICA', sans-serif;
+$ff-2: 'GT-AMERICA', sans-serif;
+$ff-3: 'GT-AMERICA', sans-serif;;
+$ff-body: $ff-1;
+$ff-cursive: $ff-1;
+$ff-title: $ff-1;
+$ff-topbar: 'GT-AMERICA', sans-serif;
+
+$ls-1: 0.02em;
+
+// ============== LAYOUT ==============
+$container-xl: 1600px;
+$container-l: 1200px;
+$container-m: 1080px;
+$container-s: 720px;
+$container-sm: 540px;
+$gutter: 15px;
+
+$header-height: 100px;
+
+/*============================================================================
+  Grid Breakpoints and Class Names
+    - Do not change the variable names
+==============================================================================*/
+$grid-medium: 768px;
+$grid-large: 990px;
+$grid-widescreen: 1400px;
+$grid-xlarge: 1601px;
+$grid-gutter: 30px;
+
+$small: 'small';
+$medium: 'medium';
+$medium-down: 'medium-down';
+$mobile: 'mobile';
+$desktop: 'desktop';
+$medium-up: 'medium-up';
+$large: 'large';
+$large-down: 'large-down';
+$large-up: 'large-up';
+$widescreen: 'widescreen';
+$xlarge: 'xlarge';
+
+// The `$breakpoints` list is used to build our media queries.
+// You can use these in the media-query mixin.
+$breakpoints: (
+  $small '(max-width: #{$grid-medium - 1})',
+  $medium '(min-width: #{$grid-medium}) and (max-width: #{$grid-large - 1})',
+  $medium-down '(max-width: #{$grid-large - 1})',
+  $desktop '(min-width: #{$grid-large})',
+  $mobile '(max-width: #{$grid-large - 1})',
+  $medium-up '(min-width: #{$grid-medium})',
+  $large '(min-width: #{$grid-large}) and (max-width: #{$grid-widescreen - 1})',
+  $large-down '(max-width: #{$grid-widescreen - 1})',
+  $large-up '(min-width: #{$grid-large})',
+  $widescreen '(min-width: #{$grid-widescreen})',
+  $xlarge '(min-width: #{$grid-xlarge})',
+);
+
+// ============== ANIMATION ==============
+$transition-time: 0.33s;
+$btn-transition: 
+  color $transition-time ease-in-out, 
+  background-color $transition-time ease-in-out, 
+  border-color $transition-time ease-in-out, 
+  box-shadow $transition-time ease-in-out;
+$nav-link-hover-opacity: 0.7;
+$animation-x: 50px;
+$animation-y: 50px;
+
+$icomoon-font-path: 'vendor/icomoon/fonts';

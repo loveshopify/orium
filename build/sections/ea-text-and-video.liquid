@@ -1,0 +1,145 @@
+{% comment %} ATTENTION!!! This is compiled version of ea-text-and-video.liquid and it is overriding automatically. You should use theme development tool and sources\sections\ea-text-and-video.liquid file to code and save your changes. {% endcomment %}{% if section.settings.visible %}
+  {% render 'ea-text-and-video-content', section: section %}
+{% endif %}
+
+{% schema %}
+  {
+  "name": "Text and video",
+  "class": "section has-overlay text-video-section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "visible",
+      "label": "Show section",
+      "default": true
+    },
+
+
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "ptop",
+      "label": "Top spacing desktop",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "pbottom",
+      "label": "Bottom spacing desktop",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "ptop_mob",
+      "label": "Top spacing mobile",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "pbottom_mob",
+      "label": "Bottom spacing mobile",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+
+
+    {
+      "id": "video_url",
+      "type": "video_url",
+      "label": "Video URL",
+      "accept": ["youtube", "vimeo"],
+      "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc"
+    },
+    {
+      "type": "image_picker",
+      "id": "bgimage",
+      "label": "Video background image"
+    },
+
+
+    {
+      "type": "header",
+      "content": "Background"
+    },
+    {
+      "type": "color",
+      "id": "sectionbg",
+      "label": "Section background color",
+      "default": "#ffffff"
+    },
+
+
+    {
+      "type": "header",
+      "content": "Text"
+    },
+    {
+      "id":"title",
+      "type":"richtext",
+      "label":"Title"
+    },
+    {
+      "id": "text",
+      "type": "richtext",
+      "label": "Text"
+    },
+
+    
+    {
+      "type": "header",
+      "content": "button"
+    },
+    {
+      "type": "range",
+      "id": "btntop",
+      "label": "Top spacing",
+      "min": -200,
+      "max": 200,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "id": "btnu",
+      "type": "url",
+      "label": "Button link"
+    },
+    {
+      "id": "btn",
+      "type": "text",
+      "label": "Button text",
+      "default": "Enter text for button"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Text and video",
+      "category": "Text and video"
+    }
+  ]
+}
+
+{% endschema %}
+
+
+
+
+

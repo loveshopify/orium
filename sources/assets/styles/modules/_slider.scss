@@ -1,0 +1,300 @@
+.slick-dots,
+.slider-dots {
+  margin: -3px 0 0 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+
+  li {
+    margin: 0;
+  }
+  button {
+    margin: 0 10px;
+    font-size: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+    padding: 0;
+    border: 5px solid $color-brown-light;
+    background: $color-brown-light;
+    opacity: 1;
+    outline: none;
+    text-indent: -9999px;
+    position: relative;
+    transition: $transition-time;
+    @include desktop {
+      border-width: 50%;
+    }
+  }
+
+  .slick-active button,
+  button.is-active {
+    opacity: 1;
+    border: 5px solid $color-brown;
+    background: $color-brown;
+
+  }
+}
+.slick-slide {
+  img {
+    display: inline-block;
+  }
+}
+
+.slick-slider.m-vertical-dots,
+.slider.m-vertical-dots {
+  .slick-dots,
+  .slider-dots {
+    margin: 0;
+    display: block;
+    position: absolute;
+    z-index: 20;
+    right: $gutter;
+    top: 50%;
+    transform: translate(0%, -50%);
+    @include desktop {
+      right: -$gutter*3;
+    }
+    li:not(:first-child) {
+      margin-top: $gutter/2;
+    }
+  }
+  &.m-left-dots {
+    .slick-dots,
+    .slider-dots {
+      right: auto;
+      left: -$gutter*3;
+    }
+  }
+}
+
+.slick-slider.m-line-dots {
+  .slick-dots,
+  .slider-dots {
+    width: 100%;
+    margin: $gutter 0 0;
+    li {
+      cursor: pointer;
+    }
+    button {
+      margin: 5px;
+      border: none;
+      border-radius: 0;
+      background: $color-blue;
+      height: 2px;
+      width: 20px;
+      &::before {
+        display: none;
+      }
+      @include desktop {
+        height: 3px;
+        width: 40px;
+        }
+    }
+  }
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  visibility: hidden;
+  &.m-mounted {
+    visibility: visible;
+  }
+  &.m-centered {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $container-sm;
+    align-items: center;
+    .slick-arrow {
+      margin-top: 0;
+      position: static;
+    }
+    .slider-dots {
+      margin: 0 $gutter;
+      button {
+        transform: translate(0, -25%);
+      }
+    }
+  }
+}
+
+.slider-arrow2 {
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: $color-brown-light;
+  &:focus,
+  &:active,
+  &:hover {
+    color: $color-brown;
+    outline: none;
+  }
+}
+
+.slick-arrow {
+  margin-top: -15px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  font-size: 0;
+  text-indent: -9999px;
+  background: $color-black url('../images/slider-arrow-right.svg') no-repeat center;
+  background-size: 5px auto;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  opacity: 0.55;
+  z-index: 1;
+  border-radius: 50%;
+  transition: $transition-time;
+  &.slick-prev,
+  &.slider-prev {
+    right: auto;
+    left: 0;
+    transform: rotate(-180deg);
+  }
+  &.m-icon {
+    width: auto;
+    height: auto;
+    background: none;
+    text-indent: 0;
+    font-size: $fz-3;
+    &.slick-prev,
+    &.slider-prev {
+      transform: none;
+    }
+  }
+  &:focus,
+  &:active,
+  &:hover {
+    outline: none;
+  }
+  &:hover {
+    opacity: 1;
+  }
+  &.slick-disabled {
+    visibility: hidden;
+  }
+  img {
+    max-width: 12px;
+  }
+}
+
+// Horizontal slider
+
+.slider.m-hor {
+  margin: 40px auto 0;
+  max-width: $container-m;
+  .slide {
+    position: relative;
+  }
+  .slide__panel {
+    background: $color-white;
+    min-width: 0;
+    max-width: 100%;
+    padding: $gutter 0;
+    width: 100%;
+    transform: none;
+    text-align: center;
+    position: absolute;
+    left: $gutter*5;
+    top: 50%;
+    @include desktop {
+      min-width: 380px;
+      max-width: 500px;
+      padding: $gutter*2;
+      transform: translate(0, -50%);
+    }
+    .btn {
+      margin-top: $gutter !important;
+    }
+  }
+  img {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.slick-dots.m-hor,
+.slider-dots.m-hor {
+  li {
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+    &:first-child {
+      hr {
+        display: none;
+      }
+    }
+    hr {
+      content: "";
+      width: 120px;
+      height: 2px;
+      background: $color-blue;
+      opacity: 0.3;
+      @include desktop {
+        width: 250px;
+        height: 3px;
+      }
+    }
+  }
+  button {
+    margin: 0;
+    text-indent: 0;
+    font-size: $fz-4;
+    font-family: $ff-1;
+    font-weight: bold;
+    color: inherit;
+    border-color: $color-blue;
+    @include desktop {
+      font-family: $ff-1;
+      font-size: $fz-3;
+    }
+    span {
+      position: absolute;
+      top: -30px;
+      left: 0;
+      transform: translate(-50%, 0);
+      @include desktop {
+        top: -40px;
+      }
+    }
+  }
+}
+
+.slider.m-custom-controls {
+  position: relative;
+  padding: 0;
+  @include desktop {
+    padding: 0 $gutter*3;
+  }
+  .slider-controls {
+    position: static;
+  }
+  .slider-dots {
+    margin-top: $gutter*2;
+  }
+  .slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+  .slider-prev {
+    left: 0;
+  }
+  .slider-next {
+    right: 0;
+  }
+}
+
+// Gallery
+.slider.m-gallery {
+  padding: 0;
+  @include desktop {
+    padding: 0 $gutter*3;
+  }
+}

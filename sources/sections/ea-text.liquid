@@ -1,0 +1,8 @@
+{% if section.settings.visible %}
+  {% render 'ea-text-content', section: section %}
+{% endif %}
+
+{% schema %}
+  @@include('ea-text.json')
+{% endschema %}
+

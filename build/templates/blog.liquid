@@ -1,0 +1,28 @@
+{% comment %} ATTENTION!!! This is compiled version of blog.liquid and it is overriding automatically. You should use theme development tool and sources\templates\blog.liquid file to code and save your changes. {% endcomment %}<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      {% for article in blog.articles %}
+        {
+          "@type": "ListItem",
+          "position": "{{ forloop.index | json }}",
+          "url": "{{ shop.url }}{{ article.url }}",
+          "name": "{{ article.title }}"
+        } {%- unless forloop.last -%},{%- endunless -%}
+      {% endfor %}
+    ]
+  }
+</script>
+
+<header class="blog-header">
+  <div class="container">
+    <h3 class="title m-black not-animated ta-center">{{ blog.title }}</h3>
+    {%- comment -%} OPTIONAL: ea-blog-menu.liquid {%- endcomment -%}
+  </div>
+</header>  <!-- /.blog-header -->
+
+{% if blog.handle != 'press' %}
+  {% section 'ea-blog-featured' %}
+{% endif %}
+{% section 'ea-blog-main' %}

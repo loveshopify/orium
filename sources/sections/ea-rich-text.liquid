@@ -1,0 +1,7 @@
+{% if section.settings.visible %}
+  {% render 'ea-rich-text-content', section: section %}
+{% endif %}
+
+{% schema %}
+  @@include('ea-rich-text.json')
+{% endschema %}

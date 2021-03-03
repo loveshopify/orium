@@ -1,0 +1,12 @@
+{% if section.settings.visible %}
+  {% render 'ea-text-and-video-content', section: section %}
+{% endif %}
+
+{% schema %}
+  @@include('ea-text-and-video.json')
+{% endschema %}
+
+
+
+
+

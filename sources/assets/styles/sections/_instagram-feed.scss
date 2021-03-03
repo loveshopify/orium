@@ -1,0 +1,94 @@
+.instagram-feed {
+  overflow: hidden;
+  margin: 0 -$gutter;
+  @include desktop {
+    margin: 0 -5px;
+    overflow: unset;
+  }
+  &.is-hidden {
+    visibility: hidden;
+  }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .slick-list {
+    margin: 0 -100px;
+  }
+  .slick-prev {
+    left: -30px;
+  }
+  .slick-next {
+    right: -30px;
+  }
+}
+.section.m-instagram {
+  .subtitle {
+    font-size: 16px;
+    font-weight: bold;
+    @include desktop {
+      font-size: 19px;
+      font-weight: normal;
+    }
+  }
+}
+.instagram-feed__post {
+  margin-top: 10px;
+  display: block;
+  padding: 0 5px;
+  width: 33.3333333%;
+  float: left;
+  outline: none;
+  position: relative;
+  @include desktop {
+    width: 20%;
+  }
+  &:first-child {
+    width: 100%;
+    @include desktop {
+      width: 40%;
+    }
+  }
+  &:hover {
+    &:after,
+    span {
+      visibility: visible;
+    }
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    background: rgba(0,0,0,0.3);
+    top: 0;
+    left: 5px;
+    right: 5px;
+    bottom: 0;
+    z-index: 1;
+    visibility: hidden;
+  }
+  span {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    color: $color-white;
+    font-size: 14px;
+    z-index: 2;
+    visibility: hidden;
+  }
+  i {
+    font-size: 1.2em;
+    margin-right: 10px;
+    position: relative;
+    top: 1.5px;
+  }
+  b+b {
+    margin-left: 25px;
+  }
+  img {
+    width: 100%;
+  }
+}

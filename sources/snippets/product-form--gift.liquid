@@ -1,0 +1,50 @@
+<form id="addToCartForm" class="product-form" action="/cart/add" method="post" enctype="multipart/form-data" data-productid="{{product.id}}" data-variantid="{{ current_variant.id }}" data-discountid="{{ current_variant.metafields.subscriptions.discount_variant_id }}">
+  
+  {% if product.available %}
+
+    <div class="field">
+      <label for="amount-select" class="label">Amount:</label>
+      <select id="amount-select" class="select" name="id" data-variant-select>
+        {% for variant in product.variants %}
+          <option value="{{ variant.id | handle }}" {% if forloop.index == 1 %}selected{% endif %} data-price="{{ variant.price }}">
+            {{ variant.title }}
+          </option>
+        {% endfor %}
+      </select> 
+    </div>
+
+  {% else %}
+    <select name="id" class="no-js" data-product-select data-productid="{{product.id}}">
+      {% for variant in product.variants %}
+      <option {% if variant == current_variant %}selected="selected" {% endif %}
+        {% unless variant.available %}disabled="disabled" {% endunless %} value="{{ variant.id }}">
+        {{ variant.title }}
+      </option>
+      {% endfor %}
+    </select>
+  {% endif %} 
+
+  <div data-price-wrapper class="product-price">
+    <span data-product-price>
+      {{ current_variant.price | money }}
+    </span>
+    {% if product.compare_at_price_max > product.price %}
+      <s data-compare-price class="was-price">
+        {% if current_variant.compare_at_price > current_variant.price %}
+          {{ current_variant.compare_at_price | money }}
+        {% endif %}
+      </s>
+    {% endif %}
+  </div> <!-- / .product-price -->
+
+
+  <div class="add-to-cart-container">
+    <button type="submit" name="add" class="btn btn--primary add-to-cart" 
+      {% unless current_variant.available %}disabled="disabled" {% endunless %}>
+      <span class="add-to-cart__text add-to-cart__text--onetime is-visible">Add To Cart</span>
+    </button> <!-- / .add-to-cart -->
+  </div> <!-- / .d-flex -->
+
+</form>
+
+

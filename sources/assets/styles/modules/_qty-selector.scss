@@ -1,0 +1,81 @@
+.qty-selector {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100px;
+  &.m-transparent {
+    .e-controls {
+      background-color: transparent;
+    }
+  }
+  .e-qty {
+    margin-right: 15px;
+  }
+
+  .e-controls {
+    padding: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background-color: $color-white;
+    font-weight: 500;
+    border: 1px solid currentColor;
+  }
+
+  .e-input {
+    padding: 0;
+    width: 40%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    font-size: inherit;
+    border-right: 0;
+    font-weight: inherit;
+    text-align: center;
+    outline: none;
+  }
+
+  .e-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .e-btn {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+    border: none;
+    color: inherit;
+    background-color: transparent;
+    outline: none;
+    position: relative;
+    z-index: 2;
+    opacity: 1;
+    font-weight: inherit;
+    font-size: 10px;
+    &:disabled {
+      cursor: default;
+      opacity: 0.5;
+    }
+    +.e-btn {
+      border-top: 1px solid transparent;
+    }
+
+    &.m-decr {
+      justify-content: flex-start;
+      padding-left: 10px;
+      z-index: 1;
+    }
+    &.m-incr {
+      justify-content: flex-end;
+      padding-right: 10px;
+    }
+  }
+  .error {
+    width: 300px;
+    position: absolute;
+    top: 110%;
+  }
+}

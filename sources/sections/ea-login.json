@@ -1,0 +1,72 @@
+{
+  "name": "Login",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Background"
+    },
+    {
+      "type": "color",
+      "id": "sectionbg",
+      "label": "Section background color",
+      "default": "#ffffff"
+    },
+
+
+    {
+      "id": "page_title",
+      "type": "richtext",
+      "label": "Page Title"
+    },
+
+
+    {
+      "type": "header",
+      "content": "Login Content"
+    },
+    {
+      "id": "title",
+      "type": "richtext",
+      "label": "Title"
+    },
+    {
+      "id": "subtitle",
+      "type": "richtext",
+      "label": "Text"
+    },
+    {
+      "id": "btn",
+      "type": "text",
+      "label": "Login button text",
+      "default": "Enter text for button"
+    },
+    {
+      "type": "text",
+      "id": "forgotlink",
+      "label": "Forgot password text",
+      "default": "Forgot Your Password?"
+    },
+
+
+    {
+      "type": "header",
+      "content": "Create Account Content"
+    },
+    {
+      "id": "title2",
+      "type": "richtext",
+      "label": "Title"
+    },
+    {
+      "id": "subtitle2",
+      "type": "richtext",
+      "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "register_text",
+      "label": "Create account button text",
+      "default": "Create Account"
+    }
+  ]
+}

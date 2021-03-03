@@ -1,0 +1,12 @@
+.stars {
+  margin-top: $gutter*2;
+  img {
+    margin-top: $gutter;
+    max-width: 95px;
+  }
+}
+.stars__title {
+  margin-top: 1em;
+  font-size: $fz-4;
+  font-weight: 600;
+}

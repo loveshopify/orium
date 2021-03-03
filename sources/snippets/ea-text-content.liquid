@@ -1,0 +1,15 @@
+
+{% assign set = section.settings %}
+
+{% render 'ea-section-styles', section: section %}
+
+{% render 'ea-section-foreground-image', section: section %}
+
+<div class="section featured-text">
+  <div class="container">
+    <div class="section__content">
+      <h2 class="title h2 not-animated">{{ set.title }}</h2>
+      <div class="subtitle rte">{{ set.text }}</div>
+    </div>
+  </div>
+</div>

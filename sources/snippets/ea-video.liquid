@@ -1,0 +1,31 @@
+{% if set.video_source != blank and set.video_source == 'youtube' %}
+  {%- capture paddingTop -%}
+    {%- if set.aspect_ratio == '16:9' -%}
+      56.25%
+    {%- else -%}
+      75%
+    {%- endif -%}
+  {%- endcapture -%}
+  <div class="video video--youtube" style="padding-top: {{ paddingTop }}">
+    <iframe frameborder="0" src="https://www.youtube.com/embed/{{ set.iframe_video.id }}?&controls=1&showinfo=0&autoplay=0&loop=0&playlist=0"></iframe>
+  </div>
+  
+{% else %}
+  {%- capture source -%}
+    {% if bset_video contains '.mp4' %}
+      <source src="{{ bset_video }}" type="video/mp4">
+    {% elsif  bset_video contains '.ogg' %}
+      <source src="{{ bset_video }}" type="video/ogg">
+    {% endif %}
+  {%- endcapture -%}
+
+  <div class="video">
+    <div class="video__player" data-video>
+      <button data-video-btn></button>
+      <video poster="{{ bset_image | img_url: 'master' }}" onclick="this.play()">{{ source }}</video>
+    </div>
+    <div class="video__text">
+      {{ bset_text }}
+    </div>
+  </div>
+{% endif %}

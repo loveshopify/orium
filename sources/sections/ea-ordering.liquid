@@ -1,0 +1,63 @@
+<style>
+  {% for block in section.blocks %}
+    .{{ block.type }} {
+      order: {{ forloop.index0 }}
+    }
+  {% endfor %}
+</style>
+
+
+{% schema %}
+
+{
+  "name": "Sections Ordering",
+  "blocks": [
+    {
+      "type": "product-main-section",
+      "name": "Product main",
+      "limit": 1
+    },
+    {
+      "type": "s7",
+      "name": "Brand info",
+      "limit": 1
+    },
+    {
+      "type": "vertical-slider-section",
+      "name": "Vertical slider",
+      "limit": 1
+    },
+    {
+      "type": "ingr",
+      "name": "Ingredients",
+      "limit": 1
+    },
+    {
+      "type": "section-results",
+      "name": "Results",
+      "limit": 1
+    },
+    {
+      "type": "section-faq",
+      "name": "FAQ",
+      "limit": 1
+    },
+    {
+      "type": "s2",
+      "name": "Products",
+      "limit": 1
+    },
+    {
+      "type": "reviews-section",
+      "name": "Reviews",
+      "limit": 1
+    }
+  ]
+}
+
+{% endschema %}
+
+
+
+
+

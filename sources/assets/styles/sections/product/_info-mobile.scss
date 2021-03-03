@@ -1,0 +1,60 @@
+@include mobile {
+  .product-info {
+
+    .accordion {
+      margin-top: $gutter;
+    }
+    .accordion__content {
+      font-size: 14px;
+      p:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .product-info__title {
+    margin-top: $gutter;
+    font-size: 23px;
+  }
+
+  .product-info__descr {
+    margin-top: $gutter;
+    font-size: 14px;
+    font-weight: 200;
+  }
+
+  .product-form {
+    margin-top: $gutter*1.5;
+  }
+
+  .product-form__qty {
+    display: block;
+    position: relative;
+    .label {
+      margin-top: 0.25rem;
+      position: absolute;
+      top: 100%;
+      left: 0;
+    }
+  }
+
+  .add-to-cart-container {
+    display: block;
+    .add-to-cart {
+      height: 35px;
+      font-size: $fz-body;
+    }
+
+  }
+
+  .product-benefits {
+    font-size: 13px;
+  }
+
+  .product-benefits__icon {
+    margin-right: 5px;
+    img {
+      height: 1.5em;
+    }
+  }
+}

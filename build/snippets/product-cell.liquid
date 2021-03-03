@@ -1,0 +1,45 @@
+{% comment %} ATTENTION!!! This is compiled version of product-cell.liquid and it is overriding automatically. You should use theme development tool and sources\snippets\product-cell.liquid file to code and save your changes. {% endcomment %}{% assign hoverImage = product.images[1] %}
+{% if hoverImage == blank %}
+  {% assign hoverImage = product.images[0] %}
+{% endif %}
+
+<div class="product-cell {{ class }}" {% if type == 'scrolling' %}data-scrolling-product-cell{% endif %}>
+  <div class="product-cell__img">
+    <a href="{{ product.url }}" class="no-hover-link">
+      <div class="img">{% render 'rimage', image: product.images[0], paddingTop: '100' %}</div>
+      <div class="img-hover">{% render 'rimage', image: hoverImage, paddingTop: '100' %}</div>
+    </a>
+  </div>
+
+  {% if template == 'collection' or showInfo %}
+    <div class="product-cell__info">
+      <div class="product-cell__info-left">
+        <h4 class="product-cell__title"><a href="{{ product.url }}" class="no-hover-link">{{ product.title }}</a></h4>
+        {% if product.metafields.main.info != blank and showDescr %}<div class="product-cell__description">{{ product.metafields.main.info }}</div>{% endif %}
+      </div>
+
+      <div class="product-cell__info-right">
+        {% if showPrice == true or showPrice == nil %}
+          {%- capture productPrice -%}
+            {% assign variant0 = product.variants[0] %}
+            ${{ variant0.price | money_without_currency }}
+            {% if variant0.compare_at_price > variant0.price %}
+              <s class="was-price">${{ variant0.compare_at_price | money_without_currency }}</s> 
+            {% endif %}
+          {%- endcapture -%}
+          <h5 class="product-cell__price">{{ productPrice }}</h5>
+        {% endif %}
+        {% if showBtn == true %}
+          <a href="{{ product.url }}" class="btn add-to-cart">View Product</a>
+        {% endif %}
+        {% if section.settings.show_quick_view %}
+          <a href="#" class="btn" data-quick-view="{{ product.handle }}">Quick View</a>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if showLearnmore %}
+    <a href="{{ product.url }}" class="btn m-underline m-tiny">SHOP NOW</a>
+  {% endif %}
+</div>

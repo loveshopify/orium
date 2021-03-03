@@ -1,0 +1,10 @@
+{% comment %}
+Required values
+price: <product price>
+{% endcomment %}
+
+{% if settings.currency_format == 'money_with_currency_format' %}
+  {{ price | money_with_currency }}
+{% else %}
+  {{ price | money }}
+{% endif %}

@@ -1,0 +1,27 @@
+{% assign set = section.settings %}
+
+{% render 'ea-section-styles', section: section %}
+
+{% render 'ea-section-foreground-image', section: section %}
+
+{% paginate search.results by 10 %}
+
+{% if search.performed and search.results != blank and search.types contains 'product' %}
+  <div class="container">
+    <h1 class="title not-animated">Search results for "{{ search.terms }}"</h1>
+    <div class="products-grid">
+      {% for result in search.results %}
+        {% assign product = result %}
+        <div class="product-cell-wrap">
+          {% render 'product-cell', { product: product, showInfo: true, showDescr: true, showPrice: true, showBtn: true } %}
+        </div>
+      {% endfor %}
+    </div> <!-- /.products-grid -->
+  </div>
+{% else %}
+  <div class="container">
+    <h1 class="title not-animated">Nothing found for "{{ search.terms }}"</h1>
+  </div>
+{% endif %}
+
+{% endpaginate %}

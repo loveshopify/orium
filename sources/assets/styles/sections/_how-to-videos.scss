@@ -1,0 +1,78 @@
+.how-to-video {
+  margin: 100px auto;
+  max-width: 850px;
+}
+
+.how-to-videos__slider {
+  margin: 0 auto;
+  max-width: $container-m;
+
+  .slick-track {
+    display: flex !important;
+  }
+
+  .slick-slide {
+    height: inherit !important;
+    padding: 0 $gutter;
+    >div, >div>div { height: 100%; }
+    &.slick-active {
+      .how-to-videos__slide {
+        box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+}
+
+.how-to-videos__slide {
+  max-width: 230px;
+  padding: $gutter;
+  background: $color-pink-light;
+  text-align: center;
+
+  .title {
+    margin-top: 0.5em;
+    font-weight: 500;
+    font-size: $fz-5;
+    font-family: $ff-1;
+  }
+}
+
+
+.how-to-use {
+  margin: 0 auto;
+  max-width: 650px;
+  margin-top: $gutter*5;
+  text-align: center;
+}
+.how-to-use__steps {
+  margin-top: $gutter*5;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  @include desktop {
+    flex-wrap: unset;
+    justify-content: space-between;
+  }
+}
+.how-to-use__step {
+  @include cell(2);
+  @include desktop {
+    @include cell(4)
+  }
+  .title {
+    margin-top: $gutter*2;
+    color: $color-body;
+    font-family: $ff-1;
+    font-weight: bold;
+    font-size: $fz-4;
+    text-transform: uppercase;
+  }
+  .subtitle {
+    margin-top: $gutter;
+  }
+}
+.how-to-use__icon {
+  height: 67px;
+  max-width: none;
+  display: inline-block;
+}

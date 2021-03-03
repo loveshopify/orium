@@ -1,0 +1,12 @@
+{% comment %} ATTENTION!!! This is compiled version of ea-blog__read-time.liquid and it is overriding automatically. You should use theme development tool and sources\snippets\ea-blog__read-time.liquid file to code and save your changes. {% endcomment %}{% comment %}Get article total words{% endcomment %}
+{% assign totalWords = article.content | strip_html | split: ' ' %}
+{% comment %}Determine WPM into WPS{% endcomment %}
+{% assign wordsPerSecond = 270.0 | divided_by: 60.0 %}
+{% comment %}Determine WPS read time{% endcomment %}
+{% assign readTimeSeconds = totalWords.size | divided_by: wordsPerSecond %}
+{% comment %}Determine WPM read time{% endcomment %}
+{% assign readTimeMinutes = readTimeSeconds | divided_by: 60.0 %}
+{% comment %}Round up value{% endcomment %}
+{% assign totalReadTime = readTimeMinutes | ceil %}
+
+<span>{{ totalReadTime }} {{ 'blogs.article.read_time' | t }}</span>

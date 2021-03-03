@@ -1,0 +1,8 @@
+{% if section.settings.visible %}
+  {% render 'ea-newsletter-content', section: section %}
+{% endif %}
+
+
+{% schema %}
+  @@include('ea-newsletter.json')
+{% endschema %}

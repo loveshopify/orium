@@ -1,0 +1,117 @@
+{% comment %} ATTENTION!!! This is compiled version of ea-cart.liquid and it is overriding automatically. You should use theme development tool and sources\sections\ea-cart.liquid file to code and save your changes. {% endcomment %}{% render 'ea-section-styles', section: section %}
+{% assign set = section.settings %}
+
+{% render 'ea-section-foreground-image', section: section %}
+
+<div class="cart-wrapper" data-cart-page data-items-count="{{ cart.item_count }}">
+  
+  {% if cart.item_count > 0 %}
+    {% if set.title %}
+      <div class="container"><h1 class="title h2 ta-center">{{ set.title }}</h1></div>
+    {% endif %}
+
+    <form action="/cart" method="post" novalidate data-cart-page-form>
+      <div class="container">{% render 'ea-cart-table', section: section %}</div>
+      <div class="container">{% render 'ea-cart-summary', section: section %}</div>
+    </form>
+
+  {% else %}
+    {% comment %} Cart empty state {% endcomment %}
+    <div class="container supports-cookies">
+      <p>{{ 'cart.general.empty' | t }}</p>
+    </div>
+  {% endif %}
+</div>  
+
+
+{% schema %}
+  {
+  "name": "Cart",
+  "class": "section section-cart",
+  "tag": "section",
+  "settings": [
+  
+
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "ptop",
+      "label": "Top spacing desktop",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "pbottom",
+      "label": "Bottom spacing desktop",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "ptop_mob",
+      "label": "Top spacing mobile",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "pbottom_mob",
+      "label": "Bottom spacing mobile",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+
+
+    {
+      "type": "header",
+      "content": "Background"
+    },
+    {
+      "type": "color",
+      "id": "sectionbg",
+      "label": "Section background color",
+      "default": "#ffffff"
+    },
+
+
+    {
+      "type": "header",
+      "content": "Text"
+    },
+    {
+      "id": "title",
+      "type": "text",
+      "label": "Title",
+      "default": "Shopping Bag"
+    },
+    {
+      "type": "text",
+      "id": "continuetitle",
+      "label": "Continue text",
+      "default": "Continue Shopping"
+    },
+    {
+      "type": "url",
+      "id": "continueurl",
+      "label": "Continue Url",
+      "default": "/"
+    }
+  ]
+}
+{% endschema %}

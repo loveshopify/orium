@@ -1,0 +1,39 @@
+{% comment %} ATTENTION!!! This is compiled version of nav-dropdown-collections.liquid and it is overriding automatically. You should use theme development tool and sources\snippets\nav-dropdown-collections.liquid file to code and save your changes. {% endcomment %}{% if block.settings.shop_all_image != blank and block.settings.shop_all_url != blank %}
+  <div class="nav-dropdown__feature-item m-primary">
+    <div class="product-cell m-no-hover-effect">
+      <div class="product-cell__img">
+        <a href="{{ block.settings.shop_all_url }}" class="no-hover-link">
+          <div class="img">{% render 'rimage', image: block.settings.shop_all_image %}</div>
+          <div class="img-hover">{% render 'rimage', image: block.settings.shop_all_image %}</div>
+        </a>
+      </div>
+      {% if block.settings.shop_all_title != blank %}
+        <div class="product-cell__info">
+          <h4 class="product-cell__title"><a href="{{ block.settings.shop_all_url }}" class="no-hover-link">{{ block.settings.shop_all_title }}</a></h4>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}
+
+{%- for i in (1..6) -%}
+  {%- capture collection_id -%}collection_{{ i }}{%- endcapture -%}
+  {%- assign handle = block.settings[collection_id] -%}
+  {%- assign collection = collections[handle] -%}
+  <!-- {{ collection.image  }} -->
+  {%- if collection != blank -%}
+    <div class="nav-dropdown__feature-item">
+      <div class="product-cell">
+        <div class="product-cell__img">
+          <a href="{{ collection.url }}" class="no-hover-link">
+            <div class="img">{% render 'rimage', image: collection.image %}</div>
+            <div class="img-hover">{% render 'rimage', image: collection.image %}</div>
+          </a>
+        </div>
+        <div class="product-cell__info">
+          <h3 class="product-cell__title not-animated">{{ collection.title }}</h3>
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
+{%- endfor -%}

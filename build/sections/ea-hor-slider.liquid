@@ -1,0 +1,206 @@
+{% comment %} ATTENTION!!! This is compiled version of ea-hor-slider.liquid and it is overriding automatically. You should use theme development tool and sources\sections\ea-hor-slider.liquid file to code and save your changes. {% endcomment %}{% if section.settings.visible %}
+  {% render 'ea-hor-slider-content', section: section %}
+{% endif %}
+
+{% schema %}
+  {
+  "name": "Horizontal Slider",
+  "class": "section cards m-hor-slider",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "visible",
+      "label": "Show section",
+      "default": true
+    },
+
+
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "ptop",
+      "label": "Top spacing desktop",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "pbottom",
+      "label": "Bottom spacing desktop",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "ptop_mob",
+      "label": "Top spacing mobile",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "pbottom_mob",
+      "label": "Bottom spacing mobile",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+
+
+    {
+      "type": "header",
+      "content": "Background"
+    },
+    {
+      "type": "color",
+      "id": "sectionbg",
+      "label": "Section background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "image_picker",
+      "id": "bgimage",
+      "label": "Background image"
+    },
+    {
+      "type": "range",
+      "id": "bgwidth",
+      "label": "Background width",
+      "min": 1,
+      "unit": "%",
+      "max": 100,
+      "step": 1,
+      "default": 25
+    },
+    {
+      "type": "select",
+      "id": "bgpos",
+      "label": "Background position",
+      "options": [
+        { "value": "left", "label": "left" },
+        { "value": "right", "label": "right" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "bgtop",
+      "label": "Background top spacing",
+      "min": 0,
+      "unit": "%",
+      "max": 100,
+      "step": 1,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "bgedge",
+      "label": "Background edge spacing",
+      "min": -50,
+      "unit": "%",
+      "max": 50,
+      "step": 1,
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Text"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "bullet_title",
+          "label": "Bullet title"
+        },
+        {
+          "type": "header",
+          "content": "Button 1"
+        },
+        {
+          "type": "text",
+          "id": "btn",
+          "label": "Button text",
+          "default": "LEARN MORE"
+        },
+        {
+          "type": "url",
+          "id": "btnu",
+          "label": "Button URL"
+        },
+        {
+          "type": "header",
+          "content": "Button 2"
+        },
+        {
+          "type": "text",
+          "id": "btn2",
+          "label": "Button text",
+          "default": "LEARN MORE"
+        },
+        {
+          "type": "url",
+          "id": "btnu2",
+          "label": "Button URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Horizontal slider Section",
+      "category": "Sliders",
+      "blocks":[
+        {
+          "type": "slide"
+        },
+        {
+          "type": "slide"
+        },
+        {
+          "type": "slide"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

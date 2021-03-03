@@ -1,0 +1,37 @@
+{% assign set = section.settings %}
+
+{%- capture customStyles -%}
+  #shopify-section-{{ section.id }} .video-item:before {
+    background-image: url({{ set.bgimage | img_url: '1000x' }});
+  }
+{%- endcapture -%}
+{% render 'ea-section-styles', section: section, customStyles: customStyles %}
+
+{% render 'ea-section-foreground-image', section: section %}
+
+<div class="text-video">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        {% if set.title != blank %}
+          <h2 class="title m-heavy h1">{{ set.title }}</h2>
+        {% endif %}
+        {% if set.text != blank %}
+          <div class="subtitle">{{ set.text }}</div>
+        {% endif %}
+        <div class="animated-bottom animated-delay-1">
+          {% render 'button', {
+            top: set.btntop,
+            id: section.id,
+            text: set.btn,
+            url: set.btnu,
+            class: 'add-to-cart m-long'
+          } %}
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="video-item">{% render 'video-external', object: section %}</div>
+      </div>
+    </div>
+  </div>
+</div>

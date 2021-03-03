@@ -1,0 +1,9 @@
+{% assign set = section.settings %}
+
+{% if section.settings.visible %}
+  {% render 'ea-product-recommendations-content', section: section %}
+{% endif %}
+
+{% schema %}
+  @@include('ea-product-recommendations.json')
+{% endschema %}

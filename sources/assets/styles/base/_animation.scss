@@ -1,0 +1,63 @@
+.animated-bottom {
+	@include smoothShow(0, 30px);
+}
+.animated-right {
+	@include smoothShow(30px, 0);
+}
+
+.animated-delay-1 {
+	transition-delay: 0.2s !important;
+}
+
+@keyframes bounce1 {
+	0% {
+		-webkit-transform: translateY(0px);
+		transform: translateY(0px)
+	}
+
+	12.5% {
+		-webkit-transform: translateY(-4px);
+		transform: translateY(-4px)
+	}
+
+	25% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0)
+	}
+}
+
+@keyframes bounce2 {
+	0%, 25% {
+		-webkit-transform: translateY(0px);
+		transform: translateY(0px)
+	}
+
+	37.5% {
+		-webkit-transform: translateY(-4px);
+		transform: translateY(-4px)
+	}
+
+	50% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0)
+	}
+}
+
+@keyframes mover {
+	0% {
+		transform: translateY(2px);
+	}
+
+	100% {
+		transform: translateY(-2px);
+	}
+}
+@keyframes stock {
+	0% {
+		width: 100%;
+	}
+
+	100% {
+		width: 25%;
+	}
+}

@@ -1,0 +1,8 @@
+
+{% if section.settings.visible %}
+  {% render 'ea-products-slider-content', section: section %}
+{% endif %}
+
+{% schema %}
+  @@include('ea-products-slider.json')
+{% endschema %}

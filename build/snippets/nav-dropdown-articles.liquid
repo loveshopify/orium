@@ -1,0 +1,9 @@
+{% comment %} ATTENTION!!! This is compiled version of nav-dropdown-articles.liquid and it is overriding automatically. You should use theme development tool and sources\snippets\nav-dropdown-articles.liquid file to code and save your changes. {% endcomment %}{% assign article = articles[block.settings.article] %}
+<a class="nav-banner no-hover-link {% if block.settings.white_text %}m-white{% endif %} lazyload" href="{{ article.url }}" {{ block.shopify_attributes }}>
+  {% render 'rimage', image: article.image %}
+  <div class="nav-banner__content">
+    <h4 class="pretitle not-animated h2"> {{ article.blog }}</h4>
+    <h2 class="title not-animated h1"> {{ article.title }}</h2>
+    <span class="btn {% if block.settings.white_text %}m-white {% else %} m-black{% endif %}" aria-hidden="true">{{ block.settings.button_text }}</span>
+  </div>
+</a>

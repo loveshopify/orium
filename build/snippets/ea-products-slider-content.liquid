@@ -1,0 +1,41 @@
+{% comment %} ATTENTION!!! This is compiled version of ea-products-slider-content.liquid and it is overriding automatically. You should use theme development tool and sources\snippets\ea-products-slider-content.liquid file to code and save your changes. {% endcomment %}{% assign set = section.settings %}
+
+{% render 'ea-section-styles', section: section %}
+
+{% render 'ea-section-foreground-image', section: section %}
+
+<div class="container">
+  {% if set.pretitle != blank %}
+    <h3 class="pretitle ta-center">{{ set.pretitle }}</h3>
+  {% endif %}
+  {% if set.title != blank %}
+    <h2 class="title ta-center">{{ set.title }}</h2>
+  {% endif %}
+  <div class="slider m-custom-controls">
+    <div class="products-slider" data-hor-slider data-slides-to-show="3" data-slides-to-show-mob="1" data-custom-controls="1">
+      {% for block in section.blocks %}
+        <div class="product-cell-wrap">
+          {% assign bset = block.settings %}
+          {% if block.type == 'product' %}
+            {% render 'product-cell', product: all_products[bset.product], showInfo: true, showDescr: true, showPrice: true %}
+          {% endif %}
+          {% if block.type == "text" %}
+            <div class="product-cell m-text">
+              {% if bset.title != blank %}
+                <h3 class="title">{{ bset.title }}</h3>
+              {% endif %}
+              {% if bset.subtitle != blank %}
+                <div class="subtitle">{{ bset.subtitle }}</div>
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+    <div class="slider-controls">
+      <button class="slider-arrow slider-prev m-icon" data-hor-slider-prev><i class="icon-left-arrow"></i></button>
+      <div class="slider-dots" data-hor-slider-dots></div>
+      <button class="slider-arrow slider-next m-icon" data-hor-slider-next><i class="icon-right-arrow"></i></button>
+    </div>
+  </div>
+</div>

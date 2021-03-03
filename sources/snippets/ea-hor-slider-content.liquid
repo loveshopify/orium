@@ -1,0 +1,33 @@
+
+{% assign set = section.settings %}
+
+{% render 'ea-section-styles', section: section %}
+
+{% render 'ea-section-foreground-image', section: section %}
+
+<div class="container">
+  {% if set.title != blank %}
+    <h3 class="title ta-center">{{ set.title }}</h3>
+  {% endif %}
+  <div class="section__content" style="padding-top: 0">
+    <div class="slider-controls">
+      <div class="slider-dots m-hor" data-hor-slider-dots></div>
+    </div> <!-- / .slider-controls -->
+    <div class="slider m-hor" data-hor-slider data-slides-to-show="1" data-custom-controls="1" data-dots-titles="1">
+      {% for block in section.blocks %}
+        {% assign bset = block.settings %}
+        <div class="slide" data-title="{{ bset.bullet_title }}">
+          <div class="slide__panel">
+            {% if bset.title != blank %}<h3 class="title">{{ bset.title }}</h3>{% endif %}
+            {% if bset.text != blank %}<div class="subtitle">{{ bset.text }}</div>{% endif %}
+            <div class="buttons">
+              {% if bset.btn != '' %}<a href="{{ bset.btnu }}" aria-label="more informations" class="btn m-outline">{{ bset.btn }}</a>{% endif %}
+              {% if bset.btn2 != '' %}<a href="{{ bset.btnu2 }}" aria-label="learn more about" class="btn m-outline">{{ bset.btn2 }}</a>{% endif %}
+            </div>
+          </div>
+          <img src="{{ bset.image | img_url: '1000x' }}" alt="{{ bset.image.alt }}" class="slide__image">
+        </div> <!-- / .slide -->
+      {% endfor %}
+    </div> <!-- / .slider -->
+  </div> <!-- / .section__content -->
+</div>

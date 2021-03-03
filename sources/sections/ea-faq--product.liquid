@@ -1,0 +1,7 @@
+{% if section.settings.visible %}
+  {% render 'ea-faq-content', section: section, class: 'm-product', type: 'topbar-disabled' %}
+{% endif %}
+
+{% schema %}
+  @@include('ea-faq--product.json')
+{% endschema %}

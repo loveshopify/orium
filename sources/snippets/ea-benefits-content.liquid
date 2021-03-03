@@ -1,0 +1,55 @@
+{% assign set = section.settings %}
+
+{% render 'ea-section-styles', section: section %}
+
+{% render 'ea-section-foreground-image', section: section %}
+
+<div class="container ta-center">
+  <div class="section__header">
+    {% if set.title != blank %}
+      <h2 class="title h1 m-heavy">{{ set.title }}</h2>
+    {% endif %}
+    {% if set.text != blank %}
+      <div class="subtitle">{{ set.text }}</div>
+    {% endif %}
+  </div>
+  <div class="section__content">
+    {%- capture benefits -%}
+      {% for block in section.blocks %}
+        {% if block.type == "benefit" %}
+          {% assign bset = block.settings %}
+          <div class="benefits__item">
+            {% if bset.image != blank %}
+              <img src="{{ bset.image | img_url: '450x' }}" alt="{{ bset.image.alt }}" class="benefits__icon">
+            {% endif %}
+            {% if bset.title != blank %}<h4 class="benefits__title">{{ bset.title }}</h4>{% endif %}
+            {% if bset.text != blank %}<div class="benefits__text">{{ bset.text }}</div>{% endif %}
+          </div> <!-- / .benefits__item -->
+        {% endif %}
+      {% endfor %}
+    {%- endcapture -%}
+    {% if benefits != blank %}
+      <div class="benefits">{{ benefits }}</div>
+    {% elsif set.image_content != blank %}
+      <div class="content-image">
+        <img src="{{ set.image_content | img_url: '1000x' }}" alt="{{ set.image_content.alt }}">
+      </div>
+    {% endif %}
+
+    {% if set.bottom_image != blank %}
+      <div class="benefits__bottom"><img src="{{ set.bottom_image | img_url: '1000x' }}" alt="{{ set.bottom_image.alt }}"></div>
+    {% endif %}
+    
+    {% if set.display_reviews %}
+      <div class="ta-center">
+        <div class="stars">
+          <div>
+            <a class="btn m-underline m-bold" href="{{ set.reviews_link_url }}">{{ set.reviews_link_text }}</a>
+          </div>
+          <div><img alt="stars.png" src="{{ 'stars.png' | asset_img_url: 'master' }}"></div>
+          <h4 class="stars__title">1,232 REVIEWS</h4>
+        </div>
+      </div>
+    {% endif %}
+  </div> <!-- / .section__content -->
+</div>

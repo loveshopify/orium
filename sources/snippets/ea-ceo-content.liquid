@@ -1,0 +1,44 @@
+{% assign set = section.settings %}
+
+{%- capture customStyles -%}
+  #shopify-section-{{ section.id }} .ceo__text{
+    background-color: {{ set.sectionbg }};
+  }
+{%- endcapture -%}
+{% render 'ea-section-styles', customStyles: customStyles %}
+
+{% render 'ea-section-foreground-image', section: section %}
+
+<div class="container">
+  {% if set.pretitle != blank %}
+    <h3 class="pretitle ta-center">{{ set.pretitle }}</h3>
+  {% endif %}
+  {% if set.title != blank %}
+    <h2 class="title ta-center">{{ set.title }}</h2>
+  {% endif %}
+  {% if set.subtitle != blank %}
+    <div class="subtitle ta-center">{{ set.subtitle }}</div>
+  {% endif %}
+
+  <div class="section__content">
+    <div class="ceo__content">
+      {% if set.ceo_photo != blank %}
+        <div class="ceo__image">{% render 'rimage', image: set.ceo_photo, size:'500x' %}</div>
+      {% endif %}
+      <div class="ceo__text">
+        {% if set.ceo_pretitle != blank %}
+          <h3 class="pretitle m-accent ta-center">{{ set.ceo_pretitle }}</h3>
+        {% endif %}
+        {% if set.ceo_title != blank %}
+          <h2 class="title h2 m-black ta-center">{{ set.ceo_title }}</h2>
+        {% endif %}
+        {% if set.ceo_subtitle != blank %}
+          <div class="subtitle ta-center">{{ set.ceo_subtitle }}</div>
+        {% endif %}
+        {% if set.bgimage != blank %}
+          <div class="ceo__bgimage">{% render 'rimage', image: set.bgimage, size:'500x' %}</div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>

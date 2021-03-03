@@ -1,0 +1,13 @@
+
+{% if section.settings.visible %}
+  {% render 'ea-image-and-text-content', section: section %}
+{% endif %}
+
+{% schema %}
+  @@include('ea-image-and-text.json')
+{% endschema %}
+
+
+
+
+

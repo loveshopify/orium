@@ -1,0 +1,45 @@
+#ReCharge {
+  padding: $gutter*3 0;
+  .recharge {
+    .rc_layout__sidebar,
+    .rc_layout__content  {
+      padding: 0;
+      float: none;
+      width: auto;
+    }
+  }
+  h2, h4 {
+    margin-top: $gutter*2;
+  }
+  .nav {
+    display: block;
+  }
+  .recharge .rc_layout {
+    margin: 0;
+  }
+  [class^=rc_layout__] {
+    padding: 0;
+  }
+  a:not(.btn) {
+    color: $color-link;
+  }
+  .section-header {
+    margin-bottom: $gutter*2;
+  }
+}
+#ReCharge .rc_layout__container {
+  max-width: $container-l;
+  padding: 0 $gutter;
+  margin: 0 auto;
+}
+#rc_product_search {
+  .field {
+    .input {
+      max-width: 300px;
+      width: 100%;
+    }
+    .btn {
+      margin-left: $gutter*2;
+    }
+  }
+}

@@ -1,0 +1,239 @@
+
+.login {
+  margin: $gutter*2 0;
+  transition: $transition-time transform ease-in;
+  @include desktop {
+    margin: $gutter*10 0;
+  }
+  .title.ta-center {
+    text-align: left;
+    @include desktop {
+      text-align: left;
+    }
+  }
+
+  &.is-hidden {
+    margin: 0;
+    transform: translate(-100%, 0%);
+    height: 0;
+    min-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
+  .container {
+    max-width: $container-m;
+  }
+}
+
+.login__wrap {
+  background: transparent;
+  display: block;
+  margin-top: 0;
+  @include desktop {
+    background: $color-white;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: space-between;
+    margin-top: $gutter*4;
+  }
+  .title + .subtitle {
+    margin-top: $gutter;
+  }
+  .btn.m-black {
+    min-width: 100px;
+    height: 30px;
+  }
+  .btn.m-underline {
+    margin-top: $gutter*2;
+  }
+}
+.login__content {
+  max-width: 100%;
+  @include desktop {
+    max-width: 300px;
+  }
+}
+.login__form {
+  flex: 1;
+  padding: $gutter 0;
+  @include desktop {
+    padding: 0;
+  }
+  .label {
+    font-stretch: condensed;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    @include desktop {
+      font-size: $fz-5;
+    }
+  }
+  .form__input {
+    max-width: none;
+    width: 100%;
+    height: 30px;
+    border-color: transparent;
+    background: $color-grey-lightest;
+    color: $color-body;
+    @include desktop {
+      max-width: 250px;
+    }
+    &.textarea {
+      height: 100px;
+    }
+  }
+  .form__field {
+    margin-top: $gutter;
+    @include desktop {
+      margin-top: $gutter*2;
+    }
+    .form__link {
+      margin-top: 0.5em;
+    }
+    .label.m-secondary {
+      margin-bottom: 0;
+      margin-top: $gutter;
+      font-size: 14px;
+    }
+    .radio {
+      .label.m-secondary {
+        margin-top: 0;
+        font-size: 14px;
+        @include desktop {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .field-group {
+    margin: 0;
+    @include desktop {
+      margin: 0 -20px;
+    }
+    .form__field {
+      padding: 0;
+      margin-top: $gutter 0 0 0;
+      min-width: 100%;
+      max-width: 100%;
+      @include desktop {
+        margin: $gutter*2 0 0 0;
+        padding: 0 20px;
+        min-width: 50%;
+        max-width: 50%;
+      }
+    }
+    .form__field+.form__field {
+      margin-top: $gutter 0 0 0;
+      @include desktop {
+        margin: $gutter*2 0 0 0;
+      }
+    }
+  }
+}
+
+.login__right {
+  
+  flex: 1;
+  margin-top: $gutter*2;
+  .btn {
+    margin-top: $gutter*2;
+    @include desktop {
+      margin-top: $gutter*3;
+    }
+  }
+  @include desktop {
+    border-left: 1px solid $color-button;
+    padding-left: $gutter*7;
+    margin-left: $gutter*7;
+    margin-top: 0;
+  }
+
+}
+
+
+.login__image {
+  display: none;
+  @include desktop {
+    display: block;
+    min-width: 50%;
+    max-width: 50%;
+  }
+}
+
+// Login with image 
+.login.has-image {
+  margin: 0;
+  align-items: flex-start;
+  .login__wrap {
+    margin-top: 0;
+  }
+  .login__content {
+    max-width: 100%;
+    padding: 0 $gutter;
+    .btn {
+      margin-top: $gutter*2;
+      @include desktop {
+        margin-top: 0px;
+      }
+    }
+    @include desktop {
+      max-width: 500px;
+      padding: 0;
+    }
+  }
+  .login__form {
+    margin-top: 0;
+    padding: $gutter*2 0;
+    @include desktop {
+      margin-top: $gutter*8;
+      padding-left: $gutter*5 0 0 0;
+    }
+  }
+  .login__buttons {
+    .btn.m-underline {
+      margin-top: 0;
+    }
+  }
+  .form__link {
+    margin-bottom: 0;
+    margin-top: $gutter*2;
+    font-size: $fz-6;
+    color: $color-body;
+    font-weight: 500;
+    font-stretch: condensed;
+    span {
+      margin-right: 0.5em;
+    }
+  }
+}
+
+.login.page-contact {
+  .login__wrap .btn.m-black {
+    min-width: 160px;
+    height: 40px;
+  }
+  .login__form {
+    .form__input {
+      width: 100%;
+      max-width: 100%;
+      height: 40px;
+      &.textarea {
+        height: 100px;
+      }
+    }
+    .label {
+      text-transform: none;
+    }
+  }
+  .form__field {
+    &.m-select {
+      padding-right: 0;
+      max-width: none;
+      @include desktop {
+        padding-right: 20px;
+        max-width: 50%;
+      }
+    }
+  }
+}

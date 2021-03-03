@@ -1,0 +1,302 @@
+<div class="section account my-account">
+  <div class="container container__account d-flex">
+
+    {% include 'account_menu' %}
+    <div class="content">
+
+      {% paginate customer.addresses by 5 %}
+    
+      <div class="row">
+        <div class="col-12">
+          <div role="banner">
+            <div class="d-flex justify-content-between align-items-center">
+              <h1 class="title" data-title-address>Addresses</h1>
+              <button type="button" class="btn btn--primary address-new-toggle top">{{ 'customer.addresses.add_new' | t }}</button>
+              <a class="btn btn--outline hide return_account" href="/account">Back To My Account</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    
+      <!-- ADDED ADDRESSES -->
+      <div class="row">
+        <div class="col-sm-12">
+          {% if customer.default_address != blank  %}
+          {% comment %}<h3>{{ 'customer.addresses.title' | t }}</h3>{% endcomment %}
+    
+          <div class="row">
+            {% for address in customer.addresses %}
+            <div class="col-sm-12 added_addresses">
+              <div class="current_address">
+                <div class="col-sm-4">
+                  {% if address == customer.default_address %}
+                  <p><strong>{{ 'customer.addresses.default' | t }}</strong></p>
+                  {% endif %}
+                  {{ address | format_address }}
+                </div>
+                <button type="button" class="btn btn--primary address-edit-toggle" data-form-id="{{ address.id }}">
+                  {{ 'customer.addresses.edit' | t }}
+                </button>
+      
+                <button type="button" class="popup-open btn btn--primary btn--outline address-delete" data-form-id="{{ address.id }}"
+                  data-confirm-message="{{ 'customer.addresses.delete_confirm' | t }}" data-popup-open="remove-address">
+                  {{ 'customer.addresses.delete' | t }}
+                </button>
+              </div>
+              <div id="EditAddress_{{ address.id }}" class="hide">
+                {% form 'customer_address', address %}
+    
+                <h4>{{ 'customer.addresses.edit_address' | t }}</h4>
+                <div class="form__field">
+                  <label class="label" for="AddressFirstName_{{ form.id }}">
+                    {{ 'customer.addresses.first_name' | t }}
+                  </label>
+                  <input type="text" name="address[first_name]" id="AddressFirstName_{{ form.id }}"
+                    value="{{ form.first_name }}" autocapitalize="words" class="input">
+                </div>
+    
+                <div class="form__field">
+                  <label class="label" for="AddressLastName_{{ form.id }}">
+                    {{ 'customer.addresses.last_name' | t }}
+                  </label>
+                  <input type="text" name="address[last_name]" id="AddressLastName_{{ form.id }}"
+                    value="{{ form.last_name }}" autocapitalize="words" class="input">
+                </div>
+    
+    
+                <div class="form__field">
+                  <label class="label" for="AddressCompany_{{ form.id }}">
+                    {{ 'customer.addresses.company' | t }}
+                  </label>
+                  <input type="text" name="address[company]" id="AddressCompany_{{ form.id }}" value="{{ form.company }}"
+                    autocapitalize="words" class="input">
+                </div>
+                <div class="form__field">
+                  <label class="label" for="AddressAddress1_{{ form.id }}">
+                    {{ 'customer.addresses.address1' | t }}
+                  </label>
+                  <input type="text" name="address[address1]" id="AddressAddress1_{{ form.id }}" value="{{ form.address1 }}"
+                    autocapitalize="words" class="input">
+                </div>
+    
+                <div class="form__field">
+                  <label class="label" for="AddressAddress2_{{ form.id }}">
+                    {{ 'customer.addresses.address2' | t }}
+                  </label>
+                  <input type="text" name="address[address2]" id="AddressAddress2_{{ form.id }}" value="{{ form.address2 }}"
+                    autocapitalize="words" class="input">
+                </div>
+                <div class="form__field">
+                  <label class="label" for="AddressCity_{{ form.id }}">
+                    {{ 'customer.addresses.city' | t }}
+                  </label>
+                  <input type="text" name="address[city]" id="AddressCity_{{ form.id }}" value="{{ form.city }}"
+                    autocapitalize="words" class="input">
+                </div>
+                <div class="form__field">
+                  <label class="label" for="AddressCountry_{{ form.id }}">
+                    {{ 'customer.addresses.country' | t }}
+                  </label>
+                  <select name="address[country]" id="AddressCountry_{{ form.id }}"
+                    class="select" data-form-id="{{ form.id }}"
+                    data-default="{{ form.country }}">
+                    {{ country_option_tags }}
+                  </select>
+                </div>
+                <div id="AddressProvinceContainer_{{ form.id }}" style="display: none">
+                  <div class="form__field">
+                    <label class="label" for="AddressProvince_{{ form.id }}">
+                      {{ 'customer.addresses.province' | t }}
+                    </label>
+                    <select name="address[province]" id="AddressProvince_{{ form.id }}" data-default="{{ form.province }}"
+                      class="select">
+                    </select>
+                  </div>
+                </div>
+    
+                <div class="form__field">
+                  <label class="label" for="AddressZip_{{ form.id }}">
+                    {{ 'customer.addresses.zip' | t }}
+                  </label>
+                  <input type="text" name="address[zip]" id="AddressZip_{{ form.id }}" value="{{ form.zip }}"
+                    autocapitalize="characters" class="input">
+                </div>
+                <div class="form__field">
+                  <label class="label" for="AddressPhone_{{ form.id }}">
+                    {{ 'customer.addresses.phone' | t }}
+                  </label>
+                  <input type="tel" name="address[phone]" id="AddressPhone_{{ form.id }}" value="{{ form.phone }}"
+                    pattern="[0-9\-]*" class="input">
+                </div>
+                <div class="form__field">
+                  <div class="radio">
+                    {{ form.set_as_default_checkbox }}
+                    <label class="label" for="address_default_address_{{ form.id }}">
+                      {{ 'customer.addresses.set_default' | t }}
+                    </label>
+                  </div>
+                </div>
+                <div class="form__field actions">
+                  <input type="submit" class="btn btn--primary" value="{{ 'customer.addresses.update' | t }}">
+                  <button type="button" class="btn btn--outline address-edit-toggle" data-form-id="{{ form.id }}">
+                    {{ 'customer.addresses.cancel' | t }}
+                  </button>
+                </div>
+    
+                {% endform %}
+    
+              </div>
+    
+            </div>
+            {% endfor %}
+          </div>
+    
+    
+          {% endif %}
+        </div>
+    
+      </div>
+
+      <div class="row new-address-wrapper">
+        <!-- ADD NEW ADDRESS -->
+        <div class="col-sm-12">
+          <div id="AddressNewForm" class="hide">
+            {% form 'customer_address', customer.new_address %}
+            {% comment %}<h3>{{ 'customer.addresses.add_new' | t }}</h3>{% endcomment %}
+    
+            <div class="form__field">
+              <label class="label" for="AddressFirstNameNew">
+                {{ 'customer.addresses.first_name' | t }}
+              </label>
+              <input type="text" name="address[first_name]" id="AddressFirstNameNew" value="{{ form.first_name }}"
+                autocapitalize="words" class="input">
+            </div>
+    
+            <div class="form__field">
+              <label class="label" for="AddressLastNameNew">
+                {{ 'customer.addresses.last_name' | t }}
+              </label>
+              <input type="text" name="address[last_name]" id="AddressLastNameNew" value="{{ form.last_name }}"
+                autocapitalize="words" class="input">
+            </div>
+    
+            <div class="form__field">
+              <label class="label" for="AddressCompanyNew">
+                {{ 'customer.addresses.company' | t }}
+              </label>
+              <input type="text" name="address[company]" id="AddressCompanyNew" value="{{ form.company }}"
+                autocapitalize="words" class="input">
+            </div>
+    
+            <div class="form__field">
+              <label class="label" for="AddressAddress1New">
+                {{ 'customer.addresses.address1' | t }}
+              </label>
+              <input type="text" name="address[address1]" id="AddressAddress1New" value="{{ form.address1 }}"
+                autocapitalize="words" class="input">
+            </div>
+    
+            <div class="form__field">
+              <label class="label" for="AddressAddress2New">
+                {{ 'customer.addresses.address2' | t }}
+              </label>
+              <input type="text" name="address[address2]" id="AddressAddress2New" value="{{ form.address2 }}"
+                autocapitalize="words" class="input">
+            </div>
+    
+            <div class="form__field">
+              <label class="label" for="AddressCityNew">
+                {{ 'customer.addresses.city' | t }}
+              </label>
+              <input type="text" name="address[city]" id="AddressCityNew" value="{{ form.city }}" autocapitalize="words"
+                class="input">
+            </div>
+    
+            <div class="form__field">
+              <label class="label" for="AddressCountryNew">
+                {{ 'customer.addresses.country' | t }}
+              </label>
+              <select name="address[country]" id="AddressCountryNew" data-default="{{ form.country }}" class="select">
+                {{ country_option_tags }}
+              </select>
+            </div>
+    
+    
+            <div id="AddressProvinceContainerNew" style="display: none">
+              <div class="form__field">
+                <label class="label" for="AddressProvinceNew">
+                  {{ 'customer.addresses.province' | t }}
+                </label>
+                <select name="address[province]" id="AddressProvinceNew" data-default="{{ form.province }}"
+                  class="select">
+                </select>
+              </div>
+            </div>
+    
+    
+            <div class="form__field">
+              <label class="label" for="AddressZipNew">
+                {{ 'customer.addresses.zip' | t }}
+              </label>
+              <input type="text" name="address[zip]" id="AddressZipNew" value="{{ form.zip }}" autocapitalize="characters"
+                class="input">
+            </div>
+    
+            <div class="form__field">
+              <label class="label" for="AddressPhoneNew">
+                {{ 'customer.addresses.phone' | t }}
+              </label>
+              <input type="tel" name="address[phone]" id="AddressPhoneNew" value="{{ form.phone }}" pattern="[0-9\-]*"
+                class="input">
+            </div>
+    
+    
+            <div class="form__field checkbox-line">
+              <div class="radio">
+                {{ form.set_as_default_checkbox }}
+                <label class="label" for="address_default_address_new">
+                  {{ 'customer.addresses.set_default' | t }}
+                </label>
+              </div>
+            </div>
+    
+            <div class="form__field">
+              <div class="row actions">
+                <div class="col-sm-6">
+                  <input type="submit" class="btn btn--primary btn-full add_address" value="Add New Address">
+                </div>
+                <div class="col-sm-6">
+                  or <button type="button" class="btn btn--outline btn-full address-new-toggle">
+                    {{ 'customer.addresses.cancel' | t }}
+                  </button>
+                </div>
+              </div>
+            </div>
+    
+            {% endform %}
+    
+          </div>
+        </div>
+      </div>
+    
+    
+    
+      {% if paginate.pages > 1 %}
+      {% render 'pagination', paginate: paginate %}
+      {% endif %}
+    
+      {% endpaginate %}
+    </div>
+  </div>
+</div>
+
+<div class="popup is-hidden" data-popup="remove-address">
+  <div class="popup-window">
+    <div class="popup_title">Are you sure you wish to delete this address?</div>
+    <div class="actions">
+      <button data-popup-close>No</button>
+      <button data-remove-address>Yes</button>
+    </div>
+  </div>
+</div>

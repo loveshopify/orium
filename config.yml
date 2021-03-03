@@ -1,0 +1,28 @@
+development:
+  password: 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
+  theme_id: 120281333956
+  store: oriumlabs.myshopify.com
+  directory: build
+  ignore_files:
+    - config/settings_data.json
+
+    
+staging:
+  password: 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
+  theme_id: 117952217249
+  store: oriumlabs.myshopify.com
+  directory: build
+  ignore_files:
+    - config/settings_data.json
+
+
+production:
+  password: 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
+  theme_id: 107149656225
+  store: oriumlabs.myshopify.com
+  directory: build
+  ignore_files:
+    - config/settings_data.json
+
+
+    

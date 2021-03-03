@@ -1,0 +1,236 @@
+.shopify-challenge__container {
+  padding: $gutter*10 0;
+  .btn {
+    background: $color-black;
+    border-color: $color-black;
+    color: $color-white;
+    &:hover {
+      background: $color-white;
+      border-color: $color-black;
+      color: $color-black;
+    }
+  }
+}
+.go-to-top {
+  display: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  position: fixed;
+  background: $color-white;
+  right: 25px;
+  bottom: $gutter*8;
+  border: 1px solid $color-blue;
+  img {
+    width: 11px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.scroll-next {
+  position: absolute;
+  bottom: $gutter;
+  left: 50%;
+  transform: translate(0, -50%);
+  img {
+    width: $fz-body;
+  }
+}
+
+
+.circle-dot {
+  display: inline-block;
+  position: relative;
+  top: -0.06em;
+  vertical-align: middle;
+  margin: 0 1em;
+  width: 0.25em;
+  height: 0.25em;
+  border-radius: 50%;
+  background: $color-black;
+}
+
+.line-delimiter {
+  margin: 0 auto;
+  width: 100%;
+  height: 4px;
+  background: $color-blue;
+  border-radius: 5px;
+  &.is-tiny {
+    width: 80px;
+  }
+}
+
+.bulk-content {
+  .btn {
+    width: 100%;
+    @include desktop {
+      width: auto;
+    }
+  }
+}
+
+.section.m-cta {
+  .title {
+    max-width: 200px;
+    margin: 0 auto;
+    @include desktop {
+      max-width: 400px;
+    }
+  }
+}
+
+.diamonds {
+  display: block;
+  margin: 0 auto;
+  max-width: $container-s;
+}
+
+.skewed-shape {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  font-size: $fz-5;
+  text-transform: uppercase;
+  background: $color-blue;
+  color: $color-white;
+  clip-path: none;
+  padding: 0 $gutter;
+  @include desktop {
+    clip-path: polygon(0 0, 86% 0%, 79% 100%, 0% 100%);
+    justify-content: flex-start;
+    padding-left: $gutter*2;
+  }
+  i {
+    animation: mover 0.4s infinite alternate;
+  }
+  span {
+    margin: 0 $gutter;
+  }
+  b {
+    font-weight: bold;
+  }
+}
+
+
+// Custom styles
+.recharge-blocks-wrapper {
+  .benefits-section {
+    border: none;
+  }
+  .benefits__item {
+    min-width: 80%;
+    max-width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    margin-bottom: 30px;
+    @include desktop {
+      max-width: 25%;
+      min-width: 25%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 0;
+
+    }
+  }
+  .promo__img-top {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto 0;
+    @include desktop {
+      max-width: 977px;
+      margin: 0 auto 88px;
+    }
+  }
+  .promo__info {
+    .title {
+      font-size: 24px !important;
+      text-align: center !important;
+      margin-top: 30px;
+      @include desktop {
+        font-size: 32px !important;
+        margin-top: 15px;
+        text-align: left !important;
+      }
+    }
+    .subtitle {
+      font-size: $fz-6;
+    }
+    .list__text p {
+      font-size: $fz-6;
+    }
+    .list.list--ico   {
+      margin-top: 30px;
+    }
+    .list--ico .list__icon {
+      top: 0.4em;
+    }
+  }
+  /* FAQ section*/ 
+
+  .faq__wrap{
+    .subtitle {
+      max-width: 485px;
+      margin: 30px auto 30px;
+    }
+    .faq-item .faq-item__title {
+      font-size: 16px;
+      font-weight: 600;
+      @include desktop {
+        font-size: 24px;
+      }
+    }
+  } 
+  .faq.m-product .faq-section {
+    display: block;
+    max-width: 85%;
+    margin: 0 auto;
+    @include desktop {
+      max-width: 845px;
+    }
+  } 
+  /* Testimonials section */
+  .title {
+      font-family: $ff-1;
+      font-size: 24px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1;
+      letter-spacing: normal;
+      text-align: left;
+      color: $color-black;
+      @include desktop {
+        font-size: 32px;
+      }
+  }
+  .testimonials__text {
+    margin: 30px auto 30px;
+  }
+  .testimonials__image {
+    width: 200px !important;
+    height: 200px !important;
+    padding-top: 0 !important;
+    margin: 30px auto 0;
+
+    img {
+      border-radius: 50%;
+    }
+  }
+}
+
+#shopify-section-faq--product-recharge h2.title.h2.m-heavy.ta-center {
+  text-align: center;
+}
+ 
+#shopify-section-ea-testimonials--recharge h3.title.testimonials__title.h2.m-heavy {
+  text-align: center;
+}
+
+#shopify-section-ea-benefits--recharge h2.title.h1.m-heavy {
+  text-align: center;
+}

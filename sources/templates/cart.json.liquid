@@ -1,0 +1,56 @@
+{% layout none %}
+{% assign discountC = '' %}
+{
+  "item_count": {{ cart.item_count }},
+  "total_price": <span id='revy-cart-subtotal-price'>{{ cart.total_price }}</span>,
+  "original_total_price": {{ cart.original_total_price }},
+  "items_subtotal_price": {{ cart.items_subtotal_price }},
+  "total_discount": {{ cart.total_discount }},
+  "total_weight": {{ cart.total_weight }},
+  "currency": "{{ cart.currency.iso_code }}",
+  "items": [
+    {% for item in cart.items %}
+    {
+      "id": "{{ item.id }}",
+      "image": "{{ item.image | img_url: '200x' }}",
+      "product_title": "{{ item.product.title }}",
+      "variant_options": [
+        "{{ item.variant.option1 }}",
+        "{{ item.variant.option2 }}"
+      ],
+      "original_handle": {{ item.product.metafields.subscriptions.original_handle | json }},
+      "url": "{{ item.url }}",
+      "quantity": {{ item.quantity }},
+      "original_price": {{ item.original_price }},
+      "final_line_price": {{ item.final_line_price }},
+      "final_price": {{ item.final_price }}
+      {% assign discount_code = item.product.metafields.sf_discount.discount_code %}
+      {% if discount_code %}
+        {% assign discountC = discount_code %}
+        ,"discount_code": "{{ discount_code }}"
+      {% endif %}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ],
+  "discount_applications": [
+    {% for discount_application in cart.discount_applications %}
+      {
+        "discount_name": "{{ discount_application.title }}"
+        "savings": "{{ discount_application.total_allocated_amount }}"
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ],
+  "cart_level_discount_applications": [
+    {% for discount_application in cart.cart_level_discount_applications %}
+      {
+        "discount_name": "{{ discount_application.title }}"
+        "savings": "{{ discount_application.total_allocated_amount }}"
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+  {% if discountC != '' %}
+    ,"discount_code": "{{ discountC }}",
+    "checkout_url": "?discount={{ discountC }}"
+  {% endif %}
+}
+

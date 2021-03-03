@@ -1,0 +1,29 @@
+{% comment %}
+** Mega menu - static **
+- Static section
+- Uses blocks
+{% endcomment %}
+
+{% assign id = section.id %}
+
+{% comment %} HTML markup {% endcomment %}
+<section class="mega-menu__section nav-dropdown mega-menu__{{ section.id }}" data-parent-link="{{ section.settings.parent_link | downcase | replace: ' ', '-' }}">
+
+  {% render 'megamenu-content', id: id %}
+
+  {% comment %}JavaScript{% endcomment %}
+  <script
+    type="application/json"
+    data-section-id="{{ section.id }}"
+    data-section-data
+  >
+    {
+      "parent_link": {{ section.settings.parent_link | handleize | json }},
+      "section_id": {{ section.id | json }}
+    }
+  </script>  
+</section>
+
+{% schema %}
+    @@include('ea-megamenu--complex.json')
+{% endschema %}

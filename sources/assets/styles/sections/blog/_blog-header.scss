@@ -1,0 +1,52 @@
+.blog-header {
+  padding-top: $gutter;
+  @include desktop {
+    padding-top: $gutter*3;
+  }
+  .title {
+    font-size: 72px;
+    text-transform: uppercase;
+  }
+}
+
+.blog-menu {
+  margin-top: $gutter;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background: $color-pink-light;
+  @include desktop {
+    margin-top: $gutter*3;
+  }
+  .container {
+    max-width: $container-s;
+    flex: 1;
+  }
+  .nav__items {
+    display: block;
+    flex: 1;
+    justify-content: center;
+    @include desktop {
+      display: initial;
+    }
+  }
+  .nav__item:not(:first-child) {
+    margin-left: 0;
+    @include desktop {
+      margin-left: 10%;
+    }
+  }
+  .nav__link {
+    min-width: 90px;
+    padding: 5px $gutter;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: $fz-5;
+    line-height: 1;
+    &.is-active {
+      background: $color-brown-light;
+    }
+  }
+}
+

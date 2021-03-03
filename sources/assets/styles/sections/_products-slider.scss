@@ -1,0 +1,6 @@
+.products-slider {
+  margin: 0 (-$gutter);
+  .product-cell-wrap {
+    @include cell(1, 0 $gutter);
+  }
+}

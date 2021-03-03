@@ -1,0 +1,294 @@
+.cart-wrapper {
+  .cart-table {
+    border: none;
+    width: 100%;
+    table-layout: fixed;
+    margin: $gutter*2 0 0;
+    @include desktop {
+      margin-top: $gutter*4;
+    }
+    tr {
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: 115px;
+      position: relative;
+      @include desktop {
+        padding-left: unset;
+      }
+    }
+    th, td {
+      padding: 5px 0;
+      width: 100%;
+      vertical-align: middle;
+      &:last-child {
+        text-align: right;
+      }
+      @include desktop {
+        width: 20%;
+      }
+      &.m-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+        @include desktop {
+          width: 150px;
+          position: relative;
+          top: unset;
+          left: unset;
+        }
+      }
+      &.m-info {
+        width: 100%;
+        line-height: 1.2;
+        @include desktop {
+          width: auto !important;
+        }
+      }
+
+      &.m-long {
+        width: 100%;
+        @include desktop {
+          width: 65%;
+        }
+      }
+
+      &.m-variants {
+        width: 60%;
+        position: relative;
+        @include desktop {
+          width: 25%;
+        }
+      }
+
+      &.m-price {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        text-align: left;
+        @include desktop {
+          width: 15%;
+          display: block;
+        }
+      }
+
+      th {
+        text-align: left;
+        font-weight: 500;
+        font-size: $fz-5;
+        text-transform: uppercase;
+        border-bottom: 2px solid #e4e4e4;
+        letter-spacing: 0.01em;
+      }
+
+      td {
+        padding: $gutter*3 0;
+      }
+
+      .field {
+        margin-top: 0;
+        position: relative;
+      }
+
+      .label {
+        top: -25px;
+        @include desktop {
+          font-weight: 600;
+          position: absolute;
+          top: -8px;
+          i {
+            font-size: 0.8em;
+          }
+        }
+      }
+
+      .select, .input {
+        width: 100%;
+        font-size: 14px;
+        font-weight: 100;
+        @include desktop {
+          width: 200px;
+        }
+      }
+        
+      .qty-selector {
+        height: 40px;
+        width: auto;
+        .e-input {
+          font-size: 14px;
+          @include desktop {
+            font-size: 16px;
+          }
+        }
+      }
+
+      .cart-product-image {
+        display: block;
+        text-align: center;
+        img {
+          display: block;
+          max-width: 100%;
+          @include desktop {
+            max-width: 150px;
+          }
+        }
+      }
+
+
+
+      &.m-qty {
+        padding-left: 10px;
+        width: 40%;
+        @include desktop {
+          width: unset;
+        }
+        .field {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .label {
+          margin-left: 0;
+          position: absolute;
+          @include desktop {
+            position: relative;
+          }
+        }
+      }
+      
+    }
+
+    .product-summary {
+      .product-variant-text {
+        margin: 0;
+        font-size: $fz-4;
+        color: $color-light-grey;
+        letter-spacing: 0.05em;
+      }
+    }
+  
+    .cart-remove-link {
+      margin-top: $gutter;
+    }
+    .select {
+      letter-spacing: 0.1em;
+  
+    }
+  }
+
+  .responsive-table-row + .responsive-table-row::after, tfoot > .responsive-table-row:first-child::after {
+    display: none;
+    @include desktop {
+      display: block;
+    }
+  }
+
+  table, tbody, th, td {
+    display: block;
+  }
+
+  .title.ta-center {
+    text-align: left;
+    @include desktop {
+      text-align: center;
+    }
+  }  
+
+}
+
+.cart-summary {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include desktop {
+    flex-direction: unset;
+    margin-top: 15px;
+    margin-top: $gutter*3;
+  }
+  .subtitle {
+    max-width: 370px;
+    margin-top: $gutter;
+    order: 1;
+    @include desktop {
+      order: unset;
+    }
+  }
+  .order-summary-box {
+    text-align: right;
+    order: 0;
+    @include desktop {
+      order: unset;
+    }
+    .label {
+      display: none;
+      @include desktop {
+        display: block;
+      }
+    }
+    .d-flex > div {
+      width: 100%;
+      @include desktop {
+        width: unset;
+      }
+    }
+    .btn {
+      width: 100%;
+      margin: 0;
+      @include desktop {
+        width: unset;
+        margin-left: $gutter;
+      }
+    }
+    .link {
+      margin-top: 25px;
+      font-size: $fz-5;
+      font-weight: bold;
+      font-stretch: normal;
+      @include desktop {
+        margin-top: 0.5em;
+      }
+      i {
+        margin-right: 10px;
+        display: inline-block;
+        font-size: 0.75em;
+      }
+    }
+  }
+
+  .prices-summary {
+    display: flex;
+    justify-content: space-between;
+    font-size: $fz-3;
+    font-weight: 500;
+    width: auto;
+    margin: 0 0 25px 0;
+    @include desktop {
+      width: 315px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: $gutter*3;
+    }
+  }
+  
+}
+
+.order-summary-box__prices {
+  text-align: left;
+  p {
+    font-size: $fz-4;
+  }
+  svg {
+    height: 1em;
+    color: #717171;
+    fill: currentColor;
+  }
+}
+
+.cart-price {
+  letter-spacing: 0.01em;
+  font-weight: 500;
+  font-stretch: condensed;
+  font-size: $fz-4;
+  margin-top: 10px;
+}
+

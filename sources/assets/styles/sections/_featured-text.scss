@@ -1,0 +1,10 @@
+.featured-text {
+  .section__content {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    @include mobile {
+      max-width: 80%;
+    }
+  }
+}

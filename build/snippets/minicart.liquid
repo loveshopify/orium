@@ -1,0 +1,44 @@
+{% comment %} ATTENTION!!! This is compiled version of minicart.liquid and it is overriding automatically. You should use theme development tool and sources\snippets\minicart.liquid file to code and save your changes. {% endcomment %}<aside data-minicart class="minicart">
+  {% if settings.show_notification_bar %}
+    <div class="minicart__noticiation">{{ settings.minicart_notification_text }}</div>
+  {% endif %}
+  <div class="minicart__header">
+    <span>CART ({ cart.item_count })</span>
+    <button class="minicart__close btn m-icon-only" aria-label="minicart toggle" data-minicart-toggle><i class="icon-close"></i></button>
+  </div>
+  <div class="minicart__free-shipping">
+    <p class="free-shipping__label" data-free-shipping-label>Congrats! You get free standard shipping.</p>
+    <div class="free-shipping_progress">
+      <div class="progress-complete" data-free-shipping-percent>
+      </div>
+    </div>
+  </div>
+  <div class="minicart__items">
+    <div class="minicart__item" rv-each-item="cart.items">
+      <a rv-href="item.url | convert item.original_handle" class="minicart__item-image no-hover-link"><img class="minicart__item-image" rv-src="item.image" rv-alt="item.image.alt"></a>
+      <div class="minicart__item-info">
+        <h5 class="minicart__item-title"><a rv-href="item.url | convert item.original_handle">{ item.product_title }</a></h5>
+        <div class="minicart__item-options" rv-unless="item.variant_options.0 | isDefaultTitle">
+          { item.variant_options.0 } <span rv-if="item.variant_options.1">/ { item.variant_options.1 }</span>
+        </div>
+        <div class="minicart__item-price">
+          <div>{ item.quantity } x <span>{ item.original_price | formatMoney }</span></div>
+        </div>
+        <button class="btn m-underline" data-remove-from-cart rv-data-line="$index">Remove</button>
+      </div>
+    </div>
+  </div>
+  <div class="minicart__footer" rv-if="cart.total_price">
+    <div class="minicart__subtotal">
+      <span>Subtotal: </span>
+      { cart.total_price | formatMoney }
+    </div>
+    <div class="minicart__buttons">
+      <a rv-on-click="setRedirect" href="/cart" class="btn add-to-cart m-primary">CHECKOUT</a>
+    </div>
+  </div>
+</aside>
+<div class="minicart-bg" data-minicart-toggle></div>
+<script>
+  var myshopify_domain='{{ shop.permanent_domain }}';
+</script>

@@ -1,0 +1,22 @@
+{% comment %} ATTENTION!!! This is compiled version of ea-testimonials-content.liquid and it is overriding automatically. You should use theme development tool and sources\snippets\ea-testimonials-content.liquid file to code and save your changes. {% endcomment %}
+{% assign set = section.settings %}
+
+{% render 'ea-section-styles', section: section %}
+
+{% render 'ea-section-foreground-image', section: section %}
+
+<div class="container ta-center">
+  <div class="section__content">
+    <div class="testimonials m-line-dots" data-hor-slider data-slides-to-show="1">
+      {% for block in section.blocks %}
+        {% assign bset = block.settings %}
+        <div class="testimonials__item">
+          {% if bset.title != blank %}<h3 class="title testimonials__title h2 m-heavy">{{ bset.title }}</h3>{% endif %}
+          {% if bset.text != blank %}<div class="testimonials__text">{{ bset.text }}</div>{% endif %}
+          {% if bset.image != blank %}<div class="testimonials__image">{% render 'rimage', image: bset.image, size: '200x' %}</div>{% endif %}
+          {% if bset.author != blank %}<div class="testimonials__author">{{ bset.author }}</div>{% endif %}
+        </div> <!-- / .benefits__item -->
+      {% endfor %}
+    </div>
+  </div> <!-- / .section__content -->
+</div>

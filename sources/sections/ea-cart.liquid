@@ -1,0 +1,29 @@
+{% render 'ea-section-styles', section: section %}
+{% assign set = section.settings %}
+
+{% render 'ea-section-foreground-image', section: section %}
+
+<div class="cart-wrapper" data-cart-page data-items-count="{{ cart.item_count }}">
+  
+  {% if cart.item_count > 0 %}
+    {% if set.title %}
+      <div class="container"><h1 class="title h2 ta-center">{{ set.title }}</h1></div>
+    {% endif %}
+
+    <form action="/cart" method="post" novalidate data-cart-page-form>
+      <div class="container">{% render 'ea-cart-table', section: section %}</div>
+      <div class="container">{% render 'ea-cart-summary', section: section %}</div>
+    </form>
+
+  {% else %}
+    {% comment %} Cart empty state {% endcomment %}
+    <div class="container supports-cookies">
+      <p>{{ 'cart.general.empty' | t }}</p>
+    </div>
+  {% endif %}
+</div>  
+
+
+{% schema %}
+  @@include('ea-cart.json')
+{% endschema %}

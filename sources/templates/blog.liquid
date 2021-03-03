@@ -1,0 +1,28 @@
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      {% for article in blog.articles %}
+        {
+          "@type": "ListItem",
+          "position": "{{ forloop.index | json }}",
+          "url": "{{ shop.url }}{{ article.url }}",
+          "name": "{{ article.title }}"
+        } {%- unless forloop.last -%},{%- endunless -%}
+      {% endfor %}
+    ]
+  }
+</script>
+
+<header class="blog-header">
+  <div class="container">
+    <h3 class="title m-black not-animated ta-center">{{ blog.title }}</h3>
+    {%- comment -%} OPTIONAL: ea-blog-menu.liquid {%- endcomment -%}
+  </div>
+</header>  <!-- /.blog-header -->
+
+{% if blog.handle != 'press' %}
+  {% section 'ea-blog-featured' %}
+{% endif %}
+{% section 'ea-blog-main' %}

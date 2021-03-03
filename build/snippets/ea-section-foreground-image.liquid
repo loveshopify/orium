@@ -1,0 +1,14 @@
+{% comment %} ATTENTION!!! This is compiled version of ea-section-foreground-image.liquid and it is overriding automatically. You should use theme development tool and sources\snippets\ea-section-foreground-image.liquid file to code and save your changes. {% endcomment %}{% assign set = section.settings %}
+<style>
+  #shopify-section-{{ section.id }} .section__bgimage {
+    width: {{ set.bgwidth }}%;
+    margin-top: {{ set.bgtop }}%;
+    {{ set.bgpos }}: {{ set.bgedge }}%;
+  }
+</style>
+
+{% if set.bgimage != blank %}
+  <div class="section__foreground-image m-pos-{{ set.bgpos }}">
+    <img src="{{ set.bgimage | img_url: 'master' }}" alt="{{ set.bgimage.alt }}">
+  </div>
+{% endif %}

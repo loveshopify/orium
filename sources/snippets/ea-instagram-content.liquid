@@ -1,0 +1,32 @@
+{% assign set = section.settings %}
+
+{%- capture customStyles -%}
+  #shopify-section-{{ section.id }} .container {
+    max-width: {{ set.max_width }}px;
+  }
+{%- endcapture -%}
+{% render 'ea-section-styles', section: section, customStyles: customStyles %}
+
+{% render 'ea-section-foreground-image', section: section %}
+
+<div {% unless set.make_full %} class="container" {% endunless %}>
+  {% if set.pretitle != blank %}
+    <h3 class="pretitle ta-center">{{ set.pretitle }}</h3>
+  {% endif %}
+  {% if set.title != blank %}
+    <h2 class="title ta-center"><a href="{{ set.url }}" target="_blank">{{ set.title }}</a></h2>
+  {% endif %}
+  {% if set.subtitle != blank %}
+    <div class="subtitle">{{ set.subtitle }}</div>
+  {% endif %}
+  <div class="section__content ta-center">
+    <div class="instagram-feed is-hidden" data-instagram-feed data-max-slides="{{ set.max_slides }}"></div>
+  </div> <!-- / .section__content -->
+</div>
+
+
+{% if set.url != blank %}
+  <script>
+    window.instagramUrl = "{{ set.url }}"
+  </script>
+{% endif %}

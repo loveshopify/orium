@@ -1,0 +1,56 @@
+
+.team {
+  .container {
+    max-width: $container-m;
+  }
+  .section__content {
+    padding-top: 0;
+    @include desktop {
+      padding-top: 15px;
+    }
+  }
+}
+.persons {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  display: flex;
+  .break {
+    flex-basis: 100%;
+  }
+}
+.person {
+  margin-top: $gutter*2;
+  max-width: 430px;
+  text-align: center;
+  @include smoothShow(0, $animation-y);
+}
+
+.person__image {
+  img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    max-width: none;
+    border-radius: 50%;
+    @include desktop {
+      width: 300px;
+      height: 300px;
+    }
+  }
+}
+
+.person__title {
+  margin-top: $gutter*2;
+}
+
+.person__subtitle {
+  margin-top: $gutter;
+  font-size: 14px;
+  font-weight: 400;
+  @include desktop {
+    margin-top: $gutter*3;
+    font-size: 24px;
+  }
+}
+
+

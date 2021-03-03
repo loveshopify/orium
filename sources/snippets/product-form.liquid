@@ -1,0 +1,166 @@
+{% assign set = section.settings %}
+{% assign isDefault = false %}
+{% if product.variants.size == 1 and product.variants[0].title == "Default Title" %}
+  {% assign isDefault = true %}
+{% endif %}
+
+{% comment %}Recharge settings{% endcomment %}
+{% assign subscription_product = product.metafields.subscriptions %}
+{% assign subscription_id = subscription_product.subscription_id %}
+{% assign discount_percent = subscription_product.discount_percentage | round: 2 %}
+{% assign discount_floor = subscription_product.discount_percentage | floor %}
+{% if discount_percent == discount_floor %}
+  {% assign discount_percent = discount_floor %}
+{% endif %}
+{% if subscription_id != blank %}
+  {% assign isRecharge = true %}
+{% endif %}
+
+<form id="addToCartForm" class="product-form {% if isRecharge %}m-recharge{% endif %}" action="/cart/add" method="post" enctype="multipart/form-data" data-productid="{{product.id}}" data-product-form data-variantid="{{ current_variant.id }}" data-discountid="{{ current_variant.metafields.subscriptions.discount_variant_id }}">
+
+  <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" data-selected-variant-id>
+
+  <div class="product-info__top-label skewed-shape">
+    <i class="icon-double-chevron"></i>
+    <span>{% if isRecharge %} {% if product.handle contains 'annual' %} Subscribe {% else %} Subscribe For <b>only $1</b> {% endif %}  {% else %} <b>SHIPS IN 2 BUSINESS DAYS</b> {% endif %}</span>
+    <i class="icon-double-chevron"></i>
+  </div>
+
+  <h1 class="title not-animated">{{ product.title }}</h1>
+  {% unless isRecharge %}
+    <div data-price-wrapper class="product-price">
+      <span data-price>
+        {{ current_variant.price | money }}
+      </span>
+      <s data-price-compare class="was-price"></s>
+    </div>
+  {% endunless %}
+
+  {% if set.info != blank %}
+    <div class="product-benefits">{{ set.info }}</div>
+  {% endif %}
+
+  {% comment %} All variants js selector {% endcomment %}
+  <select class="no-js" data-all-variants name="all-variants">
+    {% for variant in product.variants %}
+      {% assign discount_price = variant.metafields.subscriptions.discount_variant_price | replace: '.', '' %}
+      {% assign discount_amount = variant.price | minus: discount_price %}
+      <option value="{{ variant.id }}" 
+        data-variant-price="{{ variant.price }}" 
+        data-variant-compare-price="{{ variant.compare_at_price }}"
+        data-available="{{ variant.available }}"
+        data-inventory-policy="{{ variant.inventory_policy }}"
+        data-inventory-quantity="{{ variant.inventory_quantity }}"
+        data-option1="{{ variant.option1 | default: '_BLANK_' }}" 
+        data-option2="{{ variant.option2 | default: '_BLANK_' }}" 
+        data-option3="{{ variant.option3 | default: '_BLANK_' }}"
+        data-subscription-id="{{ subscription_id }}" 
+        data-discount-variant-id="{{ variant.metafields.subscriptions.discount_variant_id }}" 
+        data-discount-variant-price="{{ discount_price }}"
+        data-discount-amount="{{ discount_amount }}"
+        data-discount-percent="{{ discount_percent }}%"
+        data-product-handle="{{ product.handle }}"
+        {% if current_variant == variant %}selected{% endif %} >
+        {{ variant.title }}
+      </option>
+    {% endfor %}
+  </select> <!-- / data-all-variants -->
+  
+
+  {% comment %} Options {% endcomment %}
+  {% unless isDefault %}
+    {% render 'product-options', current_variant: current_variant %}
+  {% endunless %}
+
+  {%- comment -%} Recharge {%- endcomment -%}
+  {% if isRecharge %}
+    <div class="recharge" data-recharge-container>
+      <input id="subscription_id" type="hidden" name="properties[subscription_id]"
+        value="{{ subscription_id }}"
+        data-product-property="subscription_id">
+      <div class="recharge__block recharge__block--subscribe is-active" data-rc-type="subscribe">
+
+        {%- comment -%} Recharge period swatch {%- endcomment -%}
+        <div class="recharge__freq product-options">
+          <div class="product-options__title">Deliver Every:</div>
+          <div class="product-options__list">
+
+            {% assign counter = 0 %}
+            {% if product.metafields.recharge.monthly != blank %}
+              {% assign monthlyProductUrl = all_products[product.metafields.recharge.monthly].url %}
+              {% assign currentProduct = 'yearly' %}
+              {% assign counter = counter | plus: 1 %}
+            {% endif %}
+            
+            {% if product.metafields.recharge.yearly != blank %}
+              {% assign yearlyProductUrl = all_products[product.metafields.recharge.yearly].url %}
+              {% assign currentProduct = 'monthly' %}
+              {% assign counter = counter | plus: 1 %}
+            {% endif %}
+            {% if counter == 0 %}<!-- Error: no recharge period metafields setted up -->{% endif %}
+            {% if counter > 1 %}<!-- Error: both recharge period metafields setted up -->{% endif %}
+
+            <a href="{{ monthlyProductUrl | default: product.url }}" class="product-option m-half no-hover-link {% if currentProduct == 'monthly' %}is-checked{% endif %}">
+              <div class="product-option__label">
+                <div class="product-option__text">Monthly</div>
+              </div>
+            </a>
+            <a href="{{ yearlyProductUrl | default: product.url }}" class="product-option m-half no-hover-link {% if currentProduct == 'yearly' %}is-checked{% endif %}">
+              <div class="product-option__label">
+                <div class="product-option__accent">Save 20% Yearly Plan</div>
+                <div class="product-option__text">Yearly</div>
+              </div>
+            </a>
+            
+            {% assign shipping_interval_unit_type = subscription_product.shipping_interval_unit_type | default: 'Days' %}
+            {% assign shipping_interval_frequency = subscription_product.shipping_interval_frequency | split: ',' | default: 30 %}
+            <input id="shipping_interval_unit_type" type="hidden" name="properties[shipping_interval_unit_type]"
+              value="{{ shipping_interval_unit_type }}"
+              data-product-property="shipping_interval_unit_type">
+            {% for freq in shipping_interval_frequency %}
+                <input id="shipping_interval_frequency" type="hidden" name="properties[shipping_interval_frequency]"
+                  value="{{ freq }}"
+                  data-product-property="shipping_interval_frequency">
+            {% endfor %}
+          </div>
+
+        </div> <!-- / .recharge__freq -->
+      </div> <!-- /.recharge__block--subscribe -->
+
+    </div> <!-- / .recharge -->
+  {% endif %}
+
+  <div class="d-flex product-add-to-cart">
+    {% unless isRecharge %}
+      <div>
+        <div class="product-options__title">Quantity:</div>
+        {% render 'qty-selector', type: 'product' %}
+      </div>
+    {% endunless %}
+    <button type="submit" name="add" class="btn btn--primary add-to-cart {% if isRecharge %}m-recharge{% endif %}" data-add-to-cart></button>
+  </div>
+  {% if isRecharge %}
+    <div class="membership-info" data-popup-open="membership">
+      <div>
+        <i class="icon-info2"></i>
+        <span class="btn m-underline">Learn more</span> 
+        <span>about our membership</span>
+      </div>
+    </div>
+  {% endif %}
+
+  {% unless isRecharge %}
+    <div class="product-stock" data-low-stock>
+      <div class="product-stock__text"><i>Hurry,</i> Only <span data-random-number></span> left in stock.</div>
+      <div class="product-stock__bar"></div>
+    </div>
+  {% endunless %}
+
+  {% if isRecharge and set.info2 != blank %}
+    <div class="product-info__bottom">{{ set.info2 }}</div>
+  {% endif %}
+
+  {% unless isRecharge %}
+    <div class="product-info__bottom-label">Premium Quality Garments</div>
+  {% endunless %}
+</form>

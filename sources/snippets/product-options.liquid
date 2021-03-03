@@ -1,0 +1,59 @@
+{% assign optionName = product.options[0] %}
+{% if optionName != blank %}
+  <div class="product-options m-{{ optionName| handle }}">
+    <div class="product-options__title">{{ optionName }}:</div>
+    <div class="product-options__list" data-options-list>
+      {% for option in product.options_by_name[optionName].values %}
+        <div class="product-option">
+          <input id="option-{{ optionName }}-{{ option }}" type="radio" name="product-option-{{ optionName | handle }}"
+            value="{{ option }}"
+            data-product-option="1"
+            {% if current_variant.option1 == option %}checked{% endif %}>
+          <label class="product-option__label" for="option-{{ optionName }}-{{ option }}" class="product-option__label">
+            <div class="product-option__text">{{ option }}</div>
+          </label>
+        </div>
+      {% endfor %}
+    </div>
+  </div> <!-- /.product-options -->
+{% endif %} {% comment %} / option1 {% endcomment %}
+
+{% assign optionName = product.options[1] %}
+{% if optionName != blank %}
+  <div class="product-options m-{{ optionName| handle }}">
+    <div class="product-options__title">{{ optionName }}:</div>
+    <div class="product-options__list" data-options-list>
+      {% for option in product.options_by_name[optionName].values %}
+        <div class="product-option">
+          <input id="option-{{ optionName }}-{{ option }}" type="radio" name="product-option-{{ optionName | handle }}"
+            value="{{ option }}"
+            data-product-option="2"
+            {% if current_variant.option2 == option %}checked{% endif %}>
+          <label class="product-option__label" for="option-{{ optionName }}-{{ option }}" class="product-option__label">
+            <div class="product-option__text">{{ option }}</div>
+          </label>
+        </div>
+      {% endfor %}
+    </div>
+  </div> <!-- /.product-options -->
+{% endif %} {% comment %} / option2 {% endcomment %}
+
+{% assign optionName = product.options[2] %}
+{% if optionName != blank %}
+  <div class="product-options m-{{ optionName| handle }}">
+    <div class="product-options__title">{{ optionName }}:</div>
+    <div class="product-options__list" data-options-list>
+      {% for option in product.options_by_name[optionName].values %}
+        <div class="product-option">
+          <input id="option-{{ optionName }}-{{ option }}" type="radio" name="product-option-{{ optionName | handle }}"
+            value="{{ option }}"
+            data-product-option="3"
+            {% if current_variant.option3 == option %}checked{% endif %}>
+          <label class="product-option__label" for="option-{{ optionName }}-{{ option }}" class="product-option__label">
+            <div class="product-option__text">{{ option }}</div>
+          </label>
+        </div>
+      {% endfor %}
+    </div>
+  </div> <!-- /.product-options -->
+{% endif %} {% comment %} / option3 {% endcomment %}

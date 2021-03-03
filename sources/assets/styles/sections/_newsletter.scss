@@ -1,0 +1,67 @@
+.newsletter {
+  padding: $gutter*2 0;
+  background: $color-newsletter-bg;
+  .container {
+    display: block;
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  
+    }
+  }
+  .title {
+    margin: 0;
+    font-weight: normal;
+  }
+  .pretitle {
+    font-stretch: normal;
+    font-weight: 100;
+    font-size: $fz-6;
+    letter-spacing: initial;
+    margin: 10px 0 0 0;
+    text-transform: none;
+    @include desktop {
+      font-size: 16px;
+      letter-spacing: 0.05em;
+    }
+  }
+  .form-field {
+    background: $color-newsletter-input-bg;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    position: relative;
+    @include desktop {
+      justify-content: flex-start;
+      margin-top: 0px;
+    }
+  }
+  .input {
+    width: auto;
+    flex: 1;
+    font-size: 14px;
+    padding: 0 $gutter;
+    background: $color-newsletter-input-bg;
+    border-color: transparent;
+    border-radius: 0;
+    @include desktop {
+      font-size: 16px;
+      flex: unset;
+      width: 300px;
+    }
+    @include placeholder {
+      color: $color-body;
+    }
+  }
+  .btn {
+    margin-right: $gutter;
+    border-bottom: 1px solid currentColor;
+    font-weight: 500;
+    font-size: 14px;
+    font-stretch: normal;
+    letter-spacing: initial;
+  }
+}
+

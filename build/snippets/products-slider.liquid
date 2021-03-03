@@ -1,0 +1,22 @@
+{% comment %} ATTENTION!!! This is compiled version of products-slider.liquid and it is overriding automatically. You should use theme development tool and sources\snippets\products-slider.liquid file to code and save your changes. {% endcomment %}<div class="products-slider {{ class }}" {% if set.enable_scrolling_product %}data-scrolling-products{% endif %}>
+  {% for product in collection.products %}
+
+    {% if set.enable_scrolling_product %}
+      {% if forloop.index == 1 and product.handle == all_products[set.product].handle  %}
+        <div class="product-cell-wrap">{% render 'product-cell', product: collection.products[1] %}</div>
+        {% assign insertedProduct = collection.products[1] %}
+        {% continue %}
+      {% endif %}
+      {% if forloop.index == 2 %}
+        <div class="product-cell-wrap m-scrolling" data-scrolling-product-wrapper>
+          {% render 'product-cell', class: 'm-sticky', product: all_products[set.product], type: 'scrolling' %}
+        </div>
+      {% endif %}
+      {% if product.handle == all_products[set.product].handle or product.handle == insertedProduct.handle %}
+        {% continue %}
+      {% endif %}
+    {% endif %}
+
+    <div class="product-cell-wrap">{% render 'product-cell' %}</div>
+  {% endfor %}
+</div>

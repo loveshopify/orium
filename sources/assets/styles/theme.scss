@@ -1,0 +1,98 @@
+// Tools
+@import 'tools/variables';
+@import 'tools/mixins';
+@import 'tools/rem';
+
+// Vendors
+@import "../../../node_modules/slick-carousel/slick/slick.scss";
+@import "../../../node_modules/perfect-scrollbar/css/perfect-scrollbar.css";
+
+// Base
+@import 'base/reboot';
+@import 'base/icons';
+@import 'base/animation';
+@import 'base/base';
+@import 'base/fonts';
+@import 'base/grid';
+@import 'base/links-buttons';
+@import 'base/texts';
+@import 'base/sections';
+@import 'base/forms';
+
+// Modules
+@import 'modules/nav';
+@import 'modules/slider';
+@import 'modules/products-grid';
+@import 'modules/stars';
+@import 'modules/reviews';
+@import 'modules/qty-selector';
+@import 'modules/accordion';
+@import 'modules/pagination';
+@import 'modules/video';
+@import 'modules/vertical-slider';
+@import 'modules/popup';
+@import 'modules/rimage';
+@import 'modules/icon-list';
+@import 'modules/before-after';
+@import 'modules/cta-card';
+@import 'modules/tabs';
+@import 'modules/search-form';
+@import 'modules/donate';
+@import 'modules/minicart';
+@import 'modules/banner';
+@import 'modules/megamenu';
+@import 'modules/password';
+
+// Sections
+@import 'sections/header';
+@import 'sections/sidenav';
+@import 'sections/footer';
+@import 'sections/hero';
+@import 'sections/s1';
+@import 'sections/s4';
+@import 'sections/s5';
+@import 'sections/s6';
+@import 'sections/ceo';
+@import 'sections/how-to-videos';
+@import 'sections/newsletter';
+@import 'sections/collection';
+@import 'sections/products-slider';
+@import 'sections/results';
+@import 'sections/faq';
+@import 'sections/promo';
+@import 'sections/instagram-feed';
+@import 'sections/benefits';
+@import 'sections/testimonials';
+@import 'sections/team';
+@import 'sections/page';
+@import 'sections/featured-text';
+@import 'sections/text-video';
+@import 'sections/image-and-text';
+@import 'sections/ik-marquee';
+
+
+
+// Product
+@import 'sections/product/layout';
+@import 'sections/product/images';
+@import 'sections/product/info';
+@import 'sections/product/form';
+@import 'sections/product/info-mobile';
+@import 'sections/product/recharge';
+
+// Cart
+@import 'sections/cart/cart';
+
+// Blog
+@import 'sections/blog/blog-header';
+@import 'sections/blog/blog';
+@import 'sections/blog/featured-posts';
+@import 'sections/blog/article';
+
+// Customer
+@import 'sections/customer/login';
+@import 'sections/customer/account';
+@import 'sections/customer/recharge';
+
+// Misc styles
+@import 'misc.scss';

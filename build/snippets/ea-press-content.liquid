@@ -1,0 +1,25 @@
+{% comment %} ATTENTION!!! This is compiled version of ea-press-content.liquid and it is overriding automatically. You should use theme development tool and sources\snippets\ea-press-content.liquid file to code and save your changes. {% endcomment %}{% assign set = section.settings %}
+
+{% render 'ea-section-styles', section: section %}
+
+<div class="section section--press has-image" id="section-press">
+  {% render 'ea-section-foreground-image', section: section %}
+  <div class="container">
+    {% if set.title != blank %}
+      <h3 class="title ta-center">{{ set.title }}</h3>
+    {% endif %}
+    <div class="section__content">
+      <div class="slider press__slider" data-hor-slider data-slides-to-show="5" data-slides-to-show-mob="3" data-infinite="false">
+        {% for block in section.blocks %}
+          {% assign bset = block.settings %}
+          <div class="press__item">
+            <img alt="{{ bset.alt }}" src="{{ bset.img | img_url: 'master' }}">
+          </div>
+        {% endfor %}
+      </div>
+      {% if set.text != blank %}
+        <div class="subtitle ta-center">{{ set.text }}</div>
+      {% endif %}
+    </div>
+  </div>
+</div>

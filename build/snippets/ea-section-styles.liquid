@@ -1,0 +1,13 @@
+{% comment %} ATTENTION!!! This is compiled version of ea-section-styles.liquid and it is overriding automatically. You should use theme development tool and sources\snippets\ea-section-styles.liquid file to code and save your changes. {% endcomment %}{% assign set = section.settings %}
+<style>
+  #shopify-section-{{ section.id }} {% if internalElement %}{{ internalElement }}{% endif %} {
+    padding: {{ set.ptop }}px 0 {{ set.pbottom }}px;
+    background-color: {{ set.sectionbg }};
+  }
+  @media (max-width: 989px) {
+    #shopify-section-{{ section.id }} {% if internalElement %}{{ internalElement }}{% endif %} {
+      padding: {{ set.ptop_mob }}px 0 {{ set.pbottom_mob }}px;
+    }
+  }
+  {% if customStyles %}{{ customStyles }}{% endif %}
+</style>

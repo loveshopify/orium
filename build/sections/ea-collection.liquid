@@ -1,0 +1,98 @@
+{% comment %} ATTENTION!!! This is compiled version of ea-collection.liquid and it is overriding automatically. You should use theme development tool and sources\sections\ea-collection.liquid file to code and save your changes. {% endcomment %}{% assign set = section.settings %}
+{% if section.settings.visible %}
+  {% render 'ea-collection-content', section: section %}
+{% endif %}
+
+{% schema %}
+  {
+  "name": "Products",
+  "class": "ea-collection",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "visible",
+      "label": "Show section",
+      "default": true
+    },
+
+
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "ptop",
+      "label": "Top spacing desktop",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "pbottom",
+      "label": "Bottom spacing desktop",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "ptop_mob",
+      "label": "Top spacing mobile",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "pbottom_mob",
+      "label": "Bottom spacing mobile",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+
+
+    {
+      "type": "header",
+      "content": "Background"
+    },
+    {
+      "type": "color",
+      "id": "sectionbg",
+      "label": "Section background color",
+      "default": "#ffffff"
+    },
+
+
+    {
+      "id": "show_product_price",
+      "type": "checkbox",
+      "default": true,
+      "label": "Show product price"
+    },
+    {
+      "id": "show_product_info",
+      "type": "checkbox",
+      "default": true,
+      "label": "Show product info"
+    },
+    {
+      "id": "show_quick_view",
+      "type": "checkbox",
+      "default": true,
+      "label": "Show Quick View"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,96 @@
+{% comment %} ATTENTION!!! This is compiled version of ea-gallery-content.liquid and it is overriding automatically. You should use theme development tool and sources\snippets\ea-gallery-content.liquid file to code and save your changes. {% endcomment %}{% assign set = section.settings %}
+
+{%- capture customStyles -%}
+  {% assign opacity = set.color_overlay_alpha | divided_by: 100.0 %}
+  #shopify-section-{{ section.id }} .card .title {
+    color: {{ set.color_overlay_text }};
+  }
+  #shopify-section-{{ section.id }} .card__inner .card__content {
+    background-color: {{ set.color_overlay | hex_to_rgba: opacity }};
+  }
+  #shopify-section-{{ section.id }} .card__inner:hover .card__content {
+    background-color: {{ set.color_overlay_hover | hex_to_rgba: opacity }};
+  }
+{%- endcapture -%}
+{% render 'ea-section-styles', section: section, customStyles: customStyles %}
+
+{% render 'ea-section-foreground-image', section: section %}
+
+
+<div class="container {% if set.full_width %}container-fluid{% endif %} {% unless set.section_padding %}no-padding{% endunless %}">
+  <div class="section__content">
+
+    {% if set.title != blank %}
+      <h2 class="h2 title not-animated ta-center"><b>{{ set.title }}</b></h2>
+    {% endif %}
+
+    {% comment %}
+      Evaluate how many images are in the section
+      Calculate how the number of rows based on the targetted images per row
+      Use the remainder to create a different grid layout for the first row
+    {% endcomment %}
+    {%- assign total_blocks = section.blocks.size -%}
+    <!-- total_blocks {{ total_blocks }} -->
+    {%- assign target_per_row = set.images_per_row -%}
+    <!-- target_per_row {{ target_per_row }} -->
+    {%- assign first_row_size = total_blocks | modulo: target_per_row -%}
+    <!-- first_row_size {{ first_row_size }} -->
+    {%- assign target_row_count = total_blocks | divided_by: target_per_row -%}
+    <!-- target_row_count {{ target_row_count }} -->
+    {% if first_row_size > 0 %}
+      {%- assign total_row_count = target_row_count | plus: 1 -%}
+    {% endif %}
+    {% case target_per_row %}
+      {% when '2' %}
+        {%- assign grid_item_width = 'col-md-6' -%}
+      {% when '3' %}
+        {%- assign grid_item_width = 'col-md-4' -%}
+      {% when '4' %}
+        {%- assign grid_item_width = 'col-md-3' -%}
+    {% endcase %}
+    {% case first_row_size %}
+      {% when 1 %}
+        {%- assign first_grid_item_width = 'col-md-12' -%}
+      {% when 2 %}
+        {%- assign first_grid_item_width = 'col-md-6' -%}
+      {% when 3 %}
+        {%- assign first_grid_item_width = 'col-md-4' -%}
+      {% when 4 %}
+        {%- assign first_grid_item_width = 'col-md-3' -%}
+    {% endcase %}
+    {%- assign last_row_start = total_blocks | minus: target_per_row | plus: 1 -%}
+    <div class="row {% if set.gutter == false %}no-gutters{% endif %}">
+      {% for block in section.blocks limit: section.blocks.size %}
+        {% assign bset = block.settings %}
+        {% if forloop.index <= first_row_size %}
+          {%- assign block_grid_item_width = first_grid_item_width -%}
+          {%- assign block_image_size = first_image_size -%}
+        {% else %}
+          {%- assign block_grid_item_width = grid_item_width -%}
+          {%- assign block_image_size = image_size -%}
+        {% endif %}
+
+        <div class="col col-12 {{ block_grid_item_width }} {% unless set.gutter %}m-no-padding{% endunless %}" {{ block.shopify_attributes }}>
+          <div class="card">
+            <a href="{{ bset.link }}" class="card__inner no-hover-link {% if set.zoom %}m-zoom{% endif %}">
+              <div class="card__image">
+                {% if bset.image != blank %}
+                  <img src="{{ bset.image | img_url: '1200x' }}" alt="{{ bset.image.alt }}">
+                {% else %}
+                  {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                {% endif %} 
+              </div> <!-- /.card__image -->
+              <div class="card__content">
+                {% if bset.title != blank %}
+                  <h3 class="title m-black h3 not-animated">{{ bset.title }}</h3>
+                {% endif %}
+              </div> <!-- /.card__content -->
+            </a> <!-- /.card__inner -->
+          </div> <!-- /.card -->
+        </div> <!-- /.col -->
+      {% endfor %}
+    </div> <!-- /.row -->
+        
+  </div> <!-- /.section__content -->
+</div> <!-- /.container -->
+

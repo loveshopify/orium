@@ -1,0 +1,36 @@
+{
+  "name": "parcel",
+  "version": "1.0.0",
+  "description": "A light foundation for your next frontend project based on webpack.",
+  "scripts": {
+    "watch": "gulp watch",
+    "build": "gulp build"
+  },
+  "author": "webmaxer",
+  "devDependencies": {
+    "@shopify/themekit": "^1.1.4",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-css-copy-assets": "0.0.5",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-embed-svg": "^1.2.0",
+    "gulp-file-include": "^2.2.2",
+    "gulp-header": "^2.0.9",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-install": "^1.1.0",
+    "gulp-mode": "^1.0.2",
+    "gulp-parcel": "^0.3.6",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.14.1"
+  },
+  "dependencies": {
+    "gulp-purgecss": "^3.0.0",
+    "jquery": "^3.4.1",
+    "lazysizes": "^5.2.2",
+    "loader": "^2.1.1",
+    "perfect-scrollbar": "^1.5.0",
+    "slick-carousel": "^1.8.1",
+    "tinybind": "^1.0.0",
+    "vendor": "^1.7.0"
+  }
+}

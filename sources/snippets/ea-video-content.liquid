@@ -1,0 +1,9 @@
+{% assign set = section.settings %}
+{% render 'ea-section-styles', section: section %}
+
+<div class="container {% if set.full_width %}container-fluid{% endif %}">
+
+  {% render 'video-external', object: section %}
+  
+</div>
+

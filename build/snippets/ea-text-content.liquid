@@ -1,0 +1,15 @@
+{% comment %} ATTENTION!!! This is compiled version of ea-text-content.liquid and it is overriding automatically. You should use theme development tool and sources\snippets\ea-text-content.liquid file to code and save your changes. {% endcomment %}
+{% assign set = section.settings %}
+
+{% render 'ea-section-styles', section: section %}
+
+{% render 'ea-section-foreground-image', section: section %}
+
+<div class="section featured-text">
+  <div class="container">
+    <div class="section__content">
+      <h2 class="title h2 not-animated">{{ set.title }}</h2>
+      <div class="subtitle rte">{{ set.text }}</div>
+    </div>
+  </div>
+</div>

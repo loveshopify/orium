@@ -1,0 +1,86 @@
+.circles {
+  .section__content {
+    padding-top: 0;
+  }
+}
+.circles-grid {
+  @include row(0);
+  justify-content: center;
+  @include desktop {
+    @include row($gutter*2);
+  }
+}
+
+.circle {
+  @include cell(1, 0);
+  margin-top: $gutter*2;
+  @include desktop {
+    @include cell(4, 0 $gutter*2);
+    margin-top: $gutter*6;
+  }
+}
+
+.circle__inner {
+  width: 250px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  &:hover {
+    .circle__hover {
+      left: 0;
+      transform: rotate(0deg);
+    }
+    img {
+      transform: rotate(180deg)
+    }
+  }
+  .title {
+    margin-top: $gutter;
+  }
+  p {
+    margin-top: 0;
+  }
+}
+
+.circle__image {
+  img {
+    margin: 0 auto;
+    display: block;
+    max-width: none;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: $transition-time all ease-in-out;
+  }
+}
+
+.circle__text {
+  margin-top: $gutter/2;
+}
+
+.circle__content {
+  margin: 0 auto;
+  max-width: 150px;
+}
+
+.circle__hover {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: $color-pink-light;
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  font-size: $fz-6;
+  position: absolute;
+  left: -250px;
+  top: 0;
+  transition: $transition-time all ease-in-out;
+  transform: rotate(-180deg);
+  .circle__content {
+    max-width: 175px;
+  }
+}

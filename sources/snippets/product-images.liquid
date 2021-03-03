@@ -1,0 +1,14 @@
+<div class="product-images {% if product.images.size > 1 %}is-multiple{% endif %} ">
+  <div class="slider product-slider" data-ps>
+    {% for image in product.images %}
+      {% if section.settings.zoom_image %}
+        <a data-fancybox="images" href="{{ image.src | img_url: '2000x' }}" id="imageZoom" data-zoom-image="{{ image.src | img_url: '2000x' }}">
+      {% endif %}
+          <img src="{{ image.src | img_url: '1000x' }}" data-variant="{% for variant in image.variants %}{{ variant.id }},{% endfor %}" data-index="{{ forloop.index0 }}" alt="{{ image.alt | escape }}">
+      {% if section.settings.zoom_image %}
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+

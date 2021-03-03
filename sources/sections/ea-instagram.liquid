@@ -1,0 +1,7 @@
+{% if section.settings.visible %}
+  {% render 'ea-instagram-content', section: section %}
+{% endif %}
+
+{% schema %}
+  @@include('ea-instagram.json')
+{% endschema %}

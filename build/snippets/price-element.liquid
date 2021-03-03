@@ -1,0 +1,10 @@
+{% comment %} ATTENTION!!! This is compiled version of price-element.liquid and it is overriding automatically. You should use theme development tool and sources\snippets\price-element.liquid file to code and save your changes. {% endcomment %}{% comment %}
+Required values
+price: <product price>
+{% endcomment %}
+
+{% if settings.currency_format == 'money_with_currency_format' %}
+  {{ price | money_with_currency }}
+{% else %}
+  {{ price | money }}
+{% endif %}

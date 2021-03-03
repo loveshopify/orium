@@ -1,0 +1,213 @@
+{% comment %} ATTENTION!!! This is compiled version of ea-team.liquid and it is overriding automatically. You should use theme development tool and sources\sections\ea-team.liquid file to code and save your changes. {% endcomment %}{% comment %}
+The contents of the ea-press.liquid template can be found in /sections/ea-press.liquid
+{% endcomment %}
+{% assign set = section.settings %}
+<style>
+  #shopify-section-{{ section.id }} {
+    padding: {{ set.ptop }}px 0 {{ set.pbottom }}px;
+    background-color: {{ set.sectionbg }};
+  }
+  @media (max-width: 989px) {
+    #shopify-section-{{ section.id }} {
+      padding: {{ set.ptop_mob }}px 0 {{ set.pbottom_mob }}px;
+    }
+  }
+</style>
+
+{% if set.visible %}
+<div class="section team">
+  {% render 'ea-section-foreground-image', section: section %}
+  <div class="container">
+    {% if set.title != blank %}
+      <h3 class="title ta-center">{{ set.title }}</h3>
+    {% endif %}
+    {% if set.text != blank %}
+      <div class="subtitle ta-center">{{ set.text }}</div>
+    {% endif %}
+    <div class="section__content">
+      <div class="persons">
+        {% for block in section.blocks %}
+          {% assign bset = block.settings %}
+          {% if forloop.index == 4 %}
+            <div class="break"></div>
+          {% endif %}
+          <div class="person">
+            <div class="person__image"><img alt="{{ bset.alt }}" src="{{ bset.img | img_url: 'master' }}"></div>
+            <h4 class="person__title title">{{ bset.title }}</h4>
+            <h5 class="person__subtitle">{{ bset.subtitle }}</h5>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{% schema %}
+
+{
+  "name": "Team",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "visible",
+      "label": "Show section",
+      "default": true
+    },
+
+
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "ptop",
+      "label": "Top spacing desktop",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "pbottom",
+      "label": "Bottom spacing desktop",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "ptop_mob",
+      "label": "Top spacing mobile",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "pbottom_mob",
+      "label": "Bottom spacing mobile",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+
+
+    {
+      "type": "header",
+      "content": "Background"
+    },
+    {
+      "type": "color",
+      "id": "sectionbg",
+      "label": "Section background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "image_picker",
+      "id": "bgimage",
+      "label": "Background image"
+    },
+    {
+      "type": "range",
+      "id": "bgwidth",
+      "label": "Background width",
+      "min": 1,
+      "unit": "%",
+      "max": 100,
+      "step": 1,
+      "default": 25
+    },
+    {
+      "type": "select",
+      "id": "bgpos",
+      "label": "Background position",
+      "options": [
+        { "value": "left", "label": "left" },
+        { "value": "right", "label": "right" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "bgtop",
+      "label": "Background top spacing",
+      "min": 0,
+      "unit": "%",
+      "max": 100,
+      "step": 1,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "bgedge",
+      "label": "Background edge spacing",
+      "min": -50,
+      "unit": "%",
+      "max": 50,
+      "step": 1,
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Text"
+    },
+    {
+      "id": "title",
+      "type": "text",
+      "label": "Title",
+      "default": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "person",
+      "name": "Person",
+      "settings": [
+        {
+          "id": "img",
+          "type": "image_picker",
+          "label": "Person's Photo"
+        },
+        {
+          "id": "alt",
+          "type": "text",
+          "label": "Image alt text",
+          "default": "media"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Team",
+      "category": "Persons"
+    }
+  ]
+}
+
+{% endschema %}

@@ -1,0 +1,47 @@
+{% assign set = section.settings %}
+<div class="topbar" data-top-bar>
+  <div class="container">
+    {% if set.topbar_text1 != blank %}
+      <div class="topbar__text">{{ set.topbar_text1 }}</div>
+    {% endif %}
+    {% if set.topbar_text2 != blank %}
+      <div class="topbar__text">{{ set.topbar_text2 }}</div>
+    {% endif %}
+    {% if set.topbar_menu != blank %}
+      <nav class="nav hide--mobile">
+        <ul class="nav__items">
+          {% for link in linklists[set.topbar_menu].links %}
+            <li class="nav__item">
+              <a href="{{ link.url }}" class="nav__link">{{ link.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    {% endif %}
+  </div>
+</div> <!-- /.topbar -->
+
+
+{% schema %}
+{
+  "name": "Top Bar",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "topbar_text1",
+      "label": "Top bar text 1"
+    },
+    {
+      "type": "richtext",
+      "id": "topbar_text2",
+      "label": "Top bar text 2"
+    },
+    {
+      "type": "link_list",
+      "id": "topbar_menu",
+      "label": "Top bar menu"
+    }
+  ]
+}
+{% endschema %}

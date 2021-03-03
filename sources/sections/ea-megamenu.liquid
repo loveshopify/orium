@@ -1,0 +1,30 @@
+<nav class="nav" data-accordions-container data-accordions-mobile-only="1">
+  <ul class="nav__items">
+
+    {% for block in section.blocks %}
+
+      {% if block.type contains 'dropdown' %}
+        <li class="nav__item m-level-1 m-dropdown" data-trigger-hover {{ block.shopify_attributes }}>
+          <a href="{{ block.settings.url }}" class="nav__link m-level-1 m-icon" data-accordion-button>
+            {{ block.settings.title }}
+            <i class="icon-caret-down"></i>
+          </a>
+          {% render 'nav-dropdown', block: block %}
+        </li>
+
+      {% elsif block.type == 'link' %}
+        <li class="nav__item m-level-1" data-megamenu="{{ block.settings.title | downcase | replace: ' ', '-' }}" {{ block.shopify_attributes }}>
+          <a class="nav__link m-level-1" href="{{ block.settings.url }}">
+            {{ block.settings.title }}
+          </a>
+        </li>      
+      {% endif %}
+
+    {% endfor %}
+
+  </ul>
+</nav> <!-- /.site-header__nav -->
+
+{% schema %}
+  @@include('ea-megamenu.json')
+{% endschema %}

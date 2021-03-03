@@ -1,0 +1,31 @@
+{% comment %} ATTENTION!!! This is compiled version of ik-text-maquee.liquid and it is overriding automatically. You should use theme development tool and sources\sections\ik-text-maquee.liquid file to code and save your changes. {% endcomment %}<div class="ik-marquee" id="{{ section.settings.marquee_id }}">
+  <div>
+    <h2>{{ section.settings.marquee_text }}</h2>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Text marquee",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "marquee_text",
+      "label": "marquee text",
+      "default": "hair confidence • hair wellness • science"
+    },
+    {
+      "type": "text",
+      "id": "marquee_id",
+      "label": "marquee id"
+    }
+  ],
+  "presets": [
+    {
+      "category": "ik-section",
+      "name": "marquee slider"
+    }
+  ]
+}
+{% endschema %}

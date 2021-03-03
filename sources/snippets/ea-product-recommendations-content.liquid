@@ -1,0 +1,55 @@
+{% render 'ea-section-styles', section: section %}
+
+{% render 'ea-section-foreground-image', section: section %}
+
+{% assign set = section.settings %}
+
+{% if recommendations.products and recommendations.products_count > 0 %}
+  {%- assign related_collection = recommendations -%}
+{% endif %}
+
+<div data-product-recommendations 
+     data-product-id="{{ product.id }}" 
+     data-limit="{{ section.settings.related_count }}">
+
+    
+    {% if set.title != blank %}
+        <h2 class="title not-animated m-bold ta-center">{{ set.title }}</h2>
+    {% endif %}
+    {% if set.subtitle != blank %}
+        <h3 class="subtitle m-medium-grey m-normal-weight not-animated ta-center">{{ set.subtitle }}</h3>
+    {% endif %}
+    {% unless recommendations.products and recommendations.products_count > 0 %}
+        <div class="product-recommendations-placeholder" data-product-recommendations-placeholder>
+        </div>
+    {% else %}
+        <div class="product-recommendations-content" data-product-recommendations-content>
+            <div class="slider m-custom-controls">
+                <div class="products-slider hide--mobile" data-hor-slider data-desktop-only="1" data-slides-to-show="5" data-custom-controls="1">
+                {% for product in recommendations.products %}
+                    <div class="product-cell-wrap">
+                        {% render 'product-cell', product: product, showInfo: true, showDescr: true, showPrice: true %}           
+                    </div>
+                {% endfor %}
+                </div>
+                <div class="products-slider hide--desktop" data-hor-slider data-mobile-only="1" data-adaptive-height="true" data-slides-to-show-mob="1" data-custom-controls="1">
+                {% for product in recommendations.products %}
+                    {% assign mod_4 = forloop.index0 | modulo: 4 %}
+                    {% if mod_4 == 0 %}
+                        <div class="product-cell-wrap">
+                    {% endif %}
+                        {% render 'product-cell', product: product, showInfo: true, showDescr: true, showPrice: true %}                    
+                    {% if mod_4 == 3 or forloop.last %}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-arrow slider-prev m-icon" data-hor-slider-prev><i class="icon-left-arrow"></i></button>
+                <div class="slider-dots" data-hor-slider-dots></div>
+                    <button class="slider-arrow slider-next m-icon" data-hor-slider-next><i class="icon-right-arrow"></i></button>
+                </div>
+            </div>
+        </div>
+    {% endunless %}
+</div>

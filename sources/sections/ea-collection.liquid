@@ -1,0 +1,8 @@
+{% assign set = section.settings %}
+{% if section.settings.visible %}
+  {% render 'ea-collection-content', section: section %}
+{% endif %}
+
+{% schema %}
+  @@include('ea-collection.json')
+{% endschema %}

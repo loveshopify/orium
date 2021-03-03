@@ -1,0 +1,164 @@
+{% comment %} ATTENTION!!! This is compiled version of ea-image-and-text.liquid and it is overriding automatically. You should use theme development tool and sources\sections\ea-image-and-text.liquid file to code and save your changes. {% endcomment %}
+{% if section.settings.visible %}
+  {% render 'ea-image-and-text-content', section: section %}
+{% endif %}
+
+{% schema %}
+  {
+  "name": "Image and text",
+  "class": "section has-overlay image-and-text-section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "visible",
+      "label": "Show section",
+      "default": true
+    },
+
+
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "ptop",
+      "label": "Top spacing desktop",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "pbottom",
+      "label": "Bottom spacing desktop",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "ptop_mob",
+      "label": "Top spacing mobile",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "pbottom_mob",
+      "label": "Bottom spacing mobile",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+
+
+    {
+      "type": "header",
+      "content": "Background"
+    },
+    {
+      "type": "color",
+      "id": "sectionbg",
+      "label": "Section background color",
+      "default": "#ffffff"
+    },
+
+
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "id": "image",
+      "type": "image_picker",
+      "label": "Main image"
+    },
+    {
+      "type": "select",
+      "id": "image_pos",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left",
+      "label": "Main image position"
+    },
+
+    
+    {
+      "type": "header",
+      "content": "Text"
+    },
+    {
+      "type": "text",
+      "id": "top_label",
+      "label": "Top label"
+    },
+    {
+      "id": "title",
+      "type": "richtext",
+      "label": "Title"
+    },
+    {
+      "id": "text",
+      "type": "richtext",
+      "label": "Text",
+      "default": "<p>Add your text here</p>"
+    },
+
+
+    {
+      "type": "header",
+      "content": "button"
+    },
+    {
+      "type": "range",
+      "id": "btntop",
+      "label": "Top spacing",
+      "min": -200,
+      "max": 200,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "id": "btnu",
+      "type": "url",
+      "label": "Button link"
+    },
+    {
+      "id": "btn",
+      "type": "text",
+      "label": "Button text",
+      "default": "Enter text for button"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image and text",
+      "category": "Image and text"
+    }
+  ]
+}
+{% endschema %}
+
+
+
+
+

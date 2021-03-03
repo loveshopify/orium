@@ -1,0 +1,83 @@
+{% assign set = section.settings %}
+
+<style>
+  #shopify-section-{{ section.id }} {
+    background-color: {{ set.sectionbg }};
+  }
+</style>
+
+<div class="section login" data-login>
+  <div class="container">
+    {% if set.page_title != blank %}
+      <h2 class="title ta-center not-animated">{{ set.page_title }}</h2>
+    {% endif %}
+    <div class="login__wrap">
+      <div class="login__form">
+        <div class="login__content">
+          <div class="form">
+            {% if set.title != blank %}
+              <h2 class="title m-black h2 m-mob not-animated">{{ set.title }}</h2>
+            {% endif %}
+            {% if set.subtitle != blank %}
+              <div class="subtitle not-animated">{{ set.subtitle }}</div>
+            {% endif %}
+            {% form 'customer_login' %}
+              {% if form.errors %}
+                <div class="">
+                  {% for field in form.errors %}
+                    <p class="form__error">{{ field | capitalize }} - {{ form.errors.messages[field] }}</p>
+                  {% endfor %}
+                </div>
+              {% endif %}
+              
+              <div class="form__field">
+                <label for="customer_email" class="label">{{ 'customer.login.email' | t }} *</label>
+                <input type="email" class="form__input" name="customer[email]" required/>
+              </div>
+          
+              <div class="form__field">
+                <label for="customer_password" class="label">{{ 'customer.login.password' | t }} *</label>
+                <input type="password" class="form__input" name="customer[password]" required/>
+              </div>
+  
+              <div class="form__buttons">
+                {% render 'button', {
+                  top: set.btntop,
+                  id: section.id,
+                  text: set.btn,
+                  class: 'm-black',
+                  type: 'submit'
+                } %}
+              </div>
+  
+              <div>
+                <a href="/account/login#reset" class="btn m-underline m-tiny" data-forgot-link>{{ set.forgotlink }}</a>
+              </div>
+            {% endform %}
+          </div> <!-- /.form -->  
+        </div>
+      </div> <!-- /.login__form -->
+
+      <div class="login__right">
+        <div class="login__content">
+          {% if set.title2 != blank %}
+            <h2 class="title m-black h2 m-mob not-animated">{{ set.title2 }}</h2>
+          {% endif %}
+          {% if set.subtitle2 != blank %}
+            <div class="subtitle not-animated">{{ set.subtitle2 }}</div>
+          {% endif %}
+          <div>
+            <a href="/account/register" class="btn m-black">{{ set.register_text }}</a>
+          </div>
+        </div>
+      </div> <!-- /.login__right -->
+
+    </div> <!-- /.login__wrap -->
+  </div> <!-- /.container -->
+</div> <!-- /.section -->
+
+
+
+{% schema %}
+  @@include('ea-login.json')
+{% endschema %}

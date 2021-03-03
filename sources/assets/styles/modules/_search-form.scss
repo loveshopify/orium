@@ -1,0 +1,25 @@
+.search-form {
+  padding: 0 0 $gutter 0;
+  display: block;
+  width: auto;
+  @include desktop {
+    width: 100%;
+    padding: $gutter 0 0;
+  }
+  .input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid currentColor;
+    color: $color-body;
+    display: block;
+    font-size: 1.2rem;
+    height: 40px;
+    width: 100%;
+    margin: 0;
+    padding: 0 $gutter;
+    @include desktop {
+      height: 60px;
+      font-size: $fz-3;
+    }
+  }
+}

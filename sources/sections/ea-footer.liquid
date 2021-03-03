@@ -1,0 +1,75 @@
+{% assign set = section.settings %}
+
+<div class="container">
+  <div class="site-footer__top">
+    <div class="row">
+      <div class="col-md-8">
+        <nav class="nav m-vertical m-flex site-footer__nav" >
+          {% for block in section.blocks %}
+            {% assign menu = linklists[block.settings.menu] %}
+            <div class="nav__col footer-box {% if forloop.first %}m-no-border{% endif %}">
+              <h4 class="title not-animated" ><span>{{ menu.title }}</span> </h4>
+              <ul class="nav__items idx-{{forloop.index}}">
+                {% for link in menu.links %}
+                  <li class="nav__item">
+                    <a class="nav__link" href="{{ link.url }}">{{ link.title }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endfor %}
+        </nav>
+      </div>
+      <div class="col-md-4 footer-box">
+        <h4 class="title not-animated">CONTACT US</h4>
+        <div class="site-footer__info">
+          {% if set.info != '' %}
+            {{ set.info }}
+          {% endif %}
+        </div>
+        {%- comment -%} End site footer info {%- endcomment -%}
+        {% if set.showSocial %}
+          <nav class="nav social-links">
+            <ul class="nav__items">
+              {% if settings.social_instagram_link != blank %}
+                <li class="nav__item">
+                  <a class="nav__link no-hover-link" href="{{ settings.social_instagram_link }}" aria-label="instagram link"><i class="icon icon-insta"></i></a>
+                </li>
+              {% endif %}
+              {% if settings.social_twitter_link != blank %}
+                <li class="nav__item">
+                  <a class="nav__link no-hover-link" href="{{ settings.social_twitter_link }}" aria-label="twitter link"><i class="icon icon-tw"></i></a>
+                </li>
+              {% endif %}
+              {% if settings.social_youtube_link != blank %}
+                <li class="nav__item">
+                  <a class="nav__link no-hover-link" href="{{ settings.social_youtube_link }}" aria-label="youtube link"><i class="icon icon-youtube"></i></a>
+                </li>
+              {% endif %}
+              {% if settings.social_facebook_link != blank %}
+                <li class="nav__item">
+                  <a class="nav__link no-hover-link" href="{{ settings.social_facebook_link }}" aria-label="facebook link"><i class="icon icon-fb"></i></a>
+                </li>
+              {% endif %}
+            </ul>
+          </nav>
+        {% endif %}
+        {%- comment -%} End social {%- endcomment -%}
+      </div>
+    </div>
+  </div>
+  <div class="site-footer__bottom">
+    <div class="site-footer__payments footer-box">
+      
+    </div>
+    <div class="site-footer__copy footer-box">
+      <p>{{ set.copy }}</p>
+    </div>
+  </div>
+</div>
+
+
+
+{% schema %}
+  @@include('ea-footer.json')
+{% endschema %}

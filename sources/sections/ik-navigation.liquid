@@ -1,0 +1,31 @@
+{% comment %} ATTENTION!!! This is compiled version of ea-topbar.liquid and it is overriding automatically. You should use theme development tool and sources\sections\ea-topbar.liquid file to code and save your changes. {% endcomment %}
+{% assign set = section.settings %}
+<div class="navigation" data-top-bar>
+  <div class="container">
+    {% if set.menu != blank %}
+      <nav class="nav hide--mobile">
+        <ul class="nav__items">
+          {% for link in linklists[set.menu].links %}
+            <li class="nav__item">
+              <a href="{{ link.url }}" class="nav__link">{{ link.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    {% endif %}
+  </div>
+</div> 
+
+{% schema %}
+{
+  "name": "Navigation",
+  "class": "ik-navigation hide--mobile",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Menu"
+    }
+  ]
+}
+{% endschema %}

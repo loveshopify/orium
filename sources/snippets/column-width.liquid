@@ -1,0 +1,24 @@
+{% comment %}
+Required values
+columns: <number>
+device: <string>
+{% endcomment %}
+{%- assign columns = columns | default: 1 | plus: 0 -%}
+{%- capture number -%}
+  {%- case columns -%}
+    {% when 1 %}12
+    {% when 2 %}6
+    {% when 3 %}4
+    {% when 4 %}3
+    {% when 6 %}2
+    {% when 12 %}1
+    {% else %}12
+  {%- endcase -%}
+{%- endcapture -%}
+{%- if device != blank -%}
+  {%- assign number = number | prepend: '-' -%}
+{% else %}
+  {%- assign device = '' -%}
+{%- endif -%}
+{%- assign col = device | prepend: 'col-'  | append: number -%}
+{{- col -}}

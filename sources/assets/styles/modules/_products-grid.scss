@@ -1,0 +1,148 @@
+.products-grid {
+  @include row($gutter);
+  @include desktop {
+    @include row($gutter*2);
+  }
+}
+
+.product-cell-wrap {
+  @include cell(2, 0 $gutter);
+  margin-top: $gutter*5;
+  @include desktop {
+    @include cell(4, 0 $gutter*2);
+  }
+}
+
+.product-cell {
+  text-align: left;
+  color: $color-black;
+  &.m-text {
+    padding-top: 0;
+    text-align: center;
+    @include desktop {
+      padding-top: 25%;
+      text-align: unset;
+    }
+  }
+  &:hover:not(.m-no-hover-effect),
+  &.is-hover {
+    .product-cell__img {
+      .img {
+        display: none;
+      }
+      .img-hover {
+        display: block;
+      }
+    }
+    .product-cell__title {
+      color: $color-yellow;
+    }
+  }
+  .btn {
+    margin-top: $gutter;
+    min-width: 80px;
+    font-size: 15px;
+  }
+
+  .standalone-bottomline {
+    display: flex;
+    justify-content: center;
+  }
+
+}
+.product-cell__img {
+  display: block;
+  position: relative;
+
+  a {
+    display: block;
+  }
+
+  .img-hover {
+    display: none;
+  }
+}
+.product-cell__info {
+  margin-top: $gutter;
+  line-height: 1.2;
+  text-align: center;
+}
+.product-cell__title {
+  margin: 0;
+  font-size: $fz-product-cell-title;
+  font-weight: normal;
+  font-family: $ff-1;
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+.product-cell__description {
+  margin-top: 0.5em;
+  font-size: $fz-product-cell-descr; 
+  p {
+    margin: 0;
+  }
+}
+.product-cell__price {
+  margin: 0.5em 0 0;
+  font-weight: 600;
+  font-size: $fz-product-cell-price;
+  color: $color-product-cell-price;
+  span {
+    font-weight: 600;
+    font-size: 0.8em;
+    color: $color-blue-grey;
+  }
+  .was-price {
+    font-size: 0.7em;
+    font-weight: normal;
+    color: #ccc;
+  }
+  &.m-button {
+    margin-top: 1em;
+    padding: 5px 25px 5px;
+    display: inline-block;
+    border: 3px solid #15bde8;
+    border-radius: 40px;
+    text-decoration: none;
+    font-size: $fz-4;
+    &:after {
+      content: "›";
+      font-size: 1.5em;
+      line-height: 0;
+      position: relative;
+      top: 1px;
+    }
+  }
+}
+
+.product-cell__more {
+  transition: $transition-time;
+  font-size: 14px;
+  &:hover {
+    text-decoration: none;
+    opacity: 0.8;
+  }
+  i {
+    font-size: 0.75em;
+    margin-right: 0.25em;
+  }
+
+}
+
+
+// Related products
+.product-cell.m-related {
+  padding: $gutter*2;
+  background: $color-grey-lightest;
+  .product-cell__title {
+    font-weight: 900;
+    font-size: 26px;
+  }
+  .product-cell__price {
+    font-weight: 900;
+    font-size: $fz-2;
+    color: $color-red;
+  }
+}

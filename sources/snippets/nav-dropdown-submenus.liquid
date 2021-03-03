@@ -1,0 +1,42 @@
+{%- for i in (1..5) -%}
+  {%- capture title -%}link_{{ i }}_title{%- endcapture -%}
+  {%- capture url -%}link_{{ i }}_url{%- endcapture -%}
+  {%- capture image -%}link_{{ i }}_image{%- endcapture -%}
+  {%- capture submenu -%}link_{{ i }}_submenu{%- endcapture -%}
+  {%- assign submenu_handle = block.settings[submenu] -%}
+  {%- assign submenu = linklists[submenu_handle] -%}
+  {%- assign title = block.settings[title] -%}
+  {%- assign url = block.settings[url] -%}
+  {%- assign image = block.settings[image] -%}
+  {%- if title != blank -%}
+    <div class="nav-dropdown__feature-item {% if submenu.links != blank %}m-wide{% endif %}">
+
+      {% if submenu.links != blank %}
+        <div class="row">
+          <div class="col hide--mobile">
+            <a class="nav-dropdown__image no-hover-link" href="{{ url }}"><img src="{{ image | img_url: '400x' }}" alt="{{ image.alt }}"></a>
+          </div>
+          <div class="col">
+            <a class="nav__link m-level-2 no-hover-link" href="{{ url }}"><b>{{ title }}</b></a>
+            <ul class="nav__items m-vertical">
+              {% for link in submenu.links %}
+                <li class="nav__item m-level-3">
+                  <a class="nav__link m-level-3 no-hover-link" href="{{ link.url }}">{{ link.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+
+      {% else %}
+        {% if image != blank %}
+          <a class="nav-dropdown__image no-hover-link" href="{{ url }}"><img src="{{ image | img_url: '400x' }}" alt="{{ image.alt }}"></a>
+        {% endif %}
+        {% if title != blank and url != blank %}
+          <a class="nav__link m-level-2 no-hover-link ta-center" href="{{ url }}"><b>{{ title }}</b></a>
+        {% endif %} 
+      {% endif %} 
+
+    </div>
+  {%- endif -%}
+{%- endfor -%}

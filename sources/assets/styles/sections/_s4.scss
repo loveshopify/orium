@@ -1,0 +1,55 @@
+.s4__content {
+  display: block;
+  align-items: center;
+  @include desktop {
+    display: flex;
+  }
+  &.m-image-pos-right {
+    .s4__image {
+      order: 1;
+    }
+    .s4__text {
+      order: 0;
+    }
+  }
+}
+
+.s4__image {
+  min-width: 0;
+  max-width: 100%;
+  @include desktop {
+    min-width: 500px;
+    max-width: 500px;
+  }
+}
+
+.s4__text {
+  flex: 1;
+  padding: $gutter*6 $gutter*3;
+  .s4__image + & {
+    margin: -150px $gutter*2 0;
+    padding: 20px;
+    position: relative;
+    @include desktop {
+      margin: 0;
+      padding: 15px;
+    }
+  }
+  .title {
+    +.subtitle {
+      margin-top: $gutter;
+    }
+  }
+  .pretitle {
+    font-size: 12px;
+    @include desktop {
+      font-size: 16px;
+    }
+  }
+  .subtitle {
+    max-width: 100%;
+    @include desktop {
+
+    }
+  }
+}

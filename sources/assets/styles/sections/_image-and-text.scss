@@ -1,0 +1,90 @@
+.image-and-text-section {
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &.has-dark-overlay {
+    height: auto;
+    z-index: 3;
+    @include desktop {
+      height: 530px;
+    }
+    &:before {
+      @include overlay {
+        background-color: rgba(0, 0, 0, 1);
+        opacity: 0.5;
+      }
+    }
+  }
+  .container {
+    max-width: $container-m;
+  }
+  .skewed-shape {
+    padding-left: $gutter;
+    clip-path: none;
+    @include desktop {
+      clip-path: polygon(0 0, 60% 0%, 53% 100%, 0% 100%);
+    }
+  }
+  .skewed-shape + .title {
+    margin-top: $gutter*2;
+  }
+  .title {
+    text-align: center;
+    @include desktop {
+      text-align: left;
+    }
+  }
+  .subtitle {
+    text-align: center;
+    font-size: $fz-5;
+    @include desktop {
+      font-size: 16px;
+      text-align: left;
+    }
+  }
+
+  .animated-bottom {
+    text-align: center;
+    @include desktop {
+      text-align: left;
+    }
+  }
+}
+
+.image-and-text__image {
+  margin-top: $gutter*2;
+  @include desktop {
+    margin-top: unset;
+  }
+}
+
+.image-and-text__image.m-big-image {
+  margin-top: 0;
+  img {
+    max-width: 100%;
+    width: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: static;
+    left: auto;
+
+    @include desktop {
+      max-width: none;
+      margin-top: -80px;
+      margin-bottom: -100px;      
+      width: 800px;
+      left: -160px;
+      position: relative;
+    }
+
+
+  }
+}
+
+.image-and-text__text {
+  &.m-white {
+    .title, .subtitle {
+      color: $color-white
+    }
+  }
+}

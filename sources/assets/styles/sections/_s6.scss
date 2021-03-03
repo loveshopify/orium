@@ -1,0 +1,53 @@
+.s6 {
+
+  .slider-arrow {
+    margin: 0;
+    color: $color-button;
+    font-size: $fz-6;
+    position: static;
+    @include desktop {
+      display: none;
+    }
+  }
+  .slider-dots {
+    margin: 0 $gutter;
+    li {
+      margin: 0;
+      line-height: 0;
+    }
+    @include desktop {
+      display: none;
+    }
+  }
+  .row {
+    @include row(0 (-$gutter/2))
+    @include desktop {
+      @include row(0 (-$gutter/2))
+    }
+  }
+  [class^=col] {
+    &:nth-child(3n+2) {
+      margin-top: 0;
+      @include desktop {
+        margin-top: $gutter*5;
+      }
+    }
+    @include cell(1, 0 $gutter/2)
+    @include desktop {
+      @include cell(1, 0 $gutter)
+    }
+  }
+  .slick-slide {
+    margin-top: 0;
+    transition: $transition-time;
+  }
+  .slick-current + .slick-slide {
+    margin-top: 0;
+    @include desktop {
+      margin-top: $gutter*5;
+    }
+  }
+  .slider-controls {
+    margin-top: $gutter*2;
+  }
+}

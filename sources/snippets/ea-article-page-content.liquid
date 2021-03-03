@@ -1,0 +1,67 @@
+{% assign set = section.settings %}
+<style>
+  #shopify-section-{{ section.id }} {
+    padding: {{ set.ptop }}px 0 {{ set.pbottom }}px;
+  }
+  #shopify-section-{{ section.id }} .article-header__text {
+    background-color: {{ set.sectionbg }};
+  }
+  .article__sidebar {
+    background-color: {{ set.sidebarbg }};
+  }
+  @media (max-width: 989px) {
+    #shopify-section-{{ section.id }} {
+      padding: {{ set.ptop_mob }}px 0 {{ set.pbottom_mob }}px;
+    }
+  }
+</style>
+
+
+<header class="article-header">
+  {% if article.image %}
+    <div class="article-header__image"><img src="{{ article.image | img_url: 'master' }}" alt="{{ article.image.alt }}"></div>
+  {% endif %}
+  <div class="article-header__text">
+    {% if article.tags[0] != blank %}
+      <h4 class="pretitle h6 m-accent not-animated">{{ article.tags[0] }}</h4>
+    {% endif %}
+    <h1 class="title not-animated m-black">{{ article.title }}</h1>
+    <div class="article-header__meta">
+      <span>{{ article.published_at | date: "%B %d, %Y" }}</span>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <article class="article">
+    <div class="article__container">
+      
+      <div class="article__sidebar">
+        {% if set.sidebar_title != blank %}<h3 class="title m-black not-animated h2">{{ set.sidebar_title }}</h3>{% endif %}
+        {% for block in section.blocks %}
+          {% render 'product-cell', 
+            section: section,
+            product: all_products[block.settings.product], 
+            showInfo: set.show_product_info, 
+            showPrice: set.show_product_price,
+            showBtn: true,
+            class: 'm-no-hover-effect' %}
+        {% endfor %}
+      </div>
+      {% comment %} end article sidebar {% endcomment %}
+
+      <div class="article__content-wrap">
+        <div class="article__content rte">{{ article.content }}</div>
+        <div class="article__content-bottom">
+          {% if set.showSocial %}
+            <div class="article__share"><span>Share:</span> {% render 'ea-social-share-buttons' %}</div>
+          {% endif %}
+          <nav class="pagination {% if paginate.previous and paginate.next %}paginate--both{% endif %}" role="navigation" aria-label="pagination">
+            <a href="{{ blog.url }}" class="pagination-previous btn m-icon-only"><i class="icon-arrow-left"></i> BACK TO BLOG</a>
+          </nav>
+        </div>
+      </div>
+      {% comment %} end article content {% endcomment %}
+    </div>
+  </article>
+</div>
