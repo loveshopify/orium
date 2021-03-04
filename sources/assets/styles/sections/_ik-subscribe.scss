@@ -1,0 +1,41 @@
+.ik-subscribe {
+  max-width: 760px;
+  margin: 0 auto;
+  .hero-title {
+    font-size: 64px;
+    line-height: 95%;
+  }
+  .hero-text {
+    max-width: 535px;
+    margin: 0 auto;
+    p {
+      font-size: 15px;
+      line-height: 150%;
+      margin-top: 20px;
+    }
+  }
+  .animated-bottom {
+    display: flex;
+    justify-content: center;
+    .hero-button {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      padding: 20px;
+      background: #1d1d1d;
+      max-width: 330px;
+      color: #ffffff;
+      font-size: 15px;
+      margin-top: 20px;
+      font-weight: normal;
+      border: none;
+      cursor: pointer;
+      svg path {
+        fill: #FFF;
+      }
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
+}
