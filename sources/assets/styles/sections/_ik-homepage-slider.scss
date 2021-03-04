@@ -7,9 +7,13 @@
     }
   }
   .main-pane {
+    .slick-list {
+      padding-left: 0 !important;
+    }
     .slick-slide {
-      & > div:first-child {
-        margin-bottom: 40px;
+      margin-right: 30px;
+      & > div:not(:last-child) {
+        margin-bottom: 30px;
       }
     }
     .panel-horizontal {
@@ -17,8 +21,6 @@
       max-width: 444px!important;
       background: #fff;
       padding: 40px;
-      margin: 0 10px;
-      margin-left: 0;
       .item-title {
         font-size: 24px;
         line-height: 29px;

@@ -10,10 +10,11 @@ $('.ik-marquee h2').marquee({
 $('.home-slider-wrapper .main-pane').slick({
 	rows: 2,
 	dots: false,
-	arrows: true,
+	arrows: false,
 	infinite: true,
 	speed: 300,
-	slidesToShow: 2,
+	slidesToShow: 3,
+	slidesToScroll: 4,
 	centerMode: true,
-	centerPadding: '50px'
+	centerPadding: '70px'
 });

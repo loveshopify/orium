@@ -475,16 +475,6 @@
       },
       {
         "type": "url",
-        "id": "social_twitter_link",
-        "label": "Twitter link"
-      },
-      {
-        "type": "url",
-        "id": "social_youtube_link",
-        "label": "Youtube link"
-      },
-      {
-        "type": "url",
         "id": "social_facebook_link",
         "label": "Facebook link"
       }

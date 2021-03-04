@@ -1,27 +1,36 @@
-{% comment %} ATTENTION!!! This is compiled version of ik-footer.liquid and it is overriding automatically. You should use theme development tool and sources\sections\ik-footer.liquid file to code and save your changes. {% endcomment %}{% render 'ea-section-styles', section: section %}
+{% comment %} ATTENTION!!! This is compiled version of ik-footer.liquid and it is overriding automatically. You should use theme development tool and sources\sections\ik-footer.liquid file to code and save your changes. {% endcomment %}{% assign set = section.settings %}
+{% render 'ea-section-styles', section: section %}
 
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-left">
+      
+      {% assign footer_menu = linklists[set.footer_menu] %}
       <ul class="footer-ul">
-        <li class="footer-li"><a href="/pages/the-lab" class="footer-a">The Labs</a></li>
-        <li class="footer-li"><a href="/pages/faq" class="footer-a">FAQ</a></li>
+        {% for link in footer_menu.links %}
+          <li class="footer-li"><a href="{{ link.url }}" class="footer-a">{{ link.title }}</a></li>
+        {% endfor %}
       </ul>
       <div class="footer-icons">
-        <a href="" class="text-white">{% render 'insta-icon' %}</a>
-       <a href="" class="text-white">{% render 'facebook-icon' %}</a>
+        {% if settings.social_instagram_link %}
+          <a href="{{ settings.social_instagram_link }}" class="text-white">{% render 'insta-icon' %}</a>
+        {% endif %}
+        {% if settings.social_facebook_link %}
+          <a href="{{ settings.social_facebook_link }}" class="text-white">{% render 'facebook-icon' %}</a>
+        {% endif %}
       </div>
     </div>
     <div class="footer-right">
-      <p>GET THE LATEST</p>
+      <p>{{ set.title }}</p>
       <form class="footer-email">
       	<input placeholder="Email address"/>
         <button type="submit">{% render 'arrow-icon' %}</button>
       </form>
       <div class="footer-links">
-        <a href="/pages/terms-and-condition" class="footer-link">Terms</a>
-        <a href="/pages/privacy-policy" class="footer-link">Privacy</a>
-        <a href="/pages/cookies-policy" class="footer-link">Cookies</a>
+        {% assign footer_bottom_menu = linklists[set.footer_bottom_menu] %}
+        {% for link in footer_bottom_menu.links %}
+          <a href="{{ link.url }}" class="footer-link">{{ link.title }}</a>
+        {% endfor %}
       </div>
     </div>
   </div>
@@ -31,23 +40,30 @@
 <footer class="footer-mobile">
   <div class="footer-inner-mobile">
     <div class="footer-wrap-mobile">
-       <p>GET THE LATEST</p>
+       <p>{{ set.title }}</p>
       <form class="footer-email-mobile">
       	<input placeholder="Email address"/>
         <button type="submit"><i class="fas fa-arrow-right footer-email-icon-mobile"></i></button>
       </form>
-       <ul class="footer-ul-mobile">
-        <li class="footer-li-mobile"><a href="/pages/the-lab" class="footer-a-mobile">The Labs</a></li>
-        <li class="footer-li-mobile"><a href="/pages/faq" class="footer-a-mobile">FAQ</a></li>
+      {% assign menu = linklists[block.settings.footer_menu] %}
+      <ul class="footer-ul">
+        {% for link in menu.links %}
+          <li class="footer-li"><a href="{{ link.url }}" class="footer-a">{{ link.title }}</a></li>
+        {% endfor %}
       </ul>
       <div class="footer-icons-mobile">
-        <a href="" class="text-white"><i class="fab fa-instagram footer-icon-mobile"></i></a>
-       <a href="" class="text-white"><i class="fab fa-facebook-f footer-icon-mobile"></i></a>
+        {% if settings.social_instagram_link %}
+          <a href="{{ settings.social_instagram_link }}" class="text-white">{% render 'insta-icon' %}</a>
+        {% endif %}
+        {% if settings.social_facebook_link %}
+          <a href="{{ settings.social_facebook_link }}" class="text-white">{% render 'facebook-icon' %}</a>
+        {% endif %}
       </div>
        <div class="footer-links-mobile">
-        <a href="/pages/terms-and-condition" class="footer-link-mobile">Terms</a>
-        <a href="/pages/privacy-policy" class="footer-link-mobile">Privacy</a>
-        <a href="/pages/cookies-policy" class="footer-link-mobile">Cookies</a>
+        {% assign footer_bottom_menu = linklists[block.settings.footer_bottom_menu] %}
+        {% for link in footer_bottom_menu.links %}
+          <a href="{{ link.url }}" class="footer-link">{{ link.title }}</a>
+        {% endfor %}
       </div>
     </div>
   </div>
@@ -120,12 +136,31 @@
       "id": "sectionbg",
       "label": "Section background color",
       "default": "#ffffff"
-    }
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "header",
+      "content": "Menus"
+    },
+    {
+      "type": "link_list",
+      "id": "footer_menu",
+      "label": "Footer Menu"
+    },
+    {
+      "type": "link_list",
+      "id": "footer_bottom_menu",
+      "label": "Footer bottom Menu"
+    } 
   ],
   "blocks": [
     {
-      "type": "testimonial",
-      "name": "Testimonial",
+      "type": "item",
+      "name": "item",
       "settings":[
         {
           "type": "text",
