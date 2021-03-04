@@ -6,3 +6,14 @@ $('.ik-marquee h2').marquee({
 	duplicated: true,
 	pauseOnHover: true
 });
+
+$('.home-slider-wrapper .main-pane').slick({
+	rows: 2,
+	dots: false,
+	arrows: true,
+	infinite: true,
+	speed: 300,
+	slidesToShow: 2,
+	centerMode: true,
+	centerPadding: '50px'
+});

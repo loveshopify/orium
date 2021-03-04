@@ -1,0 +1,41 @@
+.home-slider-wrapper {
+  .title-wrapper {
+    .section-title {
+      font-size: 24px;
+      line-height: 29px;
+      margin-bottom: 40px;
+    }
+  }
+  .main-pane {
+    .slick-slide {
+      & > div:first-child {
+        margin-bottom: 40px;
+      }
+    }
+    .panel-horizontal {
+      padding: 40px;
+      max-width: 444px!important;
+      background: #fff;
+      padding: 40px;
+      margin: 0 10px;
+      margin-left: 0;
+      .item-title {
+        font-size: 24px;
+        line-height: 29px;
+        margin-bottom: 20px;
+      }
+      .item-image {
+        border-radius: 50%;
+        max-width: 190px;
+        max-height: 190px;
+      }
+      .item-text {
+        font-size: 15px;
+        line-height: 150%;
+        p {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
