@@ -1,0 +1,39 @@
+.why-wrapper {
+  .why-inner-wrapper {
+    display: flex;
+    justify-content: center;
+    .left-pane-plane {
+      max-width: 330px;
+      margin-right: 10vw;
+      display: flex;
+      .title-wrapper {
+        align-self: center;
+        .why-section-title {
+          font-weight: normal;
+          font-size: 64px;
+          line-height: 95%;
+        }
+      }
+    }
+    .why-right-pane {
+      .panel-horizontal {
+        max-width: 415px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 60px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        .why-title {
+          font-size: 24px;
+          line-height: 29px;
+        }
+        .why-text p {
+          font-size: 15px;
+          line-height: 150%;
+          margin: 0;
+        }
+      }
+    }
+  }
+}

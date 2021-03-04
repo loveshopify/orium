@@ -1,4 +1,4 @@
-$('#marquee_1 h2').marquee({
+$('.ik-marquee h2').marquee({
 	speed: 200,
 	gap: 300,
 	delayBeforeStart: 0,

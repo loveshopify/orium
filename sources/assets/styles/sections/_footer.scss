@@ -301,10 +301,12 @@
   }
 
   .footer-right button {
-    padding: 1rem;
+    padding: 0;
     background-color: #fff;
     outline: none;
     border: none;
+    width: 45px;
+    height: 56px;
   }
 
   .footer-email-icon {

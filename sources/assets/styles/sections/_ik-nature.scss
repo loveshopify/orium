@@ -75,6 +75,9 @@
       svg path {
         fill: #FFF;
       }
+      &:hover {
+        opacity: .8;
+      }
     }
   }
 }
