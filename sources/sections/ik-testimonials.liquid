@@ -1,0 +1,108 @@
+{% render 'ea-section-styles', section: section %}
+
+<div class="ik-testimonial">
+  <div class="container">
+    <div class="inner-effect-wrapper">
+      {% for block in section.blocks %}
+        <div class="effect-panel">
+          <h2 class="panel-title">{{ block.settings.title }}</h2>
+          <div class="panel-text">{{ block.settings.text }}</div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Testimonials",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "visible",
+      "label": "Show section",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "ptop",
+      "label": "Top spacing desktop",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "pbottom",
+      "label": "Bottom spacing desktop",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "ptop_mob",
+      "label": "Top spacing mobile",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "pbottom_mob",
+      "label": "Bottom spacing mobile",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+
+    {
+      "type": "header",
+      "content": "Background"
+    },
+    {
+      "type": "color",
+      "id": "sectionbg",
+      "label": "Section background color",
+      "default": "#ffffff"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings":[
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "ik-section",
+      "name": "Testimonials"
+    }
+  ]
+}
+{% endschema %}

@@ -1,4 +1,4 @@
-
+{% comment %} ATTENTION!!! This is compiled version of theme.liquid and it is overriding automatically. You should use theme development tool and sources\layout\theme.liquid file to code and save your changes. {% endcomment %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,7 +17,8 @@
     {{ content_for_layout }}
 
     <div class="site-footer-container" data-site-footer>
-      {% section 'ea-footer' %}
+      {% comment %}{% section 'ea-footer' %}{% endcomment %}
+      {% section 'ik-footer' %}
     </div>
 
     {% render 'product-quick-view-popup' %}

@@ -1,0 +1,144 @@
+{% comment %} ATTENTION!!! This is compiled version of ik-footer.liquid and it is overriding automatically. You should use theme development tool and sources\sections\ik-footer.liquid file to code and save your changes. {% endcomment %}{% render 'ea-section-styles', section: section %}
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <ul class="footer-ul">
+        <li class="footer-li"><a href="/pages/the-lab" class="footer-a">The Labs</a></li>
+        <li class="footer-li"><a href="/pages/faq" class="footer-a">FAQ</a></li>
+      </ul>
+      <div class="footer-icons">
+        <a href="" class="text-white">{% render 'insta-icon' %}</a>
+       <a href="" class="text-white">{% render 'facebook-icon' %}</a>
+      </div>
+    </div>
+    <div class="footer-right">
+      <p>GET THE LATEST</p>
+      <form class="footer-email">
+      	<input placeholder="Email address"/>
+        <button type="submit">{% render 'arrow-icon' %}</button>
+      </form>
+      <div class="footer-links">
+        <a href="/pages/terms-and-condition" class="footer-link">Terms</a>
+        <a href="/pages/privacy-policy" class="footer-link">Privacy</a>
+        <a href="/pages/cookies-policy" class="footer-link">Cookies</a>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+<footer class="footer-mobile">
+  <div class="footer-inner-mobile">
+    <div class="footer-wrap-mobile">
+       <p>GET THE LATEST</p>
+      <form class="footer-email-mobile">
+      	<input placeholder="Email address"/>
+        <button type="submit"><i class="fas fa-arrow-right footer-email-icon-mobile"></i></button>
+      </form>
+       <ul class="footer-ul-mobile">
+        <li class="footer-li-mobile"><a href="/pages/the-lab" class="footer-a-mobile">The Labs</a></li>
+        <li class="footer-li-mobile"><a href="/pages/faq" class="footer-a-mobile">FAQ</a></li>
+      </ul>
+      <div class="footer-icons-mobile">
+        <a href="" class="text-white"><i class="fab fa-instagram footer-icon-mobile"></i></a>
+       <a href="" class="text-white"><i class="fab fa-facebook-f footer-icon-mobile"></i></a>
+      </div>
+       <div class="footer-links-mobile">
+        <a href="/pages/terms-and-condition" class="footer-link-mobile">Terms</a>
+        <a href="/pages/privacy-policy" class="footer-link-mobile">Privacy</a>
+        <a href="/pages/cookies-policy" class="footer-link-mobile">Cookies</a>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+{% schema %}
+{
+  "name": "Footer",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "visible",
+      "label": "Show section",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "ptop",
+      "label": "Top spacing desktop",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "pbottom",
+      "label": "Bottom spacing desktop",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "ptop_mob",
+      "label": "Top spacing mobile",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "pbottom_mob",
+      "label": "Bottom spacing mobile",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+
+    {
+      "type": "header",
+      "content": "Background"
+    },
+    {
+      "type": "color",
+      "id": "sectionbg",
+      "label": "Section background color",
+      "default": "#ffffff"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings":[
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
