@@ -1,41 +1,92 @@
-{% comment %} ATTENTION!!! This is compiled version of ik-nature.liquid and it is overriding automatically. You should use theme development tool and sources\sections\ik-nature.liquid file to code and save your changes. {% endcomment %}<div class="nature-wrapper">
-  <div class="nature-inner-wrapper">
+{% comment %} ATTENTION!!! This is compiled version of ik-nature.liquid and it is overriding automatically. You should use theme development tool and sources\sections\ik-nature.liquid file to code and save your changes. {% endcomment %}{% assign set = section.settings %}
+{% render 'ea-section-styles', section: section %}
+
+<div class="nature-wrapper">
+  <div class="nature-inner-wrapper {% if set.image_pos == 'left' %}is-left {% else %}is-right{% endif %}">
       <div class="left-pane">
         <img class="nature-img" src="{{ section.settings.product_image | img_url : 'master' }}" />
       </div>
       <div class="right-pane">
         <div class="right-pane-wrapper">
           <h1 class="nature-title">{{section.settings.prod_title}}</h1>
-          <p class="nature-text">We have combined science with nature, and meticulously developed a formulation consisting of 20 clinically-tested ingredients. The Supplement is filled only with what your body needs, no fillers and responsibly sourced non-GMO ingredients.</p>
-         <button class="hero-button">subscribe FOR £25.99 <svg class="button-arrow" width="27" height="18" viewBox="0 0 27 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0.9 9.38995L0.9 9.48995L1 9.48995L24.105 9.48995L16.2876 16.3394L16.2121 16.4055L16.2784 16.4807L16.7943 17.0661L16.8602 17.1409L16.9352 17.0752L26.0659 9.07542L26.1517 9.0002L26.0659 8.92499L16.9352 0.924787L16.8601 0.859027L16.7942 0.933938L16.2784 1.52011L16.2122 1.59535L16.2876 1.66139L24.105 8.5104L1 8.5104L0.9 8.5104L0.9 8.6104L0.9 9.38995Z" fill="white" stroke="white" stroke-width="0.2"/>
-</svg>
-</button>
+          <span class="nature-text">{{ section.settings.text }}</span>
+          <div class="animated-bottom animated-delay-1">
+            {% render 'button', {
+              top: set.btntop,
+              id: section.id,
+              text: set.btn,
+              url: set.btnu,
+              class: 'add-to-cart m-long animated-bottom animated-delay-1 hero-button'
+            } %}
+          </div>
         </div>
       </div>
   </div>
 </div>
 
-<script>
-console.log({{section.settings.product.featured_image}})
-</script>
-
 {% schema %}
 {
   "name": "Nature Subscription",
-  "settings": [{
-  "type": "image_picker",
-    "id": "product_image",
-    "label": "Product  Image"
-
-            }, {
-       "type": "text",
-    "id": "prod_title",
-    "label": "Product  title"
-
-}          
-   ],
-"presets": [
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "product_image",
+      "label": "Product  Image"
+    }, 
+    {
+      "type": "select",
+      "id": "image_pos",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left",
+      "label": "Main image position"
+    },
+    {
+      "type": "text",
+      "id": "prod_title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "header",
+      "content": "button"
+    },
+    {
+      "type": "range",
+      "id": "btntop",
+      "label": "Top spacing",
+      "min": -200,
+      "max": 200,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "id": "btnu",
+      "type": "url",
+      "label": "Button link"
+    },
+    {
+      "id": "btn",
+      "type": "text",
+      "label": "Button text",
+      "default": "SUBSCRIBE FOR £25.99"
+    }
+  ],
+  "presets": [
   {
     "category": "ik-section",
     "name": "Nature"

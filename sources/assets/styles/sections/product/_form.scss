@@ -110,6 +110,11 @@
     margin-left: 15px;
     width: 25px;
     height: 16px;
+    path {
+      fill: #fff;
+      stroke: #FFF;
+      stroke-width: 1px;
+    }
   }
   &:hover {
     transition: .2s all;
