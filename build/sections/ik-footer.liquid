@@ -22,10 +22,37 @@
     </div>
     <div class="footer-right">
       <p>{{ set.title }}</p>
-      <form class="footer-email">
-      	<input placeholder="Email address"/>
+      {% form 'customer', class: 'footer-email', id: 'newsletter_form' %}
+        {% if form.errors %}              
+          <script>
+            {% for field in form.errors %}
+                Swal.fire({
+                title: 'Error',
+                text: '{{ field | capitalize }} - {{ form.errors.messages[field] }}',
+                icon: 'error',
+                confirmButtonText: 'Cool' 
+                })
+            {% endfor %}
+          </script>
+        {% endif %}
+
+        {%- if form.posted_successfully? -%}
+          <script>
+            Swal.fire({
+              title: 'Success!',
+              text: 'Thank you! Please check your email to confirm your subscription.',
+              icon: 'success',
+              confirmButtonText: 'Cool' 
+            })
+          </script>
+        {%- endif -%}
+        <input type="hidden" name="contact[tags]" value="prospect,newsletter"/>
+        <input type="hidden" name="challenge" value="false" />
+        <input type="text" class="" name="contact[email]" placeholder="{{ set.placeholder }}">
         <button type="submit">{% render 'arrow-icon' %}</button>
-      </form>
+      {% endform %}
+
+
       <div class="footer-links">
         {% assign footer_bottom_menu = linklists[set.footer_bottom_menu] %}
         {% for link in footer_bottom_menu.links %}
