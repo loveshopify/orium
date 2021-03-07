@@ -1,9 +1,17 @@
 .home-slider-wrapper {
+  @include mobile {
+    padding: 0 15px;
+  }
   .title-wrapper {
     .section-title {
       font-size: 24px;
       line-height: 29px;
       margin-bottom: 40px;
+      @include mobile {
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 20px;
+      }
     }
   }
   .main-pane {
@@ -12,30 +20,45 @@
     }
     .slick-slide {
       margin-right: 30px;
+      @include mobile {
+        margin-right: 10px;
+      }
       & > div:not(:last-child) {
         margin-bottom: 30px;
       }
     }
     .panel-horizontal {
       padding: 40px;
-      max-width: 444px!important;
+      max-width: 444px !important;
       background: #fff;
       padding: 40px;
       .item-title {
         font-size: 24px;
         line-height: 29px;
         margin-bottom: 20px;
+        @include mobile {
+          font-size: 18px;
+          line-height: 22px;
+        }
       }
       .item-image {
         border-radius: 50%;
         max-width: 190px;
         max-height: 190px;
+        @include mobile {
+          max-width: 129px;
+          max-height: 129px;
+        }
       }
       .item-text {
         font-size: 15px;
         line-height: 150%;
         p {
           margin-top: 20px;
+          @include mobile {
+            font-size: 14px;
+            line-height: 150%;
+          }
         }
       }
     }

@@ -6,13 +6,12 @@
   position: relative;
   border-radius: 5px;
   @include desktop {
-    padding: 75px $gutter*2 0;
+    padding: 75px $gutter * 2 0;
   }
   &.m-recharge {
     padding-bottom: 15px;
   }
 }
-
 
 .product-options {
   margin-top: $gutter;
@@ -36,21 +35,21 @@
   &:hover {
     text-decoration: none;
   }
-  &:nth-child(n+4) {
+  &:nth-child(n + 4) {
     margin-top: 10px;
   }
   input {
     display: none;
   }
-  input:checked+.product-option__label,
+  input:checked + .product-option__label,
   &.is-checked .product-option__label {
     background: $color-white;
     border-color: currentColor;
     color: $color-blue;
     font-weight: 600;
   }
-  input:disabled+.product-option__label,
-  input.is-disabled+.product-option__label {
+  input:disabled + .product-option__label,
+  input.is-disabled + .product-option__label {
     background: #e5e2e5;
     text-decoration: line-through;
     color: $color-light-grey;
@@ -106,24 +105,28 @@
   padding: 0 20px;
   height: 55px;
   font-size: $fz-4;
-  svg{
+  @include mobile {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  svg {
     margin-left: 15px;
     width: 25px;
     height: 16px;
     path {
       fill: #fff;
-      stroke: #FFF;
+      stroke: #fff;
       stroke-width: 1px;
     }
   }
   &:hover {
-    transition: .2s all;
+    transition: 0.2s all;
   }
   @include desktop {
     font-size: 16px;
     height: 60px;
   }
-  
+
   &.m-recharge {
     height: 45px;
     font-weight: 600;

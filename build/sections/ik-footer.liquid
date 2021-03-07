@@ -4,59 +4,59 @@
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-left">
-      
+
       {% assign footer_menu = linklists[set.footer_menu] %}
       <ul class="footer-ul">
         {% for link in footer_menu.links %}
-          <li class="footer-li"><a href="{{ link.url }}" class="footer-a">{{ link.title }}</a></li>
+        <li class="footer-li"><a href="{{ link.url }}" class="footer-a">{{ link.title }}</a></li>
         {% endfor %}
       </ul>
       <div class="footer-icons">
         {% if settings.social_instagram_link %}
-          <a href="{{ settings.social_instagram_link }}" class="text-white">{% render 'insta-icon' %}</a>
+        <a href="{{ settings.social_instagram_link }}" class="text-white">{% render 'insta-icon' %}</a>
         {% endif %}
         {% if settings.social_facebook_link %}
-          <a href="{{ settings.social_facebook_link }}" class="text-white">{% render 'facebook-icon' %}</a>
+        <a href="{{ settings.social_facebook_link }}" class="text-white">{% render 'facebook-icon' %}</a>
         {% endif %}
       </div>
     </div>
     <div class="footer-right">
       <p>{{ set.title }}</p>
       {% form 'customer', class: 'footer-email', id: 'newsletter_form' %}
-        {% if form.errors %}              
-          <script>
-            {% for field in form.errors %}
-                Swal.fire({
-                title: 'Error',
-                text: '{{ field | capitalize }} - {{ form.errors.messages[field] }}',
-                icon: 'error',
-                confirmButtonText: 'Cool' 
-                })
-            {% endfor %}
-          </script>
-        {% endif %}
+      {% if form.errors %}
+      <script>
+        {% for field in form.errors %}
+        Swal.fire({
+          title: 'Error',
+          text: '{{ field | capitalize }} - {{ form.errors.messages[field] }}',
+          icon: 'error',
+          confirmButtonText: 'Cool'
+        })
+        {% endfor %}
+      </script>
+      {% endif %}
 
-        {%- if form.posted_successfully? -%}
-          <script>
-            Swal.fire({
-              title: 'Success!',
-              text: 'Thank you! Please check your email to confirm your subscription.',
-              icon: 'success',
-              confirmButtonText: 'Cool' 
-            })
-          </script>
-        {%- endif -%}
-        <input type="hidden" name="contact[tags]" value="prospect,newsletter"/>
-        <input type="hidden" name="challenge" value="false" />
-        <input type="text" class="" name="contact[email]" placeholder="{{ set.placeholder }}">
-        <button type="submit">{% render 'arrow-icon' %}</button>
+      {%- if form.posted_successfully? -%}
+      <script>
+        Swal.fire({
+          title: 'Success!',
+          text: 'Thank you! Please check your email to confirm your subscription.',
+          icon: 'success',
+          confirmButtonText: 'Cool'
+        })
+      </script>
+      {%- endif -%}
+      <input type="hidden" name="contact[tags]" value="prospect,newsletter" />
+      <input type="hidden" name="challenge" value="false" />
+      <input type="text" class="" name="contact[email]" placeholder="Email address">
+      <button type="submit">{% render 'arrow-icon' %}</button>
       {% endform %}
 
 
       <div class="footer-links">
         {% assign footer_bottom_menu = linklists[set.footer_bottom_menu] %}
         {% for link in footer_bottom_menu.links %}
-          <a href="{{ link.url }}" class="footer-link">{{ link.title }}</a>
+        <a href="{{ link.url }}" class="footer-link">{{ link.title }}</a>
         {% endfor %}
       </div>
     </div>
@@ -67,31 +67,58 @@
 <footer class="footer-mobile">
   <div class="footer-inner-mobile">
     <div class="footer-wrap-mobile">
-       <p>{{ set.title }}</p>
-      <form class="footer-email-mobile">
-      	<input placeholder="Email address"/>
-        <button type="submit"><i class="fas fa-arrow-right footer-email-icon-mobile"></i></button>
-      </form>
-      {% assign menu = linklists[block.settings.footer_menu] %}
+      <p>{{ set.title }}</p>
+      {% form 'customer', class: 'footer-email', id: 'newsletter_form' %}
+      {% if form.errors %}
+      <script>
+        {% for field in form.errors %}
+        Swal.fire({
+          title: 'Error',
+          text: '{{ field | capitalize }} - {{ form.errors.messages[field] }}',
+          icon: 'error',
+          confirmButtonText: 'Cool'
+        })
+        {% endfor %}
+      </script>
+      {% endif %}
+
+      {%- if form.posted_successfully? -%}
+      <script>
+        Swal.fire({
+          title: 'Success!',
+          text: 'Thank you! Please check your email to confirm your subscription.',
+          icon: 'success',
+          confirmButtonText: 'Cool'
+        })
+      </script>
+      {%- endif -%}
+      <input type="hidden" name="contact[tags]" value="prospect,newsletter" />
+      <input type="hidden" name="challenge" value="false" />
+      <input type="text" class="" name="contact[email]" placeholder="Email address">
+      <button type="submit">{% render 'arrow-icon' %}</button>
+      {% endform %}
+      {% assign footer_menu = linklists[set.footer_menu] %}
       <ul class="footer-ul">
-        {% for link in menu.links %}
-          <li class="footer-li"><a href="{{ link.url }}" class="footer-a">{{ link.title }}</a></li>
+        {% for link in footer_menu.links %}
+        <li class="footer-li"><a href="{{ link.url }}" class="footer-a">{{ link.title }}</a></li>
         {% endfor %}
       </ul>
       <div class="footer-icons-mobile">
         {% if settings.social_instagram_link %}
-          <a href="{{ settings.social_instagram_link }}" class="text-white">{% render 'insta-icon' %}</a>
+        <a href="{{ settings.social_instagram_link }}" class="text-white">{% render 'insta-icon' %}</a>
         {% endif %}
         {% if settings.social_facebook_link %}
-          <a href="{{ settings.social_facebook_link }}" class="text-white">{% render 'facebook-icon' %}</a>
+        <a href="{{ settings.social_facebook_link }}" class="text-white">{% render 'facebook-icon' %}</a>
         {% endif %}
       </div>
-       <div class="footer-links-mobile">
-        {% assign footer_bottom_menu = linklists[block.settings.footer_bottom_menu] %}
+
+      <div class="footer-links-mobile">
+        {% assign footer_bottom_menu = linklists[set.footer_bottom_menu] %}
         {% for link in footer_bottom_menu.links %}
-          <a href="{{ link.url }}" class="footer-link">{{ link.title }}</a>
+        <a href="{{ link.url }}" class="footer-link">{{ link.title }}</a>
         {% endfor %}
       </div>
+
     </div>
   </div>
 
@@ -100,107 +127,107 @@
 
 {% schema %}
 {
-  "name": "Footer",
-  "tag": "section",
-  "settings": [
-    {
-      "type": "checkbox",
-      "id": "visible",
-      "label": "Show section",
-      "default": true
-    },
-    {
-      "type": "header",
-      "content": "Spacing"
-    },
-    {
-      "type": "range",
-      "id": "ptop",
-      "label": "Top spacing desktop",
-      "min": 0,
-      "unit": "px",
-      "max": 500,
-      "step": 5,
-      "default": 45
-    },
-    {
-      "type": "range",
-      "id": "pbottom",
-      "label": "Bottom spacing desktop",
-      "min": 0,
-      "unit": "px",
-      "max": 500,
-      "step": 5,
-      "default": 45
-    },
-    {
-      "type": "range",
-      "id": "ptop_mob",
-      "label": "Top spacing mobile",
-      "min": 0,
-      "unit": "px",
-      "max": 500,
-      "step": 5,
-      "default": 45
-    },
-    {
-      "type": "range",
-      "id": "pbottom_mob",
-      "label": "Bottom spacing mobile",
-      "min": 0,
-      "unit": "px",
-      "max": 500,
-      "step": 5,
-      "default": 45
-    },
+"name": "Footer",
+"tag": "section",
+"settings": [
+{
+"type": "checkbox",
+"id": "visible",
+"label": "Show section",
+"default": true
+},
+{
+"type": "header",
+"content": "Spacing"
+},
+{
+"type": "range",
+"id": "ptop",
+"label": "Top spacing desktop",
+"min": 0,
+"unit": "px",
+"max": 500,
+"step": 5,
+"default": 45
+},
+{
+"type": "range",
+"id": "pbottom",
+"label": "Bottom spacing desktop",
+"min": 0,
+"unit": "px",
+"max": 500,
+"step": 5,
+"default": 45
+},
+{
+"type": "range",
+"id": "ptop_mob",
+"label": "Top spacing mobile",
+"min": 0,
+"unit": "px",
+"max": 500,
+"step": 5,
+"default": 45
+},
+{
+"type": "range",
+"id": "pbottom_mob",
+"label": "Bottom spacing mobile",
+"min": 0,
+"unit": "px",
+"max": 500,
+"step": 5,
+"default": 45
+},
 
-    {
-      "type": "header",
-      "content": "Background"
-    },
-    {
-      "type": "color",
-      "id": "sectionbg",
-      "label": "Section background color",
-      "default": "#ffffff"
-    },
-    {
-      "type": "text",
-      "id": "title",
-      "label": "Title"
-    },
-    {
-      "type": "header",
-      "content": "Menus"
-    },
-    {
-      "type": "link_list",
-      "id": "footer_menu",
-      "label": "Footer Menu"
-    },
-    {
-      "type": "link_list",
-      "id": "footer_bottom_menu",
-      "label": "Footer bottom Menu"
-    } 
-  ],
-  "blocks": [
-    {
-      "type": "item",
-      "name": "item",
-      "settings":[
-        {
-          "type": "text",
-          "id": "title",
-          "label": "Title"
-        },
-        {
-          "type": "richtext",
-          "id": "text",
-          "label": "Text"
-        }
-      ]
-    }
-  ]
+{
+"type": "header",
+"content": "Background"
+},
+{
+"type": "color",
+"id": "sectionbg",
+"label": "Section background color",
+"default": "#ffffff"
+},
+{
+"type": "text",
+"id": "title",
+"label": "Title"
+},
+{
+"type": "header",
+"content": "Menus"
+},
+{
+"type": "link_list",
+"id": "footer_menu",
+"label": "Footer Menu"
+},
+{
+"type": "link_list",
+"id": "footer_bottom_menu",
+"label": "Footer bottom Menu"
+}
+],
+"blocks": [
+{
+"type": "item",
+"name": "item",
+"settings":[
+{
+"type": "text",
+"id": "title",
+"label": "Title"
+},
+{
+"type": "richtext",
+"id": "text",
+"label": "Text"
+}
+]
+}
+]
 }
 {% endschema %}

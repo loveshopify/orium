@@ -243,17 +243,18 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 300px;
   }
 
   .footer-ul {
-    font-size: 2.6rem;
     padding-left: 0;
   }
 
   .footer-li {
     list-style: none;
     margin-bottom: 5px;
+    @include mobile {
+      margin-top: 20px;
+    }
   }
   .footer a {
     text-decoration: none;
@@ -267,12 +268,16 @@
     font-size: 42px;
     line-height: 51px;
     text-transform: uppercase;
+    @include mobile {
+      font-size: 18px;
+      line-height: 22px;
+      text-decoration: none;
+    }
   }
 
   .footer-right {
     display: flex;
     flex-direction: column;
-    height: 300px;
     max-width: 350px;
     justify-content: space-between;
   }
@@ -342,6 +347,13 @@
     color: #fff;
     font-size: 16px;
     margin: 8px;
+    @include mobile {
+      margin-left: 0;
+      margin-right: 20px;
+      font-size: 14px;
+      line-height: 150%;
+      text-decoration: none;
+    }
   }
 
   .footer-mobile {
@@ -349,11 +361,13 @@
   }
   .footer-inner-mobile {
     margin: 0 auto;
-    max-width: 90%;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: start;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .footer-ul-mobile {
@@ -371,15 +385,20 @@
   }
 
   .footer-wrap-mobile {
-    margin: 2rem 0;
     display: flex;
     flex-direction: column;
-    height: 300px;
     justify-content: start;
+    @include mobile {
+      width: 100%;
+    }
   }
   .footer-wrap-mobile p {
     color: #fff;
     font-size: 32px;
+    @include mobile {
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
 
   .footer-wrap-mobile form input {
@@ -392,18 +411,31 @@
     font-size: 1.2rem;
     flex-basis: 90%;
     width: 100%;
+    @include mobile {
+      font-size: 14px;
+      line-height: 150%;
+      padding-left: 0;
+    }
   }
 
   .footer-wrap-mobile form {
     margin-top: 20px;
     display: flex;
+    @include mobile {
+      margin-bottom: 20px;
+    }
   }
 
   .footer-wrap-mobile button {
-    padding: 1rem;
+    padding: 0;
     background-color: #fff;
     outline: none;
     border: none;
+    width: 45px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .footer-email-icon-mobile {

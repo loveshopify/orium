@@ -2,18 +2,37 @@
   .inner-effect-wrapper {
     display: flex;
     justify-content: space-between;
+    @include mobile {
+      flex-direction: column;
+      padding: 0 25px;
+    }
     .effect-panel {
       max-width: calc(33.3333% - 40px);
+      @include mobile {
+        max-width: 100%;
+        &:last-child .panel-text p {
+          margin-bottom: 0 !important;
+        }
+      }
     }
     .panel-title {
       font-size: 24px;
       line-height: 29px;
       margin-bottom: 20px;
+      @include mobile {
+        font-size: 18px;
+        line-height: 22px;
+      }
     }
     .panel-text {
       p {
         font-size: 16px;
         line-height: 19px;
+        margin-bottom: 40px;
+        @include mobile {
+          font-size: 14px;
+          line-height: 150%;
+        }
       }
     }
   }

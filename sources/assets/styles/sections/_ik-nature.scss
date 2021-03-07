@@ -22,6 +22,10 @@
     text-transform: uppercase;
     margin-bottom: 1rem;
     max-width: 430px;
+    @include mobile {
+      font-size: 50px;
+      line-height: 60px;
+    }
   }
 
   .nature-text {
@@ -32,6 +36,10 @@
     height: 186px;
     margin-bottom: 1rem;
     padding: 30px 0;
+    @include mobile {
+      font-size: 14px;
+      line-height: 150%;
+    }
   }
 
   .nature-wrapper {
@@ -43,20 +51,30 @@
     width: 50%;
     img {
       width: 100%;
+      object-fit: cover;
     }
   }
 
   .nature-inner-wrapper {
     display: flex;
     min-height: 672px;
+    @include mobile {
+      flex-direction: column !important;
+      & > div {
+        width: 100% !important;
+        flex: 100% !important;
+      }
+    }
   }
 
   .right-pane {
     flex: 50%;
     width: 50%;
     padding: 13vh 5vw;
+    @include mobile {
+      padding: 50px 12.5px;
+    }
     .right-pane-wrapper {
-      max-width: 450px;
       margin: 0 auto;
     }
 
@@ -66,18 +84,22 @@
       align-items: flex-start;
       padding: 20px;
       background: #1d1d1d;
-      max-width: 330px;
+      display: inline-flex;
       color: #ffffff;
       font-size: 15px;
       margin-top: 20px;
       border: none;
       font-weight: normal;
       cursor: pointer;
+      @include mobile {
+        font-size: 14px;
+        line-height: 17px;
+      }
       svg path {
-        fill: #FFF;
+        fill: #fff;
       }
       &:hover {
-        opacity: .8;
+        opacity: 0.8;
       }
     }
   }

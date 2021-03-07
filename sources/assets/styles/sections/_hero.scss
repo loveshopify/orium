@@ -292,15 +292,31 @@
         flex-direction: column;
         padding: 13vh 10vw;
         flex-grow: 1;
+        @include mobile {
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
         .title,
         .subtitle {
           color: #fff;
+          @include mobile {
+            max-width: 355px;
+            margin: 0 auto;
+          }
           &.title > p {
             font-style: normal;
             font-weight: normal;
             font-size: 64px;
             line-height: 95%;
             text-transform: uppercase;
+            @include mobile {
+              font-size: 50px;
+              line-height: 60px;
+              text-align: center;
+            }
           }
           &.subtitle > p {
             font-size: 15px;
@@ -308,16 +324,16 @@
           }
         }
         .add-to-cart {
-          background-color: #FFF;
+          background-color: #fff;
           font-size: 15px;
           line-height: 18px;
           &:hover {
-            color: #1D1D1D;
-            opacity: .8;
+            color: #1d1d1d;
+            opacity: 0.8;
           }
           svg path {
-            fill: #1D1D1D;
-            stroke: #1D1D1D;
+            fill: #1d1d1d;
+            stroke: #1d1d1d;
           }
         }
       }

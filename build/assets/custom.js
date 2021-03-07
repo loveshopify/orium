@@ -16,5 +16,15 @@ $('.home-slider-wrapper .main-pane').slick({
 	slidesToShow: 3,
 	slidesToScroll: 4,
 	centerMode: true,
-	centerPadding: '70px'
+	centerPadding: '70px',
+  responsive: [
+    {
+      breakpoint: 990,
+      settings: {
+        arrows: false,
+				centerPadding: '15px',
+        slidesToShow: 1
+      }
+    }
+  ]
 });
