@@ -21,5 +21,9 @@
     margin: 0;
     background-color: #dad4c6;
     overflow: hidden;
+    @include mobile {
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
 }
