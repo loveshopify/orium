@@ -261,6 +261,7 @@
 .incart_upsell {
   padding: 25px 30px;
   box-shadow: 0 -5px 5px -5px #333;
+  z-index: 1;
   & > span {
     display: block;
     margin-bottom: 15px;
@@ -292,6 +293,15 @@
       font-weight: normal !important;
       font-size: 15px !important;
       line-height: 18px;
+    }
+  }
+}
+.minicart {
+  .ps__rail-y {
+    @include mobile {
+      display: block;
+      opacity: 1 !important;
+      background: inherit !important;
     }
   }
 }
