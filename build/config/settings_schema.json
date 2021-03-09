@@ -513,7 +513,7 @@
     ]
   },
   {
-    "name": "Minicart Notification Bar",
+    "name": "Minicart Settings",
     "settings": [
       {
         "type": "checkbox",
@@ -526,6 +526,17 @@
         "id": "minicart_notification_text",
         "label": "Minicart Notification Text",
         "default": "Notification Text Here"
+      },
+      {
+        "type": "checkbox",
+        "id": "is_cart_upsell",
+        "label": "Enable cart upsell function",
+        "default": true
+      },
+      {
+        "type": "product",
+        "id": "upsell_product",
+        "label": "In-cart upsell product"
       }
     ]
   }

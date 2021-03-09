@@ -11,5 +11,23 @@ body {
 }
 
 .sidenav {
-  width: 80%;
+  // width: 80%;
+}
+
+body.no-scroll, .is-menu-open {
+  overflow: hidden;
+  position: fixed;
+  .container .row {
+    max-width: 100%;
+    width: 100vw;
+  }
+}
+
+.is-hidden {
+  display: none;
+}
+
+a:hover {
+  color: inherit i !important;
+  opacity: .8;
 }

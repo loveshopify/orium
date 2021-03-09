@@ -17,6 +17,7 @@ $('.home-slider-wrapper .main-pane').slick({
 	slidesToScroll: 4,
 	centerMode: true,
 	centerPadding: '70px',
+	adaptiveHeight: true,
   responsive: [
     {
       breakpoint: 990,

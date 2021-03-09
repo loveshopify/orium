@@ -23,8 +23,9 @@
     margin-bottom: 1rem;
     max-width: 430px;
     @include mobile {
-      font-size: 50px;
+      font-size: 47px;
       line-height: 60px;
+      margin-bottom: 20px;
     }
   }
 

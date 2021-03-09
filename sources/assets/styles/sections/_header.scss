@@ -151,11 +151,12 @@
       }
       .cart-count {
         font-size: 8px;
-        min-width: 12px;
-        height: 12px;
+        min-width: 14px;
+        height: 14px;
         position: absolute;
         top: 0;
         right: -3px;
+        line-height: 0;
         @include desktop {
           font-size: 10px;
           height: 15px;

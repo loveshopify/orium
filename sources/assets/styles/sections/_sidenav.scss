@@ -6,7 +6,7 @@
   top: 0;
   left: 0;
   bottom: 0;
-  background: #FDF8F5;
+  background: #1D1D1D;
   z-index: 998;
   opacity: 0;
   overflow: auto;
@@ -86,7 +86,7 @@
   color: $color-white;
   position: absolute;
   top: 15px;
-  right: 20px;
+  left: 20px;
 }
 .sidenav-bg {
   z-index: -1;

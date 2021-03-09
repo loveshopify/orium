@@ -280,9 +280,13 @@
 }
 
 .image-and-text-section {
+  padding: 0;
   & > .container {
     max-width: unset !important;
+    padding: 0;
+    width: 100%;
     .row {
+      margin: 0;
       @include mobile {
         .col-md-6 {
           max-width: 100%;
@@ -340,10 +344,8 @@
         }
         .add-to-cart {
           background-color: #fff;
-          font-size: 15px;
-          line-height: 18px;
+          color: #1d1d1d;
           &:hover {
-            color: #1d1d1d;
             opacity: 0.8;
           }
           svg path {

@@ -98,6 +98,44 @@ const removeFromCart = function () {
   }
 }
 
+$(document).on('click', '[data-upsell-add]', function(e){
+  e.preventDefault();
+  var variantId = $(this).attr('data-upsell-id');
+  addToCart(variantId, 1, '');
+})
+
+$(document).on('click', '[data-qty-plus]', function(){
+  updateCartItem('inc', $(this));
+})
+
+$(document).on('click', '[data-qty-minus]', function(){
+  updateCartItem('dec', $(this));
+})
+
+const updateCartItem = function(param, handle){
+  var id = handle.closest('.minicart__item').attr('data-id');
+  var qty = parseInt(handle.parent('.item__qty').find('[data-qty]').text());
+  if(param == 'inc') {
+    qty += 1;
+    updateQty(id, qty);
+  }
+  else {
+    if(qty != 1) {
+      qty -= 1;
+      updateQty(id, qty);
+    }
+  }
+}
+
+const updateQty = function(id, qty) {
+  jQuery.post('/cart/update.js', 
+    "updates["+id+"]="+qty,
+    function(){
+      updateMinicart();
+    }
+  );
+}
+
 function reChargeProcessCart() {
   let token = '';
 	function get_cookie(name){ return( document.cookie.match('(^|; )'+name+'=([^;]*)')||0 )[2] }
@@ -142,6 +180,7 @@ const updateMinicart = function() {
       data.update(newCart);    
       updateCartCount();
       if (open) {
+        console.log("Update cart");
         $minicart.addClass('is-open');
         $("body").addClass('no-scroll');
         open = false;
@@ -185,10 +224,10 @@ const eventHandlers = function() {
   $('[data-minicart-toggle]').on('click', function(e) {
     e.preventDefault();
     $minicart.toggleClass('is-open');
+    $("body").toggleClass('no-scroll');
+    console.log("remove class");
   });
-
-
-
+  
   $(document).on('cart.requestComplete', function (event, cart) {
     updateMinicart();
 
@@ -224,6 +263,7 @@ const init = function() {
     console.log('here2');
     $('[data-minicart]').addClass('is-open');
     localStorage.setItem('opened_side_cart', false);
+    console.log("add class");
   }
   
 }
