@@ -260,7 +260,7 @@
     text-decoration: none;
     &:hover {
       text-decoration: none;
-      color: #fff;
+      color: #fff !important;
     }
   }
   .footer-a {
@@ -312,6 +312,9 @@
     border: none;
     width: 45px;
     height: 56px;
+    &:hover {
+      opacity: .8;
+    }
   }
 
   .footer-email-icon {
@@ -326,7 +329,7 @@
     }
   }
   .footer-icon {
-    color: #fff;
+    color: #fff !important;
     font-size: 16px;
   }
 
@@ -344,7 +347,7 @@
     }
   }
   .footer-link {
-    color: #fff;
+    color: #fff !important;
     font-size: 16px;
     margin: 8px;
     @include mobile {
@@ -381,8 +384,8 @@
   }
 
   .footer-a-mobile {
-    color: #fff;
-  }
+    color: #fff !important;
+  } 
 
   .footer-wrap-mobile {
     display: flex;

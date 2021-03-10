@@ -4,7 +4,7 @@ $('.ik-marquee h2').marquee({
 	delayBeforeStart: 0,
 	direction: 'left',
 	duplicated: true,
-	pauseOnHover: true
+	pauseOnHover: false
 });
 
 $('.home-slider-wrapper .main-pane').slick({
