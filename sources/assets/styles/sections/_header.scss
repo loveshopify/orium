@@ -434,6 +434,21 @@
       line-height: 150%;
       padding-left: 0;
       padding-right: 40px;
+      @include desktop {
+        font-weight: bold !important;
+      }
+    }
+  }
+}
+.site-header-container {
+  #site-header > .container {
+    @include mobile {
+      .site-header__logo {
+        flex: unset;
+        a {
+          display: block;
+        }
+      }
     }
   }
 }

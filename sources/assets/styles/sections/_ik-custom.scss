@@ -28,7 +28,7 @@ body.no-scroll, .is-menu-open {
   display: none;
 }
 
-a:hover {
+a:hover:not(.btn) {
   color: inherit !important;
   opacity: .8;
 }

@@ -3,11 +3,14 @@
     display: block;
     margin-bottom: 65px;
     @include mobile {
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
   }
   .title-wrapper {
     margin-bottom: 90px;
+    @include mobile {
+      margin-bottom: 50px;
+    }
     .section-title {
       font-weight: normal;
       font-size: 82px;
