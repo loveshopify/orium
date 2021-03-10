@@ -17,6 +17,7 @@ body {
 body.no-scroll, .is-menu-open {
   overflow: hidden;
   position: fixed;
+  width: 100%;
   .container .row {
     max-width: 100%;
     width: 100vw;

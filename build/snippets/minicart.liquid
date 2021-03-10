@@ -69,11 +69,7 @@
           <img class="lazy" src="{{ upsell_item.featured_image | img_url: '320x' }}" alt="{{ upsell_item.variant_title }}" />
         </a>
         <div class="minicart__item-info">
-          <h5 class="minicart__item-title"><a href="{{ upsell_item.url }}">{{ upsell_item.title }}</a>
-            <button class="">
-              {% render 'icon' with 'delete' %}
-            </button>
-          </h5>
+          <h5 class="minicart__item-title"><a href="{{ upsell_item.url }}">{{ upsell_item.title }}</a></h5>
           <div class="minicart__item-price">
             <div><span>{{ upsell_item.price | money }}</span></div>
           </div>

@@ -1,0 +1,133 @@
+{% comment %} ATTENTION!!! This is compiled version of ik-ingredient.liquid and it is overriding automatically. You should use theme development tool and sources\sections\ik-ingredient.liquid file to code and save your changes. {% endcomment %}{% assign set = section.settings %}
+{% render 'ea-section-styles', section: section %}
+
+<div class="ingredient-wrapper">
+  <div class="container">
+    <a class="ingredient-back" href="#">
+      <svg width="49" height="31" viewBox="0 0 49 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M47.975 14.5813L47.975 14.4813L47.875 14.4813L4.32719 14.4813L19.1519 1.91136L19.2309 1.84437L19.1612 1.76777L18.194 0.705535L18.129 0.634158L18.0554 0.696586L0.935335 15.2123L0.845376 15.2885L0.935331 15.3648L18.0554 29.8812L18.1291 29.9437L18.1941 29.8722L19.1612 28.8086L19.2309 28.732L19.1519 28.665L4.3272 16.0958L47.875 16.0958L47.975 16.0958L47.975 15.9958L47.975 14.5813Z" fill="#1D1D1D" stroke="#1D1D1D" stroke-width="0.2"/>
+      </svg>
+    </a>
+  	 <div class="inner-wrapper">
+            <div class="title-wrapper">
+              <h1 class="section-title">{{ set.title }}</h1>
+              <div class="section-text">{{ set.text }}</div>
+            </div>
+        <div class="main-pane">
+          {% for block in section.blocks %}
+            {% assign bset = block.settings %}
+            <div class="panel-horizontal">
+              <h1 class="item-title">{{ bset.title }}</h1>
+              <div class="item-image"><img src="{{ bset.image | img_url: "190x190" }}" /></div>
+              <span class="item-text">
+                {{ bset.text }}
+              </span>
+            </div>
+          {% endfor %}
+        </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Homepage slider",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "visible",
+      "label": "Show section",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "ptop",
+      "label": "Top spacing desktop",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "pbottom",
+      "label": "Bottom spacing desktop",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "ptop_mob",
+      "label": "Top spacing mobile",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "pbottom_mob",
+      "label": "Bottom spacing mobile",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "header",
+      "content": "Background"
+    },
+    {
+      "type": "color",
+      "id": "sectionbg",
+      "label": "Section background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,58 @@
+#shopify-section-ik-ingredient {
+  a.ingredient-back {
+    display: block;
+    margin-bottom: 65px;
+    @include mobile {
+      margin-bottom: 30px;
+    }
+  }
+  .title-wrapper {
+    margin-bottom: 90px;
+    .section-title {
+      font-weight: normal;
+      font-size: 82px;
+      line-height: 95%;
+      max-width: 1100px;
+      @include mobile {
+        font-size: 34px;
+        line-height: 115%;
+      }
+    }
+    .section-text p {
+      max-width: 500px;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 150%;
+      @include mobile {
+        font-size: 14px;
+      }
+    }
+  }
+  .main-pane {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    @include mobile {
+      grid-template-columns: 1fr;
+      grid-row-gap: 20px;
+    }
+    .panel-horizontal {
+      padding: 40px;
+      background-color: #fff;
+      .item-title {
+        font-size: 24px;
+        line-height: 29px;
+        margin-bottom: 20px;
+      }
+      .item-image {
+        max-width: 105px;
+      }
+      .item-text p {
+        margin-top: 20px;
+        font-size: 15px;
+        line-height: 150%;
+      }
+    }
+  }
+}
