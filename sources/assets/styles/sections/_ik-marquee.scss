@@ -21,6 +21,32 @@
     margin: 0;
     background-color: #dad4c6;
     overflow: hidden;
+    span {
+      @include desktop {
+        margin-right: 300px;
+      }
+    }
+    @include mobile {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+}
+#product_marquee {
+  h2 {
+    font-size: 24px;
+    line-height: 29px;
+    padding: 40px 0;
+    margin: 0;
+    background-color: #FFF;
+    border-top: 1px solid #1D1D1D;
+    border-bottom: 1px solid #1D1D1D;
+    overflow: hidden;
+    span {
+      @include desktop {
+        margin-right: 300px;
+      }
+    }
     @include mobile {
       font-size: 18px;
       line-height: 22px;

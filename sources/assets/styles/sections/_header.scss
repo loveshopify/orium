@@ -441,6 +441,7 @@
   }
 }
 .site-header-container {
+  border-bottom: 1px solid #1D1D1D;
   #site-header > .container {
     @include mobile {
       .site-header__logo {

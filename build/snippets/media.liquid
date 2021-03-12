@@ -1,0 +1,20 @@
+{% comment %} ATTENTION!!! This is compiled version of media.liquid and it is overriding automatically. You should use theme development tool and sources\snippets\media.liquid file to code and save your changes. {% endcomment %}{% case media.media_type %}
+{% when 'image' %}
+asdfasdf
+{% when 'external_video' %}
+  <div class="product-single__media" style="padding-top: {{ 1 | divided_by: media.aspect_ratio | times: 100}}%;" data-media-id="{{ media.id }}">
+    {{ media | external_video_tag }}
+  </div>
+{% when 'video' %}
+  <div class="product-single__media" data-media-id="{{ media.id }}">
+    {{ media | video_tag: controls: true }}
+  </div>
+{% when 'model' %}
+  <div class="product-single__media" style="padding-top: 100%" data-media-id="{{ media.id }}">
+    {{ media | model_viewer_tag }}
+  </div>
+{% else %}
+  <div class="product-single__media" style="padding-top: 100%;" data-media-id="{{ media.id }}">
+    {{ media | media_tag }}
+  </div>
+{% endcase %}

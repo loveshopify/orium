@@ -1,0 +1,98 @@
+{% comment %} ATTENTION!!! This is compiled version of ik-landing.liquid and it is overriding automatically. You should use theme development tool and sources\sections\ik-landing.liquid file to code and save your changes. {% endcomment %}{% assign set = section.settings %}
+{% render 'ea-section-styles', section: section %}
+
+<div class="landing-wrapper container">
+  <div class="landing-container">
+    <h1 class="landing-title">{{ set.title }}</h1>
+    <span class="landing-text">{{ set.text }}</span>
+  </div>
+  <img class="landing-img" src="{{ set.image | img_url : '2000x' }}" />
+</div>
+
+
+{% schema %}
+{
+  "name": "Product landing",
+  "tag": "section",
+  "class": "ik-product-landing",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "visible",
+      "label": "Show section",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "ptop",
+      "label": "Top spacing desktop",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "pbottom",
+      "label": "Bottom spacing desktop",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "ptop_mob",
+      "label": "Top spacing mobile",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "pbottom_mob",
+      "label": "Bottom spacing mobile",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+
+
+    {
+      "type": "header",
+      "content": "Background"
+    },
+    {
+      "type": "color",
+      "id": "sectionbg",
+      "label": "Section background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ]
+}
+{% endschema %}
