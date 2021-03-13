@@ -7,39 +7,78 @@
     }
     .title-wrap {
       display: grid;
-      grid-template-columns: 50% 50%;
       margin: 60px 0;
+      @include desktop {
+        grid-template-columns: 50% 50%;
+      }
+      @include mobile {
+        margin: 40px 0;
+      }
       h2 {
         font-size: 42px;
         line-height: 51px;
         max-width: 482px;
+        @include mobile {
+          font-size: 50px;
+          line-height: 60px;
+        }
       }
       .text {
         p {
-          max-width: 415px;
           font-size: 15px;
           line-height: 150%;
-          margin: 0 auto;
+          max-width: 415px;
+          @include desktop {
+            margin: 0 auto;
+          }
+          @include mobile {
+            font-size: 14px;
+            line-height: 150%;
+          }
         }
       }
     }
     .section-wrap {
       .arrod-wrap {
         display: grid;
-        grid-template-columns: 50% 50%;
-        margin-left: -40px;
-        margin-right: -40px;
+        @include desktop {
+          grid-template-columns: 50% 50%;
+          margin-left: -40px;
+          margin-right: -40px;
+        }
         .panel-horizontal {
-          padding: 0 40px;
+          &:not(:last-child) {
+            @include mobile {
+              margin-bottom: 60px;
+            }
+          }
+          @include desktop {
+            padding: 0 40px;
+          }
+          img {
+            @include mobile {
+              width: 100%;
+            }
+          }
           .item-subtitle {
             font-size: 16px;
             line-height: 19px;
             margin-top: 30px;
+            @include mobile {
+              font-size: 18px;
+              line-height: 22px;
+              margin-top: 20px;
+            }
           }
           .item-title {
             font-size: 24px;
             line-height: 29px;
             margin-top: 10px;
+            @include mobile {
+              font-size: 50px;
+              line-height: 60px;
+              margin-top: 5px;
+            }
           }
           .item-text {
             margin-top: 20px;
@@ -47,6 +86,10 @@
               font-size: 15px;
               line-height: 150%;
               margin: 0;
+              @include mobile {
+                font-size: 14px;
+                line-height: 150%;
+              }
             }
           }
         }

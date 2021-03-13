@@ -10,6 +10,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include mobile {
+          font-size: 18px;
+          line-height: 22px;
+          padding: 20px 30px;
+        }
         cursor: pointer;
         &.is--active {
           svg path:last-child {
@@ -47,15 +52,25 @@
       line-height: 95%;
       max-width: 804px;
       margin-bottom: 65px;
+      @include mobile {
+        font-size: 50px;
+        line-height: 60px;
+        padding: 0 30px;
+      }
     }
   }
   .section-wrap {
     display: grid;
-    grid-template-columns: 60% 40%;
-    border: 1px solid #1D1D1D;
+    @include desktop {
+      border: 1px solid #1D1D1D;
+      grid-template-columns: 60% 40%;
+    }
     .arrod-wrap {
       padding: 70px 50px;
       padding-right: 80px;
+      @include mobile {
+        padding: 0;
+      }
     }
     .panel-horizontal {
       .item-title {
@@ -89,10 +104,24 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    @include mobile {
+      display: none;
+    }
     img {
       width: 100%;
       max-height: 380px;
       object-fit: cover;
+    }
+  }
+}
+
+.ik-product-accord.container {
+  @include mobile {
+    max-width: unset;
+    padding: 0;
+    .item-title {
+      padding-left: 30px !important;
+      padding-right: 30px !important;
     }
   }
 }

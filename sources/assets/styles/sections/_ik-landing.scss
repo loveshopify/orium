@@ -6,14 +6,26 @@
       font-size: 82px;
       line-height: 95%;
       text-align: center;
+      @include mobile {
+        font-size: 50px;
+        line-height: 60px;
+        text-align: left;
+        margin-bottom: 20px;
+      }
     }
     .landing-text {
       margin-top: 30px;
-      max-width: 515px;
-      float: right;
+      @include desktop {
+        max-width: 515px;
+        float: right;
+      }
       p {
         font-size: 15px;
         line-height: 150%;
+        @include mobile {
+          font-size: 14px;
+          line-height: 150%;
+        }
       }
     }
   }
