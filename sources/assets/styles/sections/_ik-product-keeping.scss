@@ -1,0 +1,36 @@
+.ik-product-keeping {
+  .ik-product-keeping {
+    .img-wrap {
+      .keeping-img {
+        width: 100%;
+      }
+    }
+    .title-wrap {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      margin: 60px 0;
+      h2 {
+        font-size: 42px;
+        line-height: 51px;
+        max-width: 482px;
+      }
+      .text {
+        p {
+          max-width: 415px;
+          font-size: 15px;
+          line-height: 150%;
+          margin: 0 auto;
+        }
+      }
+    }
+    .section-wrap {
+      .arrod-wrap {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        .panel-horizontal {
+          padding: 0 40px;
+        }
+      }
+    }
+  }
+}

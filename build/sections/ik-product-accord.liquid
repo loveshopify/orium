@@ -1,0 +1,113 @@
+{% comment %} ATTENTION!!! This is compiled version of ik-product-accord.liquid and it is overriding automatically. You should use theme development tool and sources\sections\ik-product-accord.liquid file to code and save your changes. {% endcomment %}{% assign set = section.settings %}
+{% render 'ea-section-styles', section: section %}
+<div class="ik-product-accord">
+  {% for block in section.blocks %}
+    {% assign bset = block.settings %}
+    <div class="panel-horizontal">
+      <h1 class="item-title">{{ bset.title }}
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15 6.375V8.625L0 8.625L9.83509e-08 6.375L15 6.375Z" fill="#1D1D1D"/>
+          <path d="M8.625 15H6.375L6.375 0L8.625 1.96701e-07L8.625 15Z" fill="#1D1D1D"/>
+        </svg>
+      </h1>
+      <div class="item-text">
+        {{ bset.text }}
+      </div>
+    </div>
+  {% endfor %}  
+  <img class="accord-img" src="{{ set.image | img_url : '2000x' }}" />
+</div>
+
+{% schema %}
+{
+  "name": "Product accordion",
+  "tag": "section",
+  "class": "ik-product-accord",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "visible",
+      "label": "Show section",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "ptop",
+      "label": "Top spacing desktop",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "pbottom",
+      "label": "Bottom spacing desktop",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "ptop_mob",
+      "label": "Top spacing mobile",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "pbottom_mob",
+      "label": "Bottom spacing mobile",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+
+    {
+      "type": "header",
+      "content": "Background"
+    },
+    {
+      "type": "color",
+      "id": "sectionbg",
+      "label": "Section background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

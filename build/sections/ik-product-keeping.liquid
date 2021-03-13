@@ -1,0 +1,143 @@
+{% comment %} ATTENTION!!! This is compiled version of ik-product-keeping.liquid and it is overriding automatically. You should use theme development tool and sources\sections\ik-product-keeping.liquid file to code and save your changes. {% endcomment %}{% assign set = section.settings %}
+{% render 'ea-section-styles', section: section %}
+
+<div class="ik-product-keeping container">
+  <div class="img-wrap">
+    <img class="keeping-img" src="{{ set.image | img_url : '2000x' }}" />
+  </div>
+  <div class="title-wrap">
+    <h2>{{ set.title }}</h2>
+    <div class="text">
+      {{ set.text }}
+    </div>
+  </div>
+  <div class="section-wrap">
+    <div class="arrod-wrap">
+      {% for block in section.blocks %}
+        {% assign bset = block.settings %}
+        <div class="panel-horizontal">
+          <img class="accord-img" src="{{ bset.image | img_url : '600x' }}" />
+          <div class="item-subtitle">{{ bset.subtitle }}</div>
+          <h1 class="item-title">{{ bset.title }}</h1>
+          <div class="item-text">
+            {{ bset.text }}
+          </div>
+        </div>
+      {% endfor %}  
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Product keeping",
+  "tag": "section",
+  "class": "ik-product-keeping",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "visible",
+      "label": "Show section",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "ptop",
+      "label": "Top spacing desktop",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "pbottom",
+      "label": "Bottom spacing desktop",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "ptop_mob",
+      "label": "Top spacing mobile",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "pbottom_mob",
+      "label": "Bottom spacing mobile",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+
+    {
+      "type": "header",
+      "content": "Background"
+    },
+    {
+      "type": "color",
+      "id": "sectionbg",
+      "label": "Section background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

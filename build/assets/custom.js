@@ -18,14 +18,19 @@ $('.home-slider-wrapper .main-pane').slick({
 	centerMode: true,
 	centerPadding: '70px',
 	adaptiveHeight: true,
-  responsive: [
-    {
-      breakpoint: 990,
-      settings: {
-        arrows: false,
+	responsive: [
+		{
+			breakpoint: 990,
+			settings: {
+				arrows: false,
 				centerPadding: '15px',
-        slidesToShow: 1
-      }
-    }
-  ]
+				slidesToShow: 1
+			}
+		}
+	]
+});
+
+$(".ik-product-accord .item-title").click(function () {
+	$(this).next().slideToggle();
+	$(this).toggleClass("is--active");
 });

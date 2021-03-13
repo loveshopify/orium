@@ -1,0 +1,26 @@
+.ik-product-ingre {
+  .ingre-container {
+    max-width: 835px;
+    .ingre-title {
+      font-size: 64px;
+      line-height: 95%;
+    }
+    .ingre-text {
+      p {
+        font-size: 15px;
+        line-height: 150%;
+        margin-top: 20px;
+      }
+    }
+  }
+  a {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 150%;
+    border-bottom: 1px solid #000;
+    padding-bottom: 6px;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

@@ -1,20 +1,38 @@
 {% assign set = section.settings %}
 {% render 'ea-section-styles', section: section %}
 
-<div class="ingre-wrapper container">
-  <div class="ingre-container">
-    <h1 class="ingre-title">{{ set.title }}</h1>
-    <span class="ingre-text">{{ set.text }}</span>
-    <a href="{{ set.link }}">{{ set.link_text }}</a>
+<div class="ik-product-accord container">
+  <div class="title-wrap">
+    <h2>{{ set.title }}</h2>
+  </div>
+  <div class="section-wrap">
+    <div class="arrod-wrap">
+      {% for block in section.blocks %}
+        {% assign bset = block.settings %}
+        <div class="panel-horizontal">
+          <h1 class="item-title">{{ bset.title }}
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15 6.375V8.625L0 8.625L9.83509e-08 6.375L15 6.375Z" fill="#1D1D1D"/>
+              <path d="M8.625 15H6.375L6.375 0L8.625 1.96701e-07L8.625 15Z" fill="#1D1D1D"/>
+            </svg>
+          </h1>
+          <div class="item-text">
+            {{ bset.text }}
+          </div>
+        </div>
+      {% endfor %}  
+    </div>
+    <div class="img-wrap">
+      <img class="accord-img" src="{{ set.image | img_url : '2000x' }}" />
+    </div>
   </div>
 </div>
 
-
 {% schema %}
 {
-  "name": "Product ingredient",
+  "name": "Product potential accord",
   "tag": "section",
-  "class": "ik-product-ingre",
+  "class": "ik-product-potential-accord",
   "settings": [
     {
       "type": "checkbox",
@@ -67,7 +85,6 @@
       "default": 45
     },
 
-
     {
       "type": "header",
       "content": "Background"
@@ -84,19 +101,27 @@
       "label": "Title"
     },
     {
-      "type": "richtext",
-      "id": "text",
-      "label": "Text"
-    },
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+  "blocks": [
     {
-      "type": "text",
-      "id": "link_text",
-      "label": "Link text"
-    },
-    {
-      "type": "url",
-      "id": "link",
-      "label": "Link"
+      "type": "item",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
     }
   ]
 }
