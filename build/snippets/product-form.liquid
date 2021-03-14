@@ -19,12 +19,14 @@
 <form id="addToCartForm" class="product-form {% if isRecharge %}m-recharge{% endif %}" action="/cart/add" method="post" enctype="multipart/form-data" data-productid="{{product.id}}" data-product-form data-variantid="{{ current_variant.id }}" data-discountid="{{ current_variant.metafields.subscriptions.discount_variant_id }}">
 
   <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" data-selected-variant-id>
-
-  <div class="product-info__top-label skewed-shape">
-    <i class="icon-double-chevron"></i>
-    <span>{% if isRecharge %} {% if product.handle contains 'annual' %} Subscribe {% else %} Subscribe For <b>only $1</b> {% endif %}  {% else %} <b>SHIPS IN 2 BUSINESS DAYS</b> {% endif %}</span>
-    <i class="icon-double-chevron"></i>
+  
+  {%- comment -%}
+    <div class="product-info__top-label skewed-shape">
+      <i class="icon-double-chevron"></i>
+      <span>{% if isRecharge %} {% if product.handle contains 'annual' %} Subscribe {% else %} Subscribe For <b>only $1</b> {% endif %}  {% else %} <b>SHIPS IN 2 BUSINESS DAYS</b> {% endif %}</span>
+      <i class="icon-double-chevron"></i>
   </div>
+  {%- endcomment -%}
 
   <h1 class="title not-animated">{{ product.title }}</h1>
   {% unless isRecharge %}
@@ -149,18 +151,22 @@
     </div>
   {% endif %}
 
+  {%- comment -%}
   {% unless isRecharge %}
     <div class="product-stock" data-low-stock>
       <div class="product-stock__text"><i>Hurry,</i> Only <span data-random-number></span> left in stock.</div>
       <div class="product-stock__bar"></div>
     </div>
   {% endunless %}
-
   {% if isRecharge and set.info2 != blank %}
     <div class="product-info__bottom">{{ set.info2 }}</div>
   {% endif %}
+  {%- endcomment -%}
 
+
+  {%- comment -%}
   {% unless isRecharge %}
     <div class="product-info__bottom-label">Premium Quality Garments</div>
   {% endunless %}
+  {%- endcomment -%}
 </form>
