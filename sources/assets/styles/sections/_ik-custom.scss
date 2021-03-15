@@ -10,6 +10,13 @@ body {
   text-align: center;
 }
 
+.container {
+  @media (max-width: 767px){
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 .sidenav {
   // width: 80%;
 }
@@ -42,4 +49,9 @@ a:hover:not(.btn) {
   .rc_popup {
     display: none;
   }
+}
+
+// =================Product New style================
+#product_newstyle {
+
 }

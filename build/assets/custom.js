@@ -49,7 +49,7 @@ $(".ik-product-landing .img_slider").slick({
 		{
 			breakpoint: 990,
 			settings: {
-				centerPadding: '50px',
+				centerPadding: '30px',
 				slidesToShow: 1
 			}
 		}

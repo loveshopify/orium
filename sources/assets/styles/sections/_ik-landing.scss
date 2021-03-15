@@ -1,4 +1,7 @@
 .ik-product-landing {
+  @media (max-width: 767px){
+    padding: 0 10px;
+  }
   .landing-container {
     max-width: 915px;
     margin: 0 auto;
@@ -38,12 +41,24 @@
 }
 
 #shopify-section-ik-landing-newstyle {
+  .landing-title {
+    @include mobile {
+      font-size: 45px;
+      line-height: 50px;
+    }
+  }
   .landing-wrapper {
     .img_slider {
       margin-top: 90px;
       display: inline-grid;
+      @include mobile {
+        margin-top: 50px;
+      }
       .img_item {
         padding: 0 15px;
+        @include mobile {
+          padding: 0 5px;
+        }
       }
     }
   }

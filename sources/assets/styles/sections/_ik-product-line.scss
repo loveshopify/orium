@@ -2,6 +2,10 @@
   .line-wrapper {
     display: grid;
     grid-template-columns: 80% 20%;
+    @include mobile {
+      display: flex;
+      flex-direction: column-reverse;
+    }
     .img_wrap {
       text-align: center;
       padding-top: 100%;
@@ -17,6 +21,9 @@
     }
     .item_wrap {
       max-width: 760px;
+      @include mobile {
+        margin-top: 60px;
+      }
       .line_item {
         h2 {
           font-size: 24px;
@@ -25,13 +32,19 @@
           margin-bottom: 40px;
           border-bottom: 1px solid #000000;
           position: relative;
+          @include mobile {
+            font-size: 13px;
+            line-height: 16px;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+          }
           &:after {
             content: "";
-            width: 5px;
-            height: 5px;
+            width: 8px;
+            height: 8px;
             background-color: #000;
             position: absolute;
-            right: 0;
+            right: -2px;
             bottom: 0;
             transform: translateY(50%);
             border-radius: 50%;
