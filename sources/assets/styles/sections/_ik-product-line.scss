@@ -1,0 +1,33 @@
+.ik-product-line {
+  .line-wrapper {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    .img_wrap {
+      text-align: center;
+    }
+    .item_wrap {
+      max-width: 760px;
+      .line_item {
+        h2 {
+          font-size: 24px;
+          line-height: 29px;
+          padding-bottom: 30px;
+          margin-bottom: 40px;
+          border-bottom: 1px solid #000000;
+          position: relative;
+          &:after {
+            content: "";
+            width: 5px;
+            height: 5px;
+            background-color: #000;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            transform: translateY(50%);
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}

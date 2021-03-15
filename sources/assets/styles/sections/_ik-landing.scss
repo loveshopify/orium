@@ -36,3 +36,14 @@
     transform: translateX(-50%);
   }
 }
+
+#shopify-section-ik-landing-newstyle {
+  .landing-wrapper {
+    .img_slider {
+      display: inline-grid;
+      .img_item {
+        padding: 0 15px;
+      }
+    }
+  }
+}

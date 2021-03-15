@@ -34,3 +34,24 @@ $(".ik-product-accord .item-title").click(function () {
 	$(this).next().slideToggle();
 	$(this).toggleClass("is--active");
 });
+
+$(".ik-product-landing .img_slider").slick({
+	dots: false,
+	arrows: false,
+	infinite: true,
+	speed: 300,
+	slidesToShow: 2,
+	slidesToScroll: 1,
+	centerMode: true,
+	centerPadding: '70px',
+	adaptiveHeight: true,
+	responsive: [
+		{
+			breakpoint: 990,
+			settings: {
+				centerPadding: '50px',
+				slidesToShow: 1
+			}
+		}
+	]
+})

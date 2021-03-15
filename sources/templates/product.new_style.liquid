@@ -1,0 +1,43 @@
+{% comment %} {% section 'ea-ordering' %} {% endcomment %}
+<div class="sections-wrapper">
+  {% section 'ea-product-main' %}
+  {%- comment -%}
+    {% section 'ea-reviews' %}
+    {% section 'ea-related-products' %}
+  {%- endcomment -%}
+  {% section 'ik-text-marquee-newstyle' %}
+  {% section 'ik-landing-newstyle' %}
+  {% section 'ik-Line-newstyle' %}
+  {% section 'ik-box-newstyle' %}
+</div>
+
+
+<div class="popup is-hidden" data-popup="ingredients">
+  <div class="popup-window">
+    <button class="close" data-popup-close><i class="icon-close"></i></button>
+    <div class="rte ingr-popup">{{ product.metafields.ingredients.all }}</div>
+  </div>
+  <div class="popup-bg" data-popup-close></div>
+</div>
+
+
+<script>
+  window.productTemplateLoaded = true;
+</script>
+
+
+{% if product.metafields.loox.num_reviews %}
+<script id="looxSchemaJson" type="application/ld+json">
+{
+	"@context": "http://schema.org",
+	"@type": "Product",
+	"@id": {{ canonical_url | json }},
+	"aggregateRating": {
+		"@type": "AggregateRating",
+		"ratingValue": "{{ product.metafields.loox.avg_rating }}",
+		"reviewCount": "{{ product.metafields.loox.num_reviews }}"
+	},
+	"name": {{ product.title | json }}
+}
+</script>
+{% endif %}
