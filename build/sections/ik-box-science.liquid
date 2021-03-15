@@ -1,27 +1,25 @@
-{% comment %} ATTENTION!!! This is compiled version of ik-box-newstyle.liquid and it is overriding automatically. You should use theme development tool and sources\sections\ik-box-newstyle.liquid file to code and save your changes. {% endcomment %}{% assign set = section.settings %}
+{% comment %} ATTENTION!!! This is compiled version of ik-box-science.liquid and it is overriding automatically. You should use theme development tool and sources\sections\ik-box-science.liquid file to code and save your changes. {% endcomment %}{% assign set = section.settings %}
 {% render 'ea-section-styles', section: section %}
 
-<div class="box-wrapper container">
+<div class="top_image">
+  <img src="{{ set.image | img_url: '1000x' }}" alt="{{ set.image.alt }}">
+</div>
+<div class="science-wrapper container">
   <div class="text-container">
-    <h1 class="landing-title">{{ set.title }}</h1>
+    <h1 class="science-title">{{ set.title }}</h1>
+    <div class="science-text">{{ set.text }}</div>
   </div>
-  <div class="box-wrap"> 
-    {% for block in section.blocks %}
-    {% assign bset = block.settings %}
-    <div class="box_item">
-      <h2>{{ bset.title }}</h2>
-      <div>{{ bset.text }}</div>
-    </div> 
-    {% endfor %}
-  </div>
+</div>
+<div class="bottom_image">
+  <img src="{{ set.image1 | img_url: '1000x' }}" alt="{{ set.image1.alt }}">
 </div>
 
 
 {% schema %}
 {
-  "name": "Product box",
+  "name": "Product science",
   "tag": "section",
-  "class": "ik-product-box",
+  "class": "ik-product-science",
   "settings": [
     {
       "type": "checkbox",
@@ -86,27 +84,24 @@
       "default": "#ffffff"
     },
     {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
       "type": "text",
       "id": "title",
       "label": "Title"
-    }
-  ],
-  "blocks": [
+    },
     {
-      "type": "item",
-      "name": "Item",
-      "settings": [
-        {
-          "type": "text",
-          "id": "title",
-          "label": "Title"
-        },
-        {
-          "type": "richtext",
-          "id": "text",
-          "label": "Text"
-        }
-      ]
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "image1",
+      "label": "Image"
     }
   ]
 }

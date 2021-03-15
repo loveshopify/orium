@@ -1,15 +1,16 @@
 {% assign set = section.settings %}
 {% render 'ea-section-styles', section: section %}
 
-<div class="landing-wrapper container">
-  <div class="landing-container">
+<div class="box-wrapper container">
+  <div class="text-container">
     <h1 class="landing-title">{{ set.title }}</h1>
   </div>
-  <div class="img_slider"> 
+  <div class="box-wrap"> 
     {% for block in section.blocks %}
     {% assign bset = block.settings %}
-    <div class="img_item">
-      <img src="{{ bset.image | img_url: '1000x' }}" alt="{{ bset.image.alt }}">
+    <div class="box_item">
+      <h2>{{ bset.title }}</h2>
+      <div>{{ bset.text }}</div>
     </div> 
     {% endfor %}
   </div>
@@ -18,9 +19,9 @@
 
 {% schema %}
 {
-  "name": "Product landing",
+  "name": "Product box",
   "tag": "section",
-  "class": "ik-product-landing",
+  "class": "ik-product-box",
   "settings": [
     {
       "type": "checkbox",
@@ -97,8 +98,13 @@
       "settings": [
         {
           "type": "text",
-          "id": "image",
-          "label": "Image"
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
         }
       ]
     }

@@ -1,0 +1,31 @@
+.ik-product-box {
+  .landing-title {
+    font-size: 82px;
+    line-height: 95%;
+    max-width: 755px;
+    margin-bottom: 60px;
+  }
+  .box-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #000;
+    grid-gap: 1px;
+    border: 1px solid #000;
+    max-width: 860px;
+    .box_item {
+      background-color: #fff;
+      padding: 50px;
+      h2 {
+        font-size: 24px;
+        line-height: 29px;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 14px;
+        line-height: 17px;
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+}
