@@ -55,3 +55,20 @@ $(".ik-product-landing .img_slider").slick({
 		}
 	]
 })
+
+$(".ik-sub-wrap .ik-item .wrapper").click(function() {
+	$(this).closest(".ik-sub-wrap").find(".ik-item").removeClass("is_active");;
+	$(this).closest(".ik-item").addClass("is_active");
+	// subscription_item
+	// onetime_item
+	if($(this).closest(".ik-item").attr("id") == "subscription_item") {
+		$("[data-selector-subsave]").find(".rc_widget__option__label").click();
+	} else {
+		$("[data-selector-onetime]").find(".rc_widget__option__label").click();
+	}
+});
+
+$(".variant_wrap .variant_item").click(function() {
+	$(this).closest(".variant_wrap").find(".input_option").removeClass("is_active");;
+	$(this).find(".input_option").addClass("is_active");
+});

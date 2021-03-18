@@ -1,11 +1,11 @@
 .product-main-section {
   position: relative;
-  &:before {
-    @include overlay {
-      background: url("../images/product-bg2.jpg") no-repeat center center / cover;
-      opacity: 0.1;
-    }
-  }
+  // &:before {
+  //   @include overlay {
+  //     background: url("../images/product-bg2.jpg") no-repeat center center / cover;
+  //     opacity: 0.1;
+  //   }
+  // }
 }
 .product-main {
   min-height: 0;

@@ -1,5 +1,11 @@
 <div class="product-images {% if product.images.size > 1 %}is-multiple{% endif %} ">
-  <div class="slider product-slider" data-ps>
+  <div class="slider product-slider" data-ps data-adaptive-height=true>
+    {% for media in product.media %}
+    {% include 'media', media: media %}
+    {% if media.media_type == "video" %}
+    {{ media | video_tag: controls: false, autoplay: true, muted: true, loop: true }}
+    {% endif %}
+    {% endfor %}
     {% for image in product.images %}
       {% if section.settings.zoom_image %}
         <a data-fancybox="images" href="{{ image.src | img_url: '2000x' }}" id="imageZoom" data-zoom-image="{{ image.src | img_url: '2000x' }}">
@@ -11,4 +17,3 @@
     {% endfor %}
   </div>
 </div>
-

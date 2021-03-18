@@ -9,7 +9,7 @@
             value="{{ option }}"
             data-product-option="1"
             {% if current_variant.option1 == option %}checked{% endif %}>
-          <label class="product-option__label" for="option-{{ optionName }}-{{ option }}" class="product-option__label">
+          <label class="product-option__label" for="option-{{ optionName }}-{{ option }}" class="product-option__label" data-variant-option-name="{{ option }}">
             <div class="product-option__text">{{ option }}</div>
           </label>
         </div>
@@ -29,7 +29,7 @@
             value="{{ option }}"
             data-product-option="2"
             {% if current_variant.option2 == option %}checked{% endif %}>
-          <label class="product-option__label" for="option-{{ optionName }}-{{ option }}" class="product-option__label">
+          <label class="product-option__label" for="option-{{ optionName }}-{{ option }}" class="product-option__label" data-variant-option-name="{{ option }}">
             <div class="product-option__text">{{ option }}</div>
           </label>
         </div>
@@ -49,7 +49,7 @@
             value="{{ option }}"
             data-product-option="3"
             {% if current_variant.option3 == option %}checked{% endif %}>
-          <label class="product-option__label" for="option-{{ optionName }}-{{ option }}" class="product-option__label">
+          <label class="product-option__label" for="option-{{ optionName }}-{{ option }}" class="product-option__label" data-variant-option-name="{{ option }}">
             <div class="product-option__text">{{ option }}</div>
           </label>
         </div>

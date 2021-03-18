@@ -1,13 +1,19 @@
 {% comment %} ATTENTION!!! This is compiled version of media.liquid and it is overriding automatically. You should use theme development tool and sources\snippets\media.liquid file to code and save your changes. {% endcomment %}{% case media.media_type %}
-{% when 'image' %}
-asdfasdf
-{% when 'external_video' %}
-  <div class="product-single__media" style="padding-top: {{ 1 | divided_by: media.aspect_ratio | times: 100}}%;" data-media-id="{{ media.id }}">
-    {{ media | external_video_tag }}
-  </div>
 {% when 'video' %}
   <div class="product-single__media" data-media-id="{{ media.id }}">
     {{ media | video_tag: controls: true }}
+  </div>
+{% when 'image' %}
+  {% if section.settings.zoom_image %}
+    <a data-fancybox="images" href="{{ image.src | img_url: '2000x' }}" id="imageZoom" data-zoom-image="{{ image.src | img_url: '2000x' }}">
+  {% endif %}
+      <img src="{{ image.src | img_url: '1000x' }}" data-variant="{% for variant in image.variants %}{{ variant.id }},{% endfor %}" data-index="{{ forloop.index0 }}" alt="{{ image.alt | escape }}">
+  {% if section.settings.zoom_image %}
+    </a>
+  {% endif %}
+{% when 'external_video' %}
+  <div class="product-single__media" style="padding-top: {{ 1 | divided_by: media.aspect_ratio | times: 100}}%;" data-media-id="{{ media.id }}">
+    {{ media | external_video_tag }}
   </div>
 {% when 'model' %}
   <div class="product-single__media" style="padding-top: 100%" data-media-id="{{ media.id }}">
