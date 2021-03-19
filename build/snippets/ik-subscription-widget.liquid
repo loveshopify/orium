@@ -1,0 +1,87 @@
+{% comment %} ATTENTION!!! This is compiled version of ik-subscription-widget.liquid and it is overriding automatically. You should use theme development tool and sources\snippets\ik-subscription-widget.liquid file to code and save your changes. {% endcomment %}{% assign product_handle = product.handle | downcase %}
+{% if product_handle == "growth-capsule"  %}
+<div class="ik-sub-wrap">
+  <div class="ik-item is_active" id="subscription_item">
+    <div class="wrapper">
+      <div class="item-info">
+        <svg width="27" height="17" viewBox="0 0 27 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.9 8.88995V8.98995H1L24.105 8.98995L16.2876 15.8394L16.2121 15.9055L16.2784 15.9807L16.7943 16.5661L16.8602 16.6409L16.9352 16.5752L26.0659 8.57542L26.1517 8.5002L26.0659 8.42499L16.9352 0.424787L16.8601 0.359026L16.7942 0.433939L16.2784 1.02011L16.2122 1.09535L16.2876 1.16139L24.105 8.0104L1 8.0104H0.9L0.9 8.1104L0.9 8.88995Z" fill="#1D1D1D" stroke="#1D1D1D" stroke-width="0.2"/>
+        </svg>
+        <div>
+          <div class="sub_item">Subsribe & save 20%</div>
+          <div class="shipping_info">Free Shipping</div>
+        </div>
+      </div>
+      <div class="item-price">£28.99</div>
+    </div>
+  </div>
+  <div class="ik-item" id="onetime_item">
+    <div class="wrapper">
+      <div class="item-info">
+        <svg width="27" height="17" viewBox="0 0 27 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.9 8.88995V8.98995H1L24.105 8.98995L16.2876 15.8394L16.2121 15.9055L16.2784 15.9807L16.7943 16.5661L16.8602 16.6409L16.9352 16.5752L26.0659 8.57542L26.1517 8.5002L26.0659 8.42499L16.9352 0.424787L16.8601 0.359026L16.7942 0.433939L16.2784 1.02011L16.2122 1.09535L16.2876 1.16139L24.105 8.0104L1 8.0104H0.9L0.9 8.1104L0.9 8.88995Z" fill="#1D1D1D" stroke="#1D1D1D" stroke-width="0.2"/>
+        </svg>
+        <div>
+          <div class="sub_item">Buy once</div>
+          <div class="shipping_info">+ £3.00 Shipping</div>
+        </div>
+      </div>
+      <div class="item-price">£35.99</div>
+    </div>
+    <div class="variant_wrap">
+    <!--  -->
+    {% assign optionName = product.options[0] %}
+    {%- assign current_variant = product.selected_or_first_available_variant -%}
+    {% if optionName != blank %}
+      {% for option in product.options_by_name[optionName].values %}
+        <label class="variant_item" for="option-{{ optionName }}-{{ option }}" data-variant-option-name="{{ option }}">
+          <span class="input_option {% if current_variant.option1 == option %}is_active{% endif %}"></span>
+          <span class="variant_value">{{ option }}</span>
+        </label>
+      {% endfor %}
+    {% endif %}
+    </div>
+  </div>
+</div>
+{% else %}
+<div class="ik-sub-wrap">
+  <div class="ik-item is_active" id="subscription_item">
+    <div class="wrapper">
+      <div class="item-info">
+        <svg width="27" height="17" viewBox="0 0 27 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.9 8.88995V8.98995H1L24.105 8.98995L16.2876 15.8394L16.2121 15.9055L16.2784 15.9807L16.7943 16.5661L16.8602 16.6409L16.9352 16.5752L26.0659 8.57542L26.1517 8.5002L26.0659 8.42499L16.9352 0.424787L16.8601 0.359026L16.7942 0.433939L16.2784 1.02011L16.2122 1.09535L16.2876 1.16139L24.105 8.0104L1 8.0104H0.9L0.9 8.1104L0.9 8.88995Z" fill="#1D1D1D" stroke="#1D1D1D" stroke-width="0.2"/>
+        </svg>
+        <div>
+          <div class="sub_item">Subsribe & save 20%</div>
+          <div class="shipping_info">Free Shipping</div>
+        </div>
+      </div>
+      <div class="item-price">£14.40</div>
+    </div>
+    <div class="variant_wrap roller">
+      <label>
+        <select name="" id="">
+          <option>Every 1 Month</option>
+          <option>Every 2 Months</option>
+          <option>Every 3 Months</option>
+          <option>Every 4 Months</option>
+        </select>
+      </label>
+    </div>
+  </div>
+  <div class="ik-item" id="onetime_item">
+    <div class="wrapper">
+      <div class="item-info">
+        <svg width="27" height="17" viewBox="0 0 27 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.9 8.88995V8.98995H1L24.105 8.98995L16.2876 15.8394L16.2121 15.9055L16.2784 15.9807L16.7943 16.5661L16.8602 16.6409L16.9352 16.5752L26.0659 8.57542L26.1517 8.5002L26.0659 8.42499L16.9352 0.424787L16.8601 0.359026L16.7942 0.433939L16.2784 1.02011L16.2122 1.09535L16.2876 1.16139L24.105 8.0104L1 8.0104H0.9L0.9 8.1104L0.9 8.88995Z" fill="#1D1D1D" stroke="#1D1D1D" stroke-width="0.2"/>
+        </svg>
+        <div>
+          <div class="sub_item">Buy once</div>
+          <div class="shipping_info">+ £3.00 Shipping</div>
+        </div>
+      </div>
+      <div class="item-price">£18.00</div>
+    </div>
+  </div>
+</div>
+{% endif %}

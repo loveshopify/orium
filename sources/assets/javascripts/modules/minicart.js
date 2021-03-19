@@ -31,7 +31,7 @@ const addToCart = function(id, qty, properties) {
     data["properties"]["shipping_interval_unit_type"] = properties['shipping_interval_unit_type'];
     data["properties"]["subscription_id"] = properties['subscription_id'];
   }
-  console.log(data);
+  // console.log(data);
 
   $.ajax({
     type: 'POST',
@@ -150,19 +150,20 @@ function reChargeProcessCart() {
 }
 
 const goToCheckout = function() {
-  let hasSubscription = false;
-  for(let i = 0; i < data.cart.items.length; i++) {
-    let item = data.cart.items[i];
-    if(item.product_title.includes('Auto renew')) {
-      hasSubscription = true;
-    }
-  }
+  // let hasSubscription = false;
+  // for(let i = 0; i < data.cart.items.length; i++) {
+  //   let item = data.cart.items[i];
+  //   // if(item.product_title.includes('Auto renew')) {
+  //   if(item.selling_plan_allocation) {
+  //     hasSubscription = true;
+  //   }
+  // }
 
-  if(hasSubscription) {
-    reChargeProcessCart();
-  } else {
+  // if(hasSubscription) {
+  //   reChargeProcessCart();
+  // } else {
     document.location.href = "/checkout";
-  }
+  // }
 }
 
 
@@ -172,8 +173,8 @@ const updateMinicart = function() {
     $.get('/cart?view=json', function(result) {      
       let response = result.replace(/<\/?[^>]+>/gi, '');
       const newCartWithOriginHandle = JSON.parse(response);
-      console.log(newCart);
-      console.log(newCartWithOriginHandle);
+      // console.log(newCart);
+      // console.log(newCartWithOriginHandle);
       for(let i=0; i < newCart.items.length; i++) {
         newCart.items[i].original_handle = newCartWithOriginHandle.items[i].original_handle
       }
@@ -184,6 +185,19 @@ const updateMinicart = function() {
         $minicart.addClass('is-open');
         $("body").addClass('no-scroll');
         open = false;
+      }
+      let hasSubscription = false;
+      for(let i = 0; i < data.cart.items.length; i++) {
+        let item = data.cart.items[i];
+        if(item.selling_plan_allocation) {
+          hasSubscription = true;
+        }
+      }
+
+      if(hasSubscription) {
+        $("#span_shipping_price").html("Yes, of course");
+      } else {
+        $("#span_shipping_price").html("£3.00");
       }
     }).fail(function() {
       console.error('minicart.js: updateMinicart error')
@@ -213,6 +227,27 @@ const updateFreeShippingBar = function() {
 }
 
 const eventHandlers = function() {
+  $(document).on('click','#btn_add_to_cart', function(e) {
+    e.preventDefault();
+    /*
+    addToCartHandler($('#addToCartForm').serialize());
+    */
+    $.ajax({
+      type: 'POST',                             
+      url: '/cart/add.js',
+      dataType: 'json',                               
+      data: $('#addToCartForm').serialize(),            
+      success: function(response){
+        updateMinicart();
+        $("[data-minicart-toggle]").click();
+        //goToCheckout();
+      },                        
+      error: function(data){
+      		alert('Something went wrong! Please refresh the page and try again');
+      }                           
+    });
+  });
+
   $(document).on('click','[data-add-to-cart]', function(e) {
     e.preventDefault();
     $('[data-popup]').addClass('is-hidden');

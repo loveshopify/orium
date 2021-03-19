@@ -72,3 +72,15 @@ $(".variant_wrap .variant_item").click(function() {
 	$(this).closest(".variant_wrap").find(".input_option").removeClass("is_active");;
 	$(this).find(".input_option").addClass("is_active");
 });
+
+$(document).on('change', '.variant_wrap select', function() {
+	var option_value = $(this).closest("select").val();
+	console.log(option_value);
+	$("[data-plans-dropdown] option").each(function(i, item) {
+		console.log(option_value + ", " + $(this).html());
+		if($(this).html() == option_value) {
+			$("[data-plans-dropdown]").find("option").removeAttr("selected");
+			$(this).attr("selected", "selected");
+		}
+	});
+});

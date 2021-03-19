@@ -83,17 +83,23 @@
   {% endif %}
   <div class="minicart__footer" rv-if="cart.total_price">
     <div class="shipping__price cart_footer_item">
+      {% assign is_subscription = false %}
       {% for item in cart.items %}
+      {%- comment -%}
       {% if has_subscription_product %}{% break %}{% endif %}
       {% for p in item.properties %}{% if p.first == "shipping_interval_frequency" %}{% assign has_subscription_product = true %}{% break %}{% endif %}{% endfor %}
+      {%- endcomment -%}
+      {% if item.selling_plan_allocation %}
+        {% assign is_subscription = true %}
+      {% endif %}
       {% endfor %}
        
-      {% if has_subscription_product %}
+      {% if is_subscription %}
         <span>FREE Shipping?</span>
-        Yes, of course
+        <span id="span_shipping_price">Yes, of course</span>
       {% else %}
         <span>Shipping: </span>
-        £3.00
+        <span id="span_shipping_price">£3.00</span>
       {% endif %}
     </div>
     <div class="cart_footer_item">
