@@ -14,68 +14,48 @@
 
   {% if type != 'topbar-disabled' %}
   <div class="faq-topbar">
-    <div class="container {% if type != 'topbar-disabled' %}m-short{% endif %}">
-      {% assign is_first = true %}
-      {% for block in section.blocks %}
-      {% assign category_handle = block.settings.category_name | handleize %}
-      {% unless category_handles contains category_handle %}
-      {% assign category_handles = category_handles | append: category_handle | append: ',' %}
-      <div class="faq-topbar__item">
-        <h3 class="faq-topbar__title {% if is_first %} is-active{% endif %}"
-          data-faq-section-toggle="{{ category_handle }}">{{ block.settings.category_name }}</h3>
+    {% assign is_first = true %}
+    {% for block in section.blocks %}
+    {% assign category_handle = block.settings.category_name | handleize %}
+    {% unless category_handles contains category_handle %}
+    {% assign category_handles = category_handles | append: category_handle | append: ',' %}
+    {% assign category_handles_array = category_handles | split: ',' %}
+    {% assign is_first = true %}
+    {% for category_handle in category_handles_array %}
+    {% assign is_first = false %}
+    {% endfor %}
+    {% assign is_first = false %}
+    {% endunless %}
+    {% endfor %}
+    <div class="container ik-faq-container">
+      <div class="faq-left">
+        <h2>FAQS</h2>
       </div>
-      <ul>
-        {% assign category_handles_array = category_handles | split: ',' %}
-        {% assign is_first = true %}
+      <div class="faq-right">
         {% for category_handle in category_handles_array %}
-        {% render 'faq-item', section: section, blockType: category_handle, is_first: is_first %}
-        {% assign is_first = false %}
+        <div class="faq-block-item {% if is_first %}is-active{% endif %}" data-accordions-container>
+          <h3 class="block-item-title">{{ category_handle }}
+            <svg width="25" height="38" viewBox="0 0 25 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.8583 37.5189L12.8583 2.86569L23.2741 14.7535L24.1421 13.9887L12.2804 0.450092L0.418055 13.9887L1.28721 14.7535L11.7024 2.86569L11.7024 37.5189L12.8583 37.5189Z" fill="#1D1D1D"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M13.1548 37.8154L11.4058 37.8154L11.4058 3.6542L1.31442 15.1725L2.83807e-07 14.0158L12.2804 0.000106958L24.56 14.0157L23.247 15.1726L13.1548 3.65416L13.1548 37.8154ZM12.8583 2.86569L23.2741 14.7535L24.1421 13.9887L12.2804 0.450092L0.418055 13.9887L1.28721 14.7535L11.7024 2.86569L11.7024 37.5189L12.8583 37.5189L12.8583 2.86569Z" fill="#1D1D1D"/>
+            </svg>
+          </h3>
+          <ul>
+            {% for block in section.blocks %}
+            {% assign category_name = block.settings.category_name | handleize %}
+            {% if category_name == category_handle%}
+            <div class="faq-item accordion">
+              <h3 class="faq-item__title accordion__title" data-accordion-button><span>{{ block.settings.title
+                  }}</span><i class="icon-plus"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 455 455"><path d="M455 212.5H242.5V0h-30v212.5H0v30h212.5V455h30V242.5H455z"/></svg></i><i class="icon-minus"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 455 455"><path d="M0 212.5h455v30H0z"/></svg></i></h3>
+              <div class="faq-item__content accordion__content" data-accordion-content>{{ block.settings.answer }}</div>
+            </div>
+            {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
         {% endfor %}
-      </ul>
-      {% assign is_first = false %}
-      {% endunless %}
-      {% endfor %}
+      </div>
     </div>
   </div>
   {% endif %}
-
-  <div class="container faq__wrap {% if type != 'topbar-disabled' %}m-short{% endif %}">
-    <div class="section__content">
-      <div class="faq-grid">
-        {% if set.image %}
-        <div class="faq-image">{% render 'rimage', image: set.image, size: '500x' %}</div>
-        {% endif %}
-        <div class="faq-questions">
-          {% if set.pretitle != blank %}
-          <h3 class="pretitle">{{ set.pretitle }}</h3>
-          {% endif %}
-          {% if set.title != blank %}
-          <h2 class="title h2 m-heavy ta-center">{{ set.title }}</h2>
-          {% endif %}
-          {% if set.subtitle != blank %}
-          <div class="subtitle ta-center">{{ set.subtitle }}</div>
-          {% endif %}
-
-          {% comment %} {%- capture btnClass -%}link {% if type == 'topbar-disabled' %}m-small{% endif %}{%- endcapture
-          -%}
-
-          <div class="ta-center">
-
-            {% render 'button', {
-            top: set.btntop,
-            id: section.id,
-            text: set.btn,
-            url: set.btnu,
-            class: btnClass
-            } %}
-
-          </div> {% endcomment %}
-
-
-
-
-        </div> <!-- /.faq-questions -->
-      </div> <!-- /.faq-grid -->
-    </div>
-  </div>
 </div>

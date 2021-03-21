@@ -84,3 +84,15 @@ $(document).on('change', '.variant_wrap select', function() {
 		}
 	});
 });
+
+$(".faq-block-item .block-item-title").click(function() {
+	if($(this).hasClass("is-active")) {
+		$(".faq-block-item").find(".block-item-title").removeClass("is-active");
+		$(".faq-block-item").find(".block-item-title").next().slideUp();
+	} else {
+		$(".faq-block-item").find(".block-item-title").removeClass("is-active");
+		$(".faq-block-item").find(".block-item-title").next().slideUp();
+		$(this).toggleClass("is-active");
+		$(this).next().slideToggle();
+	}
+});
